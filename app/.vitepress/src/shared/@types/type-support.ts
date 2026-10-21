@@ -407,37 +407,32 @@ export interface FilterListT {
   select: string[];
   title: string;
 }
+// CVE 详情数据：CVSS 指标统一由 CVSSResult 向量串提供，不再消费零散分指标字段
 export interface CveDetailCvssT {
   affectedProduct: string;
   announcementTime: string;
-  attackComplexityNVD: string;
-  attackComplexityOE: string;
-  attackVectorNVD: string;
-  attackVectorOE: string;
-  availabilityNVD: string;
-  availabilityOE: string;
-  confidentialityNVD: string;
-  confidentialityOE: string;
   cveId: string;
   cvrf: null;
   cvsssCoreNVD: string;
   cvsssCoreOE: string;
   id: number;
-  integrityNVD: string;
-  integrityOE: string;
   nationalCyberAwarenessSystem: string;
   packageList: null;
   packageName: string;
   parserBean: null;
-  privilegesRequiredNVD: string;
-  privilegesRequiredOE: string;
-  scopeNVD: string;
-  scopeOE: string;
   securityNoticeNo: string;
   status: string;
   createTime: string;
   summary: string;
   updateTime: string;
-  userInteractionNVD: string;
-  userInteractionOE: string;
+  v4_scorenvd: string;
+  v4_scoreoe: string;
+  v4VectorNVD: string;
+  v4VectorOE: string;
+  CVSSResult: {
+    NVDV3: string;
+    NVDV4: string;
+    OEV3: string;
+    OEV4: string;
+  };
 }

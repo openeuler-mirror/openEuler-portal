@@ -44,6 +44,8 @@ import { useCommon } from '@/stores/common';
 
 interface CvssItem {
   cate?: string;
+  // 括号内的限定语（如 Vulnerable System），展示时独立成行
+  cateSub?: string;
   NVD?: string;
   openEuler?: string;
 }
@@ -82,71 +84,230 @@ const packageName = ref('');
 const cveDetailData = ref<CveDetailCvssT>();
 const affectedProductList = ref<AffectProductT[]>([]);
 const cvssList = ref<CvssItem[]>([]);
+// openEuler 侧评分：按 CVSS 展示版本取值（见 buildCvssData），页头评分展示与安全等级分级共用，
+// 保证与指标表「CVSS评分」行一致，而非只读 v3 字段 cvsssCoreOE
+const oeScore = ref('');
 
-// -------------------- CVSS v3 表格表头 --------------------
+// -------------------- CVSS 指标表头 --------------------
 const columns = [
   { label: '', key: 'cate' },
   { label: 'NVD', key: 'NVD' },
   { label: 'openEuler', key: 'openEuler' },
 ];
 
-// -------------------- 获取CVSS v3 指标数据 --------------------
+// CVSS v3.1 向量取值映射（缩写 → 全称，依据 FIRST.org CVSS v3.1 规范）
+const V3_VALUE_MAP: Record<string, Record<string, string>> = {
+  AV: { N: 'Network', A: 'Adjacent', L: 'Local', P: 'Physical' },
+  AC: { L: 'Low', H: 'High' },
+  PR: { N: 'None', L: 'Low', H: 'High' },
+  UI: { N: 'None', R: 'Required' },
+  S: { U: 'Unchanged', C: 'Changed' },
+  C: { H: 'High', L: 'Low', N: 'None' },
+  I: { H: 'High', L: 'Low', N: 'None' },
+  A: { H: 'High', L: 'Low', N: 'None' },
+};
+
+// CVSS v4.0 向量取值映射（依据 FIRST.org CVSS v4.0 规范）
+// 与 v3 的差异：新增 AT（None/Present）；UI 扩展为 None/Passive/Active；
+// 以 VC/VI/VA + SC/SI/SA 取代 v3 的 C/I/A 与 Scope
+const V4_VALUE_MAP: Record<string, Record<string, string>> = {
+  AV: { N: 'Network', A: 'Adjacent', L: 'Local', P: 'Physical' },
+  AC: { L: 'Low', H: 'High' },
+  AT: { N: 'None', P: 'Present' },
+  PR: { N: 'None', L: 'Low', H: 'High' },
+  UI: { N: 'None', P: 'Passive', A: 'Active' },
+  VC: { H: 'High', L: 'Low', N: 'None' },
+  VI: { H: 'High', L: 'Low', N: 'None' },
+  VA: { H: 'High', L: 'Low', N: 'None' },
+  SC: { H: 'High', L: 'Low', N: 'None' },
+  SI: { H: 'High', L: 'Low', N: 'None' },
+  SA: { H: 'High', L: 'Low', N: 'None' },
+};
+
+// CVSS v4 指标行定义（按官方 CVSS v4.0 标准，key 为向量串中的指标缩写）
+const V4_ROWS: Array<{ label: string; key: string }> = [
+  { label: 'Attack Vector', key: 'AV' },
+  { label: 'Attack Complexity', key: 'AC' },
+  { label: 'Attack Requirements', key: 'AT' },
+  { label: 'Privileges Required', key: 'PR' },
+  { label: 'User Interaction', key: 'UI' },
+  { label: 'Confidentiality (Vulnerable System)', key: 'VC' },
+  { label: 'Integrity (Vulnerable System)', key: 'VI' },
+  { label: 'Availability (Vulnerable System)', key: 'VA' },
+  { label: 'Confidentiality (Subsequent System)', key: 'SC' },
+  { label: 'Integrity (Subsequent System)', key: 'SI' },
+  { label: 'Availability (Subsequent System)', key: 'SA' },
+];
+
+// CVSS v3 指标行定义
+const V3_ROWS: Array<{ label: string; key: string }> = [
+  { label: 'Attack Vector', key: 'AV' },
+  { label: 'Attack Complexity', key: 'AC' },
+  { label: 'Privileges Required', key: 'PR' },
+  { label: 'User Interaction', key: 'UI' },
+  { label: 'Scope', key: 'S' },
+  { label: 'Confidentiality', key: 'C' },
+  { label: 'Integrity', key: 'I' },
+  { label: 'Availability', key: 'A' },
+];
+
+// 各版本行集包含的指标键，用于判断某列 CVSS 版本是否具备该指标
+// （如 v4 列没有 Scope——v4 向量中的 S 是 Safety，不能当作 Scope 展示）
+const V3_ROW_KEYS = new Set(V3_ROWS.map(({ key }) => key));
+const V4_ROW_KEYS = new Set(V4_ROWS.map(({ key }) => key));
+
+// 判断字段是否有有效值（非空且非 N/A）
+const isValidVal = (val?: string | null) =>
+  !!val && val.trim() !== '' && val.trim().toUpperCase() !== 'N/A';
+
+// 去掉向量串开头的评分前缀（"9.8 CVSS:4.0/..." → "CVSS:4.0/..."）
+const stripScore = (vector?: string) =>
+  (vector ?? '').trim().replace(/^\d+(?:\.\d+)?\s+/, '');
+
+// 解析向量串为指标键值对，兼容 "7.5 CVSS:4.0/AV:N/..."、"CVSS:4.0/AV:N/..."、"AV:N/..." 格式
+const parseVector = (vector?: string) => {
+  const metrics: Record<string, string> = {};
+  const str = stripScore(vector).replace(/^CVSS:\d+(?:\.\d)?\//, '');
+  if (!str) return metrics;
+  str.split('/').forEach((part) => {
+    const idx = part.indexOf(':');
+    if (idx > 0) {
+      const key = part.slice(0, idx).trim();
+      const value = part.slice(idx + 1).trim();
+      if (/^[A-Z]{1,2}$/.test(key) && value) {
+        metrics[key] = value;
+      }
+    }
+  });
+  return metrics;
+};
+
+// 提取向量串开头的分数（如 "7.5 AV:N/..." 中的 7.5）
+const extractScore = (vector?: string) => {
+  if (!vector) return '';
+  const match = vector.trim().match(/^(\d+(?:\.\d+)?)\s/);
+  return match ? match[1] : '';
+};
+
+// 指标单元格取值：该列 CVSS 版本不包含的指标留空（由表格渲染为占位符），
+// 映射不到全称时回退显示原始缩写
+const metricCell = (
+  metrics: Record<string, string>,
+  key: string,
+  valueMap: Record<string, Record<string, string>>,
+  rowKeys: Set<string>
+) => {
+  if (!rowKeys.has(key)) return '';
+  const abbr = metrics[key];
+  if (!abbr) return '';
+  return valueMap[key]?.[abbr] ?? abbr;
+};
+
+// 评分取值：优先取接口分数字段，缺失时回退解析向量串前缀
+const scoreOf = (useV4: boolean, v4Score?: string, v3Score?: string, vector?: string) =>
+  useV4
+    ? isValidVal(v4Score)
+      ? v4Score
+      : extractScore(vector)
+    : isValidVal(v3Score)
+      ? v3Score
+      : extractScore(vector);
+
+// 拆分指标行标签：主标签与括号限定语分字段存放，
+// 由模板将限定语渲染为固定的第二行，避免在括号内随意断行（如 Integrity (Vulnerable / System)）
+const splitMetricLabel = (label: string): Pick<CvssItem, 'cate' | 'cateSub'> => {
+  const idx = label.lastIndexOf(' (');
+  return idx === -1
+    ? { cate: label }
+    : { cate: label.slice(0, idx), cateSub: label.slice(idx + 2, -1) };
+};
+
+// -------------------- 组装 CVSS 指标数据（表格行 + 页头评分） --------------------
+// 全部指标值均由 CVSSResult 向量串映射得到（v3/v4 各自的官方取值映射表）；
+// 展示版本优先级：1. 双方都有 v3 → 统一取 v3；2. 否则双方都有 v4 → 统一取 v4；
+// 3. 其余情况各列优先 v3、没有 v3 再取 v4；
+// v4 与 v3 数据同表展示时追加 v3 特有行（Scope/C/I/A，不区分脆弱/后续系统），
+// 各列严格按自身 CVSS 版本填充，对侧无法回答的行显示占位符，不做任何跨版本语义换算；
+// openEuler 侧选定评分同时返回给页头（评分展示与安全等级分级共用），
+// 避免页头只读 v3 字段 cvsssCoreOE、在仅有 v4 数据时与表格评分互相矛盾
+const buildCvssData = (detail?: CveDetailCvssT): { rows: CvssItem[]; oeScore: string } => {
+  if (!detail) return { rows: [], oeScore: '' };
+  const cvssResult = detail.CVSSResult ?? { NVDV3: '', NVDV4: '', OEV3: '', OEV4: '' };
+  // 各数据源版本可用性：该版本的向量串或评分字段任一有效即视为有该版本数据
+  const hasNvdV3 = isValidVal(cvssResult.NVDV3) || isValidVal(detail.cvsssCoreNVD);
+  const hasOeV3 = isValidVal(cvssResult.OEV3) || isValidVal(detail.cvsssCoreOE);
+  const hasNvdV4 =
+    isValidVal(cvssResult.NVDV4) || isValidVal(detail.v4VectorNVD) || isValidVal(detail.v4_scorenvd);
+  const hasOeV4 =
+    isValidVal(cvssResult.OEV4) || isValidVal(detail.v4VectorOE) || isValidVal(detail.v4_scoreoe);
+
+  // 两列展示版本按优先级统一（见上方注释），任一列可能为此放弃自己更全的版本
+  const bothV3 = hasNvdV3 && hasOeV3;
+  const bothV4 = hasNvdV4 && hasOeV4;
+  const nvdUseV4 = !bothV3 && (bothV4 || (!hasNvdV3 && hasNvdV4));
+  const oeUseV4 = !bothV3 && (bothV4 || (!hasOeV3 && hasOeV4));
+
+  // 各列展示的向量串
+  const nvdVector = nvdUseV4 ? cvssResult.NVDV4 || detail.v4VectorNVD : cvssResult.NVDV3;
+  const oeVector = oeUseV4 ? cvssResult.OEV4 || detail.v4VectorOE : cvssResult.OEV3;
+
+  // 各列按自身 CVSS 版本选择取值映射与可填充行键，不做跨版本语义换算
+  const nvdMetrics = parseVector(nvdVector);
+  const oeMetrics = parseVector(oeVector);
+  const nvdValueMap = nvdUseV4 ? V4_VALUE_MAP : V3_VALUE_MAP;
+  const oeValueMap = oeUseV4 ? V4_VALUE_MAP : V3_VALUE_MAP;
+  const nvdRowKeys = nvdUseV4 ? V4_ROW_KEYS : V3_ROW_KEYS;
+  const oeRowKeys = oeUseV4 ? V4_ROW_KEYS : V3_ROW_KEYS;
+
+  // 行集：任一列展示 v4 时以 v4 行集为主，仍有列展示 v3 数据时追加 v3 特有行（Scope/C/I/A）；
+  // v3 列只填 v3 行、v4 列只填 v4 行，其余行由表格渲染占位符
+  const nvdShowsV3 = !nvdUseV4 && hasNvdV3;
+  const oeShowsV3 = !oeUseV4 && hasOeV3;
+  const v3OnlyRows = V3_ROWS.filter(({ key }) => !V4_ROW_KEYS.has(key));
+  const metricRows = !(nvdUseV4 || oeUseV4)
+    ? V3_ROWS
+    : nvdShowsV3 || oeShowsV3
+      ? [...V4_ROWS, ...v3OnlyRows]
+      : V4_ROWS;
+
+  const nvdScore = scoreOf(nvdUseV4, detail.v4_scorenvd, detail.cvsssCoreNVD, nvdVector);
+  const oeScore = scoreOf(oeUseV4, detail.v4_scoreoe, detail.cvsssCoreOE, oeVector);
+  const rows: CvssItem[] = [
+    {
+      cate: t('cve.cvssScore'),
+      NVD: nvdScore,
+      openEuler: oeScore,
+    },
+    {
+      cate: t('cve.vector'),
+      NVD: stripScore(nvdVector),
+      openEuler: stripScore(oeVector),
+    },
+  ];
+
+  metricRows.forEach(({ label, key }) => {
+    rows.push({
+      ...splitMetricLabel(label),
+      NVD: metricCell(nvdMetrics, key, nvdValueMap, nvdRowKeys),
+      openEuler: metricCell(oeMetrics, key, oeValueMap, oeRowKeys),
+    });
+  });
+  return { rows, oeScore };
+};
+
+// -------------------- 获取CVSS 指标数据 --------------------
 const getCveDetailInfo = (cveId: string, packageName: string) => {
   getCveDetail(cveId, packageName).then((res: any) => {
     cveDetailData.value = res.result;
-    cvssList.value = [
-      {
-        cate: t('cve.cvssScore'),
-        NVD: cveDetailData.value?.cvsssCoreNVD,
-        openEuler: cveDetailData.value?.cvsssCoreOE,
-      },
-      {
-        cate: 'Attack Vector',
-        NVD: cveDetailData.value?.attackVectorNVD,
-        openEuler: cveDetailData.value?.attackVectorOE,
-      },
-      {
-        cate: 'Attack Complexity',
-        NVD: cveDetailData.value?.attackComplexityNVD,
-        openEuler: cveDetailData.value?.attackComplexityOE,
-      },
-      {
-        cate: 'Privileges Required',
-        NVD: cveDetailData.value?.privilegesRequiredNVD,
-        openEuler: cveDetailData.value?.privilegesRequiredOE,
-      },
-      {
-        cate: 'User Interaction',
-        NVD: cveDetailData.value?.userInteractionNVD,
-        openEuler: cveDetailData.value?.userInteractionOE,
-      },
-      {
-        cate: 'Scope',
-        NVD: cveDetailData.value?.scopeNVD,
-        openEuler: cveDetailData.value?.scopeOE,
-      },
-      {
-        cate: 'Confidentiality',
-        NVD: cveDetailData.value?.confidentialityNVD,
-        openEuler: cveDetailData.value?.confidentialityOE,
-      },
-      {
-        cate: 'Integrity',
-        NVD: cveDetailData.value?.integrityNVD,
-        openEuler: cveDetailData.value?.integrityOE,
-      },
-      {
-        cate: 'Availability',
-        NVD: cveDetailData.value?.availabilityNVD,
-        openEuler: cveDetailData.value?.availabilityOE,
-      },
-    ];
+    const cvssData = buildCvssData(res.result);
+    cvssList.value = cvssData.rows;
+    oeScore.value = cvssData.oeScore;
   });
 };
 
-// 严重级别列表显示
-const levelShow = (cvsssCoreOE: string) => {
-  const val = parseFloat(cvsssCoreOE);
+// 严重级别列表显示（入参为按展示版本选定的评分，见 oeScore）
+const levelShow = (score: string) => {
+  const val = parseFloat(score);
   if (val >= 9.0) {
     return {
       label: typeMap.get('Critical')?.label[locale.value],
@@ -235,16 +396,16 @@ onMounted(() => {
           <span class="title">{{ cveDetailData?.cveId }}</span>
           <OTag
             class="type-tag"
-            :class="[levelShow(cveDetailData.cvsssCoreOE).calss]"
+            :class="[levelShow(oeScore).calss]"
             :style="{ '--tag-radius': '4px' }"
           >
             <OIcon> <IconSecurityLevel /></OIcon>
-            {{ levelShow(cveDetailData.cvsssCoreOE).label }}
+            {{ levelShow(oeScore).label }}
           </OTag>
         </div>
         <div class="text-box">
           <span class="gray">{{ t('cve.cvssScore') }}:</span>
-          <span>{{ cveDetailData?.cvsssCoreOE }}</span>
+          <span>{{ oeScore || 'N/A' }}</span>
         </div>
         <div class="time text-box">
           <span>
@@ -276,7 +437,14 @@ onMounted(() => {
               :data="cvssList"
               border="row-frame"
               class="cvss-table"
-            ></OTable>
+            >
+              <template #td_cate="{ row }">
+                <span class="metric-label">{{ row.cate }}</span>
+                <span v-if="row.cateSub" class="metric-label-sub"
+                  >({{ row.cateSub }})</span
+                >
+              </template>
+            </OTable>
           </OScroller>
         </div>
         <div class="info-item">
@@ -363,6 +531,7 @@ onMounted(() => {
               </template>
             </OTable>
           </OScroller>
+          <div class="maintenance-tip">{{ t('cve.maintenanceTip') }}</div>
         </div>
       </div>
     </ContentWrapper>
@@ -386,10 +555,10 @@ onMounted(() => {
           <template #td_description="{ row }">
             <p v-dompurify-html="row.description[locale]"></p>
             <ul v-if="locale === 'zh' && row.listZh">
-              <li v-for="(item, i) in row.listZh">{{ item }}</li>
+              <li v-for="(item, i) in row.listZh" :key="i">{{ item }}</li>
             </ul>
             <ul v-if="locale === 'en' && row.listEn">
-              <li v-for="(item, i) in row.listEn">{{ item }}</li>
+              <li v-for="(item, i) in row.listEn" :key="i">{{ item }}</li>
             </ul>
           </template>
         </OTable>
@@ -544,11 +713,33 @@ onMounted(() => {
     @include tip1;
   }
 }
+// CVSS 指标表：占满可用宽度并采用固定布局精确控列宽，
+// 指标名列定宽、NVD / openEuler 两列平分剩余宽度（避免两列宽窄不一）；
+// 屏幕足够宽时向量串单行展示，列宽不足时才在列内换行
 .cvss-table {
-  width: 65%;
+  width: 100%;
+  :deep(table) {
+    table-layout: fixed;
+  }
+  :deep(col:nth-of-type(1)) {
+    width: 176px;
+  }
+  // 括号限定语固定为第二行且不断行，保证标签换行位置统一在括号前
+  .metric-label-sub {
+    display: block;
+    white-space: nowrap;
+    @include tip1;
+  }
 }
 .product-table {
   margin-top: 7px;
+}
+.maintenance-tip {
+  margin-top: 16px;
+  color: var(--o-color-info2);
+  white-space: pre-line;
+  text-align: justify;
+  @include text1;
 }
 .glossary-table {
   --table-head-cell-padding: 9px 24px;
@@ -647,6 +838,9 @@ ul {
   }
   .cvss-table {
     min-width: 400px;
+    :deep(col:nth-of-type(1)) {
+      width: 152px;
+    }
   }
   :deep(.o-scrollbar) {
     --scrollbar-x-bottom: -12px;
