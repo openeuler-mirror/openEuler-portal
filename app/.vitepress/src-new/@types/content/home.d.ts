@@ -76,6 +76,7 @@ declare module '#content/home' {
 
   // friendly_community: 友情社区
   interface HomeFriendlyCommunityItemT {
+    name: string;
     logo_light: string;
     logo_dark: string;
     url: string;
@@ -84,6 +85,7 @@ declare module '#content/home' {
 
   // publisher: 合作伙伴
   interface HomePublisherItemT {
+    name: string;
     logo_light: string;
     logo_dark: string;
     href: string;

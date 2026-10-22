@@ -33,7 +33,10 @@ const friendlyCommunityConfig = computed(
           }"
         >
           <div class="community-logo">
-            <OFigure :src="theme === 'light' ? community.logo_light : community.logo_dark" />
+            <OFigure
+              :src="theme === 'light' ? community.logo_light : community.logo_dark"
+              :alt="community.name"
+            />
           </div>
         </OLink>
         <p class="community-desc">{{ community.desc }}</p>

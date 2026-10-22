@@ -33,6 +33,7 @@ const isActive = (
 };
 
 const mapFunc = (p: {
+  name: string;
   logo_light: string;
   logo_dark: string;
   href: string;
@@ -40,6 +41,7 @@ const mapFunc = (p: {
   logo: isDark.value ? p.logo_dark : p.logo_light,
   logoDark: p.logo_dark,
   href: p.href,
+  alt: p.name,
 });
 
 const publisherRows = computed(() => {
