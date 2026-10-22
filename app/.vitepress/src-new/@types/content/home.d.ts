@@ -18,6 +18,8 @@ declare module '#content/home' {
     href_en?: string;
     is_blank?: boolean;
     attach?: string;
+    alt_zh?: string;
+    alt_en?: string;
     locale?: string;
     custom_class?: string;
     pad_offset?: string;
