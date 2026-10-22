@@ -4,7 +4,9 @@ import viteLastModifiedPlugin from '@opendesign-plus/plugins/vite/generate-lastm
 import sitemapItemTransformer from '@opendesign-plus/geo-scripts/vitepress-sitemap-transformer';
 import generateLLMsFull from '@opendesign-plus/geo-scripts/generate-llms-full';
 import { OPlusYamlContentVitePlugin } from '@opendesign-plus/vite-plugins';
+import yaml from 'js-yaml';
 import publicRawPlugin from './plugins/vite-plugin-public-raw';
+import { slugifyEvent } from './src-new/shared/event-slug';
 import { isNews, setNewsGeo } from './news-geo';
 
 import path, { join } from 'node:path';
@@ -19,6 +21,33 @@ const isShowcase = /^(?:zh|en)\/showcase\/[^/]+\/.+$/;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const geoDir = path.resolve(__dirname, '../../.geo')
 const currentHostname = readEnvVar('VITE_MAIN_DOMAIN_URL') || 'https://www.openeuler.org';
+
+/**
+ * 活动详情页为动态路由（/{locale}/interaction/event-list/{slug}），由 [event].paths.ts
+ * 从 .content/activity/events.yaml 生成，git 时间无法反映单页数据变化，
+ * sitemap lastmod 直接取该活动的 start_date（slug -> 毫秒时间戳）。
+ */
+const eventListLastmod = (() => {
+  const map = new Map<string, number>();
+  try {
+    const events = yaml.load(
+      readFileSync(resolve(__dirname, '../../.content/activity/events.yaml'), 'utf-8')
+    ) as { title_zh?: string; title_en?: string; start_date?: string }[];
+    for (const ev of events) {
+      const slug = slugifyEvent(ev);
+      const ts = ev.start_date ? new Date(ev.start_date.replace(' ', 'T')).getTime() : NaN;
+      if (slug && Number.isFinite(ts) && !map.has(slug)) {
+        map.set(slug, ts);
+      }
+    }
+  } catch (e) {
+    console.error('[sitemap] 读取 events.yaml 失败，活动详情页 lastmod 未设置', e);
+  }
+  return map;
+})();
+
+// 活动详情页 URL（无末尾斜杠的 index 路径，静态子页如 latest/ collect/ 均以 / 结尾不会命中）
+const eventDetailUrl = /^(?:zh|en)\/interaction\/event-list\/([^/]+)$/;
 
 /**
  * 设置JSON-LD
@@ -111,17 +140,33 @@ const config: UserConfig = {
     hostname: currentHostname,
     transformItems: sitemapItemTransformer(
       items => {
+        let lastmodeTimeStamp = {} as Record<string, number>;
         try {
-          const lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(geoDir, 'last-modified.json'), 'utf-8')) as Record<string, number>;
-          for (const item of items) {
-            item.priority = 0.5;
-            const key = item.url.endsWith('.html') ? item.url.replace('.html', '.md') : (item.url.endsWith('/') ? `${item.url}index.md` : `${item.url}/index.md`);
-            const generatedItem = lastmodeTimeStamp[key];
+          lastmodeTimeStamp = JSON.parse(readFileSync(path.resolve(geoDir, 'last-modified.json'), 'utf-8')) as Record<string, number>;
+        } catch (e) {
+          console.error('[sitemap] 读取 last-modified.json 失败，lastmod 将回退为当前时间', e);
+        }
+        const now = Date.now();
+        for (const item of items) {
+          item.priority = 0.5;
+          const eventSlug = item.url.match(eventDetailUrl)?.[1];
+          const eventStartTs = eventSlug ? eventListLastmod.get(eventSlug) : undefined;
+          if (eventStartTs) {
+            item.lastmod = eventStartTs;
+          } else {
+            const base = item.url.replace(/\.html$/, '').replace(/\/+$/, '');
+            const generatedItem = lastmodeTimeStamp[`${base}/index.md`] || lastmodeTimeStamp[`${base}.md`];
             if (generatedItem) {
               Object.assign(item, generatedItem);
             }
+            if (!item.lastmod) {
+              item.lastmod = now;
+            }
           }
-        } catch {}
+          if (!item.changefreq || item.changefreq === 'never') {
+            item.changefreq = 'weekly';
+          }
+        }
         return items;
       },
       {
