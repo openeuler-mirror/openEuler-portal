@@ -101,9 +101,9 @@ quickNav:
 
 qrcode:
   - img: ./images/code-zgz.jpg
-    label: WeChat Subscription
+    label: openEuler公众号
   - img: ./images/code-xzs.png
-    label: WeChat Assistant
+    label: openEuler小助手
 
 friendshipLink:
   title: 友情链接
