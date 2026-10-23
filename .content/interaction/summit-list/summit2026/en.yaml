@@ -4,6 +4,8 @@
 #   banner     Top banner (PC / pad / mobile background, text image, registration button)
 #   introduce  Conference intro
 #   callfor    Call for cards (Speakers / Talks)
+#   agent      Agenda (initial data reuses the 2025 content as placeholder, to be updated)
+#   partner    Sponsors
 #   previous   Past events
 # Image paths are relative to this yaml (./images/...) and rewritten to hashed URLs by the build plugin.
 # Theme variants (light/dark) are split into light/dark fields.
@@ -53,8 +55,8 @@ introduce:
 # link: Card link (opens in a new tab)
 callfor:
   bg:
-    light: ./images/card-light.jpg
-    dark: ./images/card-dark.jpg
+    light: ./images/card-light.png
+    dark: ./images/card-dark.png
   list:
     - title: CALL FOR SPEAKERS
       sub: Agentic Infra OS Conference 2026
@@ -62,6 +64,949 @@ callfor:
     - title: CALL FOR TALKS
       sub: openEuler Summit 2026
       link: '#'
+
+# agent: Agenda (keynote / sub-forum sessions with speakers; initial data reuses the 2025 content as placeholder, to be updated)
+agent:
+  title: Agenda
+  tips: The agenda will be updated soon. Stay tuned!
+  salon_tips: Details coming soon
+  text: Click here for details
+  list:
+    - date: '13'
+      children:
+        - title: Keynote
+          children:
+            - time: '10:00-10:05'
+              content:
+                - title: Opening Remarks
+                  name: OpenAtom Foundation
+                  post: ''
+            - time: '10:05-10:10'
+              content:
+                - title: Opening Remarks
+                  name: Huawei
+                  post: openEuler Strategic Donor
+            - time: '10:10-10:30'
+              content:
+                - title: The Evolution of the openEuler Community
+                  name: Dr. Xiong Wei
+                  post: Chairperson, OpenAtom openEuler Committee
+            - time: '10:30-10:35'
+              content:
+                - title: 'Initiative: Co-building the openEuler Agentic Infra Ecosystem'
+            - time: '10:35-10:40'
+              content:
+                - title: Recognition Ceremony
+                  name: 2026 openEuler Pioneers
+                  post: ''
+            - time: '10:40-12:00'
+              content:
+                - title: 'JD.com: Advertising Practices Powered by openEuler-based SuperPoD'
+                  name: Guest Speaker
+                  post: ''
+                - title: 'CTyunOS: Technology Innovations In Practice'
+                  name: Guest Speaker
+                  post: ''
+                - title: 'BC-Linux: Technology Innovations In Practice'
+                  name: Guest Speaker
+                  post: ''
+                - title: 'Ubuntu and openEuler: Building the SuperPoD Ecosystem Together'
+                  name: Guest Speaker
+                  post: ''
+                - title: AI Practices Powered by openEuler
+                  name: Guest Speaker
+                  post: ''
+                - title: 'Meituan: openEuler-based Agent Sandboxing in Practice'
+                  name: Guest Speaker
+                  post: ''
+          tab: []
+        - title: Subforums
+          children: []
+          # Intermediate state while sub-forum details are unconfirmed: placeholder cards (no "details" link); remove pending_cards once confirmed to restore the tabbed agenda
+          pending_tips: Details coming soon
+          pending_cards:
+            - label: 'SuperPoD OS'
+              time: 'TBD'
+            - label: 'Internet & Agentic Infra'
+              time: 'TBD'
+            - label: 'Embedded & Industrial Control'
+              time: 'TBD'
+            - label: 'Finance'
+              time: 'TBD'
+            - label: 'Science & Education'
+              time: 'TBD'
+            - label: 'More to come...'
+          tab:
+            - label: KylinSoft
+              time: '13:30 - 15:45'
+              address: ''
+              children:
+                - time: '13:30-13:40'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Guest speaker
+                      post: ''
+                - time: '13:40-13:50'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Guest speaker
+                      post: ''
+                - time: '13:50-14:05'
+                  content:
+                    - title: 'Embracing Open Source × AI: KylinOS Integrated Solution for Servers'
+                      name: Hou Jian
+                      post: Deputy General Manager, Server R&D Center, KylinSoft
+                - time: '14:05-14:20'
+                  content:
+                    - title: When AI Meets Archiving
+                      name: Xia Guangjun
+                      post: Deputy General Manager, PDE
+                - time: '14:20-14:35'
+                  content:
+                    - title: Building AI-powered Digital Campus with Newcapec Foundation Model
+                      name: Zhang Weibing
+                      post: 'Solution Director, Newcapec AI Research Institute '
+                - time: '14:35-14:50'
+                  content:
+                    - title: How Heterogeneous Compute is Powering Autonomous Innovation
+                      name: Wu Yuebo
+                      post: Solution Director, CEC Great Wall
+                - time: '14:50-15:05'
+                  content:
+                    - title: 'Redefining Office Productivity: The New Homegrown Device-Edge-Cloud Stack'
+                      name: Jia Anya
+                      post: Senior Product Director, SenseTime
+                - time: '15:05-15:20'
+                  content:
+                    - title: AI Appliance Deployments in Private Domains
+                      name: Liu Yanyan
+                      post: Chief Architect, SuperCloud
+                - time: '15:20-15:35'
+                  content:
+                    - title: 'AI-COP: A New Intelligent Ecosystem Paradigm'
+                      name: Guan Junjun
+                      post: Director of Ecosystem Cooperation, Seeyon
+                - time: '15:35-15:45'
+                  content:
+                    - title: Luck Draw
+                      name: ''
+                      post: ''
+            - label: Kylinsec
+              time: '14:30 - 17:00'
+              address: ''
+              children:
+                - time: '14:30-14:35'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Dr. Xiong Wei
+                      post: Chairperson, OpenAtom openEuler Committee
+                - time: '14:35-14:45'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Yang Tao
+                      post: Chairman, Kylinsec
+                - time: '14:45-15:05'
+                  content:
+                    - title: Kylinsec OS V6 Launch
+                      name: Guest speaker
+                      post: ''
+                - time: '15:05-15:25'
+                  content:
+                    - title: Kylinsec Robot OS Launch
+                      name: Guest speaker
+                      post: ''
+                - time: '15:25-15:45'
+                  content:
+                    - title: Kylinsec AI Cloud Product Launch
+                      name: Guest speaker
+                      post: ''
+                - time: '15:45-16:00'
+                  content:
+                    - title: Kylinsec Applications in AI Computing
+                      name: Guest speaker
+                      post: ''
+                - time: '16:00-16:15'
+                  content:
+                    - title: Kylinsec Applications in Manufacturing
+                      name: Guest speaker
+                      post: ''
+                - time: '16:15-16:30'
+                  content:
+                    - title: Kylinsec Applications in Electric Power
+                      name: Guest speaker
+                      post: ''
+                - time: '16:30-16:45'
+                  content:
+                    - title: Kylinsec Applications in Finance
+                      name: Guest speaker
+                      post: ''
+                - time: '16:45-17:00'
+                  content:
+                    - title: Kylinsec Applications in Intranet Virtualization
+                      name: Guest speaker
+                      post: ''
+            - label: Internet Roundtable
+              time: '14:00 - 17:00'
+              address: ''
+              children:
+                - time: '14:00-14:05'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Guest speaker
+                      post: ''
+                - time: '14:05-14:10'
+                  content:
+                    - title: Advancing openEuler in Internet for Community Growth
+                      name: Guest speaker
+                      post: ''
+                - time: '14:10-15:10'
+                  content:
+                    - title: 'UnifiedBus SuperPoD in Internet: Practices and Value Scenarios'
+                      name: Guest speaker
+                      post: ''
+                - time: '15:10-15:50'
+                  content:
+                    - title: 'AI Computing Cluster in Internet: Practices'
+                      name: Guest speaker
+                      post: ''
+                - time: '15:50-16:30'
+                  content:
+                    - title: 'Multi-core High-density Computing in Internet: Practices'
+                      name: Guest speaker
+                      post: ''
+                - time: '16:30-17:00'
+                  content:
+                    - title: 'openEuler × Kunpeng in Internet: Practices'
+                      name: Guest speaker
+                      post: ''
+            - label: openEuler Global Ecosystem
+              time: '13:30 - 15:00'
+              address: ''
+              children:
+                - time: '13:30-13:35'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Fu Haiwei
+                      post: Director, Business Development Department, OpenAtom Foundation
+                - time: '13:35-13:50'
+                  content:
+                    - title: Remarks by Hardware Vendors
+                      guest:
+                        - name: Andrew Wafaa
+                          post: Arm Senior Director Software Communities & Fellow, PyTorch Board
+                        - name: Liu Bingwei
+                          post: Senior Director, Software Technology Group, Intel China
+                        - name: Wang Wenkuan
+                          post: Linux Kernel Expert, AMD China
+                - time: '13:50-14:00'
+                  content:
+                    - title: 'Open Source Software Meets AI: The Road Ahead'
+                      name: Dr. Xiong Wei
+                      post: Chairperson, OpenAtom openEuler Committee
+                - time: '14:00-14:15'
+                  content:
+                    - title: Intelligent Transformation Practices in Carrier
+                      name: Yang Yuchao
+                      post: Senior Technical Expert, Overseas Business, China Telecom eSurfing Cloud
+                - time: '14:15-14:30'
+                  content:
+                    - title: Intelligent Transformation Practices in Internet
+                      name: Zhang Zehua
+                      post: Director, Ads Algorithm, JD.com
+                - time: '14:30-14:40'
+                  content:
+                    - title: AI Training & Inference Application Cases
+                      name: Zhang Xiao
+                      post: Director, Intelligent Computing Platform, iFLYTEK Spark AI Research Institute
+                - time: '14:40-14:50'
+                  content:
+                    - title: ERP Application Cases
+                      name: Jin Xiaoxu
+                      post: Director of Chinese Enterprise Go Global, Yonyou
+                - time: '14:50-15:00'
+                  content:
+                    - title: openEuler Global Service System
+                      name: Paul Zhou
+                      post: Senior Delivery Director, Wind River
+            - label: Science & Education Innovation
+              time: '13:30 - 16:30'
+              address: ''
+              children:
+                - time: '13:30-13:40'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      guest:
+                        - name: Hu Xinwei
+                          post: Technical Committee Chairperson, OpenAtom openEuler
+                        - name: Hu Chunming
+                          post: ' Dean, School of Software, Beihang University'
+                - time: '13:40-15:00'
+                  content:
+                    - title: Key Technologies of Heterogeneous Pooling System Based on High-speed Interconnect Bus
+                      name: Zhao Xinkui
+                      post: Researcher of 100-Young Professor Plan, School of Software Technology, Zhejiang University
+                    - title: Parameter Storage System for Recommendation Models
+                      name: Xie Minhui
+                      post: Lecturer, Department of Computer Science, School of Information, Renmin University of China
+                    - title: End-to-End Complex Attack Detection in AI
+                      name: Li Ding
+                      post: Assistant Professor, Peking University
+                    - title: Resource Management and Reliability Assurance for Heterogeneous AI Infra System Software
+                      name: Yang Renyu
+                      post: Associate Professor, Beihang University
+                - time: '15:00-15:05'
+                  content:
+                    - title: 'Awards Ceremony: OSPP 2025 Star Projects'
+                      name: ''
+                      post: ''
+                - time: '15:05-15:20'
+                  content:
+                    - title: Stories of Outstanding Student Developers
+                      name: Guest speaker
+                      post: ''
+                - time: '15:20-15:50'
+                  content:
+                    - title: 'Open Source in Education: From Campus Initiatives to Talent Assessment'
+                      name: Han Jiang
+                      post: Head of Education Department, OpenAtom Foundation
+                    - title: Curriculum Development and Industry-Academia Collaboration in System Software
+                      name: Zhang Li
+                      post: Professor, Beihang University
+                - time: '15:50-16:30'
+                  content:
+                    - title: Collaborating in Open Source to Bridge Academia and Industry for a Prosperous Ecosystem
+                      name: Hu Chunming
+                      post: Dean, School of Software, Beihang University
+            - label: Intelligent Manufacturing Industry
+              time: '13:30 - 16:20'
+              address: ''
+              children:
+                - time: '13:30-13:40'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Liu Cheng
+                      post: Product Planning Expert, openEuler
+                - time: '13:40-14:00'
+                  content:
+                    - title: PLCnext Technology in Smart Manufacturing
+                      name: Yang Lu
+                      post: Director of PLCnext Software Application, Phoenix Contact
+                - time: '14:00-14:20'
+                  content:
+                    - title: Foundational Technology for Industrial Control in Intelligent Automation
+                      name: Wang Zhiqiang
+                      post: Head of Marketing, CODESYS Software Group
+                - time: '14:20-14:40'
+                  content:
+                    - title: An openEuler OS for Lights-out Labs (Factories) in Large Scientific Facilities
+                      name: Lu Jun
+                      post: Deputy Director, Lineage Engineering Technology Center, Guangzhou Institutes of Biomedicine and Health, Chinese Academy of Sciences
+                - time: '14:40-15:00'
+                  content:
+                    - title: 'Real-time Industry OS for High-end CNC Systems: Requirement Changes'
+                      name: Song Shi
+                      post: Chief Engineer, GSK CNC Equipment
+                - time: '15:00-15:20'
+                  content:
+                    - title: 'Embodied AI Robotics: Exploration and Practices'
+                      name: Zeng Yi
+                      post: Director of Robotics Market, Topstar
+                - time: '15:20-15:40'
+                  content:
+                    - title: 'openEuler Embedded Industrial Control in Smart Transportation '
+                      name: 'Wang Wei '
+                      post: Head of Unmanned Equipment, JRLC
+                - time: '15:40-16:00'
+                  content:
+                    - title: Software Empowers Industrial Intelligence
+                      name: Yao Guangzhong
+                      post: Technology Expert, Henan KunLun Technology
+                - time: '16:00-16:20'
+                  content:
+                    - title: openEuler Embedded × Ascend 310B for Edge AI
+                      name: Zhang Tao
+                      post: Manager of Embedded Dept, HopeRun
+    - date: '14'
+      children:
+        - title: Keynote
+          children:
+            - time: '10:00-10:05'
+              content:
+                - title: Opening Remarks
+                  name: Guest Speaker
+                  post: ''
+            - time: '10:05-10:10'
+              content:
+                - title: openEuler Community Keynote
+                  name: Liu Fei
+                  post: 'Executive Director, OpenAtom openEuler Committee'
+            - time: '10:10-10:50'
+              content:
+                - title: openEuler Technology Trends and Prospects
+                  name: Hu Xinwei
+                  post: 'Technical Committee Chairperson, OpenAtom openEuler'
+            - time: '10:50-11:00'
+              content:
+                - title: Joint Speech
+                  name: Guest Speaker
+                  post: ''
+            - time: '11:00-11:10'
+              content:
+                - title: Joint Speech
+                  name: Guest Speaker
+                  post: ''
+            - time: '11:10-11:30'
+              content:
+                - title: Recognition Ceremony
+                  name: 2026 openEuler Top Contributors
+                  post: ''
+                - title: Recognition Ceremony
+                  name: 2026 openEuler Contribution Stars
+                  post: ''
+          tab: []
+        - title: Subforums
+          # Temporarily hidden; remove the visible field to show it again
+          visible: false
+          children: []
+          # Intermediate state while sub-forum details are unconfirmed: placeholder cards (no "details" link); remove pending_cards once confirmed to restore the tabbed agenda
+          pending_tips: Details coming soon
+          pending_cards:
+            - label: 'Science & Education Innovation Sub-Forum'
+              address: 'xxxxxxxxxx'
+              time: '13:30 - 16:30'
+            - label: 'Industrial Software Industry Sub-Forum'
+              address: 'xxxxxxxxxx'
+              time: '13:30 - 16:30'
+            - label: 'openEuler & ARM Global Ecosystem Sub-Forum'
+              address: 'xxxxxxxxxx'
+              time: '13:30 - 16:30'
+            - label: 'Science & Education Innovation Sub-Forum'
+              address: 'xxxxxxxxxx'
+              time: '13:30 - 16:30'
+            - label: 'Industrial Software Industry Sub-Forum'
+              address: 'xxxxxxxxxx'
+              time: '13:30 - 16:30'
+            - label: 'openEuler & ARM Global Ecosystem Sub-Forum'
+              address: 'xxxxxxxxxx'
+              time: '13:30 - 16:30'
+          tab:
+            - label: Embedded & Embodied AI
+              time: '13:00 - 16:15'
+              address: ''
+              children:
+                - time: '13:00-13:15'
+                  content:
+                    - title: 'vPLCnext Powered by openEuler: Exploration and Practices'
+                      name: Xu Peiwen
+                      post: Phoenix Contact
+                - time: '13:15-13:30'
+                  content:
+                    - title: AI-powered Space-based openEuler Foundation for Satellite-borne Applications
+                      name: Wang Dawei
+                      post: JRLC
+                - time: '13:30-13:45'
+                  content:
+                    - title: 'openEuler in Aerospace: Exploration and Practices'
+                      name: Cai Xinqi
+                      post: Beijing Aerospace Microsystem and Information Technology Research Institute
+                - time: '13:45-13:50'
+                  content:
+                    - title: Aerospace OS Launch
+                      name: ''
+                      post: ''
+                - time: '13:50-14:05'
+                  content:
+                    - title: 'AimRT: A Programming Framework for Modern Robotics'
+                      name: Hu Kuang
+                      post: AgiBot
+                - time: '14:05-14:20'
+                  content:
+                    - title: AGIROS Common Algorithm Framework for Robotics
+                      name: Li Peng
+                      post: Institute of Software, Chinese Academy of Sciences
+                - time: '14:20-14:35'
+                  content:
+                    - title: 'Industry Embodied AI Based on openEuler Embedded: Solution and Practices'
+                      name: Wu Jian
+                      post: TD Tech
+                - time: '14:35-14:50'
+                  content:
+                    - title: Next-gen Embodied AI Electronics Architecture
+                      name: Tan Rui
+                      post: Intewell
+                - time: '14:50-15:05'
+                  content:
+                    - title: 'Robotics OS: Insights and Progress'
+                      name: Xu Lei
+                      post: xFusion
+                - time: '15:05-15:20'
+                  content:
+                    - title: Autonomous Mobile Robotics Based on All-homegrown Technologies
+                      name: Jiang Dongping
+                      post: Qino
+                - time: '15:20-15:35'
+                  content:
+                    - title: QSemOS × IntarkDB Homegrown Embedded Foundational Software
+                      name: Liu Baoyu
+                      post: Greater Bay Area National Center of Technology Innovation
+                - time: '15:35-15:'
+                  content:
+                    - title: Cross-node Multi-system Hybrid Deployment Using Declarative Orchestration
+                      name: Wei Jiangang
+                      post: HopeRun
+                - time: '15:50-16:00'
+                  content:
+                    - title: Break
+                      name: ''
+                      post: ''
+                - time: '16:00-16:15'
+                  content:
+                    - title: ROS SIG Development Plan and Robotic Practices
+                      name: Wang Xiaoyun
+                      post: Institute of Software, Chinese Academy of Sciences
+            - label: Developer Enablement & Tools
+              time: '13:00 - 15:50'
+              address: ''
+              children:
+                - time: '13:00-13:05'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Liu Fei
+                      post: Technical Expert, openEuler
+                - time: '13:05-13:20'
+                  content:
+                    - title: OPEA and openHPC in openEuler Native Ecosystem
+                      name: Lu Weijun
+                      post: Senior Engineer, Huawei
+                - time: '13:20-13:35'
+                  content:
+                    - title: 'DevStation: An AI-powered Developer Workstation'
+                      name: Yuan Lipeng
+                      post: Senior Engineer, Huawei
+                - time: '13:35-13:50'
+                  content:
+                    - title: Lightweight openEuler OS Customization, Build, and Deployment
+                      name: Liao Wei
+                      post: R&D Engineer, Kylinsec
+                - time: '13:50-14:05'
+                  content:
+                    - title: 'Hot Patch Tool Based on LibcarePlus: Enhancements and Multi-architecture Multi-language Support'
+                      name: Wu Heng
+                      post: R&D Expert, China Telecom eSurfing Cloud
+                - time: '14:05-14:20'
+                  content:
+                    - title: Contributions and Improvements in openEuler Innovation Versions
+                      name: Funda Wang
+                      post: Individual Contributor
+                - time: '14:20-14:35'
+                  content:
+                    - title: AI-powered Software Engineering Platform
+                      name: Guo Jiyan
+                      post: Director of Product R&D, Linx Software
+                - time: '14:35-14:50'
+                  content:
+                    - title: AI-powered C2Rust Conversion Automation
+                      name: Zhang Haidong
+                      post: Manager of Technology R&D, UnionTech
+                - time: '14:50-15:05'
+                  content:
+                    - title: AI Tooling in Document-based Development
+                      name: Ding Jiahui
+                      post: Senior Engineer, Huawei
+                - time: '15:05-15:20'
+                  content:
+                    - title: AI LLM in Infrastructure
+                      name: Zhai Wenjie
+                      post: Senior Engineer, Huawei
+                - time: '15:20-15:35'
+                  content:
+                    - title: PortGPT for LLM-based Automation of Patch Backporting
+                      name: Li Chaoyang
+                      post: Huazhong University of Science and Technology
+                - time: '15:35-15:50'
+                  content:
+                    - title: 'LiteView: A Lightweight Browser Engine'
+                      name: Xu Jingmin
+                      post: LiteView Kernel Architect, Institute of Software, Chinese Academy of Sciences
+            - label: Cloud Native
+              time: '13:00 - 15:35'
+              address: ''
+              children:
+                - time: '13:00-13:10'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: 'Hu Xinwei  '
+                      post: Technical Committee Chairperson, OpenAtom openEuler
+                - time: '13:10-13:30'
+                  content:
+                    - title: openYuanrong Serverless Distributed Computing Engine
+                      name: Liang Yi
+                      post: Chief Expert of General-Purpose Serverless, Huawei
+                - time: '13:30-13:45'
+                  content:
+                    - title: Apache Doris Performance Optimization Based on Kunpeng
+                      name: Wu Zhiguo
+                      post: Engineer, Linaro
+                - time: '13:45-13:55'
+                  content:
+                    - title: Challenges of AI Agent Sandbox vs. Traditional Cloud Native Architectures
+                      name: Fei Jianqiang
+                      post: Cloud Native Expert, Huawei
+                - time: '13:55-14:05'
+                  content:
+                    - title: 'Conch: A Container Engine for Agentic AI Workloads'
+                      name: Zhong Tao
+                      post: Engineer, Huawei
+                - time: '14:05-14:20'
+                  content:
+                    - title: Real-time Topology Visualization and O&M of Cloud Native Networks
+                      name: Wan Feng
+                      post: Senior Software Engineer, KylinSoft
+                - time: '14:20-14:40'
+                  content:
+                    - title: NPU Virtualization for Enhancing AI Server Resource Utilization
+                      name: Yang Bin
+                      post: Director, openEuler Research Center, iSoftStone
+                - time: '14:40-15:00'
+                  content:
+                    - title: AI Agent Empowering Cloud Native Infrastructure
+                      name: Zhang Yinghui
+                      post: Cloud Native Architect, China Mobile Information
+                - time: '15:00-15:15'
+                  content:
+                    - title: Cloud Native Immutable Infrastructure Based on CTyunOS
+                      name: Liu Min
+                      post: China Telecom eSurfing Cloud Technology
+                - time: '15:15-15:35'
+                  content:
+                    - title: 'OmniRuntime for Big Data Acceleration: Opening Source and Practices'
+                      name: Yin Weijie
+                      post: Big Data Expert, Huawei
+            - label: UnifiedBus
+              time: '13:00 - 15:40'
+              address: ''
+              children:
+                - time: '13:00-13:05'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Zhu Zhaosheng
+                      post: General Manager of Cluster Computing, Huawei
+                - time: '13:05-13:25'
+                  content:
+                    - title: SuperPoD and Key Application Scenarios
+                      name: Zhang Jian
+                      post: ''
+                - time: '13:25-13:45'
+                  content:
+                    - title: 'CXL for Computer Architecture Restructuring: Position, Role, and Value'
+                      name: Song Jiayu
+                      post: Secretary-General, CXL Tech Application Club
+                - time: '13:45-14:00'
+                  content:
+                    - title: UnifiedBus Technology and Software Reference Design
+                      name: Niu Tao
+                      post: ''
+                - time: '14:00-14:15'
+                  content:
+                    - title: 'UnifiedBus Memory Pooling: Key Technologies and Applications'
+                      name: Gao Chao
+                      post: ''
+                - time: '14:15-14:35'
+                  content:
+                    - title: 'UnifiedBus Communication: Key Technologies and Applications'
+                      name: Li Lijun
+                      post: ''
+                - time: '14:35-14:50'
+                  content:
+                    - title: 'UnifiedBus Device Virtualization: Key Technologies and Applications'
+                      name: Ye Biaoxiang
+                      post: ''
+                - time: '14:50-15:05'
+                  content:
+                    - title: 'SuperPoD Reliability: Key Technologies'
+                      name: Deng Guangxing
+                      post: ''
+                - time: '15:05-15:25'
+                  content:
+                    - title: 'UnifiedBus High-level System Services: Key Technologies and Applications'
+                      name: Yao Yiyu
+                      post: ''
+                - time: '15:25-15:40'
+                  content:
+                    - title: 'UnifiedBus SuperPoD Programming and Compiling: Key Technologies'
+                      name: Yang Yang
+                      post: ''
+            - label: AI
+              time: '13:00 - 16:00'
+              address: ''
+              children:
+                - time: '13:00-13:15'
+                  content:
+                    - title: Building an OS Development Team on openEuler Intelligence
+                      name: Sun Zhenghua
+                      post: R&D Director, Central Platform Dept, Sangfor
+                - time: '13:15-13:30'
+                  content:
+                    - title: Next-gen Healthcare CDSS AI Engine Powered by openEuler
+                      name: Feng Yan
+                      post: Senior Engineer, Huimei Technology
+                - time: '13:30-13:45'
+                  content:
+                    - title: LLM-based Tuning for Next-gen Core Trading Systems
+                      name: Huang Jun
+                      post: Core System Architect, China Merchants Securities
+                - time: '13:45-14:00'
+                  content:
+                    - title: 'JuiceFS MLPerf Storage v2.0: Performance and Tuning'
+                      name: 'Liu Xinliang '
+                      post: Engineer, Linaro
+                - time: '14:00-14:15'
+                  content:
+                    - title: Intelligence BooM for Inference Optimization and Intelligent Applications
+                      name: Jin Long
+                      post: Solution Director, PowerLeader
+                - time: '14:15-14:30'
+                  content:
+                    - title: Coordination of General and AI Computing Model Inference
+                      name: Li Yuzhen
+                      post: AI Engineer, Huawei
+                - time: '14:30-14:45'
+                  content:
+                    - title: AI-powered O&M Platform
+                      name: Zhong Maoheng
+                      post: R&D Manager, Linx Software
+                - time: '14:45-15:00'
+                  content:
+                    - title: TongTech Middleware AI Agent
+                      name: Li Jingjing
+                      post: Product Manager, TongTech
+                - time: '15:00-15:15'
+                  content:
+                    - title: Ascend-optimized MoE EP Communication Acceleration Library
+                      name: Han Yuankun
+                      post: AI Communication Expert, Huawei
+                - time: '15:15-15:30'
+                  content:
+                    - title: KunLun Ultimate Tuning Based on Ascend Soft FP8
+                      name: Sun Yanan
+                      post: Senior Engineer, Operator Development, KunLun Technology
+                - time: '15:30-15:45'
+                  content:
+                    - title: 'ANNC: XLA-based Deep Learning Graph Compiler for Search and Recommendation'
+                      name: Zheng Chenhui
+                      post: Software Engineer, Huawei
+                - time: '15:45-16:00'
+                  content:
+                    - title: CTyunOS, an AI-powered Security Center
+                      name: Wu Kaishun
+                      post: Development Engineer, China Telecom eSurfing Cloud Technology
+            - label: Kernel & All-Scenario
+              time: '13:00 - 15:30'
+              address: ''
+              children:
+                - time: '13:00-13:15'
+                  content:
+                    - title: openEuler Kernel Community Developments
+                      name: 'Xie Xiuqi '
+                      post: openEuler Kernel SIG Maintainer
+                - time: '13:15-13:30'
+                  content:
+                    - title: How to Copy Memory? Coordinated Asynchronous Copy as a First-Class OS Service
+                      name: Du Dongdong
+                      post: Assistant Professor, Shanghai Jiao Tong University
+                - time: '13:30-13:45'
+                  content:
+                    - title: Break
+                      name: ''
+                      post: ''
+                - time: '13:45-14:00'
+                  content:
+                    - title: 'AMD P-State: Balancing Performance and Power Efficiency'
+                      name: Wang Wenkuan
+                      post: Linux Kernel Expert, AMD China
+                - time: '14:00-14:15'
+                  content:
+                    - title: Power for Performance on Intel Platforms
+                      name: Zhang Rui
+                      post: Software Engineer, Intel
+                - time: '14:15-14:30'
+                  content:
+                    - title: Programmable I/O Scheduler Design
+                      name: Cheng Kaitao
+                      post: Kernel Engineer, KylinSoft
+                - time: '14:30-14:45'
+                  content:
+                    - title: trampoline and kexec_file Features Based on LoongArch
+                      name: Jiang Haoran
+                      post: R&D Engineer, KylinSoft
+                - time: '14:45-15:00'
+                  content:
+                    - title: eBPF for Optimizing Multi-threaded System Information Collection
+                      name: Li Ziyao
+                      post: Senior R&D Engineer, UnionTech
+                - time: '15:00-15:15'
+                  content:
+                    - title: eBPF-based Tool for Observing Memory, Process, I/O, and File Cache
+                      name: Song Zhen
+                      post: Senior Kernel Engineer, Kylinsec
+                - time: '15:15-15:30'
+                  content:
+                    - title: UACCE Accelerator Framework for User-mode Innovations
+                      name: Feng Chengwen
+                      post: Engineer, Huawei
+            - label: Security & Confidential Computing
+              time: '13:00 - 15:35'
+              address: ''
+              children:
+                - time: '13:00-13:05'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Zhu Jianwei
+                      post: Chairperson, openEuler Security Committee
+                - time: '13:05-13:20'
+                  content:
+                    - title: HAOC 3.0 Security Enhanced Hybrid Kernel Features and 4.0 Roadmap
+                      name: Wu Chenggang
+                      post: Researcher, Institute of Computing Technology, Chinese Academy of Sciences
+                - time: '13:20-13:35'
+                  content:
+                    - title: Arm CCA for Open Source Confidential Computing
+                      name: Kaly Xin
+                      post: Director of Software Engineering, Linaro
+                - time: '13:35-13:50'
+                  content:
+                    - title: Full-stack AI Security Technologies and Practices Based on openEuler
+                      name: Cheng Kun
+                      post: openEuler Confidential Computing SIG Maintainer
+                - time: '13:50-14:05'
+                  content:
+                    - title: Confidential Computing for Dynamic Trusted Attestation and Confidential AI
+                      name: Andy
+                      post: Security Engineer, JD.com
+                - time: '14:05-14:20'
+                  content:
+                    - title: AI-assisted CVE Vulnerability Remediation and Conflict Resolution
+                      name: Li Ping
+                      post: Senior Software Engineer, Huawei
+                - time: '14:20-14:35'
+                  content:
+                    - title: AI-assisted Risk Management and Compliance Audit for Open Source Supply Chains
+                      name: Wang Lin
+                      post: Senior R&D Expert, China Unicom Digital Technology
+                - time: '14:35-14:50'
+                  content:
+                    - title: Password Service Platform Based on Kunpeng Confidential Computing
+                      name: Zhang Chi
+                      post: Technology Director, Sansec
+                - time: '14:50-15:05'
+                  content:
+                    - title: System Security Hardening Solution Built on openEuler
+                      name: Wang Yucheng
+                      post: R&D Engineer, Kylinsec
+                - time: '15:05-15:20'
+                  content:
+                    - title: 'SBOM for Supply Chain Security Operations: Automation, Visualization, and openEuler Adaptation'
+                      name: He Liyun
+                      post: Deputy General Manager, Linx Software Chengdu R&D Center
+                - time: '15:20-15:35'
+                  content:
+                    - title: Database Performance Optimization Technology for TEE
+                      name: Lei Zhuoyi
+                      post: Master's Student, Lanzhou University
+            - label: RISC-V
+              time: '13:00 - 15:05'
+              address: ''
+              children:
+                - time: '13:00-13:05'
+                  content:
+                    - title: Welcome & Opening Remarks
+                      name: Wang Jingwei
+                      post: ''
+                - time: '13:05-13:25'
+                  content:
+                    - title: RISC-V User-mode Component Performance Optimization
+                      name: Lan Jing
+                      post: Performance Optimization Engineer, ZTE
+                - time: '13:25-13:45'
+                  content:
+                    - title: RISC-V AI CPU Go-to-Market Explorations
+                      name: Chen Jiandong
+                      post: Product Director, SpacemiT
+                - time: '13:45-14:05'
+                  content:
+                    - title: Ecosystem Evolution for RISC-V PMU Expansion and Performance Profiling
+                      name: Deng Tianmai
+                      post: Senior Software Engineer, UltraRISC
+                - time: '14:05-14:25'
+                  content:
+                    - title: Open Source Practice of XuanTie C930 Virtualization and IOMMU on openEuler
+                      name: Yu Fangyu
+                      post: Kernel Technology Expert, Alibaba DAMO Academy
+                - time: '14:25-14:45'
+                  content:
+                    - title: RISC-V Confidential Computing Explorations
+                      name: Zhang Jian
+                      post: Product Manager, BOSC
+                - time: '14:45-15:05'
+                  content:
+                    - title: 'openEuler × SRA3 Server: RISC-V Architecture in Data Centers'
+                      name: Wei Chao
+                      post: Embedded Software Engineer, OpenGPGPU
+        - title: Tech Salons
+          children: []
+          tab: []
+          list:
+            - title: Tech Salons
+              children:
+                - label: Kernel & Infrastructure Reliability
+                  time: '13:30-17:30'
+                  children: []
+                - label: AI & Agentic Infra
+                  time: '13:30-17:30'
+                  children: []
+                - label: Agentic Development Tools & Engineering Enablement
+                  time: '13:30-17:30'
+                  children: []
+                - label: Compilers & Performance Optimization in the AI Era
+                  time: '13:30-17:30'
+                  children: []
+                - label: Embodied AI, Edge & Embedded Systems
+                  time: '13:30-17:30'
+                  children: []
+                - label: AI-Enabled Software Security & Trustworthiness
+                  time: '13:30-17:30'
+                  children: []
+
+# partner: Sponsors (hosts / co-hosts / co-organizers / supporter logos; initial data reuses the 2025 content, to be updated)
+# Temporarily hidden; remove the visible field to show it again
+partner:
+  visible: false
+  title: Sponsors
+  list:
+    - title: Hosts
+      logos:
+        - light: ./images/logo/openEuler_light.png
+          dark: ./images/logo/openEuler_dark.png
+    - title: Co-Hosts
+      logos:
+        - light: ./images/logo/huawei_light.png
+          dark: ./images/logo/huawei_dark.png
+        - light: ./images/logo/qiling_light.png
+          dark: ./images/logo/qiling_dark.png
+        - light: ./images/logo/xinan_light.png
+          dark: ./images/logo/xinan_dark.png
+    - title: Co-Organizers
+      logos:
+        - light: ./images/logo/ningsi_light.png
+          dark: ./images/logo/ningsi_dark.png
+        - light: ./images/logo/xfusion_light.png
+          dark: ./images/logo/xfusion_dark.png
+        - light: ./images/logo/dongfang_light.png
+          dark: ./images/logo/dongfang_dark.png
+        - light: ./images/logo/ruantong_light.png
+          dark: ./images/logo/ruantong_dark.png
+        - light: ./images/logo/runhe_light.png
+          dark: ./images/logo/runhe_dark.png
 
 # previous: Past events (links to previous summits)
 previous:
