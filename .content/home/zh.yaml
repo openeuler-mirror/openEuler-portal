@@ -135,126 +135,165 @@ case:
 #   url: 社区官网链接
 #   desc: 补充说明（可选，仅部分社区有）
 friendly_community:
-  - logo_light: ./images/linaro_light.png
+  - name: Linaro
+    logo_light: ./images/linaro_light.png
     logo_dark: ./images/linaro_dark.png
     url: https://www.linaro.org/
-  - logo_light: './images/linux foundation_light.png'
+  - name: Linux Foundation
+    logo_light: './images/linux foundation_light.png'
     logo_dark: './images/linux foundation_dark.png'
     url: https://www.linuxfoundation.org/
     desc: '* openEuler是Linux Foundation的Associate Member'
-  - logo_light: ./images/OpenChain_light.png
+  - name: OpenChain
+    logo_light: ./images/OpenChain_light.png
     logo_dark: ./images/OpenChain_dark.png
     url: https://openchainproject.org/
     desc: ''
-  - logo_light: ./images/OpenHPC_light.png
+  - name: OpenHPC
+    logo_light: ./images/OpenHPC_light.png
     logo_dark: ./images/OpenHPC_dark.png
     url: https://openhpc.community/
-  - logo_light: ./images/OpenInfra_light.png
+  - name: OpenInfra
+    logo_light: ./images/OpenInfra_light.png
     logo_dark: ./images/OpenInfra_dark.png
     url: https://openinfra.org/
-  - logo_light: ./images/opea_light.png
+  - name: OPEA
+    logo_light: ./images/opea_light.png
     logo_dark: ./images/opea_dark.png
     url: https://opea.dev/
-  - logo_light: ./images/RISC-V_light.png
+  - name: RISC-V
+    logo_light: ./images/RISC-V_light.png
     logo_dark: ./images/RISC-V_dark.png
     url: https://riscv.org/
-  - logo_light: ./images/ai-data_light.png
+  - name: LF AI & Data
+    logo_light: ./images/ai-data_light.png
     logo_dark: ./images/ai-data_dark.png
     url: https://lfaidata.foundation/
-  - logo_light: ./images/Zephyr_light.png
+  - name: Zephyr
+    logo_light: ./images/Zephyr_light.png
     logo_dark: ./images/Zephyr_dark.png
     url: https://zephyrproject.org/
 
 # publisher: 合作伙伴 logo 轮播墙
+#   name: 厂商名称（logo 图片 alt 文案，与 logo 展示的品牌名一致）
 #   logo_light/logo_dark: 亮色/暗色主题 logo（PNG，<OFigure> 消费）
 #   href: 合作伙伴官网链接
 publisher:
-  - logo_light: ./images/baode_light.png
+  - name: 宝德
+    logo_light: ./images/baode_light.png
     logo_dark: ./images/baode_dark.png
     href: http://www.powerleader.com.cn
-  - logo_light: ./images/bochuan_light.png
+  - name: 泊川软件
+    logo_light: ./images/bochuan_light.png
     logo_dark: ./images/bochuan_dark.png
     href: https://www.qsemos.com/
-  - logo_light: ./images/xfusion_light.png
+  - name: 超聚变
+    logo_light: ./images/xfusion_light.png
     logo_dark: ./images/xfusion_dark.png
     href: https://www.xfusion.com/cn/
-  - logo_light: ./images/dingqiao_light.png
+  - name: 鼎桥通信
+    logo_light: ./images/dingqiao_light.png
     logo_dark: ./images/dingqiao_dark.png
     href: https://www.td-tech.com/
-  - logo_light: ./images/fenhuo_light.png
+  - name: 烽火星空
+    logo_light: ./images/fenhuo_light.png
     logo_dark: ./images/fenhuo_dark.png
     href: https://www.fhss.com.cn/
-  - logo_light: ./images/hengsheng_light.png
+  - name: 恒生电子
+    logo_light: ./images/hengsheng_light.png
     logo_dark: ./images/hengsheng_dark.png
     href: https://www.hundsun.com/
-  - logo_light: ./images/huizhi_light.png
+  - name: 汇智
+    logo_light: ./images/huizhi_light.png
     logo_dark: ./images/huizhi_dark.png
     href: http://www.teligen.net/
-  - logo_light: ./images/intewellLogo_light.png
+  - name: 东土科技
+    logo_light: ./images/intewellLogo_light.png
     logo_dark: ./images/intewellLogo_dark.png
     href: https://www.kyland.com.cn/
-  - logo_light: ./images/kaihong_light.png
+  - name: 深开鸿
+    logo_light: ./images/kaihong_light.png
     logo_dark: ./images/kaihong_dark.png
     href: https://www.kaihong.com/
     validity:
       end: '2027-05-23'
-  - logo_light: ./images/langchaoyun_light.png
+  - name: 浪潮云
+    logo_light: ./images/langchaoyun_light.png
     logo_dark: ./images/langchaoyun_dark.png
     href: https://cloud.inspur.com/
-  - logo_light: ./images/ruidun_light.png
+  - name: 瑞盾
+    logo_light: ./images/ruidun_light.png
     logo_dark: ./images/ruidun_dark.png
     href: http://www.sgepri.sgcc.com.cn
-  - logo_light: ./images/linsiLogo_light.png
+  - name: 凝思软件
+    logo_light: ./images/linsiLogo_light.png
     logo_dark: ./images/linsiLogo_dark.png
     href: http://www.linx-info.com/#/
-  - logo_light: ./images/cetc_light.png
+  - name: 普华软件
+    logo_light: ./images/cetc_light.png
     logo_dark: ./images/cetc_dark.png
     href: http://www.i-soft.com.cn/
-  - logo_light: ./images/qiling_light.png
+  - name: 麒麟软件
+    logo_light: ./images/qiling_light.png
     logo_dark: ./images/qiling_dark.png
     href: https://www.kylinos.cn/
-  - logo_light: ./images/xinan_light.png
+  - name: 麒麟信安
+    logo_light: ./images/xinan_light.png
     logo_dark: ./images/xinan_dark.png
     href: http://www.kylinsec.com.cn/
-  - logo_light: ./images/hopeRun_light.png
+  - name: 润和软件
+    logo_light: ./images/hopeRun_light.png
     logo_dark: ./images/hope-run_dark.png
     href: http://www.hoperun.com/
-  - logo_light: ./images/geidi_light.png
+  - name: 格蒂电力
+    logo_light: ./images/geidi_light.png
     logo_dark: ./images/geidi_dark.png
     href: http://www.grid-elec.com/
-  - logo_light: ./images/suse_light.png
+  - name: SUSE
+    logo_light: ./images/suse_light.png
     logo_dark: ./images/suse_dark.png
     href: https://www.suse.com/
-  - logo_light: ./images/turbo_light.png
+  - name: 拓林思
+    logo_light: ./images/turbo_light.png
     logo_dark: ./images/turbo_dark.png
     href: https://www.turbolinux.com.cn/
-  - logo_light: ./images/tongYuan_light.png
+  - name: 同源
+    logo_light: ./images/tongYuan_light.png
     logo_dark: ./images/tong-yuan_dark.png
     href: http://www.tongyuanos.com/
-  - logo_light: ./images/tongxin_light.png
+  - name: 统信软件
+    logo_light: ./images/tongxin_light.png
     logo_dark: ./images/tongxin_dark.png
     href: https://www.uniontech.com/
-  - logo_light: ./images/h3cLogo_light.png
+  - name: 新华三
+    logo_light: ./images/h3cLogo_light.png
     logo_dark: ./images/h3cLogo_dark.png
     href: https://www.h3c.com/cn/
-  - logo_light: ./images/iscas_light.png
+  - name: 中科院软件所
+    logo_light: ./images/iscas_light.png
     logo_dark: ./images/iscas_dark.png
     href: http://www.iscas.ac.cn/
-  - logo_light: ./images/ruantong_light.png
+  - name: 软通动力
+    logo_light: ./images/ruantong_light.png
     logo_dark: ./images/ruantong_dark.png
     href: https://www.isoftstone.com
-  - logo_light: ./images/zhongruan_light.png
+  - name: 中软国际
+    logo_light: ./images/zhongruan_light.png
     logo_dark: ./images/zhongruan_dark.png
     href: https://www.chinasofti.com/
-  - logo_light: ./images/zhongkeLogo_light.png
+  - name: 中科创达
+    logo_light: ./images/zhongkeLogo_light.png
     logo_dark: ./images/zhongkeLogo_dark.png
     href: https://www.thundersoft.com/
-  - logo_light: ./images/zhongkefangde_light.png
+  - name: 中科方德
+    logo_light: ./images/zhongkefangde_light.png
     logo_dark: ./images/zhongkefangde_dark.png
     href: https://www.nfschina.com/
-  - logo_light: ./images/zhongkehongqi_light.png
+  - name: 中科红旗
+    logo_light: ./images/zhongkehongqi_light.png
     logo_dark: ./images/zhongkehongqi_dark.png
     href: http://www.chinaredflag.cn/
-  - logo_light: ./images/seaway_light.png
+  - name: 中科海微
+    logo_light: ./images/seaway_light.png
     logo_dark: ./images/seaway_dark.png
     href: http://new.haiwei.tech/
