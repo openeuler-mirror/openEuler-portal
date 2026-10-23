@@ -57,12 +57,25 @@ const setJSONLD = async (pageData: PageData, pagePath: string) => {
   if (!existsSync(jsonFile)) {
     return;
   }
-  let content = readFileSync(jsonFile, 'utf-8');
+  const content = readFileSync(jsonFile, 'utf-8');
   if (content) {
-    (pageData.frontmatter.head ??= []).push([
+    const payload = currentHostname !== 'https://www.openeuler.org' ? content.replaceAll('https://www.openeuler.org', currentHostname) : content;
+    const head = (pageData.frontmatter.head ??= []);
+    const ldIndex = head.findIndex(
+      (item: HeadConfig) => item[0] === 'script' && item[1]?.type === 'application/ld+json'
+    );
+    if (ldIndex !== -1) {
+      head.splice(ldIndex, 1, [
+        'script',
+        { type: 'application/ld+json' },
+        payload,
+      ]);
+      return;
+    }
+    head.push([
       'script',
       { type: 'application/ld+json' },
-      currentHostname !== 'https://www.openeuler.org' ? content.replaceAll('https://www.openeuler.org', currentHostname) : content
+      payload,
     ]);
   }
 }
