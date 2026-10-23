@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { OIcon, OLink } from '@opensig/opendesign';
+import { OIcon } from '@opensig/opendesign';
 
 import IconReview from '~icons/app-new/icon-review.svg';
 
@@ -35,6 +35,7 @@ defineProps({
 
 <style scoped lang="scss">
 .previous {
+  @include title-margin-top;
   padding-bottom: var(--o-gap-10);
   text-align: left;
 

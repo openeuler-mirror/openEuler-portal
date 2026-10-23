@@ -86,10 +86,18 @@ const CARD_RATIO = 624 / 300;
   min-width: 0;
   // 封面图铺满卡片（与 openEuler 主题定制值一致）
   --card-cover-padding: 0;
+  // 设计要求外层容器 4px 圆角；背景透明，避免圆角裁切缝隙露出卡片底色角
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 .card-figure {
   width: 100%;
+  // 传入图片宽于卡片比例时从左侧开始裁切，保住右侧主视觉
+  --figure-position: right center;
+  // 图片自身按 4px 圆角裁切，与外层容器圆角保持一致
+  border-radius: 4px;
 }
 
 .card-content {
