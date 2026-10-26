@@ -537,7 +537,7 @@ onUnmounted(() => {
           {{ title3 }}
         </p>
       </div>
-      <OIcon class="icon-box icon-close" @click="closeFeedbackMb"
+      <OIcon class="icon-box icon-close-mb" @click="closeFeedbackMb"
         ><component :is="IconCancel"></component>
       </OIcon>
     </div>
@@ -983,7 +983,7 @@ onUnmounted(() => {
     .o-icon {
       font-size: 16px;
     }
-    .icon-close {
+    .icon-close-mb {
       position: absolute;
       right: 12px;
       top: 50%;
