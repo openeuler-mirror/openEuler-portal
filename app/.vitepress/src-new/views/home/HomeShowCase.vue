@@ -266,6 +266,16 @@ useInViewDuration(
 .nav-item-icon {
   margin-right: 8px;
   @include h2;
+  line-height: 1;
+  @include respond('laptop') {
+    line-height: 1;
+  }
+  @include respond('pad_h') {
+    line-height: 1;
+  }
+  @include respond('pad_v') {
+    line-height: 1;
+  }
 }
 .item-tab-active {
   position: absolute;
