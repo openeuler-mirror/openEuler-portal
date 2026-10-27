@@ -3,7 +3,7 @@
 # Top-level sections (top to bottom on the page):
 #   banner     Top banner (PC / pad / mobile background, text image, registration button)
 #   introduce  Conference intro
-#   callfor    Call for cards (Speakers / Talks)
+#   callfor    Call for cards (Speakers / Sponsors / Talks)
 #   agent      Agenda (initial data reuses the 2025 content as placeholder, to be updated)
 #   partner    Sponsors
 #   previous   Past events
@@ -50,17 +50,23 @@ introduce:
   slogan:
     - A shared vision brings us together, across mountains and seas. We look forward to seeing you in Beijing, as we chart the next chapter of agentic AI together.
 
-# callfor: Call for cards (two cards side by side above 840px; 2-column grid from 601px to 840px; single column at or below 600px, cards capped at 400px and centered)
-# bg: Card background image (one copy shared across breakpoints)
+# callfor: Call for cards (three cards side by side, square, above 840px; 2-column grid from 601px to 840px; single column at or below 600px, cards capped at 400px and centered)
+# bg_pc: Square card background image above 840px (pad-h / PC); bg_mb: rectangular card background image at or below 840px (mobile)
 # link: Card link (opens in a new tab)
 callfor:
-  bg:
+  bg_pc:
+    light: ./images/card-square-light.png
+    dark: ./images/card-square-dark.png
+  bg_mb:
     light: ./images/card-light.png
     dark: ./images/card-dark.png
   list:
     - title: CALL FOR SPEAKERS
       sub: Agentic Infra OS Conference 2026
       link: '#'
+    - title: CALL FOR SPONSORS
+      sub: Agentic Infra OS Conference & openEuler Summit 2026
+      link: 'https://shimo.im/forms/47kgMpK1KaurOZ3V/fill'
     - title: CALL FOR TALKS
       sub: openEuler Summit 2026
       link: '#'

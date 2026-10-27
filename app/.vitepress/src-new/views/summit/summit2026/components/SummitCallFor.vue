@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { OCard, OFigure } from '@opensig/opendesign';
 
+import { useScreen } from '~@/composables/useScreen';
 import { useCommon } from '@/stores/common';
 
 const props = defineProps({
@@ -13,20 +14,22 @@ const props = defineProps({
 });
 
 const commonStore = useCommon();
+const { lePadV } = useScreen();
 
 type ThemeT = 'light' | 'dark';
 
 const theme = computed<ThemeT>(() => (commonStore.theme === 'dark' ? 'dark' : 'light'));
 
-// 卡片背景：各端共用一份
+// 卡片背景：>840px 使用方形背景图（bg_pc），<=840px 移动端使用矩形背景图（bg_mb），均区分亮暗主题
 const cardBg = computed(() => {
   const data = props.callforData as Record<string, Record<string, string>> | null;
   if (!data) return '';
-  return data.bg?.[theme.value] ?? '';
+  const bgMap = lePadV.value ? data.bgMb : data.bgPc;
+  return bgMap?.[theme.value] ?? '';
 });
 
-// 封面宽高比（与背景图 624×300 一致）
-const CARD_RATIO = 624 / 300;
+// 封面宽高比：>840px 设计要求卡片为正方形（1:1）；<=840px 沿用矩形背景图 624×300
+const cardRatio = computed(() => (lePadV.value ? 624 / 300 : 1));
 </script>
 
 <template>
@@ -41,7 +44,7 @@ const CARD_RATIO = 624 / 300;
       rel="noopener noreferrer"
     >
       <template #cover>
-        <OFigure class="card-figure" :src="cardBg" :ratio="CARD_RATIO" fit="cover">
+        <OFigure class="card-figure" :src="cardBg" :ratio="cardRatio" fit="cover">
           <div class="card-content">
             <p class="card-title">{{ item.title }}</p>
             <p class="card-sub">{{ item.sub }}</p>

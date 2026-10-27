@@ -92,8 +92,10 @@ declare module '#content/interaction/summit-list/summit2026' {
     sub: string;
     link: string;
   }
+  // bg_pc: >840px 方形卡片背景图；bg_mb: <=840px 移动端矩形卡片背景图
   interface Summit2026CallForT {
-    bg: Summit2026ThemeImgT;
+    bg_pc: Summit2026ThemeImgT;
+    bg_mb: Summit2026ThemeImgT;
     list: Summit2026CallForItemT[];
   }
 
