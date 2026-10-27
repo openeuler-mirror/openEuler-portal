@@ -67,7 +67,7 @@ const onClickLink = (link: any, container: any) => {
             </OButton>
           </a>
         </div>
-        <div class="grid-container" :class="{ en: locale === 'en' }">
+        <div class="links-grid" :class="{ en: locale === 'en' }">
           <div
             v-for="link in container.links"
             class="link-container"
@@ -117,7 +117,7 @@ const onClickLink = (link: any, container: any) => {
       @include respond('<=pad_v') {
         margin-top: 12px;
       }
-      .grid-container {
+      .links-grid {
         border-top: 1px solid transparent;
         @include respond('<=pad_v') {
           border-top: none;
@@ -164,7 +164,7 @@ const onClickLink = (link: any, container: any) => {
         }
       }
     }
-    .grid-container {
+    .links-grid {
       flex: 1;
       display: grid;
       grid-template-columns: repeat(6, minmax(100px, 1fr));
@@ -247,7 +247,7 @@ const onClickLink = (link: any, container: any) => {
     }
   }
   #container {
-    .grid-container {
+    .links-grid {
       & > {
         .link-container {
           grid-column: span 3;
