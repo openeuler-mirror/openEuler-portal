@@ -3,7 +3,7 @@
 # 顶层板块（按页面从上到下顺序）：
 #   banner     顶部 banner（PC / pad / 移动端背景图、文字图、报名按钮）
 #   introduce  大会简介
-#   callfor    Call for 征集卡片（Speakers / Talks）
+#   callfor    Call for 征集卡片（Speakers / Sponsors / Talks）
 #   agent      活动日程（初始数据沿用 2025 内容占位，待更新）
 #   partner    共建单位
 #   previous   精彩回顾
@@ -49,17 +49,23 @@ introduce:
   slogan:
     - 志合者，不以山海为远。我们期待与您相聚北京，共话Agentic AI时代的技术演进之道，携手谱写Agentic Infra的创新篇章！
 
-# callfor: Call for 征集卡片（>840px 两列横排均分；601-840px 两列网格；<=600px 单列纵排且限宽 400px 居中）
-# bg: 卡片背景图（各端共用一份）
+# callfor: Call for 征集卡片（>840px 三列横排均分、方形卡片；601-840px 两列网格；<=600px 单列纵排且限宽 400px 居中）
+# bg_pc: >840px（PC / pad 横屏）方形卡片背景图；bg_mb: <=840px 移动端矩形卡片背景图
 # link: 卡片跳转链接（新窗口打开）
 callfor:
-  bg:
+  bg_pc:
+    light: ./images/card-square-light.png
+    dark: ./images/card-square-dark.png
+  bg_mb:
     light: ./images/card-light.png
     dark: ./images/card-dark.png
   list:
     - title: SPEAKERS 征集
       sub: Agentic Infra 操作系统大会 2026
       link: 'https://shimo.im/forms/zdkydZQ8gLIpV7q6/fill'
+    - title: SPONSORS 征集
+      sub: Agentic Infra 操作系统大会 & openEuler Summit 2026
+      link: 'https://shimo.im/forms/47kgMpK1KaurOZ3V/fill'
     - title: TALKS 征集
       sub: openEuler Summit 2026
       link: 'https://sessionize.com/openeuler-summit-2026/'
