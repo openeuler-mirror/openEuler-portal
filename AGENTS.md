@@ -13,7 +13,7 @@ openEuler 官网，基于 **VitePress** 构建。
 - UI：**@opensig/opendesign**（本地软链 `./opendesign`）+ Element Plus
 - 状态：Pinia（`~@/stores/`）
 - 国际化：vue-i18n（`zh` / `en` 双语必须同步）
-- SEO/GEO：`.geo/` 目录按页面路径管理 TDK 与 JSON-LD，详见 [docs/geo-implementation-summary.md](./docs/geo-implementation-summary.md)
+- SEO/GEO：`.geo/` 目录按页面路径管理 TDK 与 JSON-LD，规范与实现见 `rules/seo-geo/`（见第 4 节）
 
 ### 常用命令
 
@@ -46,7 +46,7 @@ openEuler-portal/
 │       │   ├── assets/style/        # SCSS + token 主题
 │       │   └── tokens/              # @opensig/opendesign-token 配置
 │       └── src/                     # 旧版源码（兼容，禁止新增引用）
-├── .geo/                            # SEO 配置（按页面路径组织）
+├── .geo/                            # HTML meta 配置（按页面路径组织）
 │   ├── tdks/{locale}/{path}/index.json
 │   ├── jsonld/{locale}/{path}/index.json
 │   └── last-modified.json           # 构建时生成
@@ -56,7 +56,6 @@ openEuler-portal/
 │   ├── settings.json                # 团队共享 settings（read-only 白名单）
 │   └── settings.local.json          # 本地覆盖（git 忽略）
 ├── docs/
-│   ├── geo-implementation-summary.md   # SEO 实现深度文档
 │   └── content-self-service.md
 ├── rules/                           # 代码规范（工具无关，本文件以相对链接索引，任何 AI 工具按需 Read）
 │   ├── naming.md
@@ -64,12 +63,11 @@ openEuler-portal/
 │   ├── typescript.md
 │   ├── api-and-state.md
 │   ├── styling.md
-│   ├── seo.md
 │   └── git.md
 ├── scripts/
 │   ├── check-git-shallow.js
-│   └── sync-opendesign-skills.js   # OpenDesign skills 增量同步
-├── skills-lock.json                 # aaron-he-zhu/seo-geo-claude-skills 锁定
+│   ├── sync-opendesign-skills.js   # OpenDesign skills 增量同步
+│   └── sync-seo-geo-specs.mjs      # SEO/GEO 规范与 skills 同步（见第 4 节）
 └── AGENTS.md                        # 本文件（所有 AI agent 唯一入口）
 ```
 
@@ -91,7 +89,7 @@ openEuler-portal/
 | 类别 | 内容 | 来源 | 入 git | 同步方式 |
 |------|------|------|--------|----------|
 | `opendesign-*`（4 个） | components / design / scripts / tokens | `atomgit.com/openeuler/opendesign-skills` | ❌ | `pnpm skills:sync` |
-| 项目自有（6 个） | meta-tags-optimizer / schema-markup-generator / sitemap-meta-tags-batch-generator / sitemap-schema-batch-generator / vue-best-practices / frontmatter-data-extractor | 项目维护 | ✅ | 直接维护 |
+| 项目自有（6 个） | meta-tags-optimizer / schema-markup-generator / vue-best-practices / frontmatter-data-extractor | 项目维护 | ✅ | 直接维护 |
 
 > opendesign 4 个被 [.gitignore](./.gitignore) 排除（`.claude/skills/*/` + 6 个项目自有的 `!` 例外）。
 > 新开发者 `git clone` 后**必须**先 `pnpm install`，postinstall 自动恢复 4 个 opendesign skill。
@@ -120,13 +118,6 @@ openEuler-portal/
 
 > 脚本：[scripts/sync-opendesign-skills.js](./scripts/sync-opendesign-skills.js)。不用 `pnpx skills add` 的原因：该 CLI 对 atomgit 等非 github 源支持不稳定。
 
-### 项目 Slash 命令
-
-| Command | 用途 |
-|---------|------|
-| `/generate-tdk-local app/.vitepress/dist` | 从本地 HTML 批量生成 TDK |
-| `/generate-schema-local app/.vitepress/dist` | 从本地 HTML 批量生成 JSON-LD |
-
 ### 常用 Skill 触发场景
 
 | 场景 | Skill |
@@ -135,55 +126,54 @@ openEuler-portal/
 | 颜色/间距/圆角想知道哪个 token | `opendesign-tokens` |
 | 跑构建/图标生成/编译样式 | `opendesign-scripts` |
 | Pixso 设计稿生产 | `opendesign-design` |
-| TDK 批量优化 | `sitemap-meta-tags-batch-generator` |
-| JSON-LD 批量生成 | `sitemap-schema-batch-generator` |
 | 硬编码数据外置到 md frontmatter | `frontmatter-data-extractor` |
 
 ---
 
 ## 4. SEO/GEO 配置
 
-完整说明：[docs/geo-implementation-summary.md](./docs/geo-implementation-summary.md) @docs/geo-implementation-summary.md
+SEO/GEO 各维度**规范与配套 skill 统一来源于规范仓库 [opensourceways/daily-check-workflow](https://github.com/opensourceways/daily-check-workflow) 的 `specifications` 分支**，通过脚本同步进本仓库；禁止另行维护本地副本或凭记忆改规范。做 robots.txt / llms.txt / sitemap / JSON-LD / TDK / a 标签 / 标签结构 / img-alt / 内链 / HTML 语义化相关任务前，先同步，再按 `rules/seo-geo/` 对应维度执行。
 
-### Agent 工作流（Issue 修复必读）
+（注意区分：OpenDesign 组件/设计类 skills 走 `pnpm skills:sync`，来源是 opendesign-skills 仓库，与本节无关。）
 
-**遇到 SEO/GEO 相关 issue 提及 TDK/Schema 问题时，遵循以下决策链**：
+### 同步脚本
 
-```
-是 SIG 页面？
-├─ 是 → 调用 generate-sig-jsonld tool（数据来自 API，更准确）
-└─ 否 → 是批量页面？
-         ├─ 是 → 调用 geo-fix-tdk-schema.js 脚本
-         └─ 否 → 使用 skill（meta-tags-optimizer / schema-markup-generator）
-```
+| 命令 | 说明 |
+|------|------|
+| `pnpm geo-specs:sync` | 运行 [scripts/sync-seo-geo-specs.mjs](./scripts/sync-seo-geo-specs.mjs)：浅克隆 `specifications` 分支 → 覆盖式同步规范与 skills（幂等，可重复执行）；已接入 `postinstall`，`pnpm install` 时自动跑 |
 
-**批量处理优先原则**：
-- **禁止**逐页手动编辑 `.geo/tdks/` 或 `.geo/jsonld/` 文件
-- **必须**先评估是否可用脚本/工具批量生成
-- 脚本调用示例：
-  ```bash
-  # 批量生成 TDK
-  node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/page1,https://example.com/en/page2 --type=tdk
-  
-  # 批量生成 JSON-LD
-  node scripts/geo-fix-tdk-schema.js --urls=https://example.com/zh/sig/Kernel,https://example.com/en/download --type=jsonld
-  ```
+落点规则：
 
-### 快速决策表
+- **规范文档**：各 `{NN-name}/specification.md`（规范）与 `{NN-name}/implementation.md`（构建时落地实现方式）→ 复制到 `rules/seo-geo/{NN-name}/`（目录不存在则新建）
+- **skills**：各维度 `skills/`（兼容单数 `skill/`）下含 `SKILL.md` 的目录 → 复制到本项目的 skills 目标目录；脚本按 `.claude/skills → .opencode/skills → .agents/skills` 顺序取**第一个已存在**的目录（本项目命中 `.claude/skills/`），三者都不存在时新建 `.agents/skills/`；skill 目录名取 `SKILL.md` frontmatter 的 `name`
 
-| 场景 | 工具/脚本 | 数据来源 | 输出路径 |
-|------|----------|---------|---------|
-| SIG 页面 JSON-LD | `generate-sig-jsonld` tool | API 自动获取 | `.geo/jsonld/{locale}/sig/{name}/index.json` |
-| 批量 TDK | `geo-fix-tdk-schema.js` 脚本 | URL 抓取页面 | `.geo/tdks/{locale}/{path}/index.json` |
-| 批量 JSON-LD | `geo-fix-tdk-schema.js` 脚本 | URL 抓取页面 | `.geo/jsonld/{locale}/{path}/index.json` |
-| 单页 TDK | `meta-tags-optimizer` skill | 手动输入 | `.geo/tdks/{locale}/{path}/index.json` |
-| 单页 JSON-LD | `schema-markup-generator` skill | 手动输入 | `.geo/jsonld/{locale}/{path}/index.json` |
+环境变量：
 
-### 关键约束
+| 变量 | 作用 |
+|------|------|
+| `SEO_GEO_SPECS_REPO` / `SEO_GEO_SPECS_REF` | 覆盖仓库地址 / 分支（默认 daily-check-workflow / `specifications`） |
+| `SEO_GEO_SYNC_SKIP=1` 或 `CI=true` | 跳过同步（CI / 离线环境） |
+| `SEO_GEO_SYNC_STRICT=1` | 失败时退出码 1（默认 graceful，仅 warn 不阻塞 install/dev） |
 
-1. **路径对应规则**：`.geo/tdks/zh/migration/index.json` 对应页面路径 `zh/migration`
-2. **双语必须同步**：修复 TDK/Schema 时，zh/en 两个 locale 都要处理
-3. **质量保证**：生成的 TDK/Schema 必须基于页面实际内容，禁止虚构信息
+### 维度目录索引（`rules/seo-geo/`）
+
+| 维度 | 内容 |
+|------|------|
+| 01-robots-txt | robots.txt 规范 |
+| 02-llms-txt | llms.txt / llms-full.txt 规范（附 `llms-txt-deploy` skill） |
+| 03-sitemap | sitemap 规范 + VitePress/Nuxt 构建时生成实现 |
+| 04-json-ld | JSON-LD 规范 + 构建时注入实现 |
+| 05-tdk | TDK 规范 + 构建时注入实现 |
+| 06-a-tag-semantics | `<a>` 标签语义化规范 |
+| 07-tag-structure-semantics | 标签结构语义化规范 |
+| 08-image-alt | img alt 规范（附 `img-alt-fix` skill） |
+| 09-internal-link | 内链规范（附内链分析 skill） |
+
+上游后续新增的维度/skill 由 `pnpm geo-specs:sync` 自动带入，以实际同步输出为准。
+
+### 与本仓库 `.geo` 数据的关系
+
+本项目 `.geo/` 目录（TDK / JSON-LD / last-modified）仍是构建时注入的数据源：注入机制为 `app/.vitepress/config.ts` 的 `transformPageData` + Vite 插件，`.geo/` 内**写什么、写成什么样**以 `rules/seo-geo/` 中 `04-json-ld`、`05-tdk` 等维度的 specification.md 为准；数据生成可参考 `meta-tags-optimizer` / `schema-markup-generator` skills 的操作流程。
 
 ---
 
@@ -198,8 +188,8 @@ openEuler-portal/
 | TypeScript 规范 | [rules/typescript.md](rules/typescript.md) |
 | API 与状态 | [rules/api-and-state.md](rules/api-and-state.md) |
 | 样式规范 | [rules/styling.md](rules/styling.md) |
-| SEO 规范 | [rules/seo.md](rules/seo.md) |
 | Git 工作流 | [rules/git.md](rules/git.md) |
+| SEO/GEO | `rules/seo-geo/**/specification.md` |
 
 ### 红线（出现频次最高的"踩坑"）
 
@@ -211,7 +201,7 @@ openEuler-portal/
 6. **SSR 安全**：`window`/`document` 只能在 `onMounted` 或 `import.meta.client` 中访问，浏览器专属组件用 `<ClientOnly>`。
 7. **i18n 双语同步**：通过 `useLocale()` 拿 `t`，zh/en 翻译文件必须同步更新。
 8. **类型命名约定**：`SigItemT`（单条）/ `SigListT`（列表）/ `SigDetailT`（详情）/ `SigQueryT`（参数）。
-9. **SEO 数据驱动**：TDK / JSONLD / canonical URL 遵循 [rules/seo.md](rules/seo.md) 定义的数据驱动模式与域名适配机制，禁止在 `config.ts` 中硬编码页级 SEO 逻辑。
+9. **SEO 数据驱动**：TDK / JSONLD / canonical URL 遵循 [04-json-ld](rules/seo-geo/04-json-ld/implementation.md)、[05-tdk](rules/seo-geo/05-tdk/implementation.md) 定义的数据驱动模式与域名适配机制，禁止在 `config.ts` 中硬编码页级 SEO 逻辑。
 
 ---
 
