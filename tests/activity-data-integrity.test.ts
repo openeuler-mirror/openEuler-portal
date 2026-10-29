@@ -246,6 +246,24 @@ describe('plan.yaml — 结构校验', () => {
     expect(openAtom).toBeDefined();
     expect(openAtom!.location_zh).toBe('中国 北京');
   });
+
+  it('opensource 类别 November(month=11) 操作系统大会 location_zh/en 不为 TBD', () => {
+    const os = planData.find((c) => c.id === 'opensource')!;
+    const novEvents = os.events.filter((e) => e.month === 11);
+    const osConf = novEvents.find((e) => e.name_zh.includes('操作系统大会'));
+    expect(osConf).toBeDefined();
+    expect(osConf!.location_zh).toBe('中国 北京');
+    expect(osConf!.location_en).toBe('Beijing, China');
+  });
+
+  it('opensource 类别 December(month=12) 开放原子开源开发者大会 location_zh/en 不为 TBD', () => {
+    const os = planData.find((c) => c.id === 'opensource')!;
+    const decEvents = os.events.filter((e) => e.month === 12);
+    const devConf = decEvents.find((e) => e.name_zh.includes('开放原子开源开发者大会'));
+    expect(devConf).toBeDefined();
+    expect(devConf!.location_zh).toBe('中国 郑州');
+    expect(devConf!.location_en).toBe('Zhengzhou, China');
+  });
 });
 
 describe('海报图资产 — default-one 兜底资产存在性', () => {
