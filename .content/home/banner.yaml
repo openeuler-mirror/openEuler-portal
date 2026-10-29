@@ -55,18 +55,6 @@
   href_zh: https://mp.weixin.qq.com/s/ws3TM25VnKJ_FmjOmqoqOw
   is_blank: true
 
-- bg_pc: ./images/contribution-star/pc.jpg
-  bg_pad: ./images/contribution-star/pad.jpg
-  bg_mb: ./images/contribution-star/mb.jpg
-  bg_theme: light
-  locale: zh
-  attach: ./images/contribution-star/text.png
-  custom_class: contribution-star
-  alt_zh: "2026 年度 openEuler 社区贡献之星评选启动！申报截止：10月26日（周一）24:00"
-  btn_zh: 查看详情
-  href_zh: https://mp.weixin.qq.com/s/kaTAG3IAxgHCu4RMFhfDiA
-  is_blank: true
-
 - bg_pc: ./images/release/pc.jpg
   bg_pad: ./images/release/pad.jpg
   bg_mb: ./images/release/mb.jpg
