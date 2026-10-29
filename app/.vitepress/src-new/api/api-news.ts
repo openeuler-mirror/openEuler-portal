@@ -9,7 +9,7 @@ import type { ParamsT, TagsParams } from '~@/@types/type-news';
 export const getTagsData = (params: TagsParams) => {
   const url = '/api-search/search/tags';
   return request.post(url, params, { ignoreDuplicates: true }).then((res) => {
-    return res.data;
+    return res?.data ?? {};
   });
 }
 
@@ -21,7 +21,7 @@ export const getTagsData = (params: TagsParams) => {
 export const getNewsData = (params: ParamsT) => {
   const url = '/api-search/search/sort';
   return request.post(url, params).then((res) => {
-    return res.data
+    return res?.data ?? {};
   });
 }
 
@@ -33,6 +33,6 @@ export const getNewsData = (params: ParamsT) => {
 export const getBlogsData = (params: ParamsT) => {
   const url = '/api-search/search/sort/blog';
   return request.post(url, params).then((res) => {
-    return res.data;
+    return res?.data ?? {};
   });
 }
