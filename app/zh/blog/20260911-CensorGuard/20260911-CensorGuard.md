@@ -1,5 +1,6 @@
 ---
 title: Agent 可观测 & 治理系列 | CensorGuard 如何守住 Agent 的最后一道防线
+category: blog 
 date: 2026-09-11
 tags:
     - openEuler
