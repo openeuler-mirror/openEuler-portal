@@ -138,8 +138,6 @@ app/.vitepress/dist
 .claude/skills/*/
 !.claude/skills/meta-tags-optimizer/
 !.claude/skills/schema-markup-generator/
-!.claude/skills/sitemap-meta-tags-batch-generator/
-!.claude/skills/sitemap-schema-batch-generator/
 !.claude/skills/vue-best-practices/
 !.claude/skills/frontmatter-data-extractor/
 !.claude/skills/anchor-link-fix/
@@ -154,3 +152,7 @@ app/.vitepress/dist
 
 # generated shared data (scripts/gen-footer.cjs)
 app/.vitepress/public/footer/
+
+# seo/geo 规范文档、skills
+
+rules/seo-geo/

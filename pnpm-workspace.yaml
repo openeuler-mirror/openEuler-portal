@@ -9,3 +9,4 @@ overrides:
   js-cookie: 3.0.7
   dayjs: 1.11.13
   vite: 6.4.3
+  markdown-it: 14.3.3
