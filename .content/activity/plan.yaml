@@ -65,8 +65,8 @@
       month: 10
     - name_zh: 操作系统大会 & openEuler Summit 2026
       name_en: Operating System Conference & openEuler Summit 2026
-      location_zh: TBD
-      location_en: TBD
+      location_zh: 中国 北京
+      location_en: Beijing, China
       month: 11
     - name_zh: GITEX Global
       name_en: GITEX Global
@@ -75,8 +75,8 @@
       month: 12
     - name_zh: 开放原子开源开发者大会 2026
       name_en: The 2026 OpenAtom Developer Conference
-      location_zh: TBD
-      location_en: TBD
+      location_zh: 中国 郑州
+      location_en: Zhengzhou, China
       month: 12
 
 - id: ecology
