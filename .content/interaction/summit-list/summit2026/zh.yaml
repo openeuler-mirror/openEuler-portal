@@ -984,10 +984,8 @@ agent:
                   time: '13:30-17:30'
                   children: []
 
-# partner: 共建单位（主办方/联合主办方/协办方/支持方 logo，初始数据沿用 2025，待更新）
-# 暂时隐藏，需要展示时删除 visible 字段即可
+# partner: 共建单位（主办方/联合主办方/协办方/支持方 logo）
 partner:
-  visible: false
   title: 共建单位
   list:
     - title: 主办方
@@ -998,24 +996,30 @@ partner:
       logos:
         - light: ./images/logo/huawei_light.png
           dark: ./images/logo/huawei_dark.png
-        - light: ./images/logo/qiling_light.png
-          dark: ./images/logo/qiling_dark.png
-        - light: ./images/logo/xinan_light.png
-          dark: ./images/logo/xinan_dark.png
+        - light: ./images/logo/tianyiyun_light.png
+          dark: ./images/logo/tianyiyun_dark.png
+        - light: ./images/logo/qilinxinan_light.png
+          dark: ./images/logo/qilinxinan_dark.png
+        - light: ./images/logo/ningsi_light.png
+          dark: ./images/logo/ningsi_dark.png
+        - light: ./images/logo/qilin_light.png
+          dark: ./images/logo/qilin_dark.png
     - title: 协办方
       logos:
         - light: ./images/logo/tongxin_light.png
           dark: ./images/logo/tongxin_dark.png
-        - light: ./images/logo/ningsi_light.png
-          dark: ./images/logo/ningsi_dark.png
-        - light: ./images/logo/xfusion_light.png
-          dark: ./images/logo/xfusion_dark.png
         - light: ./images/logo/runhe_light.png
           dark: ./images/logo/runhe_dark.png
-        - light: ./images/logo/ruantong_light.png
-          dark: ./images/logo/ruantong_dark.png
         - light: ./images/logo/dongfang_light.png
           dark: ./images/logo/dongfang_dark.png
+        - light: ./images/logo/ruantong_light.png
+          dark: ./images/logo/ruantong_dark.png
+        - light: ./images/logo/xfusion_light.png
+          dark: ./images/logo/xfusion_dark.png
+    - title: 支持方
+      logos:
+        - light: ./images/logo/baolande_light.png
+          dark: ./images/logo/baolande_dark.png
 
 # previous: 精彩回顾（历届活动链接）
 previous:
