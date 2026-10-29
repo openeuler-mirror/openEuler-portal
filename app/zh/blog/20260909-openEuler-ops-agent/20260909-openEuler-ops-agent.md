@@ -1,6 +1,7 @@
 ---
 title: SkillHub 中的可对话的运维助手：openEuler Ops Agent 上手指南
 date: 2026-09-09
+category: blog 
 tags:
     - openEuler
     - Ops Agent

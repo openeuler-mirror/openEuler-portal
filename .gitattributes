@@ -3,3 +3,5 @@ app/zh/blog/20260817-oe+witty+dsh/video/*.mov filter=lfs diff=lfs merge=lfs -tex
 app/.vitepress/public/img/banners/20260430-openEuler-EuroSys.png filter=lfs diff=lfs merge=lfs -text
 app/en/news/20260430-openEuler-EuroSys/eurosys-2026-media/*.png filter=lfs diff=lfs merge=lfs -text
 app/en/news/20260618-China[[:space:]]International[[:space:]]Finance[[:space:]]Exhibition/media/*.jpg filter=lfs diff=lfs merge=lfs -text
+app/zh/news/20260922-openEuler[[:space:]]Witty/3.png filter=lfs diff=lfs merge=lfs -text
+app/zh/news/20260928-[[:space:]]openEuler[[:space:]]Meetup[[:space:]]ChengDu/3.jpg filter=lfs diff=lfs merge=lfs -text
