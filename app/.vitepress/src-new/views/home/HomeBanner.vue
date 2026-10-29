@@ -341,18 +341,7 @@ const getBannerAlt = (info: Record<string, unknown>) => {
 .banner-item4 {
 }
 
-// attach 文字图定制：征集贡献之星 / Summit 2026 大会（不依赖轮播 index）
-.contribution-star {
-  .banner-attach {
-    height: 160px;
-    width: auto;
-
-    @include respond('pad') {
-      height: 110px;
-    }
-  }
-}
-
+// attach 文字图定制：Summit 2026 大会（不依赖轮播 index）
 .summit {
   .banner-attach {
     height: 220px;

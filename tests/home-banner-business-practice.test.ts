@@ -40,12 +40,12 @@ describe('banner.yaml — 新增"商业实践单位遴选"轮播条目（设计 
     expect(entry.bg_pc).toContain('business-practice');
   });
 
-  it('条目位于 raw 数组 index 1（summit[0] 之后、contribution-star 之前，设计 §banner.yaml 顺序约束）', () => {
+  it('条目位于 raw 数组 index 1（summit[0] 之后、release 之前，设计 §banner.yaml 顺序约束）', () => {
     expect(banners[1].bg_pc).toContain('business-practice');
     // 前一条是 summit
     expect(banners[0].bg_pc).toContain('summit');
-    // 后一条是 contribution-star（原 index 1 漂移到 index 2）
-    expect(banners[2].bg_pc).toContain('contribution-star');
+    // 后一条是 release（贡献之星下线后，原 index 3 上移到 index 2）
+    expect(banners[2].bg_pc).toContain('release');
   });
 
   it('条目包含三端背景图字段 bg_pc / bg_pad / bg_mb', () => {
@@ -75,7 +75,7 @@ describe('banner.yaml — 新增"商业实践单位遴选"轮播条目（设计 
     expect(entry.href_en).toBeUndefined();
   });
 
-  it('条目无 title_zh（PNG 原图已烘焙标题文字，对齐 summit/contribution-star 无 title_zh 先例，避免双标题）', () => {
+  it('条目无 title_zh（PNG 原图已烘焙标题文字，对齐 summit 无 title_zh 先例，避免双标题）', () => {
     expect(entry.title_zh).toBeUndefined();
     expect(entry.title_en).toBeUndefined();
   });
