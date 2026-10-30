@@ -7,17 +7,53 @@
     "name": "三湘银行 | openEuler社区",
     "description": "基于麒麟信安打造银行IT信息化系统安全底座",
     "inLanguage": "zh",
-    "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.org/", "url": "https://www.openeuler.org/", "name": "openEuler社区", "inLanguage": "zh"},
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.openeuler.org/",
+      "url": "https://www.openeuler.org/",
+      "name": "openEuler社区",
+      "inLanguage": "zh"
+    },
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.openeuler.org/zh/"},
-        {"@type": "ListItem", "position": 2, "name": "成功案例", "item": "https://www.openeuler.org/zh/showcase/"},
-        {"@type": "ListItem", "position": 3, "name": "金融", "item": "https://www.openeuler.org/zh/showcase/finance/"},
-        {"@type": "ListItem", "position": 4, "name": "三湘银行", "item": "https://www.openeuler.org/zh/showcase/finance/xiangjiang"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://www.openeuler.org/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "成功案例",
+          "item": "https://www.openeuler.org/zh/showcase/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "金融",
+          "item": "https://www.openeuler.org/zh/showcase/finance/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "三湘银行",
+          "item": "https://www.openeuler.org/zh/showcase/finance/xiangjiang"
+        }
       ]
     },
-    "about": {"@type": "Organization", "name": "湖南三湘银行股份有限公司", "alternateName": "三湘银行", "description": "中部地区首家、全国第八家开业的民营银行，以"做一流的数智银行"为愿景", "industry": "金融银行业", "areaServed": {"@type": "AdministrativeArea", "name": "湖南省"}}
+    "about": {
+      "@type": "Organization",
+      "name": "湖南三湘银行股份有限公司",
+      "alternateName": "三湘银行",
+      "description": "中部地区首家、全国第八家开业的民营银行，以\"做一流的数智银行\"为愿景",
+      "industry": "金融银行业",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "湖南省"
+      }
+    }
   },
   {
     "@context": "https://schema.org",
@@ -26,17 +62,49 @@
     "description": "三湘银行联合麒麟信安，基于openEuler社区构建的麒麟信安服务器操作系统，完成业务系统从CentOS/RedHat向国产操作系统的平滑迁移，夯实银行IT信息化安全底座。",
     "url": "https://www.openeuler.org/zh/showcase/finance/xiangjiang",
     "inLanguage": "zh",
-    "publisher": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/", "logo": {"@type": "ImageObject", "url": "https://www.openeuler.org/favicon.ico"}},
+    "publisher": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.openeuler.org/favicon.ico"
+      }
+    },
     "about": [
-      {"@type": "Thing", "name": "openEuler", "url": "https://www.openeuler.org/"},
-      {"@type": "Thing", "name": "麒麟信安服务器操作系统"},
-      {"@type": "Thing", "name": "金融行业信创"},
-      {"@type": "Thing", "name": "操作系统迁移"}
+      {
+        "@type": "Thing",
+        "name": "openEuler",
+        "url": "https://www.openeuler.org/"
+      },
+      {
+        "@type": "Thing",
+        "name": "麒麟信安服务器操作系统"
+      },
+      {
+        "@type": "Thing",
+        "name": "金融行业信创"
+      },
+      {
+        "@type": "Thing",
+        "name": "操作系统迁移"
+      }
     ],
     "mentions": [
-      {"@type": "Organization", "name": "湖南三湘银行股份有限公司", "alternateName": "三湘银行"},
-      {"@type": "Organization", "name": "麒麟信安"},
-      {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/"}
+      {
+        "@type": "Organization",
+        "name": "湖南三湘银行股份有限公司",
+        "alternateName": "三湘银行"
+      },
+      {
+        "@type": "Organization",
+        "name": "麒麟信安"
+      },
+      {
+        "@type": "Organization",
+        "name": "openEuler社区",
+        "url": "https://www.openeuler.org/"
+      }
     ],
     "keywords": "三湘银行,openEuler,麒麟信安,国产操作系统,金融信创,系统迁移,C2K,银行IT安全"
   },
@@ -46,7 +114,16 @@
     "name": "三湘银行携手麒麟信安基于openEuler实现金融信创",
     "description": "三湘银行将业务系统从CentOS 7.6、RedHat 6/7及Oracle Linux迁移至基于openEuler社区的麒麟信安服务器操作系统，通过C2K一站式迁移平台完成原地升级，夯实IT信息化安全底座。",
     "url": "https://www.openeuler.org/zh/showcase/finance/xiangjiang",
-    "provider": {"@type": "Organization", "name": "openEuler社区", "url": "https://www.openeuler.org/"},
-    "about": {"@type": "Organization", "name": "湖南三湘银行股份有限公司", "alternateName": "三湘银行", "description": "中部地区首家、全国第八家开业的民营银行"}
+    "provider": {
+      "@type": "Organization",
+      "name": "openEuler社区",
+      "url": "https://www.openeuler.org/"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "湖南三湘银行股份有限公司",
+      "alternateName": "三湘银行",
+      "description": "中部地区首家、全国第八家开业的民营银行"
+    }
   }
 ]

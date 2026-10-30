@@ -70,7 +70,7 @@
     "@context": "https://schema.org",
     "@type": "CaseStudy",
     "name": "联通医疗科研云平台基于openEuler的解决方案",
-    "description": "联通医疗科研云平台以"服务医改、惠及民生"为宗旨，基于openEuler开源操作系统运行，进行全栈优化，Hive SQL1-5场景性能平均提升7%，国密加解密SM3、SM4及并发查询吞吐量性能均大幅提升，助力医疗科研数字化升级。",
+    "description": "联通医疗科研云平台以\"服务医改、惠及民生\"为宗旨，基于openEuler开源操作系统运行，进行全栈优化，Hive SQL1-5场景性能平均提升7%，国密加解密SM3、SM4及并发查询吞吐量性能均大幅提升，助力医疗科研数字化升级。",
     "url": "https://www.openeuler.org/zh/showcase/others/liantongyiliao",
     "provider": {
       "@type": "Organization",

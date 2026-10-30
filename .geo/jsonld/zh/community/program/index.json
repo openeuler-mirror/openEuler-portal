@@ -3,7 +3,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "openEuler Call for X 计划 | openEuler社区",
-    "description": ""openEuler Call for X 计划"是一个开放的社区项目，鼓励所有社区成员以及开源爱好者积极贡献、乐于分享、热衷实践，希望通过多元化的贡献一起丰富社区生态。想要了解更多信息，欢迎访问openEuler官网。",
+    "description": "\"openEuler Call for X 计划\"是一个开放的社区项目，鼓励所有社区成员以及开源爱好者积极贡献、乐于分享、热衷实践，希望通过多元化的贡献一起丰富社区生态。想要了解更多信息，欢迎访问openEuler官网。",
     "url": "https://www.openeuler.org/zh/community/program",
     "inLanguage": "zh",
     "isPartOf": {
@@ -44,7 +44,7 @@
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "openEuler Call for X 计划活动项目",
-    "description": ""openEuler Call for X 计划"资源面向openEuler社区所有成员开放，欢迎与openEuler社区共同组织开发者活动，繁荣openEuler生态。",
+    "description": "\"openEuler Call for X 计划\"资源面向openEuler社区所有成员开放，欢迎与openEuler社区共同组织开发者活动，繁荣openEuler生态。",
     "url": "https://www.openeuler.org/zh/community/program",
     "itemListElement": [
       {

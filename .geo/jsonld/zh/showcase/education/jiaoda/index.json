@@ -2,8 +2,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "上海交通大学"交我算"计算集群：共建openEuler开源技术新生态",
-    "description": "交大"交我算"计算集群：共建openEuler开源技术新生态。上海交通大学"交我算"平台openEuler集群荣获"2023年度openEuler领先商业实践"，为教育行业高性能计算平台提供示范推广价值。",
+    "headline": "上海交通大学\"交我算\"计算集群：共建openEuler开源技术新生态",
+    "description": "交大\"交我算\"计算集群：共建openEuler开源技术新生态。上海交通大学\"交我算\"平台openEuler集群荣获\"2023年度openEuler领先商业实践\"，为教育行业高性能计算平台提供示范推广价值。",
     "url": "https://www.openeuler.org/zh/showcase/education/jiaoda",
     "inLanguage": "zh-CN",
     "articleSection": "用户案例",
@@ -22,7 +22,7 @@
         "name": "上海交通大学",
         "alternateName": "Shanghai Jiao Tong University",
         "url": "https://www.sjtu.edu.cn/",
-        "description": "上海交通大学网络信息中心负责建设及管理"交我算"校级高性能计算服务平台"
+        "description": "上海交通大学网络信息中心负责建设及管理\"交我算\"校级高性能计算服务平台"
       }
     ],
     "publisher": {

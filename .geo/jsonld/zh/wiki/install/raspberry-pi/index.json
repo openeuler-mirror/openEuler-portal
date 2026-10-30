@@ -67,25 +67,25 @@
             "@type": "HowToStep",
             "position": 2,
             "name": "选择版本",
-            "text": "在列表内选择需要的版本，进入该版本的下载列表，本文以"openEuler 24.03 LTS"为例介绍整体的安装流程。"
+            "text": "在列表内选择需要的版本，进入该版本的下载列表，本文以\"openEuler 24.03 LTS\"为例介绍整体的安装流程。"
           },
           {
             "@type": "HowToStep",
             "position": 3,
             "name": "进入树莓派镜像下载列表",
-            "text": "单击"raspi_img"，进入树莓派镜像的下载列表。"
+            "text": "单击\"raspi_img\"，进入树莓派镜像的下载列表。"
           },
           {
             "@type": "HowToStep",
             "position": 4,
             "name": "下载树莓派镜像",
-            "text": "单击"openEuler-24.03-LTS-raspi-aarch64.img.xz"，将 openEuler 发布的树莓派镜像下载到本地。"
+            "text": "单击\"openEuler-24.03-LTS-raspi-aarch64.img.xz\"，将 openEuler 发布的树莓派镜像下载到本地。"
           },
           {
             "@type": "HowToStep",
             "position": 5,
             "name": "下载校验文件",
-            "text": "单击"openEuler-24.03-LTS-raspi-aarch64.img.xz.sha256sum"，将 openEuler 发布的树莓派镜像的校验文件下载到本地。"
+            "text": "单击\"openEuler-24.03-LTS-raspi-aarch64.img.xz.sha256sum\"，将 openEuler 发布的树莓派镜像的校验文件下载到本地。"
           }
         ]
       },

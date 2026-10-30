@@ -12,10 +12,7 @@
         "name": "Why does the self-compilation of some applications that depend on java-devel fail when the rpmbuild command is executed?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "openEuler provides multiple versions of OpenJDK, such as OpenJDK 1.8.0 and OpenJDK 11, to support updated OpenJDK features and be compatible with Java applications. Certain applications require the java-devel package for compilation. However, installing the java-devel package may default to java-11-openjdk, causing compilation failures. To resolve this issue, execute the following commands to install java-1.8.0-openjdk and then proceed with the rpmbuild command for self-compilation:
-
-yum install java-1.8.0-openjdk
-yum install java-1.8.0-openjdk-devel"
+          "text": "openEuler provides multiple versions of OpenJDK, such as OpenJDK 1.8.0 and OpenJDK 11, to support updated OpenJDK features and be compatible with Java applications. Certain applications require the java-devel package for compilation. However, installing the java-devel package may default to java-11-openjdk, causing compilation failures. To resolve this issue, execute the following commands to install java-1.8.0-openjdk and then proceed with the rpmbuild command for self-compilation:\n\nyum install java-1.8.0-openjdk\nyum install java-1.8.0-openjdk-devel"
         }
       }
     ]

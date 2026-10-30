@@ -62,7 +62,7 @@
       },
       {
         "@type": "Question",
-        "name": "Kmesh服务在启动时，提示"get kube config error!"",
+        "name": "Kmesh服务在启动时，提示\"get kube config error!\"",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "集群启动模式下，Kmesh服务会根据k8s的配置，自动获取控制面程序ip信息，若环境中没有配置k8s的kubeconfig路径，会导致获取kubeconfig失败，然后提示上述信息。若已经手动修改Kmesh的配置文件，正确配置控制面程序ip信息，该问题可忽略。具体解决方式请参考文档Kmesh用户指南的常见问题2：https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Kmesh/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.html"

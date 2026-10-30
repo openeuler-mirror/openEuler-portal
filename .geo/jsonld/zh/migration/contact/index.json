@@ -56,7 +56,7 @@
         "@type": "ContactPoint",
         "contactType": "customer support",
         "name": "openEuler 公众号",
-        "description": "进入迁移专区，点击"加群"，进入技术交流群，可在群内直接提问，我们会有专人为您解答。",
+        "description": "进入迁移专区，点击\"加群\"，进入技术交流群，可在群内直接提问，我们会有专人为您解答。",
         "availableLanguage": {
           "@type": "Language",
           "name": "Chinese"
@@ -66,7 +66,7 @@
         "@type": "ContactPoint",
         "contactType": "customer support",
         "name": "openEuler 小助手",
-        "description": "备注"迁移"进入技术交流群，可在群内直接提问，我们会有专人为您解答。",
+        "description": "备注\"迁移\"进入技术交流群，可在群内直接提问，我们会有专人为您解答。",
         "availableLanguage": {
           "@type": "Language",
           "name": "Chinese"
