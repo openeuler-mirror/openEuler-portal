@@ -352,14 +352,4 @@ const getBannerAlt = (info: Record<string, unknown>) => {
     }
   }
 }
-
-.xinhuo {
-  .banner-title--large {
-    @include display3;
-  }
-
-  .banner-subtitle {
-    @include text1;
-  }
-}
 </style>

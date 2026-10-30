@@ -103,43 +103,39 @@ describe('HomeBanner.vue 专属 SCSS 清理守卫（设计 §3 关键改动点�
 describe('删除贡献之星条目后 banner 数量与索引守卫（设计 §4 索引漂移）', () => {
   const banners = parseBannerYaml();
 
-  it('raw 数组共 7 条（删 contribution-star 后 8→7）', () => {
-    expect(banners).toHaveLength(7);
+  it('raw 数组共 6 条（删 contribution-star 后 8→7，删 business-practice 后 7→6）', () => {
+    expect(banners).toHaveLength(6);
   });
 
   it('raw[0] 为 summit 条目', () => {
     expect(banners[0].bg_pc).toContain('images/summit/');
   });
 
-  it('raw[1] 为 business-practice 条目', () => {
-    expect(banners[1].bg_pc).toContain('business-practice');
+  it('raw[1] 为 release 条目（删 business-practice 后从 index 2 上移到 index 1）', () => {
+    expect(banners[1].bg_pc).toContain('release');
   });
 
-  it('raw[2] 为 release 条目（删 contribution-star 后从 index 3 上移到 index 2）', () => {
-    expect(banners[2].bg_pc).toContain('release');
+  it('raw[2] 为 call-for-submissions 条目', () => {
+    expect(banners[2].bg_pc).toContain('call-for-submissions');
   });
 
-  it('raw[3] 为 call-for-submissions 条目', () => {
-    expect(banners[3].bg_pc).toContain('call-for-submissions');
+  it('raw[3] 为 ai-coding-assistants 条目', () => {
+    expect(banners[3].bg_pc).toContain('ai-coding-assistants');
   });
 
-  it('raw[4] 为 ai-coding-assistants 条目', () => {
-    expect(banners[4].bg_pc).toContain('ai-coding-assistants');
+  it('raw[4] 为 annual-report 条目', () => {
+    expect(banners[4].bg_pc).toContain('annual-report');
   });
 
-  it('raw[5] 为 annual-report 条目', () => {
-    expect(banners[5].bg_pc).toContain('annual-report');
+  it('raw[5] 为 download 条目', () => {
+    expect(banners[5].bg_pc).toContain('images/download/');
   });
 
-  it('raw[6] 为 download 条目', () => {
-    expect(banners[6].bg_pc).toContain('images/download/');
+  it('zh 可见 banner 共 6 条（contribution-star / business-practice 均 locale=zh 被删除后 zh 减 2）', () => {
+    expect(visibleBanners('zh')).toHaveLength(6);
   });
 
-  it('zh 可见 banner 共 7 条（contribution-star locale=zh 被删除后 zh 减 1）', () => {
-    expect(visibleBanners('zh')).toHaveLength(7);
-  });
-
-  it('en 可见 banner 共 4 条（contribution-star 本就 locale=zh，en 端无变化）', () => {
+  it('en 可见 banner 共 4 条（contribution-star / business-practice 本就 locale=zh，en 端无变化）', () => {
     expect(visibleBanners('en')).toHaveLength(4);
   });
 });
