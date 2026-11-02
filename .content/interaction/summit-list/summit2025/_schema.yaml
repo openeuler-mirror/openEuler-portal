@@ -1,0 +1,173 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  banner:
+    label: 顶部 banner
+    fields:
+      bg: 背景图
+      bg.light: 亮色版
+      bg.dark: 暗色版
+      bg_mb: 移动端背景图
+      bg_mb.light: 亮色版
+      bg_mb.dark: 暗色版
+      text_img: 文字图
+      text_img.light: 亮色版
+      text_img.dark: 暗色版
+      textImgAlt: 文字图 alt
+      sign_up_title: 报名按钮文案
+      watch_replay: 观看回放文案
+      replay_link: 回放链接
+      link: 链接
+      link.pc: PC 端链接
+      link.mo: 移动端链接
+      tips: 提示
+      text_img_mb: text_img_mb
+      text_img_mb.light: light
+      text_img_mb.dark: dark
+  introduce:
+    label: 大会介绍
+    fields:
+      desc: 大会介绍文本(数组,多段)
+      tips: 邀请提示
+      list: 亮点列表
+      slogan: 口号
+  live:
+    label: 活动直播
+    fields:
+      title: 板块标题
+      list: 直播列表
+      list[].time: 时间
+      list[].lives: 直播项列表
+      lives.title: 直播标题
+      lives.url: 直播链接
+      time: 时间
+      lives: 直播项
+      url: 链接
+  agent:
+    label: 活动日程
+    fields:
+      title: 板块标题
+      tips: 提示
+      list: 日程列表
+      list[].date: 日期
+      list[].text: 描述
+      list[].children: 子链接列表
+      children.label: 文案
+      children.link: 链接
+      text: 文本
+      date: 日期
+      children: 子日程
+      list[].children[].children: children
+      list[].children[].children[].content: content
+      list[].children[].children[].content[].guest: guest
+      list[].children[].tab: tab
+      list[].children[].tab[].children: children
+      list[].children[].tab[].children[].content: content
+      list[].children[].tab[].children[].content[].guest: guest
+      list[].children[].children[].content[].titles: titles
+      list[].children[].list: list
+      list[].children[].list[].children: children
+      list[].children[].list[].children[].children: children
+  guest:
+    label: 活动嘉宾
+    fields:
+      title: 板块标题
+      list: 嘉宾列表
+      list[].name: 嘉宾名
+      list[].title: 嘉宾头衔
+      list[].light: 亮色头像
+      list[].dark: 暗色头像
+      name: 嘉宾名
+      list[].children: children
+  partner:
+    label: 共建单位
+    fields:
+      title: 板块标题
+      list: 单位列表
+      list[].title: 单位名
+      list[].logos: logo 列表
+      logos.light: 亮色 logo
+      logos.dark: 暗色 logo
+      name: 单位名
+  previous:
+    label: 精彩回顾
+    fields:
+      title: 板块标题
+      list: 回顾列表
+      list[].name: 回顾名称
+      list[].link: 回顾链接
+      name: 名称
+      link: 链接
+en:
+  banner:
+    label: Top banner
+    fields:
+      bg: bg
+      bg.light: light
+      bg.dark: dark
+      bg_mb: bg_mb
+      bg_mb.light: light
+      bg_mb.dark: dark
+      text_img: text_img
+      text_img.light: light
+      text_img.dark: dark
+      text_img_mb: text_img_mb
+      text_img_mb.light: light
+      text_img_mb.dark: dark
+      textImgAlt: textImgAlt
+      sign_up_title: sign_up_title
+      watch_replay: watch_replay
+      replay_link: replay_link
+      link: link
+      link.pc: pc
+      link.mo: mo
+  introduce:
+    label: Conference intro
+    fields:
+      desc: desc
+      tips: tips
+      list: list
+      slogan: slogan
+  live:
+    label: Live streams
+    fields:
+      title: title
+      list: list
+      list[].lives: lives
+  agent:
+    label: Agenda
+    fields:
+      title: title
+      tips: tips
+      text: text
+      list: list
+      list[].children: children
+      list[].children[].children: children
+      list[].children[].children[].content: content
+      list[].children[].tab: tab
+      list[].children[].children[].content[].guest: guest
+      list[].children[].tab[].children: children
+      list[].children[].tab[].children[].content: content
+      list[].children[].tab[].children[].content[].guest: guest
+      list[].children[].children[].content[].titles: titles
+      list[].children[].list: list
+      list[].children[].list[].children: children
+      list[].children[].list[].children[].children: children
+  guest:
+    label: Speakers
+    fields:
+      title: title
+      list: list
+      list[].children: children
+  partner:
+    label: Sponsors
+    fields:
+      title: title
+      list: list
+      list[].logos: logos
+  previous:
+    label: Previous editions
+    fields:
+      title: title
+      list: list

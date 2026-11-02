@@ -1,0 +1,60 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  vision:
+    label: 愿景列表
+    fields:
+      title: 愿景标题
+      desc: 愿景描述
+  version_info:
+    label: 版本信息
+    fields:
+      first: 首版本
+      first.name: 版本名称
+      first.desc: 版本描述
+      first.url: 版本链接
+      first.picture: 版本图片
+      first.feature: 特性列表
+      feature.title: 特性分类标题
+      feature.desc: 特性项列表
+      desc.name: 特性项名称
+      desc.desc: 特性项描述
+      second: 第二版本（结构同 first）
+      first.feature[].desc: desc
+      second.name: name
+      second.desc: desc
+      second.url: url
+      second.picture: picture
+      second.feature: feature
+      second.feature[].desc: desc
+en:
+  vision:
+    label: Vision list
+    fields:
+      title: Vision title
+      desc: Vision description
+  version_info:
+    label: Version info
+    fields:
+      first: First version
+      first.name: Version name
+      first.desc: Version description
+      first.url: Version link
+      first.picture: Version image
+      first.feature: Feature list
+      feature.title: Feature category title
+      feature.desc: Feature item list
+      desc.name: Feature item name
+      desc.desc: Feature item description
+      second: Second version (same structure as first)
+      first.feature[].desc: desc
+      second.name: name
+      second.desc: desc
+      second.url: url
+      second.picture: picture
+      second.feature: feature
+      second.feature[].desc: desc
+members:
+  label: Intelligence BooM 成员
+  fields: {}

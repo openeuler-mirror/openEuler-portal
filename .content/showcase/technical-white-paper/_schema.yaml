@@ -1,0 +1,16 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  white_paper:
+    label: 技术白皮书列表
+    fields:
+      path: PDF 文件路径（相对站点根目录，部分含 %20 URL 编码）
+      htmlPage: 静态化 HTML 预览页路径（可选，有则点击打开 HTML 预览，无则下载 PDF）
+      summary: 白皮书标题
+en:
+  white_paper:
+    label: Technical white paper list
+    fields:
+      path: PDF file path (relative to site root, some contain %20 URL encoding)
+      summary: White paper title

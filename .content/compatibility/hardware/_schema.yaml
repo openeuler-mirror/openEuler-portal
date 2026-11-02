@@ -1,0 +1,33 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  hardware_info:
+    label: 硬件兼容性测试流程信息
+    fields:
+      title: 板块标题
+      desc: 描述文案列表（含 HTML <a> 链接）
+      list: 测试流程步骤列表
+      list.title: 步骤标题
+      list.desc: 步骤描述（含 HTML <a> 链接）
+      list.tips: 提示文案
+      list.columns: 表格列名
+      list.data: 表格数据
+      data.content: 内容名
+      data.info: 内容描述（含 HTML <a> 链接）
+      list[].columns: columns
+      list[].data: data
+en:
+  hardware_info:
+    label: Hardware compatibility test process info
+    fields:
+      title: Section title
+      desc: Description text list (contains HTML <a> links)
+      list: Test process step list
+      list.title: Step title
+      list.desc: Step description (contains HTML <a> links)
+      list.tips: Tip text
+      list.columns: Table column names
+      list.data: Table data
+      data.content: Content name
+      data.info: Content description (contains HTML <a> links)

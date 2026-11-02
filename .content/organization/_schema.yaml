@@ -1,0 +1,75 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+advisory:
+  label: 顾问专家委员会
+  fields:
+    position: position
+    position_en: position_en
+    title: title
+    title_en: title_en
+    members: members
+    members[].position: position
+    members[].position_en: position_en
+ai:
+  label: AI联合工作组
+  fields:
+    title: title
+    title_en: title_en
+    members: members
+business:
+  label: 业务发展工作组
+  fields:
+    title: title
+    title_en: title_en
+    members: members
+committee:
+  label: 委员会
+  fields:
+    members: members
+    title: title
+    title_en: title_en
+    groups: groups
+    groups[].members: members
+education:
+  label: 教育工作组
+  fields:
+    title: title
+    title_en: title_en
+    members: members
+globalization:
+  label: 全球化工作组
+  fields:
+    title: title
+    title_en: title_en
+    rows: rows
+legal:
+  label: 法务工作组
+  fields:
+    title: title
+    title_en: title_en
+    members: members
+marketing:
+  label: 品牌委员会
+  fields:
+    title: title
+    title_en: title_en
+    members: members
+operations:
+  label: 社区运营工作组
+  fields:
+    title: title
+    title_en: title_en
+    members: members
+technical:
+  label: 技术委员会
+  fields:
+    title: title
+    title_en: title_en
+    members: members
+user:
+  label: 用户委员会
+  fields:
+    title: title
+    title_en: title_en
+    members: members

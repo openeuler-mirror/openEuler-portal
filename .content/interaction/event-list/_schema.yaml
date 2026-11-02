@@ -1,0 +1,42 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  apply_steps:
+    label: 活动申请步骤列表
+    fields:
+      img: 步骤背景图（PNG，<img> 消费，不带 ?raw）
+      title: 步骤标题
+      desc: 步骤描述（含 HTML <a> 链接，用 v-dompurify-html 渲染）
+      href: 按钮链接
+      btn: 按钮文案
+      material1: 材料 1 图片（JPG）
+      material2: 材料 2 图片（JPG）
+      list_data: 材料列表
+      list_data.title: 材料标题
+      list_data.desc: 材料描述
+      list_data.href: 材料链接
+  event_series:
+    label: 活动系列筛选选项
+    fields:
+      value: 选项值
+      label: 选项标签
+  event_status:
+    label: 活动状态筛选选项
+    fields:
+      value: 选项值
+      label: 选项标签
+en:
+  apply_steps:
+    label: Event application steps
+    fields: {}
+  event_series:
+    label: Event series filter options
+    fields:
+      value: Option value
+      label: Option label
+  event_status:
+    label: Event status filter options
+    fields:
+      value: Option value
+      label: Option label

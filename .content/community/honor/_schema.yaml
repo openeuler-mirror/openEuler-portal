@@ -1,0 +1,113 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+"2021":
+  label: 2021 年度荣誉榜单
+  fields:
+    news: news
+"2022":
+  label: 2022 年度荣誉榜单
+  fields:
+    title: title
+    personal: personal
+    personal[].list: list
+    personal[].list[].post: post
+    personal[].list[].detail: detail
+    team: team
+    team.title: title
+    team.list: list
+    team.list[].detail: detail
+    notice: notice
+    news: news
+    contribution: contribution
+    contribution.title: title
+    contribution.personal: personal
+    contribution.personal[].list: list
+    contribution.personal[].list[].post: post
+    contribution.personal[].list[].detail: detail
+    contribution.team: team
+    contribution.team.title: title
+    contribution.team.list: list
+    contribution.team.list[].detail: detail
+    contribution.notice: notice
+"2023":
+  label: 2023 年度荣誉榜单
+  fields:
+    title: title
+    list: list
+    list[].list: list
+    list[].list[].detail: detail
+    personal: personal
+    personal[].list: list
+    personal[].list[].post: post
+    personal[].list[].detail: detail
+    news: news
+    project: project
+    project.title: title
+    project.list: list
+    project.list[].list: list
+    project.list[].list[].detail: detail
+    contribution: contribution
+    contribution.title: title
+    contribution.personal: personal
+    contribution.personal[].list: list
+    contribution.personal[].list[].post: post
+    contribution.personal[].list[].detail: detail
+    notice: notice
+"2024":
+  label: 2024 年度荣誉榜单
+  fields:
+    title: title
+    list: list
+    list[].list: list
+    list[].list[].detail: detail
+    personal: personal
+    personal[].list: list
+    personal[].list[].post: post
+    personal[].list[].detail: detail
+    project: project
+    project.title: title
+    project.list: list
+    project.list[].list: list
+    project.list[].list[].detail: detail
+    contribution: contribution
+    contribution.title: title
+    contribution.personal: personal
+    contribution.personal[].list: list
+    contribution.personal[].list[].post: post
+    contribution.personal[].list[].detail: detail
+    nomination: nomination
+    nomination.title: title
+    nomination.list: list
+    notice: notice
+"2025":
+  label: 2025 年度荣誉榜单
+  fields:
+    title: title
+    list: list
+    tips: tips
+    personal: personal
+    personal[].list: list
+    personal[].list[].post: post
+    personal[].list[].detail: detail
+    list[].list: list
+    list[].list[].detail: detail
+    company: company
+    company.title: title
+    company.list: list
+    company.tips: tips
+    contribution: contribution
+    contribution.title: title
+    contribution.personal: personal
+    contribution.personal[].list: list
+    contribution.personal[].list[].post: post
+    contribution.personal[].list[].detail: detail
+    project: project
+    project.title: title
+    project.list: list
+    project.list[].list: list
+    project.list[].list[].detail: detail
+    nomination: nomination
+    nomination.title: title
+    nomination.list: list
+    notice: notice

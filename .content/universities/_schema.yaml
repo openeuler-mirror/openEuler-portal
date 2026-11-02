@@ -1,0 +1,55 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  title:
+    label: 页面标题
+    fields: {}
+  technical_group:
+    label: 高校技术小组板块
+    fields:
+      title: 板块标题
+      description: 板块描述
+      description.text: 描述正文
+      description.link_text: 申请加入按钮文案
+      group_list: 技术小组列表
+      group_list[].logo: 高校 Logo（图片路径，相对当前 yaml）
+      group_list[].name: 小组名称
+      group_list[].description: 小组简介
+      group_list[].content_list: 内容卡片列表
+      content_list.title: 卡片标题
+      content_list.description: 卡片描述（含 /n 文本分隔符，组件按 /n 拆分横向展示）
+  activity_game:
+    label: 活动与大赛板块
+    fields:
+      title: 板块标题
+      activity_list: 活动列表
+      activity_list[].title: 活动标题
+      activity_list[].bg_img_pc: PC 端背景图（图片路径，相对当前 yaml）
+      activity_list[].bg_img_mb: 移动端背景图（可选；存在时由组件按屏宽切换，不存在时组件使用 bg_img_pc）
+      activity_list[].bg_inset: 右下角内嵌图（可选，图片路径）
+      activity_list[].id: 卡片样式标识（可选，如 ccf）
+      activity_list[].detail: 活动详情正文
+      activity_list[].link_text: 链接文案
+      activity_list[].link_href: 链接 URL
+  university_contribution:
+    label: 高校贡献板块
+    fields:
+      title: 板块标题
+      university_content_list: 高校贡献卡片列表
+      university_content_list[].logo: 高校 Logo（图片路径，相对当前 yaml）
+      university_content_list[].name: 高校名称
+      university_content_list[].detail: 贡献详情正文
+      university_content_list[].contribution_name: 贡献类型标签（如 SIG贡献）
+      university_content_list[].contribution_tag_list: 贡献 SIG 标签数组
+      university_content_list[].contribution_detail: 贡献详情链接文案（可选，为空则不展示）
+      university_content_list[].contribution_detail_link: 贡献详情链接 URL（可选）
+      university_content_list[].official_website: 前往官网链接文案
+      university_content_list[].official_website_link: 官网链接 URL
+      university_list: 其他参与高校列表
+      university_list[].logo: 高校 Logo
+      university_list[].name: 高校名称
+      more: '"更多高校贡献…" 文案'
+  university_mooc:
+    label: 课程与培训板块标题
+    fields: {}

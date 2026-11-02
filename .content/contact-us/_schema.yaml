@@ -1,0 +1,83 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  banner:
+    label: 顶部 banner 标题
+    fields:
+      title: 标题文案
+  community_contact:
+    label: 社区联系板块
+    fields:
+      title: 板块标题
+      desc: 板块副标题（答复周期说明）
+  contact_items:
+    label: 联系项列表
+    fields:
+      title: 联系项标题（取自 i18n communityItem1~4）
+      email: 联系邮箱（点击 mailto）
+      icon: 联系项图标（SVG，inline 消费，路径带 ?raw）
+  follow_us:
+    label: 欢迎关注我们板块
+    fields:
+      title: 板块标题
+      desc: 板块副标题
+      cover: 封面图（zh/en 差异化，zh 用 follow-zh.jpg）
+      footer_codes: 二维码列表（zh 专属，en 留空数组）
+      footer_codes[].code: 二维码图片
+      footer_codes[].label: 二维码说明
+      follow_links: 社交媒体列表（zh/en 共用，label/href 不分语言）
+      follow_links[].icon: 亮色主题图标
+      follow_links[].icon_dark: 暗色主题图标
+      follow_links[].icon_primary: 主题色图标（hover 态）
+      follow_links[].href: 社交链接
+      follow_links[].label: 平台名称
+  handy_materials:
+    label: 资源推荐板块
+    fields:
+      title: 板块标题
+      list: 资源列表
+      list[].title: 资源标题
+      list[].desc: 资源描述
+      list[].href: 资源链接
+      list[].icon: 资源图标（SVG，inline 消费，路径带 ?raw）
+en:
+  banner:
+    label: top banner title
+    fields:
+      title: title text
+  community_contact:
+    label: Community Contact section
+    fields:
+      title: section title
+      desc: section subtitle (response time note)
+  contact_items:
+    label: contact items
+    fields:
+      title: item title (from i18n communityItem1~4)
+      email: contact email (mailto)
+      icon: item icon (SVG, inline, path with ?raw)
+  follow_us:
+    label: Follow Us section
+    fields:
+      title: section title
+      desc: section subtitle
+      cover: cover image (localized, en uses follow-en.jpg)
+      footer_codes: QR code list (zh-only; en uses empty array)
+      footer_codes[].code: QR code image
+      footer_codes[].label: QR code label
+      follow_links: social media list (shared zh/en; label/href are language-agnostic)
+      follow_links[].icon: light theme icon
+      follow_links[].icon_dark: dark theme icon
+      follow_links[].icon_primary: primary color icon (hover state)
+      follow_links[].href: social link
+      follow_links[].label: platform name
+  handy_materials:
+    label: Handy Materials section
+    fields:
+      title: section title
+      list: resource list
+      list[].title: resource title
+      list[].desc: resource description
+      list[].href: resource link
+      list[].icon: resource icon (SVG, inline, path with ?raw)

@@ -1,0 +1,27 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  button:
+    label: 案例卡片按钮文案
+    fields: {}
+  cases:
+    label: 案例列表
+    fields:
+      path: 案例链接（站内路径）
+      title: 案例标题
+      summary: 案例摘要
+      industry: 行业类型
+      img: 案例图片（站内 public 路径，不以 ./images/ 前缀）
+en:
+  button:
+    label: Case card button text
+    fields: {}
+  cases:
+    label: Case list
+    fields:
+      path: Case link (in-site path)
+      title: Case title
+      summary: Case summary
+      industry: Industry type
+      img: Case image (in-site public path, no ./images/ prefix)

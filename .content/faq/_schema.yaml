@@ -1,0 +1,28 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  faq_title:
+    label: 侧边栏标题
+    fields: {}
+  page_content:
+    label: 页内目录标题
+    fields: {}
+  toc:
+    label: 侧边栏目录
+    fields:
+      label: 分类标签
+      link: 分类链接（空字符串表示当前页 /zh/faq/，其余为子页面路径段）
+en:
+  faq_title:
+    label: Sidebar title
+    fields: {}
+  page_content:
+    label: In-page anchor title
+    fields: {}
+  toc:
+    label: Sidebar TOC
+    fields:
+      label: Category label
+      link: Category link (empty string for the current page /en/faq/, others are
+        sub-page path segments)

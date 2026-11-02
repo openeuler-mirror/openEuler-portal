@@ -1,0 +1,272 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  advantage:
+    label: 我们的优势板块
+    fields:
+      title: 板块标题
+      description: 板块描述
+      card_top_left: 左侧卡片（原系统 EOM）
+      card_top_left.url: 卡片图片
+      card_top_left.title_01: 标题1
+      card_top_left.title_02: 标题2
+      card_top_left.description: 描述
+      transition_right: 右向过渡箭头图片
+      transition_down: 下向过渡箭头图片
+      card_top_right: 右侧卡片（openEuler）
+      card_top_right.url: 卡片图片
+      card_top_right.title_01: 标题1
+      card_top_right.title_02: 标题2
+      card_top_right.description: 描述
+      benefit: 优势列表（按主题拆分亮色/暗色）
+      benefit.light: 亮色主题卡片列表
+      light.icon: 图标
+      light.title: 标题
+      light.link: 链接
+      benefit.dark: 暗色主题卡片列表
+      dark.icon: 图标
+      dark.title: 标题
+      dark.link: 链接
+  download:
+    label: 快速下载板块
+    fields:
+      title: 板块标题
+      description: 板块描述
+      left: 下载工具信息
+      left.img_light: 亮色主题工具图片
+      left.img_dark: 暗色主题工具图片
+      left.name: 工具名称
+      left.version: 版本号
+      btns: 按钮列表
+      btns[].name: 按钮名称
+      btns[].link: 按钮链接（可选，与 soft_links 二选一）
+      btns[].soft_links: 下拉链接列表（可选）
+      soft_links.name: 链接名称
+      soft_links.link: 链接地址
+      bg_url: 背景图片
+      url_1_light: 链接 1 亮色版
+      url_mo_1_light: 移动端链接 1 亮色版
+      url_mo_2_light: 移动端链接 2 亮色版
+      url_1_dark: 链接 1 暗色版
+      url_mo_1_dark: 移动端链接 1 暗色版
+      url_mo_2_dark: 移动端链接 2 暗色版
+  instruction:
+    label: 轻松上手板块
+    fields:
+      title: 板块标题
+      description: 板块描述
+      list: 步骤列表
+      list[].title: 步骤标题
+      list[].content: 步骤内容（多行用 \n 分隔）
+      list[].sogan: 步骤标语
+      bg: 背景图片配置（亮色/暗色 + PC/移动端）
+      bg.url_1_light: PC 端亮色背景
+      bg.url_2_light: PC 端亮色背景
+      bg.url_mo_1_light: 移动端亮色背景
+      bg.url_mo_2_light: 移动端亮色背景
+      bg.url_mo_3_light: 移动端亮色背景
+      bg.url_1_dark: PC 端暗色背景
+      bg.url_2_dark: PC 端暗色背景
+      bg.url_mo_1_dark: 移动端暗色背景
+      bg.url_mo_2_dark: 移动端暗色背景
+      bg.url_mo_3_dark: 移动端暗色背景
+  path:
+    label: 迁移路径板块
+    fields:
+      title: 板块标题
+      description: 板块描述
+      img_light: 亮色主题路径图（zh 差异化，文件名无后缀）
+      img_dark: 暗色主题路径图（zh/en 共用）
+      img_mo: 移动端路径
+      img_mo.top: 上半部分
+      top.title: 标题
+      top.description: 描述
+      top.img: 图片
+      img_mo.bottom: 下半部分
+      bottom.title: 标题
+      bottom.description: 描述
+      bottom.img: 图片
+      img_mo.top.title: title
+      img_mo.top.description: description
+      img_mo.top.img: img
+      img_mo.bottom.title: title
+      img_mo.bottom.description: description
+      img_mo.bottom.img: img
+  case:
+    label: 政企案例板块
+    fields:
+      title: 板块标题
+      description: 板块描述
+      list: 案例列表
+      list[].name: 案例名称
+      list[].description: 案例描述
+      list[].link: 案例链接
+      btn: 按钮
+      btn.text: 按钮文案
+      btn.link: 按钮链接
+  guide:
+    label: 移植指南板块
+    fields:
+      title: 板块标题
+      description: 板块描述
+      list: 指南列表
+      list[].label: 指南标题
+      list[].link: 指南链接
+      btn: 按钮
+      btn.text: 按钮文案
+      btn.link: 按钮链接
+  help:
+    label: 帮助咨询板块
+    fields:
+      title: 板块标题
+      description: 板块描述
+      tips: 提示文案列表
+      tips[].text_left: 左侧文案
+      tips[].link_text: 链接文案
+      tips[].text_right: 右侧文案
+      tips[].link: 链接
+      offical_qr: 官方公众号二维码
+      offical_qr.img: 二维码图片
+      offical_qr.text: 公众号名称
+      assistant_qr: 小助手二维码
+      assistant_qr.img: 二维码图片
+      assistant_qr.text: 小助手名称
+  toc:
+    label: 迁移专区侧边导航
+    fields:
+      label: 节点显示文案
+      link: 节点链接路径段
+      is_leaf: 是否为叶子节点（可选）
+en:
+  advantage:
+    label: Advantages section
+    fields:
+      title: Section title
+      description: Section description
+      card_top_left: Left card (OSs that reach EOM)
+      card_top_left.url: Card image
+      card_top_left.title_01: Title 1
+      card_top_left.title_02: Title 2
+      card_top_left.description: Description
+      transition_right: Right transition arrow image
+      transition_down: Down transition arrow image
+      card_top_right: Right card (openEuler)
+      card_top_right.url: Card image
+      card_top_right.title_01: Title 1
+      card_top_right.title_02: Title 2
+      card_top_right.description: Description
+      benefit: Benefit list (split by light/dark theme)
+      benefit.light: Light theme card list
+      light.icon: Icon
+      light.title: Title
+      light.link: Link
+      benefit.dark: Dark theme card list
+      dark.icon: Icon
+      dark.title: Title
+      dark.link: Link
+  download:
+    label: Download section
+    fields:
+      title: Section title
+      description: Section description
+      left: Download tool info
+      left.img_light: Light theme tool image
+      left.img_dark: Dark theme tool image
+      left.name: Tool name
+      left.version: Version number
+      btns: Button list
+      btns[].name: Button name
+      btns[].link: Button link (optional, mutually exclusive with soft_links)
+      btns[].soft_links: Dropdown link list (optional)
+      soft_links.name: Link name
+      soft_links.link: Link URL
+      bg_url: Background image
+  instruction:
+    label: Getting Started section
+    fields:
+      title: Section title
+      description: Section description
+      list: Step list
+      list[].title: Step title
+      list[].content: Step content (multi-line with \n)
+      list[].sogan: Step slogan
+      bg: Background image config (light/dark + PC/mobile)
+      bg.url_1_light: PC light background
+      bg.url_2_light: PC light background
+      bg.url_mo_1_light: Mobile light background
+      bg.url_mo_2_light: Mobile light background
+      bg.url_mo_3_light: Mobile light background
+      bg.url_1_dark: PC dark background
+      bg.url_2_dark: PC dark background
+      bg.url_mo_1_dark: Mobile dark background
+      bg.url_mo_2_dark: Mobile dark background
+      bg.url_mo_3_dark: Mobile dark background
+  path:
+    label: Migration Paths section
+    fields:
+      title: Section title
+      description: Section description
+      img_light: "Light theme path diagram (en differentiated, original filename:
+        implementation.png)"
+      img_dark: Dark theme path diagram (zh/en shared)
+      img_mo: Mobile path
+      img_mo.top: Top half
+      top.title: Title
+      top.description: Description
+      top.img: Image
+      img_mo.bottom: Bottom half
+      bottom.title: Title
+      bottom.description: Description
+      bottom.img: Image
+      img_mo.top.title: title
+      img_mo.top.description: description
+      img_mo.top.img: img
+      img_mo.bottom.title: title
+      img_mo.bottom.description: description
+      img_mo.bottom.img: img
+  case:
+    label: Best Practices section
+    fields:
+      title: Section title
+      description: Section description
+      list: Case list
+      list[].name: Case name
+      list[].description: Case description
+      list[].link: Case link
+      btn: Button
+      btn.text: Button text
+      btn.link: Button link
+  guide:
+    label: Porting Guides section
+    fields:
+      title: Section title
+      description: Section description
+      list: Guide list
+      list[].label: Guide title
+      list[].link: Guide link
+      btn: Button
+      btn.text: Button text
+      btn.link: Button link
+  help:
+    label: Contact section
+    fields:
+      title: Section title
+      description: Section description
+      tips: Tip text list
+      tips[].text_left: Left text
+      tips[].link_text: Link text
+      tips[].text_right: Right text
+      tips[].link: Link
+      offical_qr: Official WeChat account QR code
+      offical_qr.img: QR code image
+      offical_qr.text: Account name
+      assistant_qr: Assistant QR code
+      assistant_qr.img: QR code image
+      assistant_qr.text: Assistant name
+  toc:
+    label: Migration sidebar navigation
+    fields:
+      label: Node display text
+      link: Node link path segment
+      is_leaf: Whether this is a leaf node (optional)

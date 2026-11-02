@@ -1,0 +1,50 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  banner_title:
+    label: banner 标题
+    fields: {}
+  banner_introduction:
+    label: banner 介绍
+    fields: {}
+  plan_introduce:
+    label: 计划介绍
+    fields: {}
+  view_more:
+    label: 查看更多按钮文案
+    fields: {}
+  card_data:
+    label: 卡片列表
+    fields:
+      title: 卡片标题
+      url: 卡片链接
+      img: 卡片背景图（PNG）
+  event_collection:
+    label: 活动征集标题
+    fields: {}
+  event_collection1:
+    label: 活动征集按钮文案
+    fields: {}
+  event_collection_url:
+    label: 活动征集链接
+    fields: {}
+en:
+  banner_title:
+    label: Banner title
+    fields: {}
+  banner_introduction:
+    label: Banner introduction
+    fields: {}
+  plan_introduce:
+    label: Program introduction
+    fields: {}
+  view_more:
+    label: View more button text
+    fields: {}
+  card_data:
+    label: Card list
+    fields:
+      title: Card title
+      url: Card link
+      img: Card background image (PNG)

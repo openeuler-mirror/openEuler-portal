@@ -1,0 +1,93 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  banner:
+    label: 页面顶部 banner
+    fields:
+      bg_pc: 背景图
+      title: 标题
+      desc: 描述
+      btn: 按钮文案
+      href: 按钮链接
+      rights: 权益
+  guide:
+    label: 用户组介绍与加入指南
+    fields:
+      title: 标题
+      subtitle1: 副标题 1
+      mail: 邮箱
+      wechat: 微信
+      subtitle2: 副标题 2
+      desc1: 描述 1
+      desc2: 描述 2
+      desc3: 描述 3
+      tip1: 提示 1
+      tip2: 提示 2
+      link1: 链接 1(邮箱)
+      link2: 链接 2(订阅地址)
+  intro:
+    label: 成员角色、权益与义务
+    fields:
+      title: 标题
+      desc: 描述
+      introList: 角色介绍列表
+      introList[].title: 角色名(数组,多个角色)
+      introList[].background: 角色背景图
+      introList[].logo: 角色 logo
+      introList[].rights: 权益
+      introList[].obligation: 义务
+      introList[].list: 描述列表
+      rights: 权益
+      obligation: 义务
+  question:
+    label: 如何成为 Organizer / Ambassador
+    fields:
+      title: 标题
+      mail: 邮箱
+      tip: 提示列表
+      desc1: 描述 1
+      desc2: 描述 2
+      subtitle1: 副标题 1(Organizer)
+      intro1: Organizer 介绍
+      subtitle2: 副标题 2(Ambassador)
+      intro2: Ambassador 介绍
+  cities:
+    label: 城市用户组列表
+    fields:
+      name: 城市名
+      img: 城市图
+      data: 城市数据
+      data.title: 城市用户组名
+      data.organizational: 组织架构描述
+      data.organizer: 组织者列表
+      data.ambassador: 大使列表
+      ambassador.name: 姓名
+      ambassador.position: 单位
+      ambassador.technology: 技术领域
+      data.news: 活动回顾列表
+      news.summary: 摘要
+      news.title: 标题
+      news.path: 链接
+      data.showcase: 案例展示列表
+      showcase.summary: 摘要
+      showcase.path: 链接
+      showcase.industry: 行业
+      showcase.title: 标题
+      data.salon: 沙龙活动列表
+      organizer.name: 姓名
+      organizer.position: 单位
+      organizer.home_page: 个人主页
+      organizer.forum: 论坛
+      organizer.email: 邮箱
+      organizer.avatar: 头像
+      organizer.avatar_dark: 头像(暗色)
+      organizer.contribution: 贡献
+      organizer.technology: 技术领域
+      ambassador.home_page: 个人主页
+      ambassador.avatar: 头像
+      ambassador.avatar_dark: 头像(暗色)
+      ambassador.contribution: 贡献
+      news.banner: 活动图
+      data.ambassador[].technology: technology
+      data.organizer[].technology: technology

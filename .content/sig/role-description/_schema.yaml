@@ -1,0 +1,117 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  community_member:
+    label: 社区成员角色说明
+    fields:
+      title: 角色名
+      subtitle: 角色简介
+      view_detail: 详情按钮文案
+      types: 类型卡片列表
+      types[].bg: 卡片背景(PC)
+      types[].bg_mb: 卡片背景(移动端)
+      types[].bg_dark: 卡片背景(暗色PC)
+      types[].bg_mb_dark: 卡片背景(暗色移动端)
+      types[].name: 类型名
+      types[].responsibilitiy: 职责说明
+      types[].requirement: 要求
+      types[].id: ID
+      types[].card_point_bg: 卡片要点背景
+      types[].points: 要点列表
+      types[].notice: 注意事项
+      types[].cards: 卡片列表
+      types[].desc: 描述
+      types[].href: 链接
+      types[].icon: 图标
+      cards: cards
+  contributor:
+    label: 贡献者 角色说明
+    fields:
+      title: 角色名
+      subtitle: 角色简介
+      view_detail: 详情按钮文案
+      id: ID
+      card_point_bg: 卡片要点背景
+      cards: 卡片列表
+      cards[].bg: 卡片背景(PC)
+      cards[].bg_dark: 卡片背景(暗色PC)
+      cards[].bg_mb: 卡片背景(移动端)
+      cards[].bg_mb_dark: 卡片背景(暗色移动端)
+      cards[].title: 卡片标题
+      cards[].desc: 描述
+      cards[].href: 链接
+      cards[].icon: 图标
+      cards[].points: points
+  committer:
+    label: committer 角色说明
+    fields:
+      title: 角色名
+      subtitle: 角色简介
+      view_detail: 详情按钮文案
+      id: ID
+      card_point_bg: 卡片要点背景
+      cards: 卡片列表
+      cards[].bg: 卡片背景(PC)
+      cards[].bg_dark: 卡片背景(暗色PC)
+      cards[].bg_mb: 卡片背景(移动端)
+      cards[].bg_mb_dark: 卡片背景(暗色移动端)
+      cards[].title: 卡片标题
+      cards[].desc: 描述
+      cards[].href: 链接
+      cards[].icon: 图标
+      cards[].points: points
+  maintainer:
+    label: maintainer 角色说明
+    fields:
+      title: 角色名
+      subtitle: 角色简介
+      view_detail: 详情按钮文案
+      id: ID
+      card_point_bg: 卡片要点背景
+      cards: 卡片列表
+      cards[].bg: 卡片背景(PC)
+      cards[].bg_dark: 卡片背景(暗色PC)
+      cards[].bg_mb: 卡片背景(移动端)
+      cards[].bg_mb_dark: 卡片背景(暗色移动端)
+      cards[].title: 卡片标题
+      cards[].desc: 描述
+      cards[].href: 链接
+      cards[].icon: 图标
+      cards[].points: points
+en:
+  community_member:
+    label: community_member
+    fields:
+      title: title
+      subtitle: subtitle
+      view_detail: view_detail
+      types: types
+      cards: cards
+  contributor:
+    label: contributor
+    fields:
+      id: id
+      title: title
+      subtitle: subtitle
+      card_point_bg: card_point_bg
+      cards: cards
+      cards[].points: points
+  committer:
+    label: committer
+    fields:
+      id: id
+      title: title
+      subtitle: subtitle
+      card_point_bg: card_point_bg
+      cards: cards
+      cards[].points: points
+  maintainer:
+    label: maintainer
+    fields:
+      id: id
+      title: title
+      subtitle: subtitle
+      card_point_bg: card_point_bg
+      cards: cards
+      cards[].points: points
