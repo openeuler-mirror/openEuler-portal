@@ -99,8 +99,8 @@ describe('HomeBanner.vue 专属 SCSS 清理守卫（设计 §3 关键改动点�
 describe('删除"商业实践单位遴选"条目后 banner 数量与索引守卫（设计 §4 索引漂移）', () => {
   const banners = parseBannerYaml();
 
-  it('raw 数组共 6 条（删 business-practice 后 7→6）', () => {
-    expect(banners).toHaveLength(6);
+  it('raw 数组共 5 条（删 business-practice 与 call-for-submissions 后）', () => {
+    expect(banners).toHaveLength(5);
   });
 
   it('raw[0] 为 summit 条目', () => {
@@ -111,27 +111,23 @@ describe('删除"商业实践单位遴选"条目后 banner 数量与索引守卫
     expect(banners[1].bg_pc).toContain('release');
   });
 
-  it('raw[2] 为 call-for-submissions 条目', () => {
-    expect(banners[2].bg_pc).toContain('call-for-submissions');
+  it('raw[2] 为 ai-coding-assistants 条目（删 call-for-submissions 后从 index 3 上移到 index 2）', () => {
+    expect(banners[2].bg_pc).toContain('ai-coding-assistants');
   });
 
-  it('raw[3] 为 ai-coding-assistants 条目', () => {
-    expect(banners[3].bg_pc).toContain('ai-coding-assistants');
+  it('raw[3] 为 annual-report 条目', () => {
+    expect(banners[3].bg_pc).toContain('annual-report');
   });
 
-  it('raw[4] 为 annual-report 条目', () => {
-    expect(banners[4].bg_pc).toContain('annual-report');
+  it('raw[4] 为 download 条目', () => {
+    expect(banners[4].bg_pc).toContain('images/download/');
   });
 
-  it('raw[5] 为 download 条目', () => {
-    expect(banners[5].bg_pc).toContain('images/download/');
+  it('zh 可见 banner 共 5 条（business-practice / call-for-submissions 均 locale=zh 被删除后 zh 减 2）', () => {
+    expect(visibleBanners('zh')).toHaveLength(5);
   });
 
-  it('zh 可见 banner 共 6 条（business-practice locale=zh 被删除后 zh 减 1）', () => {
-    expect(visibleBanners('zh')).toHaveLength(6);
-  });
-
-  it('en 可见 banner 共 4 条（business-practice 本就 locale=zh，en 端无变化）', () => {
+  it('en 可见 banner 共 4 条（business-practice / call-for-submissions 本就 locale=zh，en 端无变化）', () => {
     expect(visibleBanners('en')).toHaveLength(4);
   });
 });
