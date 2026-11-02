@@ -105,16 +105,16 @@ describe('HomeBanner.vue 专属 SCSS 清理守卫（设计 §3 关键改动点�
 describe('删除国庆条目后 banner 数量与索引守卫（设计 §4 索引漂移）', () => {
   const banners = parseBannerYaml();
 
-  it('raw 数组共 5 条（release / call-for-submissions / ai-coding / annual-report / download）', () => {
+  it('raw 数组共 5 条（summit / release / ai-coding-assistants / annual-report / download）', () => {
     expect(banners).toHaveLength(5);
   });
 
-  it('raw[0] 为 release 条目', () => {
-    expect(banners[0].bg_pc).toContain('images/release/');
+  it('raw[0] 为 summit 条目', () => {
+    expect(banners[0].bg_pc).toContain('images/summit/');
   });
 
-  it('raw[1] 为 call-for-submissions 条目（删国庆后从 index 2 上移到 index 1）', () => {
-    expect(banners[1].bg_pc).toContain('call-for-submissions');
+  it('raw[1] 为 release 条目', () => {
+    expect(banners[1].bg_pc).toContain('release');
   });
 
   it('raw[2] 为 ai-coding-assistants 条目', () => {
@@ -133,7 +133,7 @@ describe('删除国庆条目后 banner 数量与索引守卫（设计 §4 索引
     expect(visibleBanners('zh')).toHaveLength(5);
   });
 
-  it('en 可见 banner 共 3 条（national-day 本就 locale=zh，en 端无变化）', () => {
-    expect(visibleBanners('en')).toHaveLength(3);
+  it('en 可见 banner 共 4 条（national-day 本就 locale=zh，en 端无变化）', () => {
+    expect(visibleBanners('en')).toHaveLength(4);
   });
 });
