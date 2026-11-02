@@ -301,6 +301,8 @@ const config: UserConfig = {
       alias: {
         '#cms': resolve(__dirname, '../../.cms/export/index.client.ts'),
         '#content': resolve(__dirname, '../../.content'),
+        // 内容编辑器 SDK 经 npm 包(link)解析:portal-cms 与
+        // portal-cms/vitepress 走 node_modules,无需 alias。
       },
     },
     plugins: [
@@ -314,8 +316,17 @@ const config: UserConfig = {
       }),
     ],
     ssr: {
-      noExternal: ['@opendesign-plus/components', 'element-plus']
-    }
+      // SDK(editor-plugin 含 .vue/.ts)在 SSR 阶段需经 vite 编译而非 node external
+      noExternal: ['@opendesign-plus/components', 'element-plus', 'portal-cms']
+    },
+    server: {
+      fs: {
+        allow: [
+          resolve(__dirname, '../..'),
+          resolve(__dirname, '../../../../../00_Common/Code/vscode-portal-cms'),
+        ],
+      },
+    },
   },
   async buildEnd() {
     await generateLLMsFull({

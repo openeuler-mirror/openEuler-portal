@@ -1,4 +1,4 @@
-import type { App } from 'vue';
+import type { App, Plugin } from 'vue';
 import { createPinia } from 'pinia';
 import { SeoBox } from '@/components/seo-box';
 
@@ -34,7 +34,7 @@ import MarkdownLayout from '~@/components/markdown/MarkdownLayout.vue';
 export default {
   Layout,
   NotFound,
-  enhanceApp({ app }: { app: App }) {
+  async enhanceApp({ app }: { app: App }) {
     if (typeof globalThis !== 'undefined') {
       // @ts-ignore
       globalThis.__VUE_PROD_DEVTOOLS__ = false;
@@ -101,6 +101,30 @@ export default {
     app.use(ElementPlus);
     app.use(OpenDesign);
     app.use(i18n);
+    // 内容编辑器:仅编辑模式(VITE_EDIT_MODE=true)动态加载。
+    // 动态 import 保证普通 dev/build 完全不加载 SDK 模块图
+    // (editor-plugin 内部的 #content-manifest 虚拟模块仅在编辑模式可解析)。
+    if (import.meta.env.VITE_EDIT_MODE === 'true') {
+      const { defineContentEditor } = await import('portal-cms/vitepress');
+      // 全自动:模块从 .content 目录自动发现,路由按"目录 = URL"约定推导。
+      // routes 仅声明约定不成立的例外(URL 修正 / null 纯数据模块)。
+      app.use(
+        defineContentEditor({
+          routes: {
+            organization: ['/zh/community/organization', '/en/community/organization'],
+            search: ['/zh/other/search', '/en/other/search'],
+            'security/safety-bulletin': ['/zh/security/security-bulletins', '/en/security/security-bulletins'],
+            // 纯数据(无独立预览页):仅表单编辑,不驱动 iframe 导航
+            activity: null,
+            common: null,
+            community: null,
+            footer: null,
+            header: null,
+            wiki: null,
+          },
+        }) as unknown as Plugin,
+      );
+    }
     app.use(
       createTheme({
         cookieKey: 'openEuler-theme-appearance',

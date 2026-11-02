@@ -134,13 +134,14 @@ app/.vitepress/dist
 
 # .claude/skills/ —
 #   - opendesign-*（4 个）  : 由 scripts/sync-opendesign-skills.js 从 atomgit 自动恢复（pnpm install / dev 触发）
-#   - 项目自有 5 个        : 入 git，直接维护
+#   - 项目自有 6 个        : 入 git，直接维护（首次添加用 git add -f，已被跟踪后不受上方 .claude 规则影响）
 .claude/skills/*/
 !.claude/skills/meta-tags-optimizer/
 !.claude/skills/schema-markup-generator/
 !.claude/skills/vue-best-practices/
 !.claude/skills/frontmatter-data-extractor/
 !.claude/skills/anchor-link-fix/
+!.claude/skills/content-data-lint/
 
 # CodeGraph MCP server artifacts (local tool, not business code)
 .codegraph/
