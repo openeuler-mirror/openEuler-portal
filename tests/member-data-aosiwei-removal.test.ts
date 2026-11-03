@@ -63,9 +63,9 @@ describe('奥思维移除 — Silver-Donors 数据层(yaml)', () => {
     expect(first?.[1]?.trim(), '首项应为 AMD').toBe('AMD');
   });
 
-  it('Silver-Donors 仍有 11 条(其余捐赠人不变,zh/en 一致)', () => {
-    expect(countEntries(silverZh), `zh 应为 11 条,实际 ${countEntries(silverZh)}`).toBe(11);
-    expect(countEntries(silverEn), `en 应为 11 条,实际 ${countEntries(silverEn)}`).toBe(11);
+  it('Silver-Donors 现为 9 条(奥思维回归基线 + Issue #380 移入 tongxin/intel、移除 baiduyun/boyun/langchaoyun/ningsi, zh/en 一致)', () => {
+    expect(countEntries(silverZh), `zh 应为 9 条,实际 ${countEntries(silverZh)}`).toBe(9);
+    expect(countEntries(silverEn), `en 应为 9 条,实际 ${countEntries(silverEn)}`).toBe(9);
   });
 });
 

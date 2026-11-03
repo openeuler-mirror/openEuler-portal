@@ -31,18 +31,13 @@ donor_levels:
         img_dark: ./images/qilin-soft_dark.png
         alt: 麒麟软件有限公司
         no_icon: true
-      - img_light: ./images/tongxin_light.png
-        img_dark: ./images/tongxin_dark.png
-        alt: 统信软件技术有限公司
-        no_icon: true
+      - img_light: ./images/ningsi_light.png
+        img_dark: ./images/ningsi_dark.png
+        alt: 宁思科技
 
   - id: Gold-Donors
     donor_title: 黄金捐赠人
     logo_list:
-      - img_light: ./images/intel_light.png
-        img_dark: ./images/intel_dark.png
-        alt: 英特尔（中国）有限公司
-        no_icon: true
       - img_light: ./images/ruantong_light.png
         img_dark: ./images/ruantong_dark.png
         alt: 软通动力信息技术（集团）股份有限公司
@@ -80,14 +75,6 @@ donor_levels:
         img_dark: ./images/arm_dark.png
         alt: Arm
         no_icon: true
-      - img_light: ./images/baiduyun_light.png
-        img_dark: ./images/baiduyun_dark.png
-        alt: 百度智能云
-        no_icon: true
-      - img_light: ./images/boyun_light.png
-        img_dark: ./images/boyun_dark.png
-        alt: 博云科技
-        no_icon: true
       - img_light: ./images/xinhua_light.png
         img_dark: ./images/xinhua_dark.png
         alt: 新华三技术有限公司
@@ -95,14 +82,6 @@ donor_levels:
       - img_light: ./images/yinke_light.png
         img_dark: ./images/yinke_dark.png
         alt: 银科控股
-        no_icon: true
-      - img_light: ./images/langchaoyun_light.png
-        img_dark: ./images/langchaoyun_dark.png
-        alt: 浪潮云信息技术股份有限公司
-        no_icon: true
-      - img_light: ./images/ningsi_light.png
-        img_dark: ./images/ningsi_dark.png
-        alt: 宁思科技
         no_icon: true
       - img_light: ./images/shenzhoushuma_light.png
         img_dark: ./images/shenzhoushuma_dark.png
@@ -115,6 +94,14 @@ donor_levels:
       - img_light: ./images/dianziyun_light.png
         img_dark: ./images/dianziyun_dark.png
         alt: 中国电子云
+        no_icon: true
+      - img_light: ./images/tongxin_light.png
+        img_dark: ./images/tongxin_dark.png
+        alt: 统信软件技术有限公司
+        no_icon: true
+      - img_light: ./images/intel_light.png
+        img_dark: ./images/intel_dark.png
+        alt: 英特尔（中国）有限公司
         no_icon: true
 
   - id: Bronze-Donors
@@ -135,6 +122,10 @@ donor_levels:
       - img_light: ./images/zhaoxin_light.png
         img_dark: ./images/zhaoxin_dark.png
         alt: 上海兆芯集成电路股份有限公司
+        no_icon: true
+      - img_light: ./images/guangyahongdao_light.png
+        img_dark: ./images/guangyahongdao_dark.png
+        alt: 北京光亚鸿道操作系统有限公司
         no_icon: true
 
   - id: Academic-Institutions
