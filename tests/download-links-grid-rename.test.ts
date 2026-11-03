@@ -15,7 +15,7 @@ function read(file: string): string {
 
 /**
  * 背景：@opendesign-plus/components 通过 theme/index.ts 的
- * `import '@opendesign-plus/components/styles'` 向全局注入了工具类
+ * `import '@opendesign-plus/components/styles'` 曾向全局注入工具类
  * `.grid-container { width: 100vw; max-width: 1920px; margin: 0 auto;
  *   padding-left/right: var(--grid--layout-padding) }`（源自
  * @opendesign-plus/styles 的 dist/mixin/grid.scss，无 scoped 限制）。
@@ -24,6 +24,10 @@ function read(file: string): string {
  * 导致全局规则的 padding-left/right（PC 端 64px / laptop 40px）、
  * width/max-width/margin 泄漏进【其他获取方式】楼层，网格被挤压、
  * 与左侧 get-os-intro 错位。故重命名为 `links-grid` 以彻底解耦。
+ *
+ * 自 @opendesign-plus/components 0.0.1-rc.104 起，components.css 不再
+ * 注入全局 `.grid-container` 工具类（rc.92 含、rc.104 移除）。app 早已
+ * 改用 `links-grid` 规避，故该全局类的移除不影响运行时，仅此断言需调整。
  */
 describe('download 页【其他获取方式】类名与设计系统全局工具类解耦', () => {
   const content = read(DOWNLOAD_GET_OS);
@@ -51,23 +55,22 @@ describe('download 页【其他获取方式】类名与设计系统全局工具�
   });
 });
 
-describe('设计系统全局工具类仍存在（印证冲突来源，供后续维护者理解上下文）', () => {
+describe('设计系统全局工具类状态（rc.104 起 .grid-container 不再注入）', () => {
   const componentsCss = path.join(
     PROJECT_ROOT,
     'node_modules/@opendesign-plus/components/dist/components.css'
   );
 
-  it('@opendesign-plus/components/dist/components.css 含全局 .grid-container 工具类', () => {
+  it('@opendesign-plus/components/dist/components.css 不再含全局 .grid-container 工具类（rc.104 移除）', () => {
     if (!fs.existsSync(componentsCss)) {
       // 依赖未安装时跳过（CI 环境差异），不阻塞
       return;
     }
     const css = read(componentsCss);
-    expect(css.includes('.grid-container{')).toBe(true);
     expect(
-      css.includes('padding-left:var(--grid--layout-padding)'),
-      '全局工具类应含 --grid--layout-padding 的 padding（冲突的直接来源）'
-    ).toBe(true);
+      css.includes('.grid-container{'),
+      'rc.104 起全局 .grid-container 工具类应已移除（rc.92 含、rc.104 移除）'
+    ).toBe(false);
   });
 
   it('theme/index.ts 引入 @opendesign-plus/components/styles（全局注入入口，勿随意移除）', () => {
