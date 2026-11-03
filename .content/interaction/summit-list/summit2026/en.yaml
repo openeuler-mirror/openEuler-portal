@@ -35,6 +35,19 @@ banner:
   button_link: https://openatomcon.openatom.cn/registration/?code=3Ytx&activityNo=HD20261010110123
   button_link_mb: https://openatomcon.openatom.cn/registration_mobile/?code=3Ytx&activityNo=HD20261010110123
 
+# apply_bar: Bottom "register" floating bar (fixed to the bottom; sits below the cookie notice while it is visible)
+# bg_pc: bar background for >840px; bg_mb: bar background for <=840px; registration links reuse banner's button_link / button_link_mb
+apply_bar:
+  bg_pc:
+    light: ./images/apply-bar-pc-light.png
+    dark: ./images/apply-bar-pc-dark.png
+  bg_mb:
+    light: ./images/apply-bar-mb-light.png
+    dark: ./images/apply-bar-mb-dark.png
+  title: Agentic Infra OS Conference & openEuler Summit 2026
+  date_place: November 13-14, 2026 | Beijing, China
+  button_text: Register Now
+
 # introduce: Conference intro (description, highlights, slogan)
 introduce:
   desc:

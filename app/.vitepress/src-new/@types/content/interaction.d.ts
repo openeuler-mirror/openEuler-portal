@@ -78,6 +78,15 @@ declare module '#content/interaction/summit-list/summit2026' {
     button_link_mb: string;
   }
 
+  // apply_bar: 页面底部「立即报名」浮窗（fixed 吸底，cookie 提示未关闭时显示在其下方；报名链接复用 banner）
+  interface Summit2026ApplyBarT {
+    bg_pc: Summit2026ThemeImgT;
+    bg_mb: Summit2026ThemeImgT;
+    title: string;
+    date_place: string;
+    button_text: string;
+  }
+
   // introduce: 大会简介
   interface Summit2026IntroduceT {
     desc: string[];
@@ -111,6 +120,7 @@ declare module '#content/interaction/summit-list/summit2026' {
 
   interface Summit2026ContentT {
     banner: Summit2026BannerT;
+    apply_bar: Summit2026ApplyBarT;
     introduce: Summit2026IntroduceT;
     callfor: Summit2026CallForT;
     previous: Summit2026PreviousT;

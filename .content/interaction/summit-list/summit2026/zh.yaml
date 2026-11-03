@@ -35,6 +35,19 @@ banner:
   button_link: https://openatomcon.openatom.cn/registration/?code=3Ytx&activityNo=HD20261010110123
   button_link_mb: https://openatomcon.openatom.cn/registration_mobile/?code=3Ytx&activityNo=HD20261010110123
 
+# apply_bar: 页面底部「立即报名」浮窗（fixed 吸底，cookie 提示未关闭时显示在其下方）
+# bg_pc: >840px 浮窗背景图；bg_mb: <=840px 浮窗背景图；报名链接复用 banner 的 button_link / button_link_mb
+apply_bar:
+  bg_pc:
+    light: ./images/apply-bar-pc-light.png
+    dark: ./images/apply-bar-pc-dark.png
+  bg_mb:
+    light: ./images/apply-bar-mb-light.png
+    dark: ./images/apply-bar-mb-dark.png
+  title: Agentic Infra 操作系统大会 & openEuler Summit 2026
+  date_place: 11月13日-14日 | 中国·北京中关村国际创新中心
+  button_text: 立即报名
+
 # introduce: 大会简介（描述、亮点列表、口号）
 introduce:
   desc:
