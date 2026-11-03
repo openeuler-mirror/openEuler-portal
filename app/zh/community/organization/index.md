@@ -6,7 +6,7 @@ anchor: true
 
 head: 
   - - script
-    - { type: '' }
+    - { type: 'application/ld+json' }
     - |
       {
         "@context": "https://schema.org",
