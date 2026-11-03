@@ -424,6 +424,7 @@ export interface CveDetailCvssT {
   status: string;
   createTime: string;
   summary: string;
+  type?: string;
   updateTime: string;
   v4_scorenvd: string;
   v4_scoreoe: string;
