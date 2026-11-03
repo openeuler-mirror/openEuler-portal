@@ -50,7 +50,8 @@ interface SectionLike {
 function loadAllSections(): Array<{ slug: string; raw: SectionLike }> {
   return fs
     .readdirSync(CONTENT_DIR)
-    .filter((f) => f.endsWith('.yaml') || f.endsWith('.yml'))
+    // `_` 前缀是目录级元数据文件(如编辑器白名单 _schema.yaml),不是页面 section。
+    .filter((f) => (/\.yaml|\.yml$/.test(f)) && !f.startsWith('_'))
     .map((f) => {
       const slug = f.replace(/\.(yaml|yml)$/, '');
       const raw = yaml.load(fs.readFileSync(path.join(CONTENT_DIR, f), 'utf8')) as SectionLike;
@@ -75,8 +76,8 @@ function stripImagePrefix(p: string): string {
 const sections = loadAllSections();
 
 describe('organization YAML — 文件完整性', () => {
-  it('共有 11 个 section YAML 文件(扫描 .content/organization/)', () => {
-    expect(sections).toHaveLength(11);
+  it('共有 12 个 section YAML 文件(扫描 .content/organization/,不含 _schema 元数据)', () => {
+    expect(sections).toHaveLength(12);
   });
 
   it('每个 SECTION slug 都有对应 YAML 文件', () => {

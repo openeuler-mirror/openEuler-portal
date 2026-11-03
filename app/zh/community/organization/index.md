@@ -15,7 +15,7 @@ head:
             "@type": "WebPage",
             "@id": "https://www.openeuler.org/zh/community/organization/",
             "name": "openEuler 社区组织架构",
-            "description": "openEuler 社区治理架构全览，包括顾问专家委员会（5位中国工程院院士）、技术委员会（27名委员）、品牌委员会、用户委员会及7个专项工作组，共覆盖140+名治理成员。",
+            "description": "openEuler 社区治理架构全览，包括顾问专家委员会（5位中国工程院院士）、技术委员会（27名委员）、学术与教育委员会（38名委员）、品牌委员会、用户委员会及6个专项工作组，共覆盖180+名治理成员。",
             "inLanguage": "zh-CN",
             "url": "https://www.openeuler.org/zh/community/organization/",
             "isPartOf": {
@@ -130,6 +130,19 @@ head:
             ]
           },
           {
+            "@type": "Person",
+            "name": "胡春明",
+            "jobTitle": "openEuler 学术与教育委员会主席",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "北京航空航天大学"
+            },
+            "memberOf": {
+              "@type": "Organization",
+              "name": "openEuler 学术与教育委员会"
+            }
+          },
+          {
             "@type": "FAQPage",
             "mainEntity": [
               {
@@ -137,7 +150,7 @@ head:
                 "name": "openEuler 的治理模式是什么？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "openEuler 采用"委员会 + 工作组"双轨治理模型，由开放原子开源基金会监督。委员会负责社区战略和资源分配；技术委员会（TC）通过公开 RFC 流程处理技术决策；各工作组聚焦品牌、用户、教育、法务、AI、全球化、业务发展、社区运营等具体职能领域。"
+                  "text": "openEuler 采用“委员会 + 工作组”双轨治理模型，由开放原子开源基金会监督。委员会负责社区战略和资源分配；技术委员会（TC）通过公开 RFC 流程处理技术决策；学术与教育委员会汇聚 38 位高校学者，推动产学研协同与人才培养；各工作组聚焦品牌、用户、教育、法务、AI、全球化、业务发展、社区运营等具体职能领域。"
                 }
               },
               {
@@ -193,7 +206,7 @@ head:
                 "name": "openEuler 委员会的任期和遴选标准是什么？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "委员会成员的任期和遴选标准由 openEuler 社区章程规定，具体条款可参见 openEuler 官网"社区章程"页面。成员通常通过成员单位提名和委员会投票确认产生。"
+                  "text": "委员会成员的任期和遴选标准由 openEuler 社区章程规定，具体条款可参见 openEuler 官网“社区章程”页面。成员通常通过成员单位提名和委员会投票确认产生。"
                 }
               }
             ]

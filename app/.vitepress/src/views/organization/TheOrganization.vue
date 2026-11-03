@@ -17,7 +17,7 @@ import IconGit from '@/assets/category/organization/icon-git.svg';
 // 渲染顺序是产品决策,显式列出而非按文件名排序。
 const SECTIONS = [
   'advisory', 'committee', 'technical', 'marketing',
-  'user', 'business', 'operations', 'education',
+  'user', 'academic-education', 'business', 'operations', 'education',
   'legal', 'ai', 'globalization',
 ] as const;
 
