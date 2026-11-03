@@ -4,6 +4,8 @@
 #   path: PDF file path (relative to site root, some contain %20 URL encoding)
 #   summary: White paper title
 white_paper:
+  - path: '/whitepaper/en/openEuler 26.09 Technical White Paper.pdf'
+    summary: 'openEuler 26.09 Technical White Paper'
   - path: '/whitepaper/en/openEuler 24.03 LTS SP4 Technical White Paper.pdf'
     summary: 'openEuler 24.03 LTS SP4 Technical White Paper'
   - path: '/whitepaper/en/openEuler 24.03 LTS SP3 Technical White Paper.pdf'
