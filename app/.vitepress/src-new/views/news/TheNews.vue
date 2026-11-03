@@ -101,9 +101,10 @@ const initTag = () => {
         },
       }
       getTagsData(params).then(res => {
-        item.options = item.type !== 'archives' ? sortInitial(res.obj.totalNum) : res.obj.totalNum;
-        item.displayOptions = item.type !== 'archives' ? sortInitial(res.obj.totalNum) : res.obj.totalNum;
-      });
+        const list = res?.obj?.totalNum ?? [];
+        item.options = item.type !== 'archives' ? sortInitial(list) : list;
+        item.displayOptions = item.type !== 'archives' ? sortInitial(list) : list;
+      }).catch((e) => { console.error('getTagsData failed:', e); });
     }
   })
 };
@@ -208,9 +209,10 @@ const getNews = () => {
     ...newsParams.value,
   }
   getNewsData(params).then(res => {
-    newsData.value = res.obj.records || [];
-    total.value = res.obj.count;
-  })
+    const obj = res?.obj;
+    newsData.value = obj?.records ?? [];
+    total.value = obj?.count ?? 0;
+  }).catch((e) => { console.error('getNews failed:', e); })
 };
 
 const onPageChange = ({ page, pageSize }: { page: number; pageSize: number }) => {
