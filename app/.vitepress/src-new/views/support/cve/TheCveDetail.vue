@@ -84,7 +84,7 @@ const packageName = ref('');
 const cveDetailData = ref<CveDetailCvssT>();
 const affectedProductList = ref<AffectProductT[]>([]);
 const cvssList = ref<CvssItem[]>([]);
-// openEuler 侧评分：按 CVSS 展示版本取值（见 buildCvssData），页头评分展示与安全等级分级共用，
+// openEuler 侧评分：按 CVSS 展示版本取值（见 buildCvssData），用于页头评分展示，
 // 保证与指标表「CVSS评分」行一致，而非只读 v3 字段 cvsssCoreOE
 const oeScore = ref('');
 
@@ -228,7 +228,7 @@ const splitMetricLabel = (label: string): Pick<CvssItem, 'cate' | 'cateSub'> => 
 // 3. 其余情况各列优先 v3、没有 v3 再取 v4；
 // v4 与 v3 数据同表展示时追加 v3 特有行（Scope/C/I/A，不区分脆弱/后续系统），
 // 各列严格按自身 CVSS 版本填充，对侧无法回答的行显示占位符，不做任何跨版本语义换算；
-// openEuler 侧选定评分同时返回给页头（评分展示与安全等级分级共用），
+// openEuler 侧选定评分同时返回给页头（评分展示），
 // 避免页头只读 v3 字段 cvsssCoreOE、在仅有 v4 数据时与表格评分互相矛盾
 const buildCvssData = (detail?: CveDetailCvssT): { rows: CvssItem[]; oeScore: string } => {
   if (!detail) return { rows: [], oeScore: '' };
@@ -305,28 +305,13 @@ const getCveDetailInfo = (cveId: string, packageName: string) => {
   });
 };
 
-// 严重级别列表显示（入参为按展示版本选定的评分，见 oeScore）
-const levelShow = (score: string) => {
-  const val = parseFloat(score);
-  if (val >= 9.0) {
+// 严重级别显示：直接取接口返回的 type 字段（如 Critical/High 等），经 typeMap 转为多语言标签
+const levelShow = (type?: string) => {
+  const level = type ? typeMap.get(type) : undefined;
+  if (type && level) {
     return {
-      label: typeMap.get('Critical')?.label[locale.value],
-      calss: 'critical',
-    };
-  } else if (val >= 7.0) {
-    return {
-      label: typeMap.get('High')?.label[locale.value],
-      calss: 'high',
-    };
-  } else if (val >= 4.0) {
-    return {
-      label: typeMap.get('Medium')?.label[locale.value],
-      calss: 'medium',
-    };
-  } else if (val > 0) {
-    return {
-      label: typeMap.get('Low')?.label[locale.value],
-      calss: 'low',
+      label: level.label[locale.value],
+      calss: type.toLocaleLowerCase(),
     };
   }
   return {
@@ -396,11 +381,11 @@ onMounted(() => {
           <span class="title">{{ cveDetailData?.cveId }}</span>
           <OTag
             class="type-tag"
-            :class="[levelShow(oeScore).calss]"
+            :class="[levelShow(cveDetailData?.type).calss]"
             :style="{ '--tag-radius': '4px' }"
           >
             <OIcon> <IconSecurityLevel /></OIcon>
-            {{ levelShow(oeScore).label }}
+            {{ levelShow(cveDetailData?.type).label }}
           </OTag>
         </div>
         <div class="text-box">

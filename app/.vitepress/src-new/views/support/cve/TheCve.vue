@@ -119,7 +119,7 @@ const COUNT_PER_PAGE = [10, 20, 30, 40];
 const columns = [
   { label: t('safetyBulletin.cve'), key: 'cveId' },
   { label: t('safetyBulletin.summary'), key: 'summary' },
-  { label: t('safetyBulletin.severityLevel'), key: 'cvsssCoreOE' },
+  { label: t('safetyBulletin.severityLevel'), key: 'type' },
   { label: t('cve.status'), key: 'status' },
   { label: t('cve.package'), key: 'packageName' },
   { label: t('safetyBulletin.releaseTime'), key: 'createTime' },
@@ -179,28 +179,13 @@ levelOptions.value.unshift({
   },
 });
 
-// 严重级别列表显示
-const levelShow = (cvsssCoreOE: string) => {
-  const val = parseFloat(cvsssCoreOE);
-  if (val >= 9.0) {
+// 严重级别列表显示：直接取接口返回的 type 字段（如 Critical/High 等），经 typeMap 转为多语言标签
+const levelShow = (type?: string) => {
+  const level = type ? typeMap.get(type) : undefined;
+  if (type && level) {
     return {
-      label: typeMap.get('Critical')?.label[locale.value],
-      calss: 'critical',
-    };
-  } else if (val >= 7.0) {
-    return {
-      label: typeMap.get('High')?.label[locale.value],
-      calss: 'high',
-    };
-  } else if (val >= 4.0) {
-    return {
-      label: typeMap.get('Medium')?.label[locale.value],
-      calss: 'medium',
-    };
-  } else if (val > 0) {
-    return {
-      label: typeMap.get('Low')?.label[locale.value],
-      calss: 'low',
+      label: level.label[locale.value],
+      calss: type.toLocaleLowerCase(),
     };
   }
   return {
@@ -380,14 +365,14 @@ onUnmounted(() => {
       <template #td_summary="{ row }">
         <p class="summary">{{ row.summary }}</p>
       </template>
-      <template #td_cvsssCoreOE="{ row }">
+      <template #td_type="{ row }">
         <OTag
           class="type-tag"
-          :class="[levelShow(row.cvsssCoreOE).calss]"
+          :class="[levelShow(row.type).calss]"
           :style="{ '--tag-radius': '4px' }"
         >
           <OIcon> <IconSecurityLevel /></OIcon>
-          {{ levelShow(row.cvsssCoreOE).label }}
+          {{ levelShow(row.type).label }}
         </OTag>
       </template>
       <template #td_status="{ row }">
@@ -493,11 +478,11 @@ onUnmounted(() => {
             <p class="item-label">{{ t('safetyBulletin.severityLevel') }}</p>
             <OTag
               class="type-tag"
-              :class="[levelShow(item.cvsssCoreOE).calss]"
+              :class="[levelShow(item.type).calss]"
               :style="{ '--tag-radius': '4px' }"
             >
               <OIcon> <IconSecurityLevel /></OIcon>
-              {{ levelShow(item.cvsssCoreOE).label }}
+              {{ levelShow(item.type).label }}
             </OTag>
           </div>
           <div class="info-item">
