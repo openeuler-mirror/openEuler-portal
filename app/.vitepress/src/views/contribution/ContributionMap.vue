@@ -77,6 +77,7 @@ const goLink = (url: string, isBlank: boolean) => {
   background-color: var(--o-color-fill1);
   width: 100%;
   padding-bottom: var(--e-spacing-h1);
+  padding-top: var(--e-spacing-h2);
   .content-map-img {
     width: 1416px;
     min-height: 650px;
