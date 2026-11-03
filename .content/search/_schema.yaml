@@ -1,0 +1,35 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  module_map:
+    label: 模块分类映射
+    fields:
+      key: 模块键名
+      label: 模块标签
+      sub_modules: 子模块列表（可选，非语言相关）
+  sub_module_map:
+    label: 子模块映射
+    fields:
+      key: 子模块键名
+      label: 子模块标签（可选）
+      from: 面包屑路径数组
+en:
+  module_map:
+    label: Module category mapping
+    fields:
+      key: Module key name
+      label: Module label
+      sub_modules: Sub-module list (optional, not locale-specific)
+  sub_module_map:
+    label: Sub-module mapping
+    fields:
+      key: Sub-module key name
+      label: Sub-module label (optional)
+      from: Breadcrumb path array
+maintainer:
+  label: 搜索页维护者默认信息
+  fields:
+    name: name
+    email: email
+    gitee_id: gitee_id

@@ -1,0 +1,88 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  features:
+    label: 功能特性卡片
+    fields:
+      title_key: 标题 i18n key
+      desc_key: 描述 i18n key
+      slug: 功能详情页 slug
+  partners:
+    label: 合作伙伴
+    fields:
+      name: 合作伙伴名称
+      logo: Logo 图片路径（相对当前 yaml）
+      href: 合作伙伴链接
+  performance_x_list:
+    label: X 轴标签
+    fields: {}
+  performance_y_list:
+    label: Y 轴系列数据
+    fields:
+      name: 系列名称
+      type: 图表类型(line)
+      data: 数值数组
+      line_style: 线型(dotted=虚线)
+      line_style.type: type
+  performance_comparison_url:
+    label: 性能对比测试说明文档链接
+    fields: {}
+  mirror_versions:
+    label: 镜像下载版本列表
+    fields:
+      date_title: 版本标题
+      x86_list: x86 架构包列表
+      x86_list[].name: 包名称
+      x86_list[].path: 下载路径
+      arm_list: ARM 架构包列表
+  doc_links:
+    label: 文档链接
+    fields:
+      title_key: 标题 i18n key
+      href: 文档链接
+  other_links:
+    label: 其他链接
+    fields:
+      title_key: 标题 i18n key
+      href: 链接
+  feature_map:
+    label: 功能详情页内容
+    fields:
+      title_key: 标题 i18n key
+      desc_key: 描述 i18n key
+      sections: 章节列表
+      sections.type: 章节类型（text/heading/list/code/image/link）
+      sections.content: 文本内容（text/heading/code/link 类型）
+      sections.items: 列表项数组（list 类型）
+      sections.src: 图片路径（image 类型，相对当前 yaml）
+      sections.href: 链接（link 类型）
+      kernel: kernel
+      kernel.title_key: title_key
+      kernel.desc_key: desc_key
+      kernel.sections: sections
+      pilotgo: pilotgo
+      pilotgo.title_key: title_key
+      pilotgo.desc_key: desc_key
+      pilotgo.sections: sections
+      pilotgo.sections[].items: items
+      nkd: nkd
+      nkd.title_key: title_key
+      nkd.desc_key: desc_key
+      nkd.sections: sections
+      nkd.sections[].items: items
+      rubik: rubik
+      rubik.title_key: title_key
+      rubik.desc_key: desc_key
+      rubik.sections: sections
+      rubik.sections[].items: items
+      custom-image: custom-image
+      custom-image.title_key: title_key
+      custom-image.desc_key: desc_key
+      custom-image.sections: sections
+      custom-image.sections[].items: items
+      x2nestos: x2nestos
+      x2nestos.title_key: title_key
+      x2nestos.desc_key: desc_key
+      x2nestos.sections: sections
+      x2nestos.sections[].items: items

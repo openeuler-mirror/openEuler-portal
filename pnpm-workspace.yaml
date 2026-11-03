@@ -4,9 +4,11 @@ allowBuilds:
   vue-demi: true
 minimumReleaseAgeExclude:
   - '@opendesign-plus/plugins@0.0.1-rc.10'
+  - portal-cms@0.1.0-rc.6 || 0.1.0-rc.7
 overrides:
   uuid: 14.0.0
   js-cookie: 3.0.7
   dayjs: 1.11.13
+  # vite 钉死 6.x:vitepress 1.6 的依赖范围,防 lockfile 失同步时悬浮解析漂到 7/8
   vite: 6.4.3
   markdown-it: 14.3.3

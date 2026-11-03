@@ -1,0 +1,84 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  community_versions:
+    label: 首页"社区版本"tab 展示的版本名称列表
+    fields: {}
+  get_os:
+    label: 获取操作系统配置
+    fields:
+      id: 锚点 ID
+      bg_light: 亮色背景
+      bg_dark: PC 端背景图（PNG，background-image 消费，zh/en 共用）
+      bg_mo_light: 移动端亮色背景
+      bg_mo_dark: 移动端背景图
+      title: 方式标题
+      intro: 方式简介
+      intro1: 安装指引文案（可选，仅 cloud/container 有）
+      intro_link: 安装指引链接（可选）
+      repeat: 布局参数（可选）
+      links: 子链接列表
+      links[].href: 链接
+      links[].label: 链接文案
+      links[].introduce: 链接介绍
+  get_resource:
+    label: 相关资源
+    fields:
+      icon_light: 亮色主题图标（SVG，OCard :icon 组件消费，路径带 ?raw）
+      title: 资源标题
+      label: 资源描述
+      href: 资源链接
+      bg_light: 亮色背景
+      bg_mo_light: 移动端亮色背景
+  support_service:
+    label: 支持与服务
+    fields:
+      icon_light: 亮色主题图标（SVG，OCard :icon 组件消费，路径带 ?raw）
+      title: 服务标题
+      label: 服务描述
+      href: 服务链接
+en:
+  community_versions:
+    label: Version names displayed in the "Community Releases" tab
+    fields: {}
+  get_os:
+    label: Get openEuler configurations
+    fields:
+      id: Anchor ID
+      bg_light: PC background (PNG, background-image, shared zh/en)
+      bg_dark: PC background (PNG, background-image, shared zh/en)
+      bg_mo_light: Mobile background
+      bg_mo_dark: Mobile background
+      title: Method title
+      intro: Method intro
+      intro1: Installation guide label (optional, only cloud/container)
+      intro_link: Installation guide link (optional)
+      repeat: Layout parameter (optional)
+      links: Sub-link list
+      links[].href: Link URL
+      links[].label: Link label
+      links[].introduce: Link introduction
+  get_resource:
+    label: Related resources
+    fields:
+      icon_light: Light theme icon (SVG, OCard :icon, path uses ?raw)
+      title: Resource title
+      label: Resource description
+      href: Resource link
+  support_service:
+    label: Support services
+    fields:
+      icon_light: Light theme icon (SVG, OCard :icon, path uses ?raw)
+      title: Service title
+      label: Service description
+      href: Service link
+new:
+  label: download-new 数据
+  fields:
+    Tree: Tree
+    ComputedScore: ComputedScore
+    fileTree: fileTree
+    fileTree[].Tree: Tree
+    mirrorList: mirrorList
+    mirrorList[].ComputedScore: ComputedScore

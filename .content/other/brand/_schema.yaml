@@ -1,0 +1,72 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  banner:
+    label: 品牌页顶部横幅图
+    fields: {}
+  logo:
+    label: openEuler logo
+    fields: {}
+  logo_dark:
+    label: openEuler logo
+    fields: {}
+  strato_virt_logo:
+    label: StratoVirt 子项目 logo
+    fields: {}
+  strato_virt_logo_dark:
+    label: StratoVirt 子项目 logo
+    fields: {}
+  guide:
+    label: 品牌规范指南外链
+    fields: {}
+  logo_download:
+    label: logo 资源包下载链接
+    fields:
+      list: list
+  innovation_logo_download:
+    label: 创新版 logo 下载链接
+    fields:
+      list: list
+  ppt_list:
+    label: 品牌介绍 PPT
+    fields: {}
+  ppt_list_en:
+    label: 品牌介绍 PPT
+    fields:
+      title: PPT 标题
+      img: 封面图
+      url: 下载链接
+en:
+  banner:
+    label: banner
+    fields: {}
+  logo:
+    label: logo
+    fields: {}
+  logo_dark:
+    label: logo_dark
+    fields: {}
+  strato_virt_logo:
+    label: strato_virt_logo
+    fields: {}
+  strato_virt_logo_dark:
+    label: strato_virt_logo_dark
+    fields: {}
+  guide:
+    label: guide
+    fields: {}
+  logo_download:
+    label: logo_download
+    fields:
+      list: list
+  innovation_logo_download:
+    label: innovation_logo_download
+    fields:
+      list: list
+  ppt_list:
+    label: ppt_list
+    fields: {}
+  ppt_list_en:
+    label: ppt_list_en
+    fields: {}

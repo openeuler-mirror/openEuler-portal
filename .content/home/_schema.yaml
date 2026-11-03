@@ -1,0 +1,129 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  display_zone:
+    label: 首页快捷入口配置
+    fields:
+      title: 入口标题
+      icon_light: 亮色/暗色主题图标（SVG，<img> 消费）
+      icon_dark: 亮色/暗色主题图标（SVG，<img> 消费）
+      description: 入口描述
+      link: 入口链接
+      label: 按钮文案
+  intro:
+    label: openEuler 介绍三步曲
+    fields:
+      title: 介绍标题
+      img_pc: PC/移动端展示图（zh 差异化，文件名含 _zh_ 后缀）
+      img_mo: PC/移动端展示图（zh 差异化，文件名含 _zh_ 后缀）
+      icon_light: 列表图标（zh/en 共用）
+      icon_dark: 列表图标（zh/en 共用）
+      description: 介绍描述（zh/en 相同）
+      logo_light: 亮色 logo
+  play_community:
+    label: 玩转社区卡片
+    fields:
+      title: 卡片标题
+      bg: 卡片背景图（zh/en 共用）
+      intro: 卡片简介
+      btn: 主按钮 {label, link}
+      textBtn: 次按钮 {label, link}（可选）
+      label: 按钮文案
+      link: 按钮链接
+      btn.label: label
+      btn.link: link
+      textBtn.label: label
+      textBtn.link: link
+  vitality:
+    label: 社区活力数据
+    fields:
+      vitalityValue: 占位数值（API 返回后覆盖）
+      vitalityKey: 与 API 返回字段对应的键名
+      vitalityLabel: 数据项标签
+  case:
+    label: 案例展示行业分类
+    fields:
+      label: 行业名称
+      icon: 行业图标（SVG，inline 消费，路径带 ?raw）
+      img: 行业插图（PNG，<OFigure> 消费）
+  friendly_community:
+    label: 友情社区 logo 墙
+    fields:
+      logo_light: 亮色/暗色主题 logo（PNG，<OFigure> 消费）
+      logo_dark: 亮色/暗色主题 logo（PNG，<OFigure> 消费）
+      url: 社区官网链接
+      desc: 补充说明（可选，仅部分社区有）
+  publisher:
+    label: 合作伙伴 logo 轮播墙
+    fields:
+      logo_light: 亮色/暗色主题 logo（PNG，<OFigure> 消费）
+      logo_dark: 亮色/暗色主题 logo（PNG，<OFigure> 消费）
+      href: 合作伙伴官网链接
+      validity.end: end
+en:
+  display_zone:
+    label: Home quick links
+    fields:
+      title: Entry title
+      icon_light: Light/dark theme icons (SVG, <img>)
+      icon_dark: Light/dark theme icons (SVG, <img>)
+      description: Entry description
+      link: Entry link
+  intro:
+    label: openEuler intro trio
+    fields:
+      title: Intro title
+      img_pc: PC/Mobile showcase images (en-differentiated, _en_ suffix)
+      img_mo: PC/Mobile showcase images (en-differentiated, _en_ suffix)
+      icon_light: List icons (shared zh/en)
+      icon_dark: List icons (shared zh/en)
+      description: Intro description (same for zh/en)
+  play_community:
+    label: Play-with-community cards
+    fields:
+      title: Card title
+      bg: Card background image (shared zh/en)
+      intro: Card intro
+      btn: Primary button {label, link}
+      textBtn: Secondary button {label, link} (optional)
+      btn.label: label
+      btn.link: link
+      textBtn.label: label
+      textBtn.link: link
+  vitality:
+    label: Community vitality stats
+    fields:
+      vitalityValue: Placeholder value (overwritten by API response)
+      vitalityKey: Key matching the API response field
+      vitalityLabel: Data item label
+  case:
+    label: Showcase industry categories
+    fields:
+      label: Industry name
+      icon: Industry icon (SVG, inline consumption, path uses ?raw)
+      img: Industry illustration (PNG, <OFigure>)
+  friendly_community:
+    label: Friendly community logo wall
+    fields:
+      logo_light: Light/dark theme logos (PNG, <OFigure>)
+      logo_dark: Light/dark theme logos (PNG, <OFigure>)
+      url: Community official site URL
+      desc: Supplementary note (optional, only some communities have it)
+  publisher:
+    label: Partner logo carousel wall
+    fields:
+      logo_light: Light/dark theme logos (PNG, <OFigure>)
+      logo_dark: Light/dark theme logos (PNG, <OFigure>)
+      href: Partner official site URL
+      validity.end: end
+banner:
+  label: 首页轮播图
+  fields:
+    dark.bg_pc: bg_pc
+    dark.bg_pad: bg_pad
+    dark.bg_mb: bg_mb
+    dark.bg_theme: bg_theme
+    dark.attach: attach
+    title_zh: title_zh
+    title_en: title_en

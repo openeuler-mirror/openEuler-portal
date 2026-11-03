@@ -1,0 +1,25 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  type_map:
+    label: 严重等级映射
+    fields:
+      key: 等级键名
+      value: 等级值
+      label: 等级标签
+      score: 分数范围
+  security_notice_nos:
+    label: 特殊安全公告编号列表
+    fields: {}
+en:
+  type_map:
+    label: Severity level mapping
+    fields:
+      key: Level key name
+      value: Level value
+      label: Level label
+      score: Score range
+  security_notice_nos:
+    label: Special security notice numbers
+    fields: {}

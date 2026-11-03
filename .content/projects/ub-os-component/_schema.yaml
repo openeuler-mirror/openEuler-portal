@@ -1,0 +1,38 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  repo_list:
+    label: UB OS 组件代码仓列表
+    fields:
+      name: 组件名
+      title: 标题
+      desc: 描述
+      href: 链接
+      icon: 图标
+      row_key: 排序键
+      children: 子模块列表
+      is_outlink: 是否外链
+      children[].children: children
+      children[].children[].repo_link: repo_link
+      children[].children[].repo: repo
+  related_links:
+    label: 相关入口链接
+    fields:
+      name: 入口名
+      icon: 图标
+      title: 标题
+      desc: 描述
+      href: 链接
+      is_outlink: 是否外链
+en:
+  repo_list:
+    label: UB OS 组件代码仓列表
+    fields:
+      children: children
+      children[].children: children
+      children[].children[].repo_link: repo_link
+      children[].children[].repo: repo
+  related_links:
+    label: 相关入口链接
+    fields: {}

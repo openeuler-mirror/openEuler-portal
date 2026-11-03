@@ -1,0 +1,65 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  type_map:
+    label: 行业分类图标映射
+    fields:
+      icon: 图标
+      img_light: 亮色图
+      img_dark: 暗色图
+      金融: 金融
+      金融.icon: icon
+      金融.img_light: img_light
+      金融.img_dark: img_dark
+      运营商: 运营商
+      运营商.icon: icon
+      运营商.img_light: img_light
+      运营商.img_dark: img_dark
+      能源: 能源
+      能源.icon: icon
+      能源.img_light: img_light
+      能源.img_dark: img_dark
+      物流: 物流
+      物流.icon: icon
+      物流.img_light: img_light
+      物流.img_dark: img_dark
+      高校&科研: 高校&科研
+      高校&科研.icon: icon
+      高校&科研.img_light: img_light
+      高校&科研.img_dark: img_dark
+      云计算: 云计算
+      云计算.icon: icon
+      云计算.img_light: img_light
+      云计算.img_dark: img_dark
+      其他: 其他
+      其他.icon: icon
+      其他.img_light: img_light
+      其他.img_dark: img_dark
+en:
+  type_map:
+    label: Industry category icon mapping
+    fields:
+      icon: Industry SVG icon (inline SVG, with ?raw, consumed via createSvgIcon)
+      img_light: Light theme industry icon PNG
+      img_dark: Dark theme industry icon PNG
+      Finance: Finance
+      Finance.icon: icon
+      Finance.img_light: img_light
+      Finance.img_dark: img_dark
+      Carrier: Carrier
+      Carrier.icon: icon
+      Carrier.img_light: img_light
+      Carrier.img_dark: img_dark
+      Energy: Energy
+      Energy.icon: icon
+      Energy.img_light: img_light
+      Energy.img_dark: img_dark
+      Logistics: Logistics
+      Logistics.icon: icon
+      Logistics.img_light: img_light
+      Logistics.img_dark: img_dark
+      Others: Others
+      Others.icon: icon
+      Others.img_light: img_light
+      Others.img_dark: img_dark

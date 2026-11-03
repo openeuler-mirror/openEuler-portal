@@ -1,0 +1,145 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  banner:
+    label: banner
+    fields:
+      bg_pc: bg_pc
+      bg_pc.light: light
+      bg_pc.dark: dark
+      bg_pad: bg_pad
+      bg_pad.light: light
+      bg_pad.dark: dark
+      bg_mb: bg_mb
+      bg_mb.light: light
+      bg_mb.dark: dark
+      text_img: text_img
+      text_img.light: light
+      text_img.dark: dark
+      text_img_mb: text_img_mb
+      text_img_mb.light: light
+      text_img_mb.dark: dark
+      text_img_alt: text_img_alt
+      button_text: button_text
+      button_link: button_link
+      button_link_mb: button_link_mb
+  introduce:
+    label: introduce
+    fields:
+      desc: desc
+      tips: tips
+      list: list
+      slogan: slogan
+  callfor:
+    label: callfor
+    fields:
+      bg_pc: bg_pc
+      bg_pc.light: light
+      bg_pc.dark: dark
+      bg_mb: bg_mb
+      bg_mb.light: light
+      bg_mb.dark: dark
+      list: list
+  agent:
+    label: agent
+    fields:
+      title: title
+      tips: tips
+      salon_tips: salon_tips
+      text: text
+      list: list
+      list[].children: children
+      list[].children[].children: children
+      list[].children[].children[].content: content
+      list[].children[].tab: tab
+      list[].children[].pending_cards: pending_cards
+      list[].children[].tab[].children: children
+      list[].children[].tab[].children[].content: content
+      list[].children[].tab[].children[].content[].guest: guest
+      list[].children[].children[].content[].titles: titles
+      list[].children[].children[].content[].guest: guest
+      list[].children[].list: list
+      list[].children[].list[].children: children
+      list[].children[].list[].children[].children: children
+  partner:
+    label: partner
+    fields:
+      title: title
+      list: list
+      list[].logos: logos
+  previous:
+    label: previous
+    fields:
+      title: title
+      list: list
+en:
+  banner:
+    label: banner
+    fields:
+      bg_pc: bg_pc
+      bg_pc.light: light
+      bg_pc.dark: dark
+      bg_pad: bg_pad
+      bg_pad.light: light
+      bg_pad.dark: dark
+      bg_mb: bg_mb
+      bg_mb.light: light
+      bg_mb.dark: dark
+      text_img: text_img
+      text_img.light: light
+      text_img.dark: dark
+      text_img_mb: text_img_mb
+      text_img_mb.light: light
+      text_img_mb.dark: dark
+      text_img_alt: text_img_alt
+      button_text: button_text
+      button_link: button_link
+      button_link_mb: button_link_mb
+  introduce:
+    label: introduce
+    fields:
+      desc: desc
+      tips: tips
+      list: list
+      slogan: slogan
+  callfor:
+    label: callfor
+    fields:
+      bg_pc: bg_pc
+      bg_pc.light: light
+      bg_pc.dark: dark
+      bg_mb: bg_mb
+      bg_mb.light: light
+      bg_mb.dark: dark
+      list: list
+  agent:
+    label: agent
+    fields:
+      title: title
+      tips: tips
+      salon_tips: salon_tips
+      text: text
+      list: list
+      list[].children: children
+      list[].children[].children: children
+      list[].children[].children[].content: content
+      list[].children[].tab: tab
+      list[].children[].pending_cards: pending_cards
+      list[].children[].tab[].children: children
+      list[].children[].tab[].children[].content: content
+      list[].children[].tab[].children[].content[].guest: guest
+      list[].children[].list: list
+      list[].children[].list[].children: children
+      list[].children[].list[].children[].children: children
+  partner:
+    label: partner
+    fields:
+      title: title
+      list: list
+      list[].logos: logos
+  previous:
+    label: previous
+    fields:
+      title: title
+      list: list

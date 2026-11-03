@@ -1,0 +1,25 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  project_data:
+    label: 项目卡片列表
+    fields:
+      title: 项目名称
+      desc: 项目描述
+      icon: 项目图标路径（空字符串表示无图标，PNG <OFigure> 消费）
+      url: 项目详情页链接（相对站点根目录）
+      atomgit_url: AtomGit 代码仓链接（可选）
+      gitee_url: Gitee 代码仓链接（可选，部分项为空字符串）
+      tag: 标签（可选，如 NEW）
+en:
+  project_data:
+    label: Project card list
+    fields:
+      title: Project name
+      desc: Project description
+      icon: Project icon path (empty string = no icon, PNG <OFigure>)
+      url: Project detail page link (relative to site root)
+      atomgit_url: AtomGit repository link (optional)
+      gitee_url: Gitee repository link (optional, some items empty string)
+      tag: Tag (optional, e.g. NEW)

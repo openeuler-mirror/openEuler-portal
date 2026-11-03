@@ -1,0 +1,35 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  description:
+    label: 板块描述
+    fields: {}
+  cards:
+    label: 优势卡片数组
+    fields:
+      text: 卡片文案
+      url: 卡片图片
+  tips:
+    label: 联系我们提示文案
+    fields:
+      text_1: 分段文案
+      text_2: 分段文案
+      text_3: 分段文案
+      link: 联系链接（当前为空，模板硬编码）
+en:
+  description:
+    label: Section description
+    fields: {}
+  cards:
+    label: Advantage card array
+    fields:
+      text: Card text
+      url: Card image
+  tips:
+    label: Contact us prompt
+    fields:
+      text_1: Text segments
+      text_2: Text segments
+      text_3: Text segments
+      link: Contact link (currently empty, template hardcodes URL)

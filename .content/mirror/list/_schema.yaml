@@ -1,0 +1,31 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  area_arr:
+    label: 地区筛选选项
+    fields:
+      value: 地区代码
+      label: 地区名称（英文，zh/en 共用）
+  rsync_code:
+    label: rsync 同步命令
+    fields: {}
+  repo_size:
+    label: 镜像仓大小列表
+    fields:
+      release: 版本名称
+      size: 镜像大小
+en:
+  area_arr:
+    label: Region filter options
+    fields:
+      value: Region code
+      label: Region name (English, shared zh/en)
+  rsync_code:
+    label: rsync sync command
+    fields: {}
+  repo_size:
+    label: Mirror repository size list
+    fields:
+      release: Version name
+      size: Image size

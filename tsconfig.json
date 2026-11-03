@@ -1,6 +1,7 @@
 {
   "extends": "./.cms/export/tsconfig.json",
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",

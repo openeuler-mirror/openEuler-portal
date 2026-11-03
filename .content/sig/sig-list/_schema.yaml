@@ -1,0 +1,45 @@
+# 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
+# fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
+# schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+zh:
+  welcome_join:
+    label: 欢迎加入 SIG 三步曲
+    fields:
+      icon: 步骤图标（SVG，inline 消费，路径带 ?raw）
+      title: 步骤标题
+      subtitle: 步骤描述（可能含 HTML 内联链接）
+  about_sig:
+    label: 关于 SIG 卡片
+    fields:
+      icon: 卡片图标（SVG，inline 消费，路径带 ?raw）
+      title: 卡片标题
+      subtitle: 卡片描述
+      path: 卡片链接（en 第 2 项为空，组件用 v-if 过滤不显示）
+      backgroud: 卡片背景图（PNG，<img> 消费，zh/en 共用）
+  application_process:
+    label: 成立 SIG 申请流程
+    fields:
+      icon: 步骤图标（SVG，inline 消费，路径带 ?raw）
+      process: 步骤名称
+      detail: 步骤详情（可能含 HTML 内联链接）
+en:
+  welcome_join:
+    label: Welcome to SIG trio
+    fields:
+      icon: Step icon (SVG, inline, path uses ?raw)
+      title: Step title
+      subtitle: Step description (may contain inline HTML links)
+  about_sig:
+    label: About SIG cards
+    fields:
+      icon: Card icon (SVG, inline, path uses ?raw)
+      title: Card title
+      subtitle: Card description
+      path: Card link (en item 2 is empty, filtered out by v-if)
+      backgroud: Card background image (PNG, <img>, shared zh/en)
+  application_process:
+    label: SIG establishment process
+    fields:
+      icon: Step icon (SVG, inline, path uses ?raw)
+      process: Step name
+      detail: Step detail (may contain inline HTML links)

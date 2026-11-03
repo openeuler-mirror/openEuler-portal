@@ -8,8 +8,20 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import replaceUrlPlugin from './.vitepress/plugins/replace-url-plugin';
 import { OPlusYamlContentVitePlugin } from '@opendesign-plus/vite-plugins';
+// 内容编辑器 SDK。node 侧入口走预构建产物(vite.config 由 Node 原生加载,
+// 无法消费包内 TS 源码);仅编辑模式注册
+import { contentYamlPlugin } from 'portal-cms/vitepress/plugin';
+
+const EDIT_MODE = process.env.VITE_EDIT_MODE === 'true';
 
 export default defineConfig({
+  // 构建期常量折叠:theme 据此决定是否动态 import 编辑器 SDK。
+  // 普通构建折叠为恒假 → Rollup DCE 移除动态 import(SDK 不进 bundle);
+  // 编辑模式恒真 → SDK 模块图(含 #content-manifest)完整接入。
+  // 与下方插件注册共用同一开关
+  define: {
+    'import.meta.env.VITE_EDIT_MODE': JSON.stringify(EDIT_MODE ? 'true' : 'false'),
+  },
   build: {
     outDir: path.resolve(__dirname, '../dist'),
     cssCodeSplit: true,
@@ -27,14 +39,28 @@ export default defineConfig({
       scss: {
         charset: false,
         api: 'modern-compiler',
-        additionalData: `
+        // SDK 的 SCSS 自包含(不依赖业务 mixin),跳过注入避免编译失败
+        additionalData: (source, filename) => {
+          if (filename.includes('portal-cms') || filename.includes('vscode-portal-cms')) {
+            return source;
+          }
+          return `
         @use "@opensig/opendesign/es/_styles/mixin.scss" as *;
         @use "~@/assets/style/mixin/font.scss" as *;
-        @use "~@/assets/style/mixin/common.scss" as *;`,
+        @use "~@/assets/style/mixin/common.scss" as *;${source}`;
+        },
       },
     },
   },
+  optimizeDeps: {
+    // SDK 源码分发(含 .vue/.scss),交由 vite transform 而非 esbuild 预打包
+    exclude: ['portal-cms'],
+  },
   plugins: [
+    // 编辑模式:SDK 插件(enforce:pre)接管 yaml(reactive 化 + 元数据 + manifest),
+    // OPlus 的 yaml 处理被绕过(reactive 对组件透明,业务照常消费);
+    // 普通构建仅 OPlus,行为与上游一致
+    ...(EDIT_MODE ? [contentYamlPlugin({ editMode: true })] : []),
     OPlusYamlContentVitePlugin(),
     vueJsx({}),
     Icons({
