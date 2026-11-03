@@ -8,6 +8,7 @@ import SummitCallFor from './components/SummitCallFor.vue';
 import SummitAgent from './components/SummitAgent.vue';
 import SummitPartner from './components/SummitPartner.vue';
 import SummitPrevious from './components/SummitPrevious.vue';
+import SummitApplyBar from './components/SummitApplyBar.vue';
 
 import summitContent from '#content/interaction/summit-list/summit2026';
 
@@ -43,6 +44,11 @@ const summitData = computed(
     <SummitPartner v-if="summitData.partner?.visible !== false" :partner-data="summitData.partner" />
     <SummitPrevious :previous-data="summitData.previous" />
   </ContentWrapper>
+  <!-- 底部「立即报名」浮窗，报名链接复用顶部 banner -->
+  <SummitApplyBar
+    :bar-data="summitData.applyBar"
+    :banner-data="summitData.banner"
+  />
 </template>
 
 <style scoped lang="scss">
