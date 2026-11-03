@@ -57,6 +57,10 @@ const friendlyCommunityConfig = computed(
     }
   }
 }
+
+.partner-tips {
+  color: var(--o-color-info2);
+}
 .community-container {
   border-radius: var(--o-radius-xs);
   background-color: var(--o-color-fill2);
