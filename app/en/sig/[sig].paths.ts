@@ -10,6 +10,7 @@ export default {
         return {
           params: {
             sig: `${sig.name}`,
+            description: sig.description,
           },
         };
       }) ?? [];
