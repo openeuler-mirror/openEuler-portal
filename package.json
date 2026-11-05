@@ -50,7 +50,7 @@
     "uuid": "14.0.0",
     "vue": "3.5.29",
     "vue-dompurify-html": "^4.0.0",
-    "vue-i18n": "latest",
+    "vue-i18n": "11.4.14",
     "vue-pdf-embed": "^2.1.2"
   },
   "devDependencies": {
@@ -75,7 +75,7 @@
     "glob": "^11.0.2",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "minimatch": "^10.2.5",
+    "minimatch": "11.0.1",
     "p-limit": "^7.3.0",
     "portal-cms": "0.1.0-rc.8",
     "prettier": "^2.7.1",
