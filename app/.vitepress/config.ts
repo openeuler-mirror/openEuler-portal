@@ -8,13 +8,15 @@ import yaml from 'js-yaml';
 import publicRawPlugin from './plugins/vite-plugin-public-raw';
 import { slugifyEvent } from './src-new/shared/event-slug';
 import { isNews, setNewsGeo } from './news-geo';
+import { resolveNewsBlogDescription, resolveShowcaseTitle } from './tdk-dedup';
 
 import path, { join } from 'node:path';
 import { existsSync, readFileSync} from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
+// 仅 news / blog（不含 showcase）走 summary 去重回退
+const isNewsBlogArticle = /^(?:zh|en)\/(?:news|blog)\/.+$/;
 // showcase 案例详情页（showcase/{industry}/... 至少两段）：title 直接取 frontmatter，
 // 避免 .geo/tdks 中按公司名生成的重复标题；栏目首页(hub)与白皮书/报告列表页保留其精修 tdk 标题。
 const isShowcase = /^(?:zh|en)\/showcase\/[^/]+\/.+$/;
@@ -84,12 +86,23 @@ const setTdk = (pageData: PageData, pagePath: string) => {
   pageData.titleTemplate = `:title | ${pagePath.startsWith('zh') ? 'openEuler社区官网' : 'openEuler'}`;
   const jsonFile = join(geoDir, 'tdks', pagePath, 'index.json');
   const tdkInfo = existsSync(jsonFile) ? JSON.parse(readFileSync(jsonFile, 'utf-8')) : null;
+  const fm = pageData.frontmatter as Record<string, unknown>;
+  // showcase 案例详情页：title 直接取 frontmatter（公司名），同公司多案例会重复。
+  // 仅在标题冲突时追加案例摘要片段区分（只影响 SEO <title>，不改页面可见横幅）。
+  const applyShowcaseTitle = () => {
+    const showcaseTitle = resolveShowcaseTitle(fm);
+    if (showcaseTitle) {
+      pageData.title = showcaseTitle;
+    }
+  };
   if (!tdkInfo) {
-    if (isBlog.test(pagePath)) {
-      const frontmatter = pageData.frontmatter;
-      const description = frontmatter?.summary || frontmatter?.Summary;
-      if (!pageData.description && description) {
-        pageData.description = description;
+    if (isShowcase.test(pagePath)) {
+      applyShowcaseTitle();
+    } else if (isNewsBlogArticle.test(pagePath)) {
+      const deduped = resolveNewsBlogDescription(fm, pageData.relativePath);
+      const fallback = deduped || String(fm?.summary ?? fm?.Summary ?? '').trim();
+      if (!pageData.description && fallback) {
+        pageData.description = fallback;
       }
     }
     return;
@@ -98,8 +111,9 @@ const setTdk = (pageData: PageData, pagePath: string) => {
   if (description) {
     pageData.description = description;
   }
-  // showcase 页面的 title 直接取 frontmatter.title，不使用 .geo/tdks 中按公司名生成的重复标题
-  if (title && !isShowcase.test(pagePath)) {
+  if (isShowcase.test(pagePath)) {
+    applyShowcaseTitle();
+  } else if (title) {
     pageData.title = title;
   }
   if (canonical) {
