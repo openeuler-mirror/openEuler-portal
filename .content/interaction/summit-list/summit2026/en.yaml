@@ -156,7 +156,7 @@ agent:
                   content:
                     - title: SuperPoD-based Performance Optimization for Agentic Workloads
                       name: Li Lijun
-                      post: "UnifiedBus SIG Maintainer, OpenAtom openEuler\nExpert of UnifiedBus communication, Huawei"
+                      post: "UnifiedBus SIG Maintainer, openEuler\nExpert in UnifiedBus Communication, Huawei"
                 - time: '16:35-16:45'
                   content:
                     - title: 'Single-Server No More: Resource Management & AI Workload Optimization in SuperPoD OS'
@@ -166,7 +166,7 @@ agent:
                   content:
                     - title: Building an AI Computing Foundation with UnifiedBus-powered SuperPoD
                       name: Liu Dalin
-                      post: 'Expert of server OS development, Kylinsec'
+                      post: 'Expert in Server OS Development, Kylinsec'
                 - time: '16:55-17:10'
                   content:
                     - title: HopeAgentPlatform on TaiShan 950 SuperPoD
@@ -1180,7 +1180,7 @@ agent:
                           post: 'R&D Engineer, Ant Group'
                     - time: '14:05-14:40'
                       content:
-                        - title: 'Joint Optimization of Industrial HPC Applications and OS: Case Studies in China'
+                        - title: 'Joint Optimization of Industrial HPC Applications and OSes: Case Studies in China'
                           name: Su Wei
                           post: 'Senior OS Engineer, Kylinsec'
                     - time: '14:40-15:15'
