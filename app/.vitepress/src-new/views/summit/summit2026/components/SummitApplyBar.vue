@@ -52,6 +52,16 @@ const bottomOffset = ref(0);
 let resizeObserver: ResizeObserver | null = null;
 let mutationObserver: MutationObserver | null = null;
 
+// -------------------- 与移动端页头导航的联动 --------------------
+// 移动端页头导航抽屉展开时隐藏横幅：OHeaderMobile 打开菜单会给
+// .header-content-mb 追加 header-content-active 类，以 MutationObserver 监听该类的切换
+const isNavOpen = ref(false);
+let navObserver: MutationObserver | null = null;
+
+const updateNavOpen = () => {
+  isNavOpen.value = !!document.querySelector('.header-content-mb.header-content-active');
+};
+
 const updateOffset = () => {
   const el = document.querySelector('.cookie-notice');
   bottomOffset.value = el ? el.getBoundingClientRect().height : 0;
@@ -101,6 +111,15 @@ onMounted(() => {
     }
   });
   mutationObserver.observe(target, { childList: true });
+
+  // 监听移动端页头导航抽屉的展开/收起（class 切换）
+  navObserver = new MutationObserver(updateNavOpen);
+  navObserver.observe(document.querySelector('#app') ?? document.body, {
+    attributes: true,
+    attributeFilter: ['class'],
+    subtree: true,
+  });
+  updateNavOpen();
 });
 
 onUnmounted(() => {
@@ -110,13 +129,15 @@ onUnmounted(() => {
   resizeObserver = null;
   mutationObserver?.disconnect();
   mutationObserver = null;
+  navObserver?.disconnect();
+  navObserver = null;
 });
 </script>
 
 <template>
   <div
     class="summit-apply-bar"
-    :class="{ 'is-hidden': isBannerVisible }"
+    :class="{ 'is-hidden': isBannerVisible || isNavOpen }"
     :style="{ bottom: `${bottomOffset}px`, backgroundImage: `url(${bg})` }"
   >
     <!-- >840px：大会名称 + 时间地点 + 报名按钮，整体居中 -->

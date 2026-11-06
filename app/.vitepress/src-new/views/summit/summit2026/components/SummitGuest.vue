@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useLocale } from '~@/composables/useLocale';
+
 defineProps({
   guestData: {
     type: Object,
@@ -6,6 +8,9 @@ defineProps({
     default: () => null,
   },
 });
+
+// 英文模式：职称行显示在单位行上方
+const { isEn } = useLocale();
 </script>
 <template>
   <div class="guest">
@@ -17,8 +22,16 @@ defineProps({
           <img v-if="item.img" class="avatar" :src="item.img" :alt="item.name" loading="lazy" />
           <span v-else class="avatar avatar-empty"></span>
           <p class="name">{{ item.name }}</p>
-          <p v-if="item.org" class="org">{{ item.org }}</p>
-          <p v-if="item.post" class="post">{{ item.post }}</p>
+          <div class="texts">
+            <template v-if="!isEn">
+              <p v-if="item.org" class="org">{{ item.org }}</p>
+              <p v-if="item.post" class="post">{{ item.post }}</p>
+            </template>
+            <template v-else>
+              <p v-if="item.post" class="post">{{ item.post }}</p>
+              <p v-if="item.org" class="org">{{ item.org }}</p>
+            </template>
+          </div>
         </div>
       </div>
     </div>
@@ -71,15 +84,17 @@ defineProps({
       font-weight: 500;
       @include text1;
     }
-    .org {
+    // 单位/职称两行：间距与顺序无关（英文模式职称在上）
+    .texts {
       margin-top: 6px;
-      color: var(--o-color-info3);
-      @include text1;
     }
+    .org,
     .post {
-      margin-top: 2px;
       color: var(--o-color-info3);
-      @include text1;
+      @include tip1;
+    }
+    .texts p + p {
+      margin-top: 2px;
     }
   }
 }
