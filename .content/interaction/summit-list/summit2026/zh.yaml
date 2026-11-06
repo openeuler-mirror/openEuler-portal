@@ -1,1056 +1,3438 @@
 # openEuler Summit 2026 页面数据 / Summit 2026 page data
+
 #
+
 # 顶层板块（按页面从上到下顺序）：
+
 #   banner     顶部 banner（PC / pad / 移动端背景图、文字图、报名按钮）
+
 #   introduce  大会简介
-#   callfor    Call for 征集卡片（Speakers / Sponsors / Talks）
-#   agent      活动日程（初始数据沿用 2025 内容占位，待更新）
+
+#   agent      活动日程（主论坛/分论坛/技术沙龙议程，含嘉宾；分论坛 tab 支持 closed 闭门态）
+
 #   partner    共建单位
+
 #   previous   精彩回顾
+
 # 图片路径相对本 yaml 文件（./images/...），由构建插件重写为带 hash 的 URL。
+
 # 主题变体（亮色/暗色）拆为 light/dark 两个字段。
 
+
+
 # banner: 顶部 banner（背景图 + 文字图 + 报名按钮）
+
 # <=840px 使用移动端 banner：背景图与文字图分离，文字图与报名按钮贴底排布（距底 12px），仅按钮可跳转
+
 # 文字图 >840px（pad 横屏 / PC）共用一份（透明底 PNG），显示尺寸由组件按断点控制；<=840px 使用移动端专用文字图
+
 banner:
+
   bg_pc:
+
     light: ./images/banner-pc-light.jpg
+
     dark: ./images/banner-pc-dark.jpg
+
   bg_pad:
+
     light: ./images/banner-pad-light.jpg
+
     dark: ./images/banner-pad-dark.jpg
+
   bg_mb:
+
     light: ./images/banner-mb-light.jpg
+
     dark: ./images/banner-mb-dark.jpg
+
   text_img:
+
     light: ./images/textImg-light.png
+
     dark: ./images/textImg-dark.png
+
   text_img_mb:
+
     light: ./images/textImg-mb-light.png
+
     dark: ./images/textImg-mb-dark.png
+
   text_img_alt: Agentic Infra 操作系统大会 & openEuler Summit 2026，11月13日-14日，中国·北京中关村国际创新中心
+
   # 报名入口（按钮，<=840px 使用移动端报名链接 button_link_mb）
+
   button_text: 立即报名
+
   button_link: https://openatomcon.openatom.cn/registration/?code=3Ytx&activityNo=HD20261010110123
+
   button_link_mb: https://openatomcon.openatom.cn/registration_mobile/?code=3Ytx&activityNo=HD20261010110123
 
+
+
 # apply_bar: 页面底部「立即报名」浮窗（fixed 吸底，cookie 提示未关闭时显示在其下方）
+
 # bg_pc: >840px 浮窗背景图；bg_mb: <=840px 浮窗背景图；报名链接复用 banner 的 button_link / button_link_mb
+
 apply_bar:
+
   bg_pc:
+
     light: ./images/apply-bar-pc-light.png
+
     dark: ./images/apply-bar-pc-dark.png
+
   bg_mb:
+
     light: ./images/apply-bar-mb-light.png
+
     dark: ./images/apply-bar-mb-dark.png
+
   title: Agentic Infra 操作系统大会 & openEuler Summit 2026
+
   date_place: 11月13日-14日 | 中国·北京中关村国际创新中心
+
   button_text: 立即报名
 
+
+
 # introduce: 大会简介（描述、亮点列表、口号）
+
 introduce:
+
   desc:
+
     - Agentic AI时代加速到来，算力基础设施正经历深刻变革，操作系统迎来全新的发展范式。历经七载深耕，作为中国领先的开源操作系统，openEuler已广泛部署在互联网及国计民生等千行万业，率先发布超节点OS，持续引领数智化创新。面向Agentic AI时代，openEuler将立足打造Agentic Infra坚实底座，携手产业伙伴共赴下一代操作系统的演进之路。
+
     - 为此，我们诚挚地邀请您出席将于2026年11月13日-14日在北京中关村国际创新中心举办的 <strong>Agentic Infra 操作系统大会 &amp; openEuler Summit 2026</strong>。本次大会以"智启未来，引领 Agentic Infra 创新"为主题，集中展示 openEuler 在超节点 OS 与 Agentic Infra 领域的最新突破，与产业界一起凝聚共识，共同探索 AI 规模化落地所必需的高效、安全底座。
+
   tips: 我们诚挚地邀请您莅临大会现场，在这里您将可以：
+
   list:
+
     - 见证 openEuler 在超节点 OS 上的最新成果发布与 Agentic Infra 的关键技术突破
+
     - 见证全球伙伴重磅AI产品与方案发布，洞悉操作系统在AI时代的关键角色
+
     - 参与30+场主题演讲与圆桌论坛，与全球专家、开发者共话Agentic Infra前沿观点与落地实践
+
     - 走进1000㎡沉浸式交流区，体验最新Agentic AI技术创新并动手实践，感受伙伴AI联创成果的全景演绎
+
   slogan:
+
     - 志合者，不以山海为远。我们期待与您相聚北京，共话Agentic AI时代的技术演进之道，携手谱写Agentic Infra的创新篇章！
 
-# callfor: Call for 征集卡片（>840px 三列横排均分、方形卡片；601-840px 两列网格；<=600px 单列纵排且限宽 400px 居中）
-# bg_pc: >840px（PC / pad 横屏）方形卡片背景图；bg_mb: <=840px 移动端矩形卡片背景图
-# link: 卡片跳转链接（新窗口打开）
-callfor:
-  bg_pc:
-    light: ./images/card-square-light.png
-    dark: ./images/card-square-dark.png
-  bg_mb:
-    light: ./images/card-light.png
-    dark: ./images/card-dark.png
-  list:
-    - title: SPEAKERS 征集
-      sub: Agentic Infra 操作系统大会 2026
-      link: 'https://shimo.im/forms/zdkydZQ8gLIpV7q6/fill'
-    - title: SPONSORS 征集
-      sub: Agentic Infra 操作系统大会 & openEuler Summit 2026
-      link: 'https://shimo.im/forms/47kgMpK1KaurOZ3V/fill'
-    - title: TALKS 征集
-      sub: openEuler Summit 2026
-      link: 'https://sessionize.com/openeuler-summit-2026/'
 
-# agent: 活动日程（主论坛/分论坛议程，含嘉宾；初始数据沿用 2025 内容占位，待更新）
+
+# agent: 活动日程（主论坛/分论坛/技术沙龙议程，含嘉宾）
+
 agent:
+
   title: 活动日程
+
   tips: 具体内容，敬请期待
-  salon_tips: 具体内容敬请期待
+
+  salon_tips: ''
+
   text: 查看详情
+
   list:
+
     - date: '13'
+
       children:
+
         - title: 主论坛
+
           children:
+
+            - time: '09:00-09:40'
+
+              content:
+
+                - title: 交流区参观交流
+
+            - time: '09:40-10:00'
+
+              content:
+
+                - title: 大会开幕
+
             - time: '10:00-10:05'
+
               content:
+
                 - title: 大会致辞
-                  name: 开放原子开源基金会
-                  post: ''
+
+                  name: 谢少锋
+
+                  post: 开放原子开源基金会理事长
+
             - time: '10:05-10:10'
+
               content:
+
                 - title: 大会致辞
-                  name: 华为
-                  post: openEuler社区战略捐赠人
-            - time: '10:10-10:30'
+
+                  name: 彭红华
+
+                  post: ICT战略与业务发展部 总裁
+
+            - time: '10:10-10:15'
+
               content:
-                - title: openEuler社区发展主题演讲
-                  name: 熊伟
-                  post: OpenAtom openEuler 委员会主席
-            - time: '10:30-10:35'
+
+                - title: openEuler Agentic Infra 生态共建倡议仪式
+
+            - time: '10:15-10:30'
+
               content:
-                - title: openEuler Agentic Infra 生态共建倡议
-            - time: '10:35-10:40'
-              content:
-                - title: 致谢仪式
-                  name: 2026年度openEuler领先商业实践单位
-                  post: ''
-            - time: '10:40-12:00'
-              content:
-                - title: 京东基于openEuler的超节点广告应用实践分享
-                  name: 特邀嘉宾
-                  post: ''
-                - title: CTyunOS 的技术创新实践
-                  name: 特邀嘉宾
-                  post: ''
-                - title: BC-Linux 的技术创新实践
-                  name: 特邀嘉宾
-                  post: ''
-                - title: Ubuntu 携手 openEuler共建超节点生态
-                  name: 特邀嘉宾
-                  post: ''
-                - title: 基于openEuler的AI实践分享
-                  name: 特邀嘉宾
-                  post: ''
-                - title: 美团基于openEuler的Agent沙箱应用实践分享
-                  name: 特邀嘉宾
-                  post: ''
-          tab: []
-        - title: 分论坛
-          children: []
-          # 分论坛信息未确定时的中间状态：展示占位卡片（无查看详情）；信息确认后删除 pending_cards 即恢复 tab 议程形式
-          pending_tips: 具体内容敬请期待
-          pending_cards:
-            - label: '超节点 OS'
-              time: '具体时间待定'
-            - label: '互联网 & Agentic Infra'
-              time: '具体时间待定'
-            - label: '嵌入式 & 工控'
-              time: '具体时间待定'
-            - label: '金融'
-              time: '具体时间待定'
-            - label: '科教'
-              time: '具体时间待定'
-            - label: '更多主题，敬请期待'
-          tab:
-            - label: 麒麟软件
-              time: '13:30 - 15:45'
-              address: ''
-              children:
-                - time: '13:30-13:40'
-                  content:
-                    - title: 开场致辞
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '13:40-13:50'
-                  content:
-                    - title: 开场致辞
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '13:50-14:05'
-                  content:
-                    - title: 拥抱开源・AI 筑基：银河麒麟服务器 OS 一体化方案
-                      name: 侯健
-                      post: 麒麟软件有限公司服务器研发中心副总经理
-                - time: '14:05-14:20'
-                  content:
-                    - title: 人工智能与档案管理融合
-                      name: 夏光军
-                      post: 北京量子伟业信息技术股份有限公司副总经理
-                - time: '14:20-14:35'
-                  content:
-                    - title: 基于星普大模型赋能数智校园建设思考与实践分享
-                      name: 张卫兵
-                      post: 新开普AI研究院解决方案总监
-                - time: '14:35-14:50'
-                  content:
-                    - title: 筑算力长城，强自主创新——异构算力底座赋能行业创新
-                      name: 吴跃搏
-                      post: 中电长城科技有限公司解决方案总监
-                - time: '14:50-15:05'
-                  content:
-                    - title: 基于自主创新建设，端边云办公生产力新思路
-                      name: 贾安亚
-                      post: 上海商汤智能科技有限公司高级产品总监
-                - time: '15:05-15:20'
-                  content:
-                    - title: 超云私域部署AI模型一体机实践分享
-                      name: 刘岩岩
-                      post: 超云数字技术集团有限公司首席架构师
-                - time: '15:20-15:35'
-                  content:
-                    - title: AI-COP 共创生态智能化新范式
-                      name: 关俊君
-                      post: 北京致远互联软件股份有限公司生态合作总监
-                - time: '15:35-15:45'
-                  content:
-                    - title: 幸运抽奖
-                      name: ''
-                      post: ''
-            - label: 麒麟信安
-              time: '14:30 - 17:00'
-              address: ''
-              children:
-                - time: '14:30-14:35'
-                  content:
-                    - title: 开场致辞
-                      name: 熊伟
-                      post: openEuler社区主席
-                - time: '14:35-14:45'
-                  content:
-                    - title: 开场致辞
-                      name: 杨涛
-                      post: 麒麟信安董事长
-                - time: '14:45-15:05'
-                  content:
-                    - title: 麒麟信安操作系统V6发布
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '15:05-15:25'
-                  content:
-                    - title: 麒麟信安机器人操作系统发布
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '15:25-15:45'
-                  content:
-                    - title: 麒麟信安智能云新品发布
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '15:45-16:00'
-                  content:
-                    - title: 智算应用实践分享
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '16:00-16:15'
-                  content:
-                    - title: 工业领域应用实践分享
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '16:15-16:30'
-                  content:
-                    - title: 电力领域应用实践分享
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '16:30-16:45'
-                  content:
-                    - title: 金融领域应用实践分享
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '16:45-17:00'
-                  content:
-                    - title: 内网虚拟化应用实践分享
-                      name: 特邀嘉宾
-                      post: ''
-            - label: 互联网
-              time: '14:00 - 17:00'
-              address: ''
-              children:
-                - time: '14:00-14:05'
-                  content:
-                    - title: 欢迎致辞
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '14:05-14:10'
-                  content:
-                    - title: 持续开源开放，携手互联网深耕openEuler社区
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '14:10-15:10'
-                  content:
-                    - title: 互联网灵衢超节点实践分享和价值场景研讨
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '15:10-15:50'
-                  content:
-                    - title: 互联网智算集群实践分享和研讨
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '15:50-16:30'
-                  content:
-                    - title: 互联网众核高密场景实践分享和研讨
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '16:30-17:00'
-                  content:
-                    - title: 互联网开源欧拉+鲲鹏实践分享和研讨
-                      name: 特邀嘉宾
-                      post: ''
-            - label: 全球生态
-              time: '13:30 - 15:00'
-              address: ''
-              children:
-                - time: '13:30-13:35'
-                  content:
-                    - title: 开场致辞
-                      name: 付海巍
-                      post: 开放原子开源基金会业务发展部部长
-                - time: '13:35-13:50'
-                  content:
-                    - title: 硬件厂商致辞
-                      guest:
-                        - name: Andrew Wafaa
-                          post: ARM公司Fellow与软件社区高级总监
-                        - name: 刘秉伟
-                          post: 英特尔（中国）软件技术事业部高级总监
-                        - name: 王文宽
-                          post: 超威半导体产品（中国）有限公司 AMD Linux内核专家
-                - time: '13:50-14:00'
-                  content:
-                    - title: 开源基础软件与AI技术创新路线
-                      name: 熊伟
-                      post: openEuler委员会主席
-                - time: '14:00-14:15'
-                  content:
-                    - title: 运营商智能化实践分享
-                      name: 杨雨超
-                      post: 天翼云国际业务事业部高级技术专家
-                - time: '14:15-14:30'
-                  content:
-                    - title: 互联网智能化实践分享
-                      name: 张泽华
-                      post: 京东算法总监
-                - time: '14:30-14:40'
-                  content:
-                    - title: AI训推应用案例分享
-                      name: 张骁
-                      post: 讯飞星火AI工程院智算平台总监
-                - time: '14:40-14:50'
-                  content:
-                    - title: ERP应用案例分享
-                      name: 靳晓旭
-                      post: 用友中企出海业务总监
-                - time: '14:50-15:00'
-                  content:
-                    - title: openEuler全球系统化服务
-                      name: 周强
-                      post: 风河高级交付总监
-            - label: 科教创新
-              time: '13:30 - 16:30'
-              address: ''
-              children:
-                - time: 13：30-13：40
-                  content:
-                    - title: 开场致辞
-                      guest:
-                        - name: 胡欣蔚
-                          post: openEuler社区技术委员会主席
-                        - name: 胡春明
-                          post: 北京航空航天大学软件学院院长
-                - time: '13:40-15:00'
-                  content:
-                    - title: 《基于高速互联总线的异构池化系统关键技术研究》
-                      name: 赵新奎
-                      post: 浙江大学软件学院百人计划研究员
-                    - title: 《面向推荐大模型的参数存储系统研究》
-                      name: 谢旻晖
-                      post: 中国人民大学信息学院计算机系讲师
-                    - title: 《人工智能端到端的复杂攻击检测技术研究》
-                      name: 李锭
-                      post: 北京大学助理教授
-                    - title: 《异构融合的AI Infra系统软件资源管理与可靠性保障》
-                      name: 杨任宇
-                      post: 北京航空航天大学副教授
-                - time: '15:00-15:05'
-                  content:
-                    - title: 开源之夏优秀项目
-                      name: 颁奖仪式
-                      post: ''
-                - time: '15:05-15:20'
-                  content:
-                    - title: 优秀学生分享
-                      name: 特邀嘉宾
-                      post: ''
-                - time: '15:20-15:50'
-                  content:
-                    - title: 《开源驱动的教育实践-从校源行到人才评价》
-                      name: 韩江
-                      post: 开放原子开源基金会教育培训部负责人
-                    - title: 《系统软件课程建设与产学合作》
-                      name: 张莉
-                      post: 北京航空航天大学教授
-                - time: '15:50-16:30'
-                  content:
-                    - title: 《聚力开源连接学术界，共话产学研生态赢未来》
-                      name: 胡春明
-                      post: ''
-            - label: 智能制造
-              time: '13:30 - 16:20'
-              address: ''
-              children:
-                - time: '13:30-13:40'
-                  content:
-                    - title: 欢迎致辞
-                      name: 刘程
-                      post: openEuler产品规划专家
-                - time: '13:40-14:00'
-                  content:
-                    - title: PLCnext Technology赋能智能制造的应用
-                      name: 杨露
-                      post: 菲尼克斯PLCnext Software Application总监
-                - time: '14:00-14:20'
-                  content:
-                    - title: 面向智能自动化的工业控制底座技术
-                      name: 王志强
-                      post: CODESYS软件集团(中国)市场负责人
-                - time: '14:20-14:40'
-                  content:
-                    - title: 基于开源欧拉面向大科学装置黑灯实验室（工厂）场景的统一操作系统研发与实践
-                      name: 卢俊
-                      post: 中国科学院广州生物医药与健康研究院 谱系工程技术中心副主任
-                - time: '14:40-15:00'
-                  content:
-                    - title: 支撑高端数控系统应用场景的工业实时操作系统需求演化趋势
-                      name: 宋师
-                      post: 广州数控设备有限公司总工程师
-                - time: '15:00-15:20'
-                  content:
-                    - title: 拓斯达在具身智能机器人领域的场景探索与实践
-                      name: 曾逸
-                      post: 广东拓斯达科技股份有限公司机器人市场总监
-                - time: '15:20-15:40'
-                  content:
-                    - title: openEuler Embedded在智慧交通工控场景的应用
-                      name: 王伟
-                      post: 成都菁蓉联创科技有限公司无人装备事业部部长
-                - time: '15:40-16:00'
-                  content:
-                    - title: 软件赋能工业智能化
-                      name: 姚广忠
-                      post: 河南昆仑技术有限公司技术专家
-                - time: '16:00-16:20'
-                  content:
-                    - title: openEuler 嵌入式适配昇腾310B解锁边缘 AI 高效部署新范式
-                      name: 张涛
-                      post: 江苏润和软件股份有限公司嵌入式部门经理
-    - date: '14'
-      children:
-        - title: 主论坛
-          children:
-            - time: '10:00-10:05'
-              content:
-                - title: 大会致辞
-                  name: 特邀嘉宾
-                  post: ''
-            - time: '10:05-10:10'
-              content:
-                - title: openEuler 社区发展主题演讲
-                  name: 刘飞
-                  post: OpenAtom openEuler 委员会执行总监
-            - time: '10:10-10:50'
-              content:
-                - titles:
-                  - openEuler技术前沿与展望
+
+                - title: 智启未来 引领Agentic Infra创新
+
                   guest:
-                    - name: 胡欣蔚
-                      post: OpenAtom openEuler 技术委员会主席
-            - time: '10:50-11:00'
+
+                    - name: 熊伟
+
+                      post: OpenAtom openEuler 委员会主席
+
+                    - name: 韩乃平
+
+                      post: 麒麟软件有限公司首席科学家
+
+            - time: '10:30-10:35'
+
               content:
-                - title: 联合演讲
-                  name: 特邀嘉宾
+
+                - title: openEuler新增白金捐赠人授牌仪式
+
+            - time: '10:35-10:45'
+
+              content:
+
+                - title: 面向Token经营，推动AI与操作系统协同演进——天翼云CTyunOS的实践与思考
+
+                  name: 广小明
+
+                  post: 天翼云科技有限公司副总经理
+
+            - time: '10:45-10:55'
+
+              content:
+
+                - title: 云智融合，开源共创：BC-Linux构建AI 时代操作系统新底座
+
+                  name: 刘军卫
+
+                  post: 中国移动云公司副总经理
+
+            - time: '10:55-11:05'
+
+              content:
+
+                - title: 从地面到太空：基于 openEuler 的星载操作系统实践与展望
+
+                  name: 中国星网网络创新研究院有限公司
+
                   post: ''
-            - time: '11:00-11:10'
+
+            - time: '11:05-11:15'
+
               content:
-                - title: 联合演讲
-                  name: 特邀嘉宾
-                  post: ''
-            - time: '11:10-11:30'
+
+                - title: 让算力流动：携手共建超节点开放生态
+
+                  name: Ivan Ramos Garza
+
+                  post: VP of Canonical
+
+            - time: '11:15-11:25'
+
               content:
+
+                - title: 京东基于openEuler 超节点广告应用实践分享
+
+                  name: 齐浩
+
+                  post: 京东零售广告算法架构师
+
+            - time: '11:25-11:30'
+
+              content:
+
                 - title: 致谢仪式
-                  name: openEuler 2026年度突出贡献单位
+
+                  name: 2026年度openEuler领先商业实践单位
+
                   post: ''
-                - title: 致谢仪式
-                  name: openEuler2026年度贡献之星
-                  post: ''
+
           tab: []
+
         - title: 分论坛
-          # 暂时隐藏，需要展示时删除 visible 字段即可
-          visible: false
+
           children: []
-          # 分论坛信息未确定时的中间状态：展示占位卡片（无查看详情）；信息确认后删除 pending_cards 即恢复 tab 议程形式
-          pending_tips: 具体内容敬请期待
-          pending_cards:
-            - label: '科教创新分论坛'
-              address: 'xxxxxxxxxx'
-              time: '13:30 - 16:30'
-            - label: '工业软件产业分论坛'
-              address: 'xxxxxxxxxx'
-              time: '13:30 - 16:30'
-            - label: 'openEuler及ARM全球生态分论坛'
-              address: 'xxxxxxxxxx'
-              time: '13:30 - 16:30'
-            - label: '科教创新分论坛'
-              address: 'xxxxxxxxxx'
-              time: '13:30 - 16:30'
-            - label: '工业软件产业分论坛'
-              address: 'xxxxxxxxxx'
-              time: '13:30 - 16:30'
-            - label: 'openEuler及ARM全球生态分论坛'
-              address: 'xxxxxxxxxx'
-              time: '13:30 - 16:30'
+
+          # 闭门分论坛：closed: true 时不渲染议程，面板展示 closed_title / closed_tips 与特殊背景 closed_bg（深浅两套）
+
           tab:
-            - label: 嵌入式&具身智能
-              time: '13:00 - 16:15'
-              address: ''
+
+            - label: 超节点OS
+
+              title: '超节点OS: 助力Agentic AI时代的智能底座重塑'
+
+              time: '16:00-17:25'
+
+              address: '106'
+
               children:
-                - time: '13:00-13:15'
+
+                - time: '16:00-16:05'
+
                   content:
-                    - title: 开放·融合·智能：vPLCnext基于openEuler的探索与产业实践
-                      name: 徐佩文
-                      post: 南京菲尼克斯电气有限公司
-                - time: '13:15-13:30'
-                  content:
-                    - title: 基于openEuler的人工智能+星载领域天基底座构建
-                      name: 王大维
-                      post: 成都菁蓉联创科技有限公司
-                - time: '13:30-13:45'
-                  content:
-                    - title: openEuler在航天领域的应用实践与探索
-                      name: 蔡鑫奇
-                      post: 北京航天微系统与信息技术研究所
-                - time: '13:45-13:50'
-                  content:
-                    - title: 航天鸿域OS 1.0发布
-                      name: ''
+
+                    - title: 致辞
+
+                      name: 特邀嘉宾
+
                       post: ''
-                - time: '13:50-14:05'
+
+                - time: '16:05-16:20'
+
                   content:
-                    - title: 面向现代机器人的编程看框架AimRT
-                      name: 胡旷
-                      post: 智元机器人
-                - time: '14:05-14:20'
+
+                    - title: 通智融合时代先进算力趋势与挑战
+
+                      name: 李铮
+
+                      post: openEuler社区灵衢sig maintainer 通算超节点首席架构师
+
+                - time: '16:20-16:35'
+
                   content:
-                    - title: AGIROS机器人共性算法框架
-                      name: 李鹏
-                      post: 中国科学院软件研究所
-                - time: '14:20-14:35'
-                  content:
-                    - title: 基于欧拉嵌入式的行业具身智能解决方案及应用实践
-                      name: 吴健
-                      post: 鼎桥技术有限公司 机器人解决方案首席架构师
-                - time: '14:35-14:50'
-                  content:
-                    - title: 新一代具身智能电子架构
-                      name: 谭睿
-                      post: 北京光亚鸿道操作系统有限公司
-                - time: '14:50-15:05'
-                  content:
-                    - title: 超聚变具身智能操作系统探索与实践
-                      name: 徐磊
-                      post: 超聚变数字技术股份有限公司
-                - time: '15:05-15:20'
-                  content:
-                    - title: 基于全国产化技术的自主移动机器人设计方案
-                      name: 江东平
-                      post: 南京启诺信息技术有限公司
-                - time: '15:20-15:35'
-                  content:
-                    - title: 国创嵌入式基础软件QSemOS+IntarkDB创新实践
-                      name: 刘保玉
-                      post: 粤港澳大湾区国家技术创新中心
-                - time: '15:35-15:50'
-                  content:
-                    - title: 基于声明式编排技术的跨节点多系统混合部署设计与实现
-                      name: 魏建刚
-                      post: 江苏润和软件股份有限公司
-                - time: '15:50-16:00'
-                  content:
-                    - title: 中场休息
-                      name: ''
-                      post: ''
-                - time: '16:00-16:15'
-                  content:
-                    - title: ROS SIG发展规划与机器人应用实践
-                      name: 王晓云
-                      post: 中国科学院软件研究所
-            - label: 开发者使能与工具
-              time: '13:00 - 15:50'
-              address: ''
-              children:
-                - time: '13:00 - 13:05'
-                  content:
-                    - title: 开场致辞
-                      name: 刘飞
-                      post: openEuler PE
-                - time: '13:05-13:20'
-                  content:
-                    - title: OPEA、openHPC在openEuler上原生生态进展
-                      name: 鲁卫军
-                      post: 华为技术有限公司 高级工程师
-                - time: '13:20-13:35'
-                  content:
-                    - title: DevStation-面向开发者的AI智能化开发者工作站
-                      name: 袁礼鹏
-                      post: 华为技术有限公司 高级工程师
-                - time: '13:35-13:50'
-                  content:
-                    - title: 基于openeuler的操作系统轻量化定制构建和部署
-                      name: 廖卫
-                      post: 麒麟信安 研发工程师
-                - time: '13:50-14:05'
-                  content:
-                    - title: 基于libcareplus的热补丁工具增强开发及支持多架构，多语言能力
-                      name: 吴衡
-                      post: 天翼云 研发专家
-                - time: '14:05-14:20'
-                  content:
-                    - title: openEuler创新版本改善贡献改进总结
-                      name: Funda Wang
-                      post: 个人贡献者
-                - time: '14:20-14:35'
-                  content:
-                    - title: AI赋能的软件工程平台
-                      name: 郭纪岩
-                      post: 北京凝思产品研发总监
-                - time: '14:35-14:50'
-                  content:
-                    - title: C转Rust的AI自动化方法
-                      name: 张海东
-                      post: 统信软件技术研发经理
-                - time: '14:50-15:05'
-                  content:
-                    - title: AI工具的所见即所得：基于文档的开发模式
-                      name: 丁嘉辉
-                      post: 华为技术有限公司 高级工程师
-                - time: '15:05-15:20'
-                  content:
-                    - title: AI大模型在基础设施的实践与应用
-                      name: 翟文杰
-                      post: 华为技术有限公司 高级工程师
-                - time: '15:20-15:35'
-                  content:
-                    - title: 'PortGPT: 基于大模型的自动化补丁后向迁移研究'
-                      name: 李朝阳
-                      post: 华中科技大学
-                - time: '15:35-15:50'
-                  content:
-                    - title: 轻量浏览器引擎LiteView
-                      name: 许景民
-                      post: 中国科学院软件研究所LiteView内核架构师
-            - label: 云原生
-              time: '13:00 - 15:35'
-              address: ''
-              children:
-                - time: '13:00-13:10'
-                  content:
-                    - title: 开场致辞
-                      name: 胡欣蔚
-                      post: openEuler社区技术委员会主席
-                - time: '13:10-13:30'
-                  content:
-                    - title: openYuanrong Serverless分布式计算引擎技术和实践
-                      name: 梁义
-                      post: 华为技术有限公司 通用Serverless首席专家
-                - time: '13:30-13:45'
-                  content:
-                    - title: Apache Doris基于Kunpeng的性能优化实践
-                      name: 吴治国
-                      post: Linaro 工程师
-                - time: '13:45-13:55'
-                  content:
-                    - title: Agent沙箱对传统云原生架构的挑战
-                      name: 费建强
-                      post: 华为技术有限公司 云原生专家
-                - time: '13:55-14:05'
-                  content:
-                    - title: Agentic AI超容器Conch技术介绍
-                      name: 钟涛
-                      post: 华为技术有限公司 工程师
-                - time: '14:05-14:20'
-                  content:
-                    - title: 云原生网络拓扑实时可视化和网络运维实践
-                      name: 万峰
-                      post: 麒麟软件 高级软件工程师
-                - time: '14:20-14:40'
-                  content:
-                    - title: 通过NPU虚拟化解决方案提升AI服务器资源利用效率
-                      name: 杨彬
-                      post: 软通动力信息技术（集团）股份有限公司 开源欧拉研究中心主任
-                - time: '14:40-15:00'
-                  content:
-                    - title: AI Agent赋能云原生基础设施
-                      name: 张盈辉
-                      post: 中国移动信息技术中心 云原生架构师
-                - time: '15:00-15:15'
-                  content:
-                    - title: 基于CTyunOS的云原生不可变基础设施实践
-                      name: 刘敏
-                      post: 天翼云科技有限公司
-                - time: '15:15-15:35'
-                  content:
-                    - title: 大数据统一加速底座OmniRuntime开源及实践
-                      name: 尹伟杰
-                      post: 华为技术有限公司 大数据专家
-            - label: 灵衢
-              time: '13:00 - 15:40'
-              address: ''
-              children:
-                - time: '13:00-13:05'
-                  content:
-                    - title: 开场致辞
-                      name: 朱照生
-                      post: 华为集群计算总经理
-                - time: '13:05-13:25'
-                  content:
-                    - title: 超节点和关键应用场景
-                      name: 张健
-                      post: ''
-                - time: '13:25-13:45'
-                  content:
-                    - title: CXL在计算机体系重构中的位置、作用和价值
-                      name: 宋家雨
-                      post: CXL技术应用俱乐部秘书长
-                - time: '13:45-14:00'
-                  content:
-                    - title: 灵衢总线技术和软件参考设计
-                      name: 牛涛
-                      post: ''
-                - time: '14:00-14:15'
-                  content:
-                    - title: 灵衢内存池化关键技术和应用
-                      name: 高超
-                      post: ''
-                - time: '14:15-14:35'
-                  content:
-                    - title: 灵衢通信关键技术和应用
+
+                    - title: 面向Agentic负载的超节点高性能优化实践
+
                       name: 李力军
-                      post: ''
-                - time: '14:35-14:50'
+
+                      post: openEuler社区UB-SIG maintainer，华为灵衢通信专家
+
+                - time: '16:35-16:45'
+
                   content:
-                    - title: 灵衢设备虚拟化关键技术和应用
-                      name: 叶镖翔
-                      post: ''
-                - time: '14:50-15:05'
+
+                    - title: 突破单机资源边界：超节点操作系统的资源管理与AI负载优化实践
+
+                      name: 严海双
+
+                      post: 中国移动（苏州） 内核架构师、openEuler Maintainer
+
+                - time: '16:45-16:55'
+
                   content:
-                    - title: 超节点可靠性关键技术
-                      name: 邓广兴
-                      post: ''
-                - time: '15:05-15:25'
+
+                    - title: 基于灵衢超节点技术构建智算底座
+
+                      name: 刘达林
+
+                      post: 麒麟信安 服务器OS开发专家
+
+                - time: '16:55-17:25'
+
                   content:
-                    - title: 灵衢系统高阶服务关键技术和应用
-                      name: 姚弋宇
-                      post: ''
-                - time: '15:25-15:40'
-                  content:
-                    - title: 灵衢超节点编程编译关键技术
-                      name: 杨扬
-                      post: ''
-            - label: AI
-              time: '13:00 - 16:00'
-              address: ''
+
+                    - title: 润和软件面向鲲鹏超节点的HopeAgentPlatform创新实践
+
+                      name: 魏博
+
+                      post: 江苏润和 解决方案总监
+
+            - label: '嵌入式&工控'
+
+              title: 嵌入式底座筑基工控，软硬协同智控万物
+
+              time: '13:30-15:00'
+
+              address: '105'
+
               children:
-                - time: '13:00-13:15'
+
+                - time: '13:30-13:35'
+
                   content:
-                    - title: 基于openEuler intelligence组建一支OS开发团队
-                      name: 孙政华
-                      post: 深信服科技有限公司 中央平台部研发主管
-                - time: '13:15-12:30'
+
+                    - title: 主持人开场
+
+                      name: 主持人
+
+                      post: ''
+
+                - time: '13:35-13:55'
+
                   content:
-                    - title: 《破局“医疗孤岛”：基于openEuler的新一代CDSS智能引擎实践》
-                      name: 冯焱
-                      post: 北京惠每云科技有限公司 高级后端工程师
-                - time: '13:30-13:45'
+
+                    - title: 工业领域具身智能机器人的场景应用与展望
+
+                      name: 丁肖同
+
+                      post: 佛山华数机器人有限公司 产品线总负责人
+
+                - time: '13:55-14:15'
+
                   content:
-                    - title: 基于大模型的新一代核心交易信创系统智能调优探索
-                      name: 黄俊
-                      post: 招商证券股份有限公司 核心系统架构师
-                - time: '13:45-14:00'
+
+                    - title: 基于鲲鹏芯片工控机的openEuler系统部署与应用实践
+
+                      name: 王伟
+
+                      post: 成都菁蓉联创科技有限公司 无人装备事业部部长
+
+                - time: '14:15-14:35'
+
                   content:
-                    - title: JuiceFS MLPerf Storage v2.0 性能测评与调优
-                      name: 刘新良
-                      post: Linaro Engineer
-                - time: '14:00-14:15'
+
+                    - title: 智算底座双分区可信架构与AI开发工具链创新实践
+
+                      name: 张涛
+
+                      post: 江苏润和软件股份有限公司 智算事业部高级研发经理
+
+                - time: '14:35-14:55'
+
                   content:
-                    - title: 宝德基于intelligence boom推理优化及智能应用的实践分享
-                      name: 金龙
-                      post: 宝德计算机系统股份有限公司 解决方案总监
-                - time: '14:15-14:30'
+
+                    - title: 从星载100TB存储到太空算力底座
+
+                      name: 池骋
+
+                      post: 艾可萨科技（成都）有限公司 总工程师
+
+                - time: '14:55-15:00'
+
                   content:
-                    - title: 通算/智算大模型推理加速协同应用与落地
-                      name: 李宇振
-                      post: 华为技术有限公司 AI工程师
-                - time: '14:30-14:45'
+
+                    - title: '论坛总结&展望'
+
+                      name: 主持人
+
+                      post: ''
+
+            - label: 技术生态
+
+              title: CTyunOS技术生态论坛：开源共建，智安协同
+
+              time: '13:30-15:00'
+
+              address: '103'
+
+              children:
+
+                - time: '13:30-13:40'
+
                   content:
-                    - title: AI赋能 - 智能运维平台
-                      name: 钟茂恒
+
+                    - title: 开场及嘉宾致辞
+
+                - time: '13:40-13:50'
+
+                  content:
+
+                    - title: CTyunOS面向智能基础设施的工程实践与开源协同
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '13:50-14:00'
+
+                  content:
+
+                    - title: 面向AI与智能体的开源操作系统演进与生态协同
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '14:00-14:10'
+
+                  content:
+
+                    - title: 面向智能基础设施的操作系统标准与测试评价
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '14:10-14:20'
+
+                  content:
+
+                    - title: 人工智能安全：从部署到应用
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '14:20-14:30'
+
+                  content:
+
+                    - title: 基于CTyunOS的安全协同与应用实践
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '14:30-14:40'
+
+                  content:
+
+                    - title: 基于CTyunOS的智能化技术与生态协同
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '14:40-14:50'
+
+                  content:
+
+                    - title: 云操作系统行业应用与实践经验
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '14:50-15:00'
+
+                  content:
+
+                    - title: 开源共建仪式
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+            - label: 凝思软件
+
+              title: 凝思软件：面向AI时代打造超节点操作系统新基座
+
+              time: '13:30-15:00'
+
+              address: '106'
+
+              children:
+
+                - time: '13:30-13:35'
+
+                  content:
+
+                    - title: 主持人开场、介绍出席嘉宾
+
+                - time: '13:35-13:40'
+
+                  content:
+
+                    - title: 开放原子基金会领导致辞
+
+                      name: 李博
+
+                      post: 开放原子开源基金会副秘书长
+
+                - time: '13:40-13:45'
+
+                  content:
+
+                    - title: openEuler社区领导致辞
+
+                      name: 熊伟
+
+                      post: OpenAtom openEuler 委员会主席
+
+                - time: '13:45-13:55'
+
+                  content:
+
+                    - title: 凝思软件领导致辞
+
+                      name: 彭志航
+
+                      post: 北京凝思软件股份有限公司 总经理
+
+                - time: '13:55-14:10'
+
+                  content:
+
+                    - title: 主题一：AI时代操作系统架构演进与技术发展趋势
+
+                      name: 徐新智
+
+                      post: 国网国调中心自动化处 干部
+
+                - time: '14:10-14:25'
+
+                  content:
+
+                    - title: 主题二：面向Agentic Infra的超节点操作系统技术创新
+
+                      name: 陈亚强
+
+                      post: OpenAtom openEuler技术委员会 委员
+
+                - time: '14:25-14:40'
+
+                  content:
+
+                    - title: 主题三：面向超节点的新一代操作系统技术创新与实践
+
+                      name: 李晓宇
+
                       post: 北京凝思软件股份有限公司 研发经理
-                - time: '14:45-15:00'
+
+                - time: '14:40-14:55'
+
                   content:
-                    - title: 东方通中间件智能体
-                      name: 李静静
-                      post: 东方通科技有限公司 产品经理
-                - time: '15:00-15:15'
+
+                    - title: 主题四：国产基础软件赋能关键行业智能化转型的应用实践
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '14:55-15:00'
+
                   content:
-                    - title: 昇腾亲和的大EP通信加速库技术与生态介绍
-                      name: 韩远坤
-                      post: 华为技术有限公司 华为AI通信专家
-                - time: '15:15-15:30'
-                  content:
-                    - title: 昆仑技术基于昇腾软FP8的极致调优
-                      name: 孙亚楠
-                      post: 河南昆仑技术有限公司 高级工程师
-                - time: '15:30-15:45'
-                  content:
-                    - title: ANNC：基于XLA的深度学习图编译器在搜推场景的探索与应用
-                      name: 郑晨卉
-                      post: 华为技术有限公司 软件工程师
-                - time: '15:45-16:00'
-                  content:
-                    - title: CTyunOS智能安全中心
-                      name: 吴开顺
-                      post: 天翼云科技有限公司 后端开发工程师
-            - label: 内核+全场景
-              time: '13:00 - 15:30'
-              address: ''
+
+                    - title: 主持人总结、论坛结束
+
+            - label: 麒麟信安
+
+              title: 麒麟信安：智能安全分论坛
+
+              time: '16:00-17:30'
+
+              address: '103'
+
               children:
-                - time: '13:00-13:15'
+
+                - time: '16:00-16:05'
+
                   content:
-                    - title: openEuler 内核社区发展介绍
-                      name: 谢秀奇
-                      post: openEuler Kernel SIG Maintainer
-                - time: '13:15-13:30'
+
+                    - title: 麒麟信安领导致辞
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '16:05-16:10'
+
                   content:
-                    - title: How to Copy Memory? Coordinated Asynchronous Copy as a First-Class OS Service
+
+                    - title: openEuler委员会领导致辞
+
+                      name: 熊伟
+
+                      post: OpenAtom openEuler 委员会主席
+
+                - time: '16:10-16:30'
+
+                  content:
+
+                    - title: 专家主题演讲
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '16:30-16:50'
+
+                  content:
+
+                    - title: 智启Agentic Infra：麒麟信安构建智能操作系统底座
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '16:50-17:10'
+
+                  content:
+
+                    - title: 构建安全合规体系：麒麟信安涉密虚拟化落地实践
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+                - time: '17:10-17:30'
+
+                  content:
+
+                    - title: 麒麟信安智算：从算力到模型应用落地实践
+
+                      name: 特邀嘉宾
+
+                      post: ''
+
+            - label: 科教
+
+              title: 开源筑平台，产教育英才：Agentic时代的openEuler科教生态
+
+              time: '16:00-17:25'
+
+              address: '105'
+
+              children:
+
+                - time: '16:00-16:05'
+
+                  content:
+
+                    - title: 主持人开场、介绍出席嘉宾
+
+                      name: 主持人
+
+                      post: ''
+
+                - time: '16:05-16:10'
+
+                  content:
+
+                    - title: 开场致辞
+
+                      name: 胡春明
+
+                      post: 北京航空航天大学软件学院院长、OpenAtom openEuler学术与教育委员会主席
+
+                - time: '16:10-16:20'
+
+                  content:
+
+                    - title: 软通天鹤AIOS × 昇腾边缘AI推理模组：开源科教教学底座与成果转化实践
+
+                      guest:
+
+                        - name: 杨彬
+
+                          post: 软通动力开源欧拉研究中心主任
+
+                        - name: 初明
+
+                          post: 软通动力计算产品与解决方案中心部长
+
+                - time: '16:20-16:30'
+
+                  content:
+
+                    - title: SuperInfer：面向超节点的推理系统
+
+                      name: 陆游游
+
+                      post: 清华大学副教授
+
+                - time: '16:30-16:40'
+
+                  content:
+
+                    - title: Deltabox：毫秒级回滚时延的智能体沙箱系统
+
                       name: 杜冬冬
-                      post: 上海交通大学 助理教授
-                - time: '13:30-13:45'
+
+                      post: 上海交通大学副研究员
+
+                - time: '16:40-16:50'
+
                   content:
-                    - title: 午间休息
-                      name: ''
-                      post: ''
-                - time: '13:45-14:00'
+
+                    - title: '从"写代码"到"编排智能体"——Agentic Infra 时代"多智能体编程与工程实践"的育人探索'
+
+                      name: 杨海龙
+
+                      post: 北京航空航天大学教授
+
+                - time: '16:50-17:00'
+
                   content:
-                    - title: AMD P-State：性能与能效的平衡
-                      name: 王文宽
-                      post: 超威半导体产品（中国）有限公司AMD linux 内核专家
-                - time: '14:00-14:15'
+
+                    - title: 以赛促教、以赛促研：开源大赛赋能操作系统人才培养的探索与实践
+
+                      name: 韩江
+
+                      post: 开放原子开源基金会秘书处教育培训部主任
+
+                - time: '17:00-17:10'
+
                   content:
-                    - title: Power for performance on Intel platforms
-                      name: 张锐
-                      post: 英特尔 软件工程师
-                - time: '14:15-14:30'
+
+                    - title: 通过参与openEuler开源社区的成长之路
+
+                      name: 段洲涛
+
+                      post: 海南大学研究生
+
+                - time: '17:10-17:20'
+
                   content:
-                    - title: 可编程IO调度器设计
-                      name: 程垲涛
-                      post: 麒麟软件 内核工程师
-                - time: '14:30-14:45'
+
+                    - title: 基于 Agent-insight 平台的智能体系统可靠性研究与实践
+
+                      name: 惠明轩
+
+                      post: 西安电子科技大学在读博士生
+
+                - time: '17:20-17:25'
+
                   content:
-                    - title: 基于loongarch 的trampoline和kexec_file功能开发
-                      name: 姜浩然
-                      post: 麒麟软件 研发工程师
-                - time: '14:45-15:00'
-                  content:
-                    - title: 基于eBPF的多线程系统信息采集优化
-                      name: 李子遥
-                      post: 统信软件 资深研发工程师
-                - time: '15:00-15:15'
-                  content:
-                    - title: 基于ebpf的内存-进程-IO-文件缓存观测工具
-                      name: 宋振
-                      post: 麒麟信安 资深内核工程师
-                - time: '15:15-15:30'
-                  content:
-                    - title: UACCE加速器框架使能用户态创新
-                      name: 冯成文
-                      post: 华为技术有限公司 工程师
-            - label: 安全与机密计算
-              time: '13:00 - 13:05'
+
+                    - title: 总结致辞
+
+                      name: 王勇
+
+                      post: 华为基础软件院业务发展部部长
+
+            - label: '互联网&Agentic Infra'
+
+              time: ''
+
               address: ''
-              children:
-                - time: '13:00-13:05'
-                  content:
-                    - title: 开场致辞
-                      name: 朱健伟
-                      post: openEuler安全委员会主席
-                - time: '13:05-13:20'
-                  content:
-                    - title: 安全增强复式内核 HAOC 3.0 特性介绍与 4.0 规划
-                      name: 武成岗
-                      post: 中国科学院计算技术研究所，研究员
-                - time: '13:20-13:35'
-                  content:
-                    - title: 与Arm CCA共铸开源机密计算新时代
-                      name: Kaly Xin
-                      post: Linaro，软件工程总监
-                - time: '13:35-13:50'
-                  content:
-                    - title: 基于openEuler的AI安全全栈技术及应用实践
-                      name: 程琨
-                      post: openEuler机密计算SIG， Maintainer
-                - time: '13:50-14:05'
-                  content:
-                    - title: 机密计算应用实践：动态可信证明与机密AI
-                      name: Andy
-                      post: 京东，安全工程师
-                - time: '14:05-14:20'
-                  content:
-                    - title: AI辅助CVE漏洞修复和冲突处理
-                      name: 李萍
-                      post: 华为技术有限公司，高级软件工程师
-                - time: '14:20-14:35'
-                  content:
-                    - title: AI助力开源供应链风险管控与合规审查
-                      name: 王麟
-                      post: 联通数字科技有限公司，高级研发专家
-                - time: '14:35-14:50'
-                  content:
-                    - title: 基于鲲鹏机密计算的密码服务平台解决方案
-                      name: 张驰
-                      post: 三未信安科技股份有限公司，技术总监
-                - time: '14:50-15:05'
-                  content:
-                    - title: 基于openEuler的系统安全加固方案
-                      name: 王宇诚
-                      post: 湖南麒麟信安科技股份有限公司，研发工程师
-                - time: '15:05-15:20'
-                  content:
-                    - title: 基于 SBOM 的供应链安全运营-自动化、可视化与欧拉生态适配实践
-                      name: 贺礼云
-                      post: 凝思软件成都研发中心，副总经理
-                - time: '15:20-15:35'
-                  content:
-                    - title: 面向TEE的数据库性能优化技术研究
-                      name: 雷卓祎
-                      post: 兰州大学，硕士研究生
-            - label: RISC-V
-              time: '13:00 - 15:05'
+
+              closed: true
+
+              closed_title: '互联网 & Agentic Infra闭门会'
+
+              closed_tips: 议程不公开
+
+              closed_bg:
+
+                light: ./images/closed-door-people.png
+
+                dark: ./images/closed-door-people-dark.png
+
+              children: []
+
+            - label: 金融
+
+              time: ''
+
               address: ''
-              children:
-                - time: '13:00-13:05'
-                  content:
-                    - title: 开场致辞
-                      name: 王经纬
-                      post: ''
-                - time: '13:05-13:25'
-                  content:
-                    - title: RISC-V 用户态组件性能优化
-                      name: 兰静
-                      post: ZTE-中兴通讯 性能优化工程师
-                - time: '13:25-13:45'
-                  content:
-                    - title: 进迭时空RISC-V AI CPU 的市场落地探索
-                      name: 陈俭东
-                      post: 进迭时空（杭州）科技有限公司 产品总监
-                - time: '13:45-14:05'
-                  content:
-                    - title: RISC-V PMU 扩展与性能剖析方法的生态演进挑战
-                      name: 邓天迈
-                      post: 超睿科技 资深软件工程师
-                - time: '14:05-14:25'
-                  content:
-                    - title: 玄铁 C930 虚拟化和 IOMMU 在openEuler 上的开源实践
-                      name: 余方玉
-                      post: 阿里巴巴达摩院 内核技术专家
-                - time: '14:25-14:45'
-                  content:
-                    - title: RISC-V 机密计算技术探索
-                      name: 张健
-                      post: 北京开源芯片研究院 产品经理
-                - time: '14:45-15:05'
-                  content:
-                    - title: openEuler x 算能SRA3服务器，RISC-V 架构落地数据中心
-                      name: 魏超
-                      post: 北京算能科技有限公司 嵌入式软件工程师
-        - title: 技术沙龙
-          children: []
+
+              closed: true
+
+              closed_title: 智筑超节点，Agentic启新：金融基础设施创新研讨闭门会
+
+              closed_tips: 议程不公开
+
+              closed_bg:
+
+                light: ./images/closed-door-people.png
+
+                dark: ./images/closed-door-people-dark.png
+
+              children: []
+
+    - date: '14'
+
+      children:
+
+        - title: 主论坛
+
+          children:
+
+            - time: '09:00-09:40'
+
+              content:
+
+                - title: 交流区参观交流
+
+            - time: '09:40-10:05'
+
+              content:
+
+                - title: 大会开场
+
+            - time: '10:05-10:25'
+
+              content:
+
+                - title: openEuler 社区发展主题演讲
+
+                  name: 刘飞
+
+                  post: OpenAtom openEuler 委员会执行总监
+
+            - time: '10:25-11:05'
+
+              content:
+
+                - title: openEuler技术前沿与展望
+
+                  name: 胡欣蔚
+
+                  post: OpenAtom openEuler 技术委员会主席
+
+            - time: '11:05-11:15'
+
+              content:
+
+                - title: 基于麒麟信安操作系统在金融行业应用与实践
+
+                  name: 雷健
+
+                  post: 中泰证券技术专家
+
+            - time: '11:15-11:25'
+
+              content:
+
+                - title: AI时代操作系统技术创新与应用
+
+                  name: 辛耀中
+
+                  post: 国家电网公司国家电力调度控制中心原副主任
+
+            - time: '11:25-11:40'
+
+              content:
+
+                - titles:
+
+                  - openEuler 2026年度突出贡献单位
+
+                  - openEuler 2026年度贡献之星
+
+                  name: 特邀嘉宾
+
+                  post: ''
+
           tab: []
-          list:
-            - title: 技术沙龙
+
+        - title: 分论坛
+
+          # 暂时隐藏，需要展示时删除 visible 字段即可
+
+          visible: false
+
+          children: []
+
+          # 分论坛信息未确定时的中间状态：展示占位卡片（无查看详情）；信息确认后删除 pending_cards 即恢复 tab 议程形式
+
+          pending_tips: 具体内容敬请期待
+
+          pending_cards:
+
+            - label: '科教创新分论坛'
+
+              address: 'xxxxxxxxxx'
+
+              time: '13:30 - 16:30'
+
+            - label: '工业软件产业分论坛'
+
+              address: 'xxxxxxxxxx'
+
+              time: '13:30 - 16:30'
+
+            - label: 'openEuler及ARM全球生态分论坛'
+
+              address: 'xxxxxxxxxx'
+
+              time: '13:30 - 16:30'
+
+            - label: '科教创新分论坛'
+
+              address: 'xxxxxxxxxx'
+
+              time: '13:30 - 16:30'
+
+            - label: '工业软件产业分论坛'
+
+              address: 'xxxxxxxxxx'
+
+              time: '13:30 - 16:30'
+
+            - label: 'openEuler及ARM全球生态分论坛'
+
+              address: 'xxxxxxxxxx'
+
+              time: '13:30 - 16:30'
+
+          tab:
+
+            - label: 嵌入式&具身智能
+
+              time: '13:00 - 16:15'
+
+              address: ''
+
               children:
+
+                - time: '13:00-13:15'
+
+                  content:
+
+                    - title: 开放·融合·智能：vPLCnext基于openEuler的探索与产业实践
+
+                      name: 徐佩文
+
+                      post: 南京菲尼克斯电气有限公司
+
+                - time: '13:15-13:30'
+
+                  content:
+
+                    - title: 基于openEuler的人工智能+星载领域天基底座构建
+
+                      name: 王大维
+
+                      post: 成都菁蓉联创科技有限公司
+
+                - time: '13:30-13:45'
+
+                  content:
+
+                    - title: openEuler在航天领域的应用实践与探索
+
+                      name: 蔡鑫奇
+
+                      post: 北京航天微系统与信息技术研究所
+
+                - time: '13:45-13:50'
+
+                  content:
+
+                    - title: 航天鸿域OS 1.0发布
+
+                      name: ''
+
+                      post: ''
+
+                - time: '13:50-14:05'
+
+                  content:
+
+                    - title: 面向现代机器人的编程看框架AimRT
+
+                      name: 胡旷
+
+                      post: 智元机器人
+
+                - time: '14:05-14:20'
+
+                  content:
+
+                    - title: AGIROS机器人共性算法框架
+
+                      name: 李鹏
+
+                      post: 中国科学院软件研究所
+
+                - time: '14:20-14:35'
+
+                  content:
+
+                    - title: 基于欧拉嵌入式的行业具身智能解决方案及应用实践
+
+                      name: 吴健
+
+                      post: 鼎桥技术有限公司 机器人解决方案首席架构师
+
+                - time: '14:35-14:50'
+
+                  content:
+
+                    - title: 新一代具身智能电子架构
+
+                      name: 谭睿
+
+                      post: 北京光亚鸿道操作系统有限公司
+
+                - time: '14:50-15:05'
+
+                  content:
+
+                    - title: 超聚变具身智能操作系统探索与实践
+
+                      name: 徐磊
+
+                      post: 超聚变数字技术股份有限公司
+
+                - time: '15:05-15:20'
+
+                  content:
+
+                    - title: 基于全国产化技术的自主移动机器人设计方案
+
+                      name: 江东平
+
+                      post: 南京启诺信息技术有限公司
+
+                - time: '15:20-15:35'
+
+                  content:
+
+                    - title: 国创嵌入式基础软件QSemOS+IntarkDB创新实践
+
+                      name: 刘保玉
+
+                      post: 粤港澳大湾区国家技术创新中心
+
+                - time: '15:35-15:50'
+
+                  content:
+
+                    - title: 基于声明式编排技术的跨节点多系统混合部署设计与实现
+
+                      name: 魏建刚
+
+                      post: 江苏润和软件股份有限公司
+
+                - time: '15:50-16:00'
+
+                  content:
+
+                    - title: 中场休息
+
+                      name: ''
+
+                      post: ''
+
+                - time: '16:00-16:15'
+
+                  content:
+
+                    - title: ROS SIG发展规划与机器人应用实践
+
+                      name: 王晓云
+
+                      post: 中国科学院软件研究所
+
+            - label: 开发者使能与工具
+
+              time: '13:00 - 15:50'
+
+              address: ''
+
+              children:
+
+                - time: '13:00 - 13:05'
+
+                  content:
+
+                    - title: 开场致辞
+
+                      name: 刘飞
+
+                      post: openEuler PE
+
+                - time: '13:05-13:20'
+
+                  content:
+
+                    - title: OPEA、openHPC在openEuler上原生生态进展
+
+                      name: 鲁卫军
+
+                      post: 华为技术有限公司 高级工程师
+
+                - time: '13:20-13:35'
+
+                  content:
+
+                    - title: DevStation-面向开发者的AI智能化开发者工作站
+
+                      name: 袁礼鹏
+
+                      post: 华为技术有限公司 高级工程师
+
+                - time: '13:35-13:50'
+
+                  content:
+
+                    - title: 基于openeuler的操作系统轻量化定制构建和部署
+
+                      name: 廖卫
+
+                      post: 麒麟信安 研发工程师
+
+                - time: '13:50-14:05'
+
+                  content:
+
+                    - title: 基于libcareplus的热补丁工具增强开发及支持多架构，多语言能力
+
+                      name: 吴衡
+
+                      post: 天翼云 研发专家
+
+                - time: '14:05-14:20'
+
+                  content:
+
+                    - title: openEuler创新版本改善贡献改进总结
+
+                      name: Funda Wang
+
+                      post: 个人贡献者
+
+                - time: '14:20-14:35'
+
+                  content:
+
+                    - title: AI赋能的软件工程平台
+
+                      name: 郭纪岩
+
+                      post: 北京凝思产品研发总监
+
+                - time: '14:35-14:50'
+
+                  content:
+
+                    - title: C转Rust的AI自动化方法
+
+                      name: 张海东
+
+                      post: 统信软件技术研发经理
+
+                - time: '14:50-15:05'
+
+                  content:
+
+                    - title: AI工具的所见即所得：基于文档的开发模式
+
+                      name: 丁嘉辉
+
+                      post: 华为技术有限公司 高级工程师
+
+                - time: '15:05-15:20'
+
+                  content:
+
+                    - title: AI大模型在基础设施的实践与应用
+
+                      name: 翟文杰
+
+                      post: 华为技术有限公司 高级工程师
+
+                - time: '15:20-15:35'
+
+                  content:
+
+                    - title: 'PortGPT: 基于大模型的自动化补丁后向迁移研究'
+
+                      name: 李朝阳
+
+                      post: 华中科技大学
+
+                - time: '15:35-15:50'
+
+                  content:
+
+                    - title: 轻量浏览器引擎LiteView
+
+                      name: 许景民
+
+                      post: 中国科学院软件研究所LiteView内核架构师
+
+            - label: 云原生
+
+              time: '13:00 - 15:35'
+
+              address: ''
+
+              children:
+
+                - time: '13:00-13:10'
+
+                  content:
+
+                    - title: 开场致辞
+
+                      name: 胡欣蔚
+
+                      post: openEuler社区技术委员会主席
+
+                - time: '13:10-13:30'
+
+                  content:
+
+                    - title: openYuanrong Serverless分布式计算引擎技术和实践
+
+                      name: 梁义
+
+                      post: 华为技术有限公司 通用Serverless首席专家
+
+                - time: '13:30-13:45'
+
+                  content:
+
+                    - title: Apache Doris基于Kunpeng的性能优化实践
+
+                      name: 吴治国
+
+                      post: Linaro 工程师
+
+                - time: '13:45-13:55'
+
+                  content:
+
+                    - title: Agent沙箱对传统云原生架构的挑战
+
+                      name: 费建强
+
+                      post: 华为技术有限公司 云原生专家
+
+                - time: '13:55-14:05'
+
+                  content:
+
+                    - title: Agentic AI超容器Conch技术介绍
+
+                      name: 钟涛
+
+                      post: 华为技术有限公司 工程师
+
+                - time: '14:05-14:20'
+
+                  content:
+
+                    - title: 云原生网络拓扑实时可视化和网络运维实践
+
+                      name: 万峰
+
+                      post: 麒麟软件 高级软件工程师
+
+                - time: '14:20-14:40'
+
+                  content:
+
+                    - title: 通过NPU虚拟化解决方案提升AI服务器资源利用效率
+
+                      name: 杨彬
+
+                      post: 软通动力信息技术（集团）股份有限公司 开源欧拉研究中心主任
+
+                - time: '14:40-15:00'
+
+                  content:
+
+                    - title: AI Agent赋能云原生基础设施
+
+                      name: 张盈辉
+
+                      post: 中国移动信息技术中心 云原生架构师
+
+                - time: '15:00-15:15'
+
+                  content:
+
+                    - title: 基于CTyunOS的云原生不可变基础设施实践
+
+                      name: 刘敏
+
+                      post: 天翼云科技有限公司
+
+                - time: '15:15-15:35'
+
+                  content:
+
+                    - title: 大数据统一加速底座OmniRuntime开源及实践
+
+                      name: 尹伟杰
+
+                      post: 华为技术有限公司 大数据专家
+
+            - label: 灵衢
+
+              time: '13:00 - 15:40'
+
+              address: ''
+
+              children:
+
+                - time: '13:00-13:05'
+
+                  content:
+
+                    - title: 开场致辞
+
+                      name: 朱照生
+
+                      post: 华为集群计算总经理
+
+                - time: '13:05-13:25'
+
+                  content:
+
+                    - title: 超节点和关键应用场景
+
+                      name: 张健
+
+                      post: ''
+
+                - time: '13:25-13:45'
+
+                  content:
+
+                    - title: CXL在计算机体系重构中的位置、作用和价值
+
+                      name: 宋家雨
+
+                      post: CXL技术应用俱乐部秘书长
+
+                - time: '13:45-14:00'
+
+                  content:
+
+                    - title: 灵衢总线技术和软件参考设计
+
+                      name: 牛涛
+
+                      post: ''
+
+                - time: '14:00-14:15'
+
+                  content:
+
+                    - title: 灵衢内存池化关键技术和应用
+
+                      name: 高超
+
+                      post: ''
+
+                - time: '14:15-14:35'
+
+                  content:
+
+                    - title: 灵衢通信关键技术和应用
+
+                      name: 李力军
+
+                      post: ''
+
+                - time: '14:35-14:50'
+
+                  content:
+
+                    - title: 灵衢设备虚拟化关键技术和应用
+
+                      name: 叶镖翔
+
+                      post: ''
+
+                - time: '14:50-15:05'
+
+                  content:
+
+                    - title: 超节点可靠性关键技术
+
+                      name: 邓广兴
+
+                      post: ''
+
+                - time: '15:05-15:25'
+
+                  content:
+
+                    - title: 灵衢系统高阶服务关键技术和应用
+
+                      name: 姚弋宇
+
+                      post: ''
+
+                - time: '15:25-15:40'
+
+                  content:
+
+                    - title: 灵衢超节点编程编译关键技术
+
+                      name: 杨扬
+
+                      post: ''
+
+            - label: AI
+
+              time: '13:00 - 16:00'
+
+              address: ''
+
+              children:
+
+                - time: '13:00-13:15'
+
+                  content:
+
+                    - title: 基于openEuler intelligence组建一支OS开发团队
+
+                      name: 孙政华
+
+                      post: 深信服科技有限公司 中央平台部研发主管
+
+                - time: '13:15-12:30'
+
+                  content:
+
+                    - title: 《破局“医疗孤岛”：基于openEuler的新一代CDSS智能引擎实践》
+
+                      name: 冯焱
+
+                      post: 北京惠每云科技有限公司 高级后端工程师
+
+                - time: '13:30-13:45'
+
+                  content:
+
+                    - title: 基于大模型的新一代核心交易信创系统智能调优探索
+
+                      name: 黄俊
+
+                      post: 招商证券股份有限公司 核心系统架构师
+
+                - time: '13:45-14:00'
+
+                  content:
+
+                    - title: JuiceFS MLPerf Storage v2.0 性能测评与调优
+
+                      name: 刘新良
+
+                      post: Linaro Engineer
+
+                - time: '14:00-14:15'
+
+                  content:
+
+                    - title: 宝德基于intelligence boom推理优化及智能应用的实践分享
+
+                      name: 金龙
+
+                      post: 宝德计算机系统股份有限公司 解决方案总监
+
+                - time: '14:15-14:30'
+
+                  content:
+
+                    - title: 通算/智算大模型推理加速协同应用与落地
+
+                      name: 李宇振
+
+                      post: 华为技术有限公司 AI工程师
+
+                - time: '14:30-14:45'
+
+                  content:
+
+                    - title: AI赋能 - 智能运维平台
+
+                      name: 钟茂恒
+
+                      post: 北京凝思软件股份有限公司 研发经理
+
+                - time: '14:45-15:00'
+
+                  content:
+
+                    - title: 东方通中间件智能体
+
+                      name: 李静静
+
+                      post: 东方通科技有限公司 产品经理
+
+                - time: '15:00-15:15'
+
+                  content:
+
+                    - title: 昇腾亲和的大EP通信加速库技术与生态介绍
+
+                      name: 韩远坤
+
+                      post: 华为技术有限公司 华为AI通信专家
+
+                - time: '15:15-15:30'
+
+                  content:
+
+                    - title: 昆仑技术基于昇腾软FP8的极致调优
+
+                      name: 孙亚楠
+
+                      post: 河南昆仑技术有限公司 高级工程师
+
+                - time: '15:30-15:45'
+
+                  content:
+
+                    - title: ANNC：基于XLA的深度学习图编译器在搜推场景的探索与应用
+
+                      name: 郑晨卉
+
+                      post: 华为技术有限公司 软件工程师
+
+                - time: '15:45-16:00'
+
+                  content:
+
+                    - title: CTyunOS智能安全中心
+
+                      name: 吴开顺
+
+                      post: 天翼云科技有限公司 后端开发工程师
+
+            - label: 内核+全场景
+
+              time: '13:00 - 15:30'
+
+              address: ''
+
+              children:
+
+                - time: '13:00-13:15'
+
+                  content:
+
+                    - title: openEuler 内核社区发展介绍
+
+                      name: 谢秀奇
+
+                      post: openEuler Kernel SIG Maintainer
+
+                - time: '13:15-13:30'
+
+                  content:
+
+                    - title: How to Copy Memory? Coordinated Asynchronous Copy as a First-Class OS Service
+
+                      name: 杜冬冬
+
+                      post: 上海交通大学 助理教授
+
+                - time: '13:30-13:45'
+
+                  content:
+
+                    - title: 午间休息
+
+                      name: ''
+
+                      post: ''
+
+                - time: '13:45-14:00'
+
+                  content:
+
+                    - title: AMD P-State：性能与能效的平衡
+
+                      name: 王文宽
+
+                      post: 超威半导体产品（中国）有限公司AMD linux 内核专家
+
+                - time: '14:00-14:15'
+
+                  content:
+
+                    - title: Power for performance on Intel platforms
+
+                      name: 张锐
+
+                      post: 英特尔 软件工程师
+
+                - time: '14:15-14:30'
+
+                  content:
+
+                    - title: 可编程IO调度器设计
+
+                      name: 程垲涛
+
+                      post: 麒麟软件 内核工程师
+
+                - time: '14:30-14:45'
+
+                  content:
+
+                    - title: 基于loongarch 的trampoline和kexec_file功能开发
+
+                      name: 姜浩然
+
+                      post: 麒麟软件 研发工程师
+
+                - time: '14:45-15:00'
+
+                  content:
+
+                    - title: 基于eBPF的多线程系统信息采集优化
+
+                      name: 李子遥
+
+                      post: 统信软件 资深研发工程师
+
+                - time: '15:00-15:15'
+
+                  content:
+
+                    - title: 基于ebpf的内存-进程-IO-文件缓存观测工具
+
+                      name: 宋振
+
+                      post: 麒麟信安 资深内核工程师
+
+                - time: '15:15-15:30'
+
+                  content:
+
+                    - title: UACCE加速器框架使能用户态创新
+
+                      name: 冯成文
+
+                      post: 华为技术有限公司 工程师
+
+            - label: 安全与机密计算
+
+              time: '13:00 - 13:05'
+
+              address: ''
+
+              children:
+
+                - time: '13:00-13:05'
+
+                  content:
+
+                    - title: 开场致辞
+
+                      name: 朱健伟
+
+                      post: openEuler安全委员会主席
+
+                - time: '13:05-13:20'
+
+                  content:
+
+                    - title: 安全增强复式内核 HAOC 3.0 特性介绍与 4.0 规划
+
+                      name: 武成岗
+
+                      post: 中国科学院计算技术研究所，研究员
+
+                - time: '13:20-13:35'
+
+                  content:
+
+                    - title: 与Arm CCA共铸开源机密计算新时代
+
+                      name: Kaly Xin
+
+                      post: Linaro，软件工程总监
+
+                - time: '13:35-13:50'
+
+                  content:
+
+                    - title: 基于openEuler的AI安全全栈技术及应用实践
+
+                      name: 程琨
+
+                      post: openEuler机密计算SIG， Maintainer
+
+                - time: '13:50-14:05'
+
+                  content:
+
+                    - title: 机密计算应用实践：动态可信证明与机密AI
+
+                      name: Andy
+
+                      post: 京东，安全工程师
+
+                - time: '14:05-14:20'
+
+                  content:
+
+                    - title: AI辅助CVE漏洞修复和冲突处理
+
+                      name: 李萍
+
+                      post: 华为技术有限公司，高级软件工程师
+
+                - time: '14:20-14:35'
+
+                  content:
+
+                    - title: AI助力开源供应链风险管控与合规审查
+
+                      name: 王麟
+
+                      post: 联通数字科技有限公司，高级研发专家
+
+                - time: '14:35-14:50'
+
+                  content:
+
+                    - title: 基于鲲鹏机密计算的密码服务平台解决方案
+
+                      name: 张驰
+
+                      post: 三未信安科技股份有限公司，技术总监
+
+                - time: '14:50-15:05'
+
+                  content:
+
+                    - title: 基于openEuler的系统安全加固方案
+
+                      name: 王宇诚
+
+                      post: 湖南麒麟信安科技股份有限公司，研发工程师
+
+                - time: '15:05-15:20'
+
+                  content:
+
+                    - title: 基于 SBOM 的供应链安全运营-自动化、可视化与欧拉生态适配实践
+
+                      name: 贺礼云
+
+                      post: 凝思软件成都研发中心，副总经理
+
+                - time: '15:20-15:35'
+
+                  content:
+
+                    - title: 面向TEE的数据库性能优化技术研究
+
+                      name: 雷卓祎
+
+                      post: 兰州大学，硕士研究生
+
+            - label: RISC-V
+
+              time: '13:00 - 15:05'
+
+              address: ''
+
+              children:
+
+                - time: '13:00-13:05'
+
+                  content:
+
+                    - title: 开场致辞
+
+                      name: 王经纬
+
+                      post: ''
+
+                - time: '13:05-13:25'
+
+                  content:
+
+                    - title: RISC-V 用户态组件性能优化
+
+                      name: 兰静
+
+                      post: ZTE-中兴通讯 性能优化工程师
+
+                - time: '13:25-13:45'
+
+                  content:
+
+                    - title: 进迭时空RISC-V AI CPU 的市场落地探索
+
+                      name: 陈俭东
+
+                      post: 进迭时空（杭州）科技有限公司 产品总监
+
+                - time: '13:45-14:05'
+
+                  content:
+
+                    - title: RISC-V PMU 扩展与性能剖析方法的生态演进挑战
+
+                      name: 邓天迈
+
+                      post: 超睿科技 资深软件工程师
+
+                - time: '14:05-14:25'
+
+                  content:
+
+                    - title: 玄铁 C930 虚拟化和 IOMMU 在openEuler 上的开源实践
+
+                      name: 余方玉
+
+                      post: 阿里巴巴达摩院 内核技术专家
+
+                - time: '14:25-14:45'
+
+                  content:
+
+                    - title: RISC-V 机密计算技术探索
+
+                      name: 张健
+
+                      post: 北京开源芯片研究院 产品经理
+
+                - time: '14:45-15:05'
+
+                  content:
+
+                    - title: openEuler x 算能SRA3服务器，RISC-V 架构落地数据中心
+
+                      name: 魏超
+
+                      post: 北京算能科技有限公司 嵌入式软件工程师
+
+        - title: 技术沙龙
+
+          children: []
+
+          tab: []
+
+          list:
+
+            - title: 技术沙龙
+
+              children:
+
                 - label: Kernel & 基础服务可靠性
-                  time: '13:30-17:30'
-                  children: []
+
+                  address: 海慧厅A会议室
+
+                  time: '13:30-17:15'
+
+                  children:
+
+                    - time: '13:30-13:40'
+
+                      content:
+
+                        - title: openEuler 内核社区发展介绍
+
+                          name: 谢秀奇
+
+                          post: openEuler SIG-Kernel Maintainer、openEuler 技术委员会委员
+
+                    - time: '13:40-14:00'
+
+                      content:
+
+                        - title: Cache感知调度器介绍
+
+                          name: 陈瑜
+
+                          post: 英特尔软件工程师
+
+                    - time: '14:00-14:20'
+
+                      content:
+
+                        - title: CPPC Performance Priority on openEuler
+
+                          name: 王文宽
+
+                          post: openEuler SIG-Kernel Committer、AMD 内核工程师
+
+                    - time: '14:20-14:40'
+
+                      content:
+
+                        - title: AgentNS：Agent事件感知的可回滚文件命名空间
+
+                          name: 刘育擎
+
+                          post: openEuler Committer
+
+                    - time: '14:40-15:00'
+
+                      content:
+
+                        - title: CCA Accomplishment Summary
+
+                          name: 庄浩坚
+
+                          post: Linaro 软件工程师
+
+                    - time: '15:00-15:20'
+
+                      content:
+
+                        - title: 基于cache_ext与机器学习的自适应页缓存策略
+
+                          name: 高英杰
+
+                          post: 统信软件内核研发工程师
+
+                    - time: '15:20-15:40'
+
+                      content:
+
+                        - title: 基于可观测体系的openEuler星载系统FDIR自愈恢复技术实践
+
+                          name: 白亮
+
+                          post: 上海航天测控通信研究所嵌入式操作系统开发工程师
+
+                    - time: '15:40-15:55'
+
+                      content:
+
+                        - title: 茶歇
+
+                    - time: '15:55-16:05'
+
+                      content:
+
+                        - title: 面向 RVA23 新基线与 RISC-V 标准服务器系统：openEuler RISC-V 进展与计划
+
+                          name: 周嘉诚
+
+                          post: openEuler SIG-RISC-V Maintainer、中科院软件所工程师
+
+                    - time: '16:05-16:15'
+
+                      content:
+
+                        - title: 从碎片化到同源：RVCK 如何为 openEuler on RISC-V 构建可复用的服务器内核可靠性底座
+
+                          name: 司延腾
+
+                          post: openEuler SIG-Kernel Committer、中科院软件所工程师、RVCK 核心维护者
+
+                    - time: '16:15-16:25'
+
+                      content:
+
+                        - title: IMA Root of Trust 框架
+
+                          name: 龚睿奇
+
+                          post: 华为操作系统开发工程师
+
+                    - time: '16:25-16:35'
+
+                      content:
+
+                        - title: GPU直访存储技术FGDS介绍
+
+                          name: 旷凯
+
+                          post: openEuler SIG-AI Committer、麒麟软件资深研发工程师
+
+                    - time: '16:35-16:45'
+
+                      content:
+
+                        - title: NPU连接池——大模型推理实时弹性
+
+                          name: 张建华
+
+                          post: openEuler SIG-Kernel Committer
+
+                    - time: '16:45-16:55'
+
+                      content:
+
+                        - title: 网络多路径亲和特性
+
+                          name: 岳海兵
+
+                          post: openEuler SIG-Network Committer
+
+                    - time: '16:55-17:05'
+
+                      content:
+
+                        - title: ASRP集群会话自愈以及会话标识选项的内核与 eBPF 高可用实践
+
+                          name: 罗照宇
+
+                          post: 移动云高级系统架构师
+
+                    - time: '17:05-17:15'
+
+                      content:
+
+                        - title: 可重现内核的探索与实践
+
+                          name: 宋振
+
+                          post: 麒麟信安开发工程师
+
                 - label: AI & Agentic Infra
-                  time: '13:30-17:30'
-                  children: []
+
+                  address: 海慧厅B会议室
+
+                  time: '13:30-17:35'
+
+                  children:
+
+                    - time: '13:30-13:50'
+
+                      content:
+
+                        - title: '思程(ThinkProcess): 操作系统面向Agent的运行新抽象'
+
+                          name: 吴斌
+
+                          post: openEuler SIG-Virt Maintainer
+
+                    - time: '13:50-14:10'
+
+                      content:
+
+                        - title: gprobe：基于eBPF的GPU程序可观测实践
+
+                          name: 李准
+
+                          post: 麒麟软件资深研发工程师
+
+                    - time: '14:10-14:30'
+
+                      content:
+
+                        - title: 面向Agentic Infra的高密度弹性沙箱
+
+                          name: 王金磊
+
+                          post: 中移（苏州）软件技术有限公司虚拟化架构师
+
+                    - time: '14:30-14:50'
+
+                      content:
+
+                        - title: Accelerating Sandbox Creation with Intel Xeon IAA
+
+                          guest:
+
+                            - name: 刘源
+
+                              post: Intel Cloud Software Development Engineer
+
+                            - name: 徐文麟
+
+                              post: openEuler SIG-intel-arch Committer、Intel Cloud Software Development Engineer
+
+                    - time: '14:50-15:10'
+
+                      content:
+
+                        - title: SysAIFrame操作系统级AI基础设施实践
+
+                          name: 刘铭然
+
+                          post: 天翼云操作系统研发专家
+
+                    - time: '15:10-15:30'
+
+                      content:
+
+                        - title: 招商银行基于自研Harness与openEuler AI基础软件技术生态的AgenticRL实践
+
+                          guest:
+
+                            - name: 谭培祥
+
+                              post: 招商银行AI Infra架构师，Twinkle & verl-speco Maintainer
+
+                            - name: 于奕骅
+
+                              post: 招商银行AI Infra工程师
+
+                    - time: '15:30-15:50'
+
+                      content:
+
+                        - title: 面向 HPC 集群故障诊断的多 Agent 协同 OS 智能运维平台
+
+                          name: 李胜松
+
+                          post: 麒麟信安研发工程师
+
+                    - time: '15:50-16:10'
+
+                      content:
+
+                        - title: 大规模AI模型分发的实践
+
+                          name: 杨开勇
+
+                          post: 蚂蚁集团软件研发工程师、Dragonfly Maintainer
+
+                    - time: '16:10-16:25'
+
+                      content:
+
+                        - title: 茶歇
+
+                    - time: '16:25-16:35'
+
+                      content:
+
+                        - title: 面向 Agent 规模化落地，构建安全高效的 Agent 基础设施
+
+                          name: 孙满利
+
+                          post: openEuler SIG-Intelligence Committer、麒麟软件资深研发工程师
+
+                    - time: '16:35-16:45'
+
+                      content:
+
+                        - title: 从 AI 工具到 AI 生态：AIOS 资源管理与 AI 能力标准化
+
+                          name: 吴衡
+
+                          post: 天翼云研发专家
+
+                    - time: '16:45-16:55'
+
+                      content:
+
+                        - title: 麒麟软件异构算力使能与推理优化实践
+
+                          guest:
+
+                            - name: 李长欣
+
+                              post: openEuler SIG-Intelligence Committer、麒麟软件高级研发工程师
+
+                            - name: 张自晓
+
+                              post: openEuler SIG-AI Committer、麒麟软件高级研发工程师
+
+                    - time: '16:55-17:05'
+
+                      content:
+
+                        - title: 中间件软件工厂：面向Agentic Infra的AI原生软件生产新范式
+
+                          name: 聂丹妮
+
+                          post: 东方通高级架构师
+
+                    - time: '17:05-17:15'
+
+                      content:
+
+                        - title: NPU直通存储
+
+                          name: 侯涛
+
+                          post: 华为主任工程师
+
+                    - time: '17:15-17:25'
+
+                      content:
+
+                        - title: AgentRL行业私域模型强化学习解决方案
+
+                          name: 林冬艺
+
+                          post: 品高股份CTO
+
+                    - time: '17:25-17:35'
+
+                      content:
+
+                        - title: Agent Insight：支撑 Agent 规模化落地的可靠性闭环实践
+
+                          name: 张丰来
+
+                          post: openEuler SIG-Intelligence Committer
+
                 - label: Agentic 开发工具与工程使能
-                  time: '13:30-17:30'
-                  children: []
+
+                  address: 106会议室
+
+                  time: '13:30-17:45'
+
+                  children:
+
+                    - time: '13:30-14:00'
+
+                      content:
+
+                        - title: 社区官网GEO落地实践：构建面向大模型的内容发现体系
+
+                          name: 龚壮邦
+
+                          post: openEuler SIG-OpenDesign Maintainer
+
+                    - time: '14:00-14:30'
+
+                      content:
+
+                        - title: 面向基础软件AI Coding的四象限架构语境重建
+
+                          name: 晋武侠
+
+                          post: 西安交通大学副教授
+
+                    - time: '14:30-15:00'
+
+                      content:
+
+                        - title: openEuler Development cli(oed-cli)：面向 Agent 的原生命令行，一键接入openEuler社区所有基础服务
+
+                          name: 翟文杰
+
+                          post: openEuler SIG-Infrastructure & SIG-EasyLife Committer
+
+                    - time: '15:00-15:30'
+
+                      content:
+
+                        - title: OBS 数字构建工程师的 Harness 架构与人机协同实践
+
+                          name: 高冲
+
+                          post: openEuler Committer、麒麟信安操作系统开发工程师
+
+                    - time: '15:30-15:45'
+
+                      content:
+
+                        - title: 茶歇
+
+                    - time: '15:45-16:15'
+
+                      content:
+
+                        - title: 构建面向 Agent 的系统底座：主线工程持续演进，打造多快好的 ToolCall 体验
+
+                          name: 王弈桥
+
+                          post: openEuler Maintainer、香港城市大学基础软件开发人员
+
+                    - time: '16:15-16:45'
+
+                      content:
+
+                        - title: Agent 会写代码之后，研发还缺什么？AI原生软件工程能力的实践与探讨
+
+                          name: 张桐
+
+                          post: openEuler SIG-ANSE Maintainer
+
+                    - time: '16:45-17:15'
+
+                      content:
+
+                        - title: 基于 OSpilot 的智能运维与自动化研发实践
+
+                          guest:
+
+                            - name: 宋亚康
+
+                              post: 超聚变操作系统开发工程师
+
+                            - name: 程志明
+
+                              post: 超聚变操作系统开发工程师
+
+                    - time: '17:15-17:45'
+
+                      content:
+
+                        - title: 麒麟软件AI Agent智能运维闭环建设
+
+                          name: 李孟虓
+
+                          post: 麒麟软件高级研发工程师
+
                 - label: AI 时代的编译器与性能优化
-                  time: '13:30-17:30'
-                  children: []
+
+                  address: G01会议室
+
+                  time: '13:30-17:15'
+
+                  children:
+
+                    - time: '13:30-14:05'
+
+                      content:
+
+                        - title: 'Jeandle: 基于 LLVM 的 JVM JIT 编译器最新探索'
+
+                          name: 刘陶峰
+
+                          post: 蚂蚁集团研发工程师
+
+                    - time: '14:05-14:40'
+
+                      content:
+
+                        - title: 国产工业HPC应用与OS联合优化案例分享
+
+                          name: 苏伟
+
+                          post: 麒麟信安高级操作系统工程师
+
+                    - time: '14:40-15:15'
+
+                      content:
+
+                        - title: ANNC：面向搜推广告场景的AI模型推理加速实践与展望
+
+                          name: 余宇峰
+
+                          post: openEuler SIG-Compiler Committer
+
+                    - time: '15:15-15:30'
+
+                      content:
+
+                        - title: 茶歇
+
+                    - time: '15:30-16:05'
+
+                      content:
+
+                        - title: LLVM for openEuler版本规划及重点特性介绍
+
+                          name: 谢志恒
+
+                          post: openEuler SIG-Compiler Maintainer
+
+                    - time: '16:05-16:40'
+
+                      content:
+
+                        - title: 流计算的原生化之路：Gluten-Flink的架构与实践
+
+                          name: 郭锡鸿
+
+                          post: 华为软件工程师
+
+                    - time: '16:40-17:15'
+
+                      content:
+
+                        - title: Triton-CPU 在鲲鹏生态下的算子编译与调优实践
+
+                          name: 陈正
+
+                          post: openEuler SIG-Compiler Maintainer
+
                 - label: 具身智能，边缘与Embedded
-                  time: '13:30-17:30'
-                  children: []
+
+                  address: 103会议室
+
+                  time: '13:30-17:25'
+
+                  children:
+
+                    - time: '13:30-13:50'
+
+                      content:
+
+                        - title: 基于openEuler的具身智能OS——IB-robot进展与展望
+
+                          name: 陈鑫
+
+                          post: openEuler SIG-Embedded 成员
+
+                    - time: '13:50-14:10'
+
+                      content:
+
+                        - title: 基于openeuler的边缘集群具身智能节点
+
+                          name: 杨彬
+
+                          post: openEuler SIG-OPS Maintainer、软通动力开源欧拉研究中心主任
+
+                    - time: '14:10-14:30'
+
+                      content:
+
+                        - title: 航天鸿域2.0：基于 openEuler 的具身群智能体操作系统探索
+
+                          name: 蔡鑫奇
+
+                          post: openEuler SIG-Space Maintainer、航天九院研发中心主任设计师
+
+                    - time: '14:30-14:50'
+
+                      content:
+
+                        - title: openEuler embedded操作系统宇航应用优化与实践
+
+                          name: 双小川
+
+                          post: 上海航天计算机技术研究所研究员
+
+                    - time: '14:50-15:10'
+
+                      content:
+
+                        - title: 面向具身智能体的仿真训练系统技术研究
+
+                          name: 张珩
+
+                          post: 中国科学院软件研究所副研究员
+
+                    - time: '15:10-15:30'
+
+                      content:
+
+                        - title: 面向航天任务的 openEuler Embedded 星载操作系统：轻量化定制与分层加固实践
+
+                          name: 刘超
+
+                          post: 进程使命（上海）科技有限公司资深软件工程师
+
+                    - time: '15:30-15:45'
+
+                      content:
+
+                        - title: 茶歇
+
+                    - time: '15:45-16:05'
+
+                      content:
+
+                        - title: 基于openEuler的核电虚拟控制器研发与原型实践
+
+                          name: 李萌
+
+                          post: 中广核数字科技智能工控系统总设计师
+
+                    - time: '16:05-16:25'
+
+                      content:
+
+                        - title: 飞腾和openEuler Embedded生态
+
+                          name: 朱鸿雷
+
+                          post: 飞腾资深软件工程师
+
+                    - time: '16:25-16:45'
+
+                      content:
+
+                        - title: 基于openEuler AIOS 的端侧多模态会议转写系统：异构调度、声纹分离与实时推理优化实践
+
+                          name: 田可辉
+
+                          post: openEuler社区运营工作组成员、软通动力计算生态研发部高级技术总监
+
+                    - time: '16:45-17:05'
+
+                      content:
+
+                        - title: 嵌入式虚拟化实时操作系统ZVM产品化实践
+
+                          name: 刘俊
+
+                          post: 长沙理工大学博士研究生
+
+                    - time: '17:05-17:25'
+
+                      content:
+
+                        - title: 基于AGIROS的机器人产业软硬件生态发展前瞻
+
+                          name: 李昭元
+
+                          post: 中国科学院软件研究所高级工程师
+
                 - label: AI 使能软件安全与可信
-                  time: '13:30-17:30'
-                  children: []
+
+                  address: 105会议室
+
+                  time: '13:30-17:45'
+
+                  children:
+
+                    - time: '13:30-13:50'
+
+                      content:
+
+                        - title: 从AI安全标准到运行时可信防护 —— 基于OWASP AISVS的AI Agent运行时安全实践与openEuler生态共建
+
+                          name: 万振华
+
+                          post: OWASP 中国区主席
+
+                    - time: '13:50-14:10'
+
+                      content:
+
+                        - title: AI×漏洞挖掘落地实践：从线索发现到复现收敛的CVE全流程工程化
+
+                          name: 王建东
+
+                          post: openEuler SIG-AI/Intelligence Committer、麒麟软件资深开发工程师
+
+                    - time: '14:10-14:30'
+
+                      content:
+
+                        - title: 'AI驱动的漏洞挖掘、工程化实践 & 社区漏洞治理'
+
+                          name: 李希文
+
+                          post: 华为网络安全与隐私保护技术专家
+
+                    - time: '14:30-14:50'
+
+                      content:
+
+                        - title: 智能体供应链安全审计与运行行为验证
+
+                          name: 毛翼辉
+
+                          post: openEuler SIG-sbom Maintainer、凝思软件研发工程师
+
+                    - time: '14:50-15:10'
+
+                      content:
+
+                        - title: AI 时代的内核维护智能化实践
+
+                          name: 曹平
+
+                          post: 中移（苏州）软件技术有限公司软件开发工程师
+
+                    - time: '15:10-15:30'
+
+                      content:
+
+                        - title: 操作系统供应链安全治理体系建设
+
+                          name: 王麟
+
+                          post: openEuler SIG-CloudNative Maintainer、联通数科操作系统研发专家
+
+                    - time: '15:30-15:45'
+
+                      content:
+
+                        - title: 茶歇
+
+                    - time: '15:45-16:05'
+
+                      content:
+
+                        - title: Hypershell：面向 AI Agent 的轻量级多后端隔离框架
+
+                          name: 王宇
+
+                          post: 华为系统安全专家
+
+                    - time: '16:05-16:25'
+
+                      content:
+
+                        - title: 面向 AI Agent 的 VM 级安全沙箱底座
+
+                          name: 魏东
+
+                          post: openEuler SIG-Desktop Maintainer、麒麟信安操作系统研发工程师
+
+                    - time: '16:25-16:45'
+
+                      content:
+
+                        - title: 基于CCA机密计算为AI Agent打造机密沙箱
+
+                          name: 周广伟
+
+                          post: openEuler SIG-confidential-computing Committer
+
+                    - time: '16:45-17:05'
+
+                      content:
+
+                        - title: 华为异构可信执行环境的安全、开放与透明
+
+                          name: 何静娴
+
+                          post: openEuler SIG-confidential-computing Committer
+
+                    - time: '17:05-17:25'
+
+                      content:
+
+                        - title: 移动云操作系统AI安全技术研究与实践
+
+                          name: 闫锐
+
+                          post: 中移（苏州）软件技术有限公司操作系统产品经理
+
+                    - time: '17:25-17:45'
+
+                      content:
+
+                        - title: Agent时代下的数据隐私保护治理
+
+                          name: 郑幼戈
+
+                          post: 统信软件AI 研发经理
+
+# guest: 活动嘉宾（头像 + 单位 + 职称，按主论坛/技术沙龙分组）
+
+guest:
+
+  title: 活动嘉宾
+
+  list:
+
+    - title: 主论坛嘉宾
+
+      children:
+
+        - name: 谢少锋
+
+          img: ./images/guests/xieshaofeng.png
+
+          org: 开放原子开源基金会
+
+          post: 理事长
+
+        - name: 熊伟
+
+          img: ./images/guests/xiongwei.png
+
+          org: OpenAtom openEuler 委员会
+
+          post: 主席
+
+        - name: 韩乃平
+
+          img: ./images/guests/hannaiping.png
+
+          org: 麒麟软件有限公司
+
+          post: 首席科学家
+
+        - name: 刘军卫
+
+          img: ./images/guests/liujunwei.png
+
+          org: 中国移动云公司
+
+          post: 副总经理
+
+        - name: 齐浩
+
+          img: ./images/guests/qihao.png
+
+          org: 京东零售广告
+
+          post: 算法架构师
+
+        - name: 刘飞
+
+          img: ./images/guests/liufei.png
+
+          org: OpenAtom openEuler 委员会
+
+          post: 执行总监
+
+        - name: 胡欣蔚
+
+          img: ./images/guests/huxinwei.png
+
+          org: OpenAtom openEuler 技术委员会
+
+          post: 主席
+
+        - name: 雷健
+
+          img: ./images/guests/leijian.png
+
+          org: 中泰证券
+
+          post: 技术专家
+
+    - title: 技术沙龙嘉宾
+
+      children:
+
+        - name: 谢秀奇
+
+          img: ./images/guests/xiexiuqi.png
+
+          org: openEuler SIG-Kernel Maintainer
+
+          post: openEuler 技术委员会委员
+
+        - name: 陈瑜
+
+          img: ./images/guests/chenyu.png
+
+          org: 英特尔
+
+          post: 软件工程师
+
+        - name: 王文宽
+
+          img: ./images/guests/wangwenkuan.png
+
+          org: openEuler SIG-Kernel Committer
+
+          post: AMD 内核工程师
+
+        - name: 刘育擎
+
+          img: ./images/guests/liuyuqing.png
+
+          org: openEuler Committer
+
+          post: ''
+
+        - name: 庄浩坚
+
+          img: ./images/guests/zhuanghaojian.png
+
+          org: Linaro
+
+          post: 软件工程师
+
+        - name: 高英杰
+
+          img: ./images/guests/gaoyingjie.png
+
+          org: 统信软件
+
+          post: 内核研发工程师
+
+        - name: 白亮
+
+          img: ./images/guests/bailiang.png
+
+          org: 上海航天测控通信研究所
+
+          post: 嵌入式操作系统开发工程师
+
+        - name: 周嘉诚
+
+          img: ./images/guests/zhoujiacheng.png
+
+          org: openEuler SIG-RISC-V Maintainer
+
+          post: 中科院软件所工程师
+
+        - name: 司延腾
+
+          img: ./images/guests/siyanteng.png
+
+          org: openEuler SIG-Kernel Committer
+
+          post: 中科院软件所工程师、RVCK 核心维护者
+
+        - name: 龚睿奇
+
+          img: ./images/guests/gongruiqi.png
+
+          org: 华为
+
+          post: 操作系统开发工程师
+
+        - name: 旷凯
+
+          img: ./images/guests/kuangkai.png
+
+          org: openEuler SIG-AI Committer
+
+          post: 麒麟软件资深研发工程师
+
+        - name: 张建华
+
+          img: ./images/guests/zhangjianhua.png
+
+          org: openEuler SIG-Kernel Committer
+
+          post: ''
+
+        - name: 岳海兵
+
+          img: ./images/guests/yuehaibing.png
+
+          org: openEuler SIG-Network Committer
+
+          post: ''
+
+        - name: 罗照宇
+
+          img: ./images/guests/luozhaoyu.png
+
+          org: 移动云
+
+          post: 高级系统架构师
+
+        - name: 宋振
+
+          img: ./images/guests/songzhen.png
+
+          org: 麒麟信安
+
+          post: 开发工程师
+
+        - name: 吴斌
+
+          img: ./images/guests/wubin.png
+
+          org: openEuler SIG-Virt Maintainer
+
+          post: ''
+
+        - name: 李准
+
+          img: ./images/guests/lizhun.png
+
+          org: 麒麟软件
+
+          post: 资深研发工程师
+
+        - name: 王金磊
+
+          img: ./images/guests/wangjinlei.png
+
+          org: 中移（苏州）软件技术有限公司
+
+          post: 虚拟化架构师
+
+        - name: 刘源
+
+          img: ./images/guests/liuyuan.png
+
+          org: Intel Cloud Software Development
+
+          post: Engineer
+
+        - name: 徐文麟
+
+          img: ./images/guests/xuwenlin.png
+
+          org: openEuler SIG-intel-arch Committer
+
+          post: Intel Cloud Software Development Engineer
+
+        - name: 刘铭然
+
+          img: ./images/guests/liumingran.png
+
+          org: 天翼云
+
+          post: 操作系统研发专家
+
+        - name: 谭培祥
+
+          img: ./images/guests/tanpeixiang.png
+
+          org: 招商银行AI Infra架构师
+
+          post: Twinkle & verl-speco Maintainer
+
+        - name: 于奕骅
+
+          img: ./images/guests/yuyihua.png
+
+          org: 招商银行
+
+          post: AI Infra工程师
+
+        - name: 李胜松
+
+          img: ./images/guests/lishengsong.png
+
+          org: 麒麟信安
+
+          post: 研发工程师
+
+        - name: 杨开勇
+
+          img: ./images/guests/yangkaiyong.png
+
+          org: 蚂蚁集团软件研发工程师
+
+          post: Dragonfly Maintainer
+
+        - name: 孙满利
+
+          img: ./images/guests/sunmanli.png
+
+          org: openEuler SIG-Intelligence Committer
+
+          post: 麒麟软件资深研发工程师
+
+        - name: 吴衡
+
+          img: ./images/guests/wuheng.png
+
+          org: 天翼云
+
+          post: 研发专家
+
+        - name: 李长欣
+
+          img: ./images/guests/lichangxin.png
+
+          org: openEuler SIG-Intelligence Committer
+
+          post: 麒麟软件高级研发工程师
+
+        - name: 张自晓
+
+          img: ./images/guests/zhangzixiao.png
+
+          org: openEuler SIG-AI Committer
+
+          post: 麒麟软件高级研发工程师
+
+        - name: 聂丹妮
+
+          img: ./images/guests/niedanni.png
+
+          org: 东方通
+
+          post: 高级架构师
+
+        - name: 侯涛
+
+          img: ./images/guests/houtao.png
+
+          org: 华为
+
+          post: 主任工程师
+
+        - name: 林冬艺
+
+          img: ./images/guests/lindongyi.png
+
+          org: 品高股份
+
+          post: CTO
+
+        - name: 张丰来
+
+          img: ./images/guests/zhangfenglai.png
+
+          org: openEuler SIG-Intelligence Committer
+
+          post: ''
+
+        - name: 龚壮邦
+
+          img: ./images/guests/gongzhuangbang.png
+
+          org: openEuler SIG-OpenDesign Maintainer
+
+          post: ''
+
+        - name: 晋武侠
+
+          img: ./images/guests/jinwuxia.png
+
+          org: 西安交通大学
+
+          post: 副教授
+
+        - name: 翟文杰
+
+          img: ./images/guests/zhaiwenjie.png
+
+          org: openEuler SIG-Infrastructure & SIG-EasyLife Committer
+
+          post: ''
+
+        - name: 高冲
+
+          img: ./images/guests/gaochong.png
+
+          org: openEuler Committer
+
+          post: 麒麟信安操作系统开发工程师
+
+        - name: 王弈桥
+
+          img: ./images/guests/wangyiqiao.png
+
+          org: openEuler Maintainer
+
+          post: 香港城市大学基础软件开发人员
+
+        - name: 张桐
+
+          img: ./images/guests/zhangtong.png
+
+          org: openEuler SIG-ANSE Maintainer
+
+          post: ''
+
+        - name: 宋亚康
+
+          img: ./images/guests/songyakang.png
+
+          org: 超聚变
+
+          post: 操作系统开发工程师
+
+        - name: 程志明
+
+          img: ./images/guests/chengzhiming.png
+
+          org: 超聚变
+
+          post: 操作系统开发工程师
+
+        - name: 李孟虓
+
+          img: ./images/guests/limengxiao.png
+
+          org: 麒麟软件
+
+          post: 高级研发工程师
+
+        - name: 刘陶峰
+
+          img: ./images/guests/liutaofeng.png
+
+          org: 蚂蚁集团
+
+          post: 研发工程师
+
+        - name: 苏伟
+
+          img: ./images/guests/suwei.png
+
+          org: 麒麟信安
+
+          post: 高级操作系统工程师
+
+        - name: 余宇峰
+
+          img: ./images/guests/yuyufeng.png
+
+          org: openEuler SIG-Compiler Committer
+
+          post: ''
+
+        - name: 谢志恒
+
+          img: ./images/guests/xiezhiheng.png
+
+          org: openEuler SIG-Compiler Maintainer
+
+          post: ''
+
+        - name: 郭锡鸿
+
+          img: ./images/guests/guoxihong.png
+
+          org: 华为
+
+          post: 软件开发工程师
+
+        - name: 陈正
+
+          img: ./images/guests/chenzheng.png
+
+          org: openEuler SIG-Compiler Maintainer
+
+          post: ''
+
+        - name: 陈鑫
+
+          img: ./images/guests/chenxin.png
+
+          org: openEuler SIG-Embedded
+
+          post: 成员
+
+        - name: 杨彬
+
+          img: ./images/guests/yangbin.png
+
+          org: openEuler SIG-OPS Maintainer
+
+          post: 软通动力开源欧拉研究中心主任
+
+        - name: 蔡鑫奇
+
+          img: ./images/guests/caixinqi.png
+
+          org: openEuler SIG-Space Maintainer
+
+          post: 航天九院研发中心主任设计师
+
+        - name: 双小川
+
+          img: ./images/guests/shuangxiaochuan.png
+
+          org: 上海航天计算机技术研究所
+
+          post: 研究员
+
+        - name: 张珩
+
+          img: ./images/guests/zhangheng.png
+
+          org: 中国科学院软件研究所
+
+          post: 副研究员
+
+        - name: 刘超
+
+          img: ./images/guests/liuchao.png
+
+          org: 进程使命（上海）科技有限公司
+
+          post: 资深软件工程师
+
+        - name: 李萌
+
+          img: ./images/guests/limeng.png
+
+          org: 中广核数字科技智能工控
+
+          post: 系统总设计师
+
+        - name: 朱鸿雷
+
+          img: ./images/guests/zhuhonglei.png
+
+          org: 飞腾
+
+          post: 资深软件工程师
+
+        - name: 田可辉
+
+          img: ./images/guests/tiankehui.png
+
+          org: openEuler社区运营工作组成员
+
+          post: 软通动力计算生态研发部高级技术总监
+
+        - name: 刘俊
+
+          img: ./images/guests/liujun.png
+
+          org: 长沙理工大学
+
+          post: 博士研究生
+
+        - name: 李昭元
+
+          img: ./images/guests/lizhaoyuan.png
+
+          org: 中国科学院软件研究所
+
+          post: 高级工程师
+
+        - name: 万振华
+
+          img: ./images/guests/wanzhenhua.png
+
+          org: OWASP 中国区
+
+          post: 主席
+
+        - name: 王建东
+
+          img: ./images/guests/wangjiandong.png
+
+          org: openEuler SIG-AI/Intelligence Committer
+
+          post: 麒麟软件资深开发工程师
+
+        - name: 李希文
+
+          img: ./images/guests/lixiwen.png
+
+          org: 华为
+
+          post: 网络安全与隐私保护技术专家
+
+        - name: 毛翼辉
+
+          img: ./images/guests/maoyihui.png
+
+          org: openEuler SIG-sbom Maintainer
+
+          post: 凝思软件研发工程师
+
+        - name: 曹平
+
+          img: ./images/guests/caoping.png
+
+          org: 中移（苏州）软件技术有限公司
+
+          post: 软件开发工程师
+
+        - name: 王麟
+
+          img: ./images/guests/wanglin.png
+
+          org: openEuler SIG-CloudNative Maintainer
+
+          post: 联通数科操作系统研发专家
+
+        - name: 王宇
+
+          img: ./images/guests/wangyu.png
+
+          org: 华为
+
+          post: 系统安全专家
+
+        - name: 魏东
+
+          img: ./images/guests/weidong.png
+
+          org: openEuler SIG-Desktop Maintainer
+
+          post: 麒麟信安操作系统研发工程师
+
+        - name: 周广伟
+
+          img: ./images/guests/zhouguangwei.png
+
+          org: openEuler SIG-confidential-computing Committer
+
+          post: ''
+
+        - name: 何静娴
+
+          img: ./images/guests/hejingxian.png
+
+          org: openEuler SIG-confidential-computing Committer
+
+          post: ''
+
+        - name: 闫锐
+
+          img: ./images/guests/yanrui.png
+
+          org: 中移（苏州）软件技术有限公司
+
+          post: 操作系统产品经理
+
+        - name: 郑幼戈
+
+          img: ./images/guests/zhengyouge.png
+
+          org: 统信软件
+
+          post: AI 研发经理
+
+
 
 # partner: 共建单位（主办方/联合主办方/协办方/支持方 logo）
+
 partner:
+
   title: 共建单位
+
   list:
+
     - title: 主办方
+
       logos:
+
         - light: ./images/logo/openEuler_light.png
+
           dark: ./images/logo/openEuler_dark.png
+
     - title: 联合主办方
+
       logos:
+
         - light: ./images/logo/huawei_light.png
+
           dark: ./images/logo/huawei_dark.png
+
         - light: ./images/logo/tianyiyun_light.png
+
           dark: ./images/logo/tianyiyun_dark.png
+
         - light: ./images/logo/qilinxinan_light.png
+
           dark: ./images/logo/qilinxinan_dark.png
+
         - light: ./images/logo/ningsi_light.png
+
           dark: ./images/logo/ningsi_dark.png
+
         - light: ./images/logo/qilin_light.png
+
           dark: ./images/logo/qilin_dark.png
+
     - title: 协办方
+
       logos:
+
         - light: ./images/logo/tongxin_light.png
+
           dark: ./images/logo/tongxin_dark.png
+
         - light: ./images/logo/runhe_light.png
+
           dark: ./images/logo/runhe_dark.png
+
         - light: ./images/logo/dongfang_light.png
+
           dark: ./images/logo/dongfang_dark.png
+
         - light: ./images/logo/ruantong_light.png
+
           dark: ./images/logo/ruantong_dark.png
+
         - light: ./images/logo/xfusion_light.png
+
           dark: ./images/logo/xfusion_dark.png
+
     - title: 支持方
+
       logos:
+
         - light: ./images/logo/baolande_light.png
+
           dark: ./images/logo/baolande_dark.png
 
+
+
 # previous: 精彩回顾（历届活动链接）
+
 previous:
+
   title: 精彩回顾
+
   list:
+
     - name: openEuler Developer Day 2026
+
       link: /zh/interaction/summit-list/devday2026/
+
     - name: 操作系统大会 & openEuler Summit 2025
+
       link: /zh/interaction/summit-list/summit2025/
+
     - name: openEuler Developer Day 2025
+
       link: /zh/interaction/summit-list/devday2025/
+
     - name: openEuler Summit 2024
+
       link: /zh/interaction/summit-list/summit2024/
+
     - name: openEuler SIG Gathering 2024
+
       link: /zh/interaction/summit-list/sig-gathering-2024/
+
     - name: openEuler Summit 2023
+
       link: /zh/interaction/summit-list/summit2023/
+
     - name: openEuler Developer Day 2023
+
       link: /zh/interaction/summit-list/devday2023/
+
     - name: openEuler Summit 2022
+
       link: /zh/interaction/summit-list/summit2022/
+

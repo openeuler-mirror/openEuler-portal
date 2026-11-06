@@ -95,19 +95,6 @@ declare module '#content/interaction/summit-list/summit2026' {
     slogan: string[];
   }
 
-  // callfor: Call for 征集卡片（背景图各端共用一份）
-  interface Summit2026CallForItemT {
-    title: string;
-    sub: string;
-    link: string;
-  }
-  // bg_pc: >840px 方形卡片背景图；bg_mb: <=840px 移动端矩形卡片背景图
-  interface Summit2026CallForT {
-    bg_pc: Summit2026ThemeImgT;
-    bg_mb: Summit2026ThemeImgT;
-    list: Summit2026CallForItemT[];
-  }
-
   // previous: 精彩回顾
   interface Summit2026PreviousItemT {
     name: string;
@@ -122,7 +109,6 @@ declare module '#content/interaction/summit-list/summit2026' {
     banner: Summit2026BannerT;
     apply_bar: Summit2026ApplyBarT;
     introduce: Summit2026IntroduceT;
-    callfor: Summit2026CallForT;
     previous: Summit2026PreviousT;
   }
 
