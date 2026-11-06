@@ -18,6 +18,28 @@ const isBlog = /.+\/(?:news|blog|showcase)\/.+$/;
 // showcase 案例详情页（showcase/{industry}/... 至少两段）：title 直接取 frontmatter，
 // 避免 .geo/tdks 中按公司名生成的重复标题；栏目首页(hub)与白皮书/报告列表页保留其精修 tdk 标题。
 const isShowcase = /^(?:zh|en)\/showcase\/[^/]+\/.+$/;
+// SIG 详情页为动态路由（/{zh|en}/sig/[sig]），页面数据来自 [sig].paths.ts 的 params
+const isSigDetail = /^(?:zh|en)\/sig\/[^/]+$/;
+const sigKeywordsTemplate: Record<'zh' | 'en', string[]> = {
+  zh: [
+    'openEuler',
+    'openEuler社区',
+    'SIG',
+    '特别兴趣小组',
+    '开源协作',
+    '社区协作',
+    '开源操作系统',
+  ],
+  en: [
+    'openEuler',
+    'openEuler community',
+    'SIG',
+    'Special Interest Group',
+    'open source collaboration',
+    'community collaboration',
+    'open source operating system',
+  ],
+};
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const geoDir = path.resolve(__dirname, '../../.geo')
 const currentHostname = readEnvVar('VITE_MAIN_DOMAIN_URL') || 'https://www.openeuler.org';
@@ -82,6 +104,26 @@ const setJSONLD = async (pageData: PageData, pagePath: string) => {
 
 const setTdk = (pageData: PageData, pagePath: string) => {
   pageData.titleTemplate = `:title | ${pagePath.startsWith('zh') ? 'openEuler社区官网' : 'openEuler'}`;
+  // SIG 详情页（动态路由 /{zh|en}/sig/[sig]，数据来自 [sig].paths.ts）：title/description 取
+  // params.sig / params.description，keywords 用固定模板（突出 openEuler、协作等含义）追加 SIG 名称生成，
+  // 不依赖 .geo 静态文件；params.sig 判断同时排除了 sig 下的静态栏目页。
+  if (isSigDetail.test(pagePath) && pageData.params?.sig) {
+    const params = pageData.params as { sig?: string; description?: string };
+    const sig = String(params.sig ?? '').trim();
+    const description = String(params.description ?? '').trim();
+    if (sig) {
+      pageData.title = `${sig} | SIG`;
+    }
+    if (description) {
+      pageData.description = description;
+    }
+    const locale = pagePath.startsWith('en') ? 'en' : 'zh';
+    setKeywords(
+      pageData,
+      [...new Set([...sigKeywordsTemplate[locale], sig].filter(Boolean))].join(', ')
+    );
+    return;
+  }
   const jsonFile = join(geoDir, 'tdks', pagePath, 'index.json');
   const tdkInfo = existsSync(jsonFile) ? JSON.parse(readFileSync(jsonFile, 'utf-8')) : null;
   if (!tdkInfo) {
@@ -109,22 +151,21 @@ const setTdk = (pageData: PageData, pagePath: string) => {
     ]);
   }
   if (keywords) {
-    pageData.frontmatter.head ??= [];
-    const keywordsIndex = pageData.frontmatter.head.findIndex(
-      (item: HeadConfig) => item[1]?.name === 'keywords'
-    );
-    if (keywordsIndex !== -1) {
-      pageData.frontmatter.head.splice(keywordsIndex, 1, [
-        'meta',
-        { name: 'keywords', content: keywords },
-      ]);
-      return;
-    }
-    pageData.frontmatter.head.push([
-      'meta',
-      { name: 'keywords', content: keywords },
-    ]);
+    setKeywords(pageData, keywords);
   }
+}
+
+const setKeywords = (pageData: PageData, keywords: string) => {
+  pageData.frontmatter.head ??= [];
+  const keywordsIndex = pageData.frontmatter.head.findIndex(
+    (item: HeadConfig) => item[1]?.name === 'keywords'
+  );
+  const kw: HeadConfig = ['meta', { name: 'keywords', content: keywords }];
+  if (keywordsIndex !== -1) {
+    pageData.frontmatter.head.splice(keywordsIndex, 1, kw);
+    return;
+  }
+  pageData.frontmatter.head.push(kw);
 }
 
 function readEnvVar(key: string): string | undefined {
