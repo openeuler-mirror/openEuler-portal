@@ -1,1 +1,1 @@
-{"title":"openEuler 镜像安装指南 | Wiki","description":"查阅openEuler镜像的安装方法，确保高效部署。","keywords":"openEuler, 镜像, 安装, 指南, 部署"}
+{"title":"NestOS 云底座操作系统","description":"NestOS 是基于 openEuler 打造的云底座操作系统，推出整合 NestOS For Container 与 NestOS For Virt 的双模式版本，面向云场景的容器化与虚拟化提供解决方案，并具备内核特性增强、PilotGo 插件式运维、NKD 云原生一体化部署、Rubik 在离线混部、系统镜像定制及 x2NestOS 不可变模式转换等功能特色。","keywords":"openEuler,NestOS,云底座操作系统,容器化,虚拟化"}

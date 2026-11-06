@@ -10,15 +10,20 @@
  *      → 复制到本项目的 skills 目标目录：优先探测已存在的
  *        .claude/skills、.opencode/skills、.agents/skills（按此顺序取第一个），
  *        都不存在则新建 .agents/skills 并复制进去
+ *   3. 仓库根 html-tools/（to-md-snapshot / calc-content-fit 脚本包）
+ *      → 复制到用户级全局工具目录（默认 ~/.seo-geo/html-tools，
+ *        SEO_GEO_TOOLS_DIR 可覆盖；跨项目共享），随后在该目录执行
+ *        pnpm install 并 pnpm add -g 注册全局命令；--disable-sync-tools 可关闭本步
  *
  * 使用方式（在其他前端项目中）：
  *   将本脚本放到该项目的 scripts/ 下（项目根 = 脚本目录的上一级），然后：
- *     node scripts/sync-seo-geo-specs.mjs
+ *     node scripts/sync-seo-geo-specs.mjs [--disable-sync-tools]
  *   可接入 package.json：postinstall / predev / 手动 script（如 "specs:sync"）。
  *
  * 环境变量：
  *   SEO_GEO_SPECS_REPO   覆盖仓库地址（默认 opensourceways/daily-check-workflow）
  *   SEO_GEO_SPECS_REF    覆盖分支/tag/commit（默认 specifications）
+ *   SEO_GEO_TOOLS_DIR    覆盖 html-tools 全局工具目录（默认 ~/.seo-geo/html-tools）
  *   SEO_GEO_SYNC_SKIP=1  强制跳过（CI、离线环境用）
  *   CI=true              自动跳过（GitHub Actions 等自动设置）
  *   SEO_GEO_SYNC_STRICT=1 失败时退出码 1（默认 graceful：失败仅 warn，不阻塞 install/dev）
@@ -30,9 +35,9 @@
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, copyFileSync, rmSync, mkdtempSync } from 'node:fs';
 import { join, resolve, dirname, sep } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { tmpdir } from 'node:os';
-import { execFileSync } from 'node:child_process';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { tmpdir, homedir } from 'node:os';
+import { execFileSync, spawnSync } from 'node:child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = resolve(__dirname, '..');
@@ -41,6 +46,11 @@ const REPO = process.env.SEO_GEO_SPECS_REPO || 'https://github.com/opensourceway
 const REF = process.env.SEO_GEO_SPECS_REF || 'specifications';
 const STRICT = process.env.SEO_GEO_SYNC_STRICT === '1';
 const SKIP = process.env.SEO_GEO_SYNC_SKIP === '1' || process.env.CI === 'true' || process.env.CI === '1';
+const SYNC_TOOLS = !process.argv.includes('--disable-sync-tools');
+const TOOLS_DIR = resolve(process.env.SEO_GEO_TOOLS_DIR || join(homedir(), '.seo-geo', 'html-tools'));
+const TOOLS_SUBDIR = 'html-tools';
+// 复制 html-tools 时跳过的目录（保留全局工具目录里已安装的 node_modules，加快 install）
+const TOOLS_SKIP_DIRS = new Set(['node_modules', '.git']);
 
 const SPEC_FILES = ['specification.md', 'implementation.md'];
 const DIM_PATTERN = /^\d{2}-.+/;
@@ -75,6 +85,21 @@ const bail = (msg, err) => {
 
 const run = (cmd, args, opts = {}) => execFileSync(cmd, args, { stdio: ['ignore', 'pipe', 'inherit'], ...opts });
 
+// execFileSync 不走 shell，Windows 下 pnpm 实际是 pnpm.cmd，需带扩展名；
+// Node 新版本又禁止无 shell 启动 .cmd（CVE-2024-27980），故走 shell 并自行拼接/引用参数
+// （不用 spawnSync 的 args+shell 组合，避免 DEP0190：参数只拼接不转义）
+const PNPM = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm';
+const pnpmQuote = (a) => (/["\s]/.test(a) ? `"${a.replace(/"/g, '\\"')}"` : a);
+const runPnpm = (args, opts = {}) => {
+  const r = spawnSync([PNPM, ...args.map(pnpmQuote)].join(' '), {
+    shell: true,
+    stdio: opts.stdio || 'inherit',
+    ...(opts.cwd ? { cwd: opts.cwd } : {}),
+  });
+  if (r.error) throw r.error;
+  if (r.status !== 0) throw new Error(`pnpm ${args.join(' ')} 退出码 ${r.status}`);
+};
+
 const copyDir = (src, dest) => {
   mkdirSync(dest, { recursive: true });
   for (const entry of readdirSync(src)) {
@@ -82,6 +107,17 @@ const copyDir = (src, dest) => {
     const d = join(dest, entry);
     if (statSync(s).isDirectory()) copyDir(s, d);
     else copyFileSync(s, d);
+  }
+};
+
+const copyDirFiltered = (src, dest, skipDirs) => {
+  mkdirSync(dest, { recursive: true });
+  for (const entry of readdirSync(src)) {
+    const s = join(src, entry);
+    const d = join(dest, entry);
+    if (statSync(s).isDirectory()) {
+      if (!skipDirs.has(entry)) copyDirFiltered(s, d, skipDirs);
+    } else copyFileSync(s, d);
   }
 };
 
@@ -121,6 +157,48 @@ const resolveSkillsTarget = () => {
   mkdirSync(abs, { recursive: true });
   console.log(`${tag} 未找到已有 skills 目录，新建 ${rel}/`);
   return { abs, rel };
+};
+
+/**
+ * 同步 html-tools 到用户级全局目录（~/.seo-geo/html-tools，SEO_GEO_TOOLS_DIR 可覆盖），
+ * 并在该目录 pnpm install、pnpm add -g 注册全局命令（to-md-snapshot / calc-content-fit）。
+ * 失败只 warn：规范/skill 已同步成功，工具可由使用方按 skill 兜底流程自行拉取。
+ */
+const syncHtmlTools = (repoTmp, sha) => {
+  if (!SYNC_TOOLS) {
+    console.log(`${tag} html-tools：--disable-sync-tools 已指定，跳过全局工具同步`);
+    return;
+  }
+  const src = join(repoTmp, TOOLS_SUBDIR);
+  if (!existsSync(src)) {
+    console.warn(`${tag} html-tools：上游仓库无 ${TOOLS_SUBDIR}/ 目录，跳过`);
+    return;
+  }
+  try {
+    copyDirFiltered(src, TOOLS_DIR, TOOLS_SKIP_DIRS);
+    console.log(`${tag} html-tools：${TOOLS_SUBDIR}/ → ${TOOLS_DIR}（上游 ${sha}）`);
+  } catch (err) {
+    console.warn(`${tag} html-tools 复制失败：${err.message || err}`);
+    return;
+  }
+  try {
+    runPnpm(['--version'], { stdio: 'ignore' });
+  } catch {
+    console.warn(`${tag} html-tools：未找到 pnpm，跳过依赖安装与全局注册（在 ${TOOLS_DIR} 手动 pnpm install 后可用）`);
+    return;
+  }
+  try {
+    runPnpm(['install'], { cwd: TOOLS_DIR });
+  } catch (err) {
+    console.warn(`${tag} html-tools 依赖安装失败：${err.message || err}（可在 ${TOOLS_DIR} 手动 pnpm install）`);
+    return;
+  }
+  try {
+    runPnpm(['add', '-g', pathToFileURL(TOOLS_DIR).href]);
+    console.log(`${tag} html-tools：全局命令已注册（to-md-snapshot / calc-content-fit）`);
+  } catch (err) {
+    console.warn(`${tag} html-tools 全局注册失败：${err.message || err}（可手动执行 pnpm add -g ${pathToFileURL(TOOLS_DIR).href}）`);
+  }
 };
 
 // 探测 git 可用
@@ -224,6 +302,9 @@ try {
     }
     console.log(`${tag} skills：${okCount}/${pendingSkills.length} 已同步`);
   }
+
+  // 3. html-tools → 全局工具目录 + pnpm install + 全局命令注册
+  syncHtmlTools(workTmp, sha);
 
   console.log(`${tag} 完成（上游 ${sha}）`);
 } catch (err) {

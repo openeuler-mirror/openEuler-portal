@@ -1,4 +1,5 @@
 import type { HeadConfig, PageData } from 'vitepress';
+import { resolveNewsBlogDescription } from './tdk-dedup';
 
 /** 匹配 news 文章页 filePath（zh/en 下的 news 文章） */
 export const isNews = /^(zh|en)\/news\//;
@@ -31,7 +32,9 @@ export const setNewsGeo = (
   const head = (pageData.frontmatter.head ??= []);
 
   const title = String(fm?.title ?? '').trim();
-  const description = String(fm?.summary ?? fm?.description ?? '').trim();
+  let description = String(fm?.summary ?? fm?.description ?? '').trim();
+  // summary 缺失或在 news/blog 间重复时，回退取 md 正文首段作为 description
+  description = resolveNewsBlogDescription(fm as Record<string, unknown>, filePath) ?? description;
   const rawTags = Array.isArray(fm?.tags) ? fm.tags : (fm?.tags ? [fm.tags] : []);
   const keywords = [...new Set(rawTags.map((s) => String(s).trim()).filter(Boolean))].join(', ');
 

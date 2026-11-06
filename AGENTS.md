@@ -140,18 +140,21 @@ SEO/GEO 各维度**规范与配套 skill 统一来源于规范仓库 [opensource
 
 | 命令 | 说明 |
 |------|------|
-| `pnpm geo-specs:sync` | 运行 [scripts/sync-seo-geo-specs.mjs](./scripts/sync-seo-geo-specs.mjs)：浅克隆 `specifications` 分支 → 覆盖式同步规范与 skills（幂等，可重复执行）；已接入 `postinstall`，`pnpm install` 时自动跑 |
+| `pnpm geo-specs:sync` | 运行 [scripts/sync-seo-geo-specs.mjs](./scripts/sync-seo-geo-specs.mjs)：浅克隆 `specifications` 分支 → 覆盖式同步规范与 skills + html-tools 全局工具（幂等，可重复执行）；已接入 `postinstall`，`pnpm install` 时自动跑 |
+| `pnpm geo-specs:sync -- --disable-sync-tools` | 只同步规范/skills，跳过 html-tools 全局工具同步与安装（`CI=true` 时整脚本本就跳过） |
 
 落点规则：
 
 - **规范文档**：各 `{NN-name}/specification.md`（规范）与 `{NN-name}/implementation.md`（构建时落地实现方式）→ 复制到 `rules/seo-geo/{NN-name}/`（目录不存在则新建）
 - **skills**：各维度 `skills/`（兼容单数 `skill/`）下含 `SKILL.md` 的目录 → 复制到本项目的 skills 目标目录；脚本按 `.claude/skills → .opencode/skills → .agents/skills` 顺序取**第一个已存在**的目录（本项目命中 `.claude/skills/`），三者都不存在时新建 `.agents/skills/`；skill 目录名取 `SKILL.md` frontmatter 的 `name`
+- **html-tools**：仓库根 `html-tools/`（`to-md-snapshot` / `calc-content-fit` 脚本包，fix-tdk 等 skill 的运行时工具）→ 复制到用户级全局目录 `~/.seo-geo/html-tools`（跨项目共享，保留已装 node_modules），随后 `pnpm install` 并 `pnpm add -g` 注册全局命令；各步失败仅 warn
 
 环境变量：
 
 | 变量 | 作用 |
 |------|------|
 | `SEO_GEO_SPECS_REPO` / `SEO_GEO_SPECS_REF` | 覆盖仓库地址 / 分支（默认 daily-check-workflow / `specifications`） |
+| `SEO_GEO_TOOLS_DIR` | 覆盖 html-tools 全局工具目录（默认 `~/.seo-geo/html-tools`） |
 | `SEO_GEO_SYNC_SKIP=1` 或 `CI=true` | 跳过同步（CI / 离线环境） |
 | `SEO_GEO_SYNC_STRICT=1` | 失败时退出码 1（默认 graceful，仅 warn 不阻塞 install/dev） |
 
