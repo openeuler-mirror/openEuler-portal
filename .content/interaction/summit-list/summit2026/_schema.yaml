@@ -31,16 +31,6 @@ zh:
       tips: tips
       list: list
       slogan: slogan
-  callfor:
-    label: callfor
-    fields:
-      bg_pc: bg_pc
-      bg_pc.light: light
-      bg_pc.dark: dark
-      bg_mb: bg_mb
-      bg_mb.light: light
-      bg_mb.dark: dark
-      list: list
   agent:
     label: agent
     fields:
@@ -59,9 +49,29 @@ zh:
       list[].children[].tab[].children[].content[].guest: guest
       list[].children[].children[].content[].titles: titles
       list[].children[].children[].content[].guest: guest
+      list[].children[].tab[].title: title
+      list[].children[].tab[].closed: closed
+      list[].children[].tab[].closed_title: closed_title
+      list[].children[].tab[].closed_tips: closed_tips
+      list[].children[].tab[].closed_bg: closed_bg
+      list[].children[].tab[].closed_bg.light: light
+      list[].children[].tab[].closed_bg.dark: dark
       list[].children[].list: list
       list[].children[].list[].children: children
+      list[].children[].list[].children[].address: address
+      list[].children[].list[].children[].time: time
       list[].children[].list[].children[].children: children
+  guest:
+    label: guest
+    fields:
+      title: title
+      list: list
+      list[].title: title
+      list[].children: children
+      list[].children[].name: name
+      list[].children[].org: org
+      list[].children[].post: post
+      list[].children[].img: img
   partner:
     label: partner
     fields:
@@ -103,16 +113,6 @@ en:
       tips: tips
       list: list
       slogan: slogan
-  callfor:
-    label: callfor
-    fields:
-      bg_pc: bg_pc
-      bg_pc.light: light
-      bg_pc.dark: dark
-      bg_mb: bg_mb
-      bg_mb.light: light
-      bg_mb.dark: dark
-      list: list
   agent:
     label: agent
     fields:
@@ -129,9 +129,30 @@ en:
       list[].children[].tab[].children: children
       list[].children[].tab[].children[].content: content
       list[].children[].tab[].children[].content[].guest: guest
+      list[].children[].children[].content[].titles: titles
+      list[].children[].tab[].title: title
+      list[].children[].tab[].closed: closed
+      list[].children[].tab[].closed_title: closed_title
+      list[].children[].tab[].closed_tips: closed_tips
+      list[].children[].tab[].closed_bg: closed_bg
+      list[].children[].tab[].closed_bg.light: light
+      list[].children[].tab[].closed_bg.dark: dark
       list[].children[].list: list
       list[].children[].list[].children: children
+      list[].children[].list[].children[].address: address
+      list[].children[].list[].children[].time: time
       list[].children[].list[].children[].children: children
+  guest:
+    label: guest
+    fields:
+      title: title
+      list: list
+      list[].title: title
+      list[].children: children
+      list[].children[].name: name
+      list[].children[].org: org
+      list[].children[].post: post
+      list[].children[].img: img
   partner:
     label: partner
     fields:

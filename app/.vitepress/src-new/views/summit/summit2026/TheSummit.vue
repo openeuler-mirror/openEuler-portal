@@ -4,8 +4,8 @@ import { computed } from 'vue';
 import ContentWrapper from '~@/components/ContentWrapper.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import SummitIntroduce from './components/SummitIntroduce.vue';
-import SummitCallFor from './components/SummitCallFor.vue';
 import SummitAgent from './components/SummitAgent.vue';
+import SummitGuest from './components/SummitGuest.vue';
 import SummitPartner from './components/SummitPartner.vue';
 import SummitPrevious from './components/SummitPrevious.vue';
 import SummitApplyBar from './components/SummitApplyBar.vue';
@@ -39,8 +39,8 @@ const summitData = computed(
   <SummitBanner :banner-data="summitData.banner" />
   <ContentWrapper vertical-padding="0">
     <SummitIntroduce :introduce-data="summitData.introduce" />
-    <SummitCallFor :callfor-data="summitData.callfor" />
     <SummitAgent :agent-data="summitData.agent" />
+    <SummitGuest :guest-data="summitData.guest" />
     <SummitPartner v-if="summitData.partner?.visible !== false" :partner-data="summitData.partner" />
     <SummitPrevious :previous-data="summitData.previous" />
   </ContentWrapper>

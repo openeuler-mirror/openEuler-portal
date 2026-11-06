@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue';
-import { OLink, OIcon, OTab, OTabPane } from '@opensig/opendesign';
+import { OTab, OTabPane } from '@opensig/opendesign';
 
 import SummitSchedule from './SummitSchedule.vue';
 
 import IconAddress from '~icons/app-new/icon-address.svg';
 import IconTime from '~icons/app-new/icon-time.svg';
-import IconChevronRight from '~icons/app-new/icon-chevron-right.svg';
+import IconChevronDown from '~icons/app-new/icon-chevron-down.svg';
 
 import { useCommon } from '@/stores/common';
-import { useLocale } from '~@/composables/useLocale';
 
 interface DateT {
   day: string;
@@ -28,6 +27,14 @@ interface TabItemT {
   time: string;
   address: string;
   url?: string;
+  // tab 面板头部：分论坛标题（配合 address / time 展示在议程行上方）
+  title?: string;
+  // 闭门分论坛：无公开议程，面板展示 closedTitle / closedTips 与特殊背景 closedBg（深浅两套）
+  // 注意：TheSummit.vue 已把 yaml 的 snake_case 键递归转为 camelCase 后传入，此处均为 camelCase
+  closed?: boolean;
+  closedTitle?: string;
+  closedTips?: string;
+  closedBg?: { light: string; dark: string };
   children?: AgentItemT[];
 }
 
@@ -60,14 +67,13 @@ const props = defineProps({
   },
 });
 
-const { isEn } = useLocale();
-
 const commonStore = useCommon();
 const isDark = computed(() => {
   return commonStore.theme === 'dark' ? true : false;
 });
 
-const tabType = ref(0);
+// OTab 的激活匹配是 paneKey === activeKey 的严格相等（paneKey 取 OTabPane 的 value），类型需一致（数字）
+const tabType = ref<number>(0);
 
 // 论坛切换
 const activeIndex = ref(0);
@@ -79,6 +85,16 @@ const listData = ref<ListItemT[]>([]);
 const pendingCards = ref<PendingCardT[]>([]);
 const pendingTips = ref('');
 
+// 当前激活 tab 是否为闭门分论坛（面板覆盖整个 tab 区域，文案在页签栏顶部到内容底部区间居中）
+const activeTabClosed = computed(() => forumTabData.value[tabType.value]?.closed === true);
+
+// 技术沙龙卡片手风琴展开（默认全部折叠，同时只展开一个）
+const openSalon = ref<string | null>(null);
+const isOpenSalon = (i: number, c: number) => openSalon.value === `${i}-${c}`;
+const toggleSalon = (key: string) => {
+  openSalon.value = openSalon.value === key ? null : key;
+};
+
 const forumClick = (val: number) => {
   tabType.value = 0;
   activeIndex.value = val;
@@ -87,8 +103,18 @@ const forumClick = (val: number) => {
   pendingCards.value = dateData.value[val]?.pendingCards || [];
   pendingTips.value = dateData.value[val]?.pendingTips || '';
   listData.value = dateData.value[val]?.list || [];
-  isCardVisible.value = (val === 1 || val === 2) && forumTabData.value.some(item => item.children?.length === 0);
+  isCardVisible.value =
+    (val === 1 || val === 2) &&
+    forumTabData.value.length > 0 &&
+    // 仅当所有 tab 都无议程且非闭门态时才切换到占位卡片；存在闭门 tab（closed）时保持 tab 形式
+    forumTabData.value.every((item) => !item.closed && (item.children?.length ?? 0) === 0);
 }
+
+// 闭门分论坛面板背景（深浅主题取不同图）
+const closedBgStyle = (item: TabItemT) => {
+  if (!item.closedBg) return {};
+  return { backgroundImage: `url(${isDark.value ? item.closedBg.dark : item.closedBg.light})` };
+};
 
 // 议程日期切换
 const dateList = ref<DateT[]>([]);
@@ -159,14 +185,40 @@ watch(
         </ClientOnly>
       </template>
       <template v-if="forumTabData?.length && !pendingCards.length">
-        <OTab v-model="tabType" :line="false" class="agenda-tabs">
+        <OTab
+          v-model="tabType"
+          :line="false"
+          class="agenda-tabs"
+          :class="{ 'agenda-tabs-closed': activeTabClosed }"
+        >
           <OTabPane
             v-for="(item, i) in forumTabData"
             :key="i"
             :label="item.label"
             :value="i"
           >
-            <SummitSchedule :options="item.children" :address="item.address" :date-index="dateIndex" />
+            <template v-if="item.closed">
+              <div class="tab-closed" :style="closedBgStyle(item)">
+                <div class="tab-closed-text">
+                  <p class="closed-title">{{ item.closedTitle }}</p>
+                  <p class="closed-tips">{{ item.closedTips }}</p>
+                </div>
+              </div>
+            </template>
+            <template v-else>
+              <div v-if="item.title" class="tab-head">
+                <p class="tab-head-title">{{ item.title }}</p>
+                <div class="tab-head-info">
+                  <span v-if="item.address" class="info-item">
+                    <IconAddress /><span>{{ item.address }}</span>
+                  </span>
+                  <span class="info-item">
+                    <IconTime /><span>{{ dateIndex === 0 ? '2026/11/13' : '2026/11/14' }} {{ item.time }}</span>
+                  </span>
+                </div>
+              </div>
+              <SummitSchedule :options="item.children" :address="item.address" :date-index="dateIndex" />
+            </template>
           </OTabPane>
         </OTab>
       </template>
@@ -210,28 +262,32 @@ watch(
       </div>
       <p class="tips">{{ agentData.tips }}</p>
     </div>
-    <div v-if="!isCardVisible && listData.length"  class="sig-agent">
+    <div v-if="!isCardVisible && listData.length" class="sig-agent">
       <template v-for="(item, i) in listData" :key="i">
-        <div class="agent-list-card" :class="`agent-list-card${i}`">
-          <div v-for="(card, c) in item.children" :key="c" class="item-card" :class="{'item-card-dark': isDark, 'item-card-en': isEn}">
-            <p class="card-title">{{ card.label }}</p>
-            <div class="bottom">
-              <div v-if="card.address" class="item-bottom">
-                <span class="item-date"><IconAddress /><span>{{ card.address }}</span></span>
-              </div>
-              <div class="item-bottom">
-                <span class="item-date"><IconTime /><span>{{ dateIndex === 0 ? '2026/11/13' : '2026/11/14' }}</span></span>
-                <span class="time">{{ card.time }}</span>
+        <div
+          v-for="(card, c) in item.children"
+          :key="`${i}-${c}`"
+          class="salon-card"
+          :class="{ 'salon-card-dark': isDark }"
+        >
+          <div class="salon-head" @click="toggleSalon(`${i}-${c}`)">
+            <div class="salon-head-main">
+              <p class="salon-title">{{ card.label }}</p>
+              <div class="salon-info">
+                <span v-if="card.address" class="info-item">
+                  <IconAddress /><span>{{ card.address }}</span>
+                </span>
+                <span class="info-item">
+                  <IconTime /><span>{{ dateIndex === 0 ? '2026/11/13' : '2026/11/14' }} {{ card.time }}</span>
+                </span>
               </div>
             </div>
-            <div v-if="card.url" class="url">
-              <OLink color="normal" variant="text" size="large" hover-underline :href="card.url" target="_blank" rel="noopener noreferrer">
-                {{ agentData.text }}
-                <template #suffix>
-                  <OIcon><IconChevronRight /> </OIcon>
-                </template>
-              </OLink>
-            </div>
+            <span class="salon-arrow" :class="{ 'salon-arrow-open': isOpenSalon(i, c) }">
+              <IconChevronDown />
+            </span>
+          </div>
+          <div v-show="isOpenSalon(i, c)" class="salon-body">
+            <SummitSchedule :options="card.children" :date-index="dateIndex" />
           </div>
         </div>
       </template>
@@ -242,11 +298,6 @@ watch(
 
 <style scoped lang="scss">
 .agent {
-  margin-top: 72px;
-  @media screen and (max-width: 768px) {
-    margin-top: var(--e-spacing-h4);
-  }
-
   .section-title {
     text-align: center;
     @include display3;
@@ -357,6 +408,78 @@ watch(
   :deep(.o-tab-body) {
     margin-top: 40px;
   }
+  // 闭门分论坛激活时：面板覆盖整个 tab 区域（含页签栏），文案在「页签栏顶部 → 内容底部」区间垂直居中
+  &.agenda-tabs-closed {
+    position: relative;
+    aspect-ratio: 2976 / 1170;
+    :deep(.o-tab-head) {
+      // 页签栏浮于面板之上，保证可点击
+      position: relative;
+      z-index: 2;
+    }
+    .tab-closed {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+  }
+}
+
+// 分论坛 tab 面板头部：标题 + 地点/日期时间
+.tab-head {
+  margin-bottom: 16px;
+  text-align: center;
+  .tab-head-title {
+    color: var(--o-color-info1);
+    font-weight: var(--o-font_weight-bold);
+    @include h2;
+  }
+  .tab-head-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    color: var(--o-color-info1);
+    @include text1;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
+    }
+  }
+  .info-item + .info-item {
+    margin-left: 16px;
+  }
+}
+
+// 闭门分论坛面板：特殊背景卡片（深浅主题由内联 style 切换），标题与提示居中
+.tab-closed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  .tab-closed-text {
+    max-width: 100%;
+  }
+  .closed-title {
+    text-align: center;
+    color: var(--o-color-info1);
+    font-weight: var(--o-font_weight-bold);
+    @include h2;
+  }
+  .closed-tips {
+    margin-top: 8px;
+    text-align: center;
+    color: var(--o-color-info1);
+    font-weight: var(--o-font_weight-bold);
+    @include h2;
+  }
 }
 
 .agent-list-card {
@@ -452,27 +575,86 @@ watch(
   width: calc((100% - 32px) / 2);
 }
 
+// 技术沙龙：整宽可展开/收起卡片，背景图保持比例贴卡片底部（展开时位于议程区下方，深浅模式）
+// 顶部间距与主/分论坛内容区（.agent-list）保持一致
 .sig-agent {
-  // 技术沙龙卡片：与分论坛占位卡片使用同一背景图（深浅模式）
-  .item-card {
-    background-image: url('../img/sub-agenda.png');
+  margin-top: 40px;
+}
+.salon-card {
+  margin-top: 24px;
+  border-radius: 4px;
+  background-color: var(--e-color-bg2);
+  background-image: url('../img/tech-salon.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left bottom;
+  overflow: hidden;
+  &:first-child {
+    margin-top: 0;
   }
-  .item-card-dark {
-    background-image: url('../img/sub-agenda-dark.png');
+  &.salon-card-dark {
+    background-image: url('../img/tech-salon-dark.png');
   }
-  .agent-list-card1 {
-    .item-card {
-      width: 100%;
-      height: auto;
-      text-align: center;
-      background-image: url('../img/developer-bg.jpg');
-      .bottom {
-        justify-content: center;
-      }
+  .salon-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    cursor: pointer;
+  }
+  .salon-title {
+    display: flex;
+    align-items: center;
+    color: var(--o-color-info1);
+    font-weight: 500;
+    @include h3;
+    &::before {
+      content: '';
+      width: 4px;
+      height: 16px;
+      margin-right: 8px;
+      background-color: var(--e-color-brand1);
     }
-    .item-card-dark {
-      background-image: url('../img/developer-bg-dark.jpg');
+  }
+  .salon-info {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    color: var(--o-color-info1);
+    @include text1;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+    svg {
+      width: 22px;
+      height: 22px;
+      margin-right: 8px;
     }
+  }
+  .info-item + .info-item {
+    margin-left: 16px;
+  }
+  .salon-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--o-color-info1);
+    transition: transform 0.3s;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    &.salon-arrow-open {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// 展开内容区（议程行）左右间距与卡片头部一致（PC 24px，移动端 16px 由下方断点覆盖）
+.salon-body {
+  :deep(.item-row) {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
@@ -588,6 +770,28 @@ watch(
       margin-top: 16px;
     }
   }
+  .tab-head {
+    margin-bottom: 8px;
+    .info-item + .info-item {
+      margin-left: 12px;
+    }
+  }
+  // 页签栏横向滚动，两端渐变隐现；激活页签由 OTab 组件平滑滚动入视野
+  .agenda-tabs {
+    :deep(.o-tab-navs-container) {
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 32px, #000 calc(100% - 32px), transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0, #000 32px, #000 calc(100% - 32px), transparent 100%);
+    }
+  }
+  // 移动端闭门面板回到文档流，文案在内容区内居中，避免绝对定位在窄屏下的宽度溢出
+  .agenda-tabs.agenda-tabs-closed {
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+  .agenda-tabs.agenda-tabs-closed .tab-closed {
+    position: static;
+    padding: 48px 16px;
+  }
   .item-card {
     width: 100%;
     height: auto;
@@ -628,6 +832,16 @@ watch(
         margin-top: 8px;
       }
     }
+  }
+  .salon-info {
+    flex-wrap: wrap;
+  }
+  .salon-card .info-item svg {
+    width: 16px;
+    height: 16px;
+  }
+  .salon-card .info-item + .info-item {
+    margin-left: 12px;
   }
 }
 </style>
