@@ -769,13 +769,15 @@ watch(
     display: flex;
     align-items: center;
     color: var(--o-color-info1);
+    // 图标原生朝上：收起态旋转 180° 朝下，展开态归位朝上
+    transform: rotate(180deg);
     transition: transform 0.3s;
     svg {
       width: 24px;
       height: 24px;
     }
     &.salon-arrow-open {
-      transform: rotate(180deg);
+      transform: rotate(0deg);
     }
   }
 }
