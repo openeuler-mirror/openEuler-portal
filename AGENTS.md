@@ -158,6 +158,12 @@ SEO/GEO 各维度**规范与配套 skill 统一来源于规范仓库 [opensource
 | `SEO_GEO_SYNC_SKIP=1` 或 `CI=true` | 跳过同步（CI / 离线环境） |
 | `SEO_GEO_SYNC_STRICT=1` | 失败时退出码 1（默认 graceful，仅 warn 不阻塞 install/dev） |
 
+### 同步被环境跳过时的处置
+
+涉及 SEO/GEO 规范维度的任务，规范须在**设计阶段**到位（不是仅开发阶段才读）。进仓后发现 `rules/seo-geo/` 对应维度目录为空（同步被 `CI=true` / `SEO_GEO_SYNC_SKIP=1` 跳过）时，须**手动强制同步**（如 `CI= pnpm geo-specs:sync`）后再读规范产出设计；强制同步仍失败时标 blocked（缺关键规范，处置见 `workflow-contract` 技能「上游 blocked，下游不干活」），**不得在规范未到位时凭推测设计或实现**。
+
+> 踩过的坑：自动同步被 CI 跳过、规范目录为空时，agent 既不强制同步也不 blocked，而是把"读规范"推迟给下游，在规范缺失下凭推测产出设计 / 实现，成果与实际规范矛盾，直到维护者评审才逐条纠正。本条补的是「先强制同步再考虑 blocked」这一前置动作——`geo-specs:sync` 命令与 `CI=true` 跳过行为是本仓机制；下游传导（developer / reviewer / tester 不各加规则）由 `workflow-contract` 覆盖。
+
 ### 维度目录索引（`rules/seo-geo/`）
 
 | 维度 | 内容 |
