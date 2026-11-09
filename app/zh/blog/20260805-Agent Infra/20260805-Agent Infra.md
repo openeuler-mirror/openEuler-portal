@@ -1,5 +1,5 @@
 ---
-title: openEuler Agent Infra企业级编码方案：基于AI原生软件工程范式，实现企业级软件交付可靠、可控、可演进
+title: openEuler Agent Infra企业级编码方案（一）：基于AI原生软件工程范式，实现企业级软件交付可靠、可控、可演进
 category: blog 
 date: 2026-08-05
 tags:
