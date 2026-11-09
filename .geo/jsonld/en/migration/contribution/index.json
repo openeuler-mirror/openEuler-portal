@@ -46,14 +46,14 @@
         "@type": "HowToStep",
         "position": 1,
         "name": "Publish Your Migration Best Practices",
-        "text": "Publish your migration best practices or porting guides in the openEuler blog pages. Be sure to include keywords in your title, like "migration best practice" or "porting guide" for better visibility.",
+        "text": "Publish your migration best practices or porting guides in the openEuler blog pages. Be sure to include keywords in your title, like \"migration best practice\" or \"porting guide\" for better visibility.",
         "url": "https://www.openeuler.org/en/interaction/post-blog/"
       },
       {
         "@type": "HowToStep",
         "position": 2,
         "name": "Receive Approval from Compatibility SIG",
-        "text": "If your blog is selected as a best practice or porting guide, the Compatibility SIG responds with "/lgtm" to indicate approval."
+        "text": "If your blog is selected as a best practice or porting guide, the Compatibility SIG responds with \"/lgtm\" to indicate approval."
       },
       {
         "@type": "HowToStep",

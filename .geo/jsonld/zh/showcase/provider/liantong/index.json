@@ -5,7 +5,7 @@
     "@id": "https://www.openeuler.org/zh/showcase/provider/liantong",
     "url": "https://www.openeuler.org/zh/showcase/provider/liantong",
     "name": "联通云 | openEuler社区",
-    "description": "基于"双引擎基座+一云多芯"为不同行业场景提供可靠、高质量的应用上云服务",
+    "description": "基于\"双引擎基座+一云多芯\"为不同行业场景提供可靠、高质量的应用上云服务",
     "inLanguage": "zh-CN",
     "isPartOf": {
       "@type": "WebSite",
@@ -42,7 +42,7 @@
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "联通云基于openEuler的云平台解决方案",
-    "description": "基于"双引擎基座+一云多芯"为不同行业场景提供可靠、高质量的应用上云服务",
+    "description": "基于\"双引擎基座+一云多芯\"为不同行业场景提供可靠、高质量的应用上云服务",
     "url": "https://www.openeuler.org/zh/showcase/provider/liantong",
     "inLanguage": "zh-CN",
     "publisher": {
@@ -58,7 +58,7 @@
       {
         "@type": "Thing",
         "name": "云计算",
-        "description": "联通云基于"双引擎基座+一云多芯"为不同行业场景提供可靠、高质量的应用上云服务"
+        "description": "联通云基于\"双引擎基座+一云多芯\"为不同行业场景提供可靠、高质量的应用上云服务"
       },
       {
         "@type": "Thing",
@@ -72,7 +72,7 @@
         "name": "联通云",
         "applicationCategory": "云服务平台",
         "operatingSystem": "银河麒麟操作系统, openEuler",
-        "description": "联通云基于"双引擎基座+一云多芯"为不同行业场景提供可靠、高质量的应用上云服务，提供云服务器、云硬盘、裸金属、负载均衡、虚拟私有云等多个IaaS和PaaS产品"
+        "description": "联通云基于\"双引擎基座+一云多芯\"为不同行业场景提供可靠、高质量的应用上云服务，提供云服务器、云硬盘、裸金属、负载均衡、虚拟私有云等多个IaaS和PaaS产品"
       }
     ]
   }

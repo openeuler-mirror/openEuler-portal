@@ -61,7 +61,7 @@
         "@type": "HowToStep",
         "position": 3,
         "name": "申请OSV技术测评",
-        "text": "您需要向公共邮箱（compatibility@openeuler.io）发送OSV技术测评申请，邮件标题需要注明"申请OSV技术测评"。如您提交的是嵌入式OS，请额外提交测试报告。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署。如果没有签署CLA，请先签署：https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0",
+        "text": "您需要向公共邮箱（compatibility@openeuler.io）发送OSV技术测评申请，邮件标题需要注明\"申请OSV技术测评\"。如您提交的是嵌入式OS，请额外提交测试报告。收到邮件后，openEuler团队中sig组会与您沟通进行协议签署。如果没有签署CLA，请先签署：https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0",
         "url": "https://www.openeuler.org/zh/approve/approve-step#step3"
       },
       {
@@ -89,7 +89,7 @@
         "@type": "HowToStep",
         "position": 7,
         "name": "openEuler官网首页LOGO展示",
-        "text": "如果通过OSV技术测评，并已经在OSV技术测评列表（https://www.openeuler.org/zh/approve）中展示，您可以联系openEuler社区（public@openeuler.io），在社区官网首页"发布openEuler商业发行版的厂商"栏目中展示贵组织单位的LOGO。邮件标题需注明"申请在openEuler社区官网首页展示logo"，并随附：贵组织单位的全称、业务负责人及业务对接人的姓名和邮箱、OSV技术测评通过结果及相关证明文件。",
+        "text": "如果通过OSV技术测评，并已经在OSV技术测评列表（https://www.openeuler.org/zh/approve）中展示，您可以联系openEuler社区（public@openeuler.io），在社区官网首页\"发布openEuler商业发行版的厂商\"栏目中展示贵组织单位的LOGO。邮件标题需注明\"申请在openEuler社区官网首页展示logo\"，并随附：贵组织单位的全称、业务负责人及业务对接人的姓名和邮箱、OSV技术测评通过结果及相关证明文件。",
         "url": "https://www.openeuler.org/zh/approve/approve-step#step7"
       }
     ]

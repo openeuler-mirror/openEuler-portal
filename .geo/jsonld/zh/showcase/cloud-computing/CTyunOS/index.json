@@ -74,7 +74,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "天翼云科技有限公司",
-    "description": "中国电信旗下一家科技型、平台型、服务型公司，以"云网融合、安全可信、专享定制"三大优势向客户提供公有云、私有云、专属云、混合云、边缘云、全栈云服务",
+    "description": "中国电信旗下一家科技型、平台型、服务型公司，以\"云网融合、安全可信、专享定制\"三大优势向客户提供公有云、私有云、专属云、混合云、边缘云、全栈云服务",
     "parentOrganization": {
       "@type": "Organization",
       "name": "中国电信"

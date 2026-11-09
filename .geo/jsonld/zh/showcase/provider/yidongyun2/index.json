@@ -46,7 +46,7 @@
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "中国移动云能力中心云主机操作系统迁移方案",
-    "description": "打造运营商行业级迁移解决方案。中国移动云能力中心的天元"易行"迁移解决方案，可以帮助已有的业务系统实现无缝迁移，保证业务的稳定性和高可用性。",
+    "description": "打造运营商行业级迁移解决方案。中国移动云能力中心的天元\"易行\"迁移解决方案，可以帮助已有的业务系统实现无缝迁移，保证业务的稳定性和高可用性。",
     "url": "https://www.openeuler.org/zh/showcase/provider/yidongyun2",
     "inLanguage": "zh",
     "publisher": {
@@ -74,7 +74,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "中国移动云能力中心",
-    "description": "中国移动云能力中心"混元"分布式计算系统是移动云自主研发的新一代算力管控系统，依托3AZ高可靠布局，采用一云多芯、多元异构分布式云原生架构。",
+    "description": "中国移动云能力中心\"混元\"分布式计算系统是移动云自主研发的新一代算力管控系统，依托3AZ高可靠布局，采用一云多芯、多元异构分布式云原生架构。",
     "knowsAbout": [
       "云主机",
       "操作系统迁移",
