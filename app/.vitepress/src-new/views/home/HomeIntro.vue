@@ -118,7 +118,7 @@ useInViewDuration(
               </li>
             </ul>
             <div class="intro-img-pc">
-              <img :src="imgSrc" alt="openEuler" />
+              <img :src="imgSrc" :alt="introData[active]?.alt || ''" />
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@ useInViewDuration(
             <img :src="theme === 'light' ? item.icon_light : item.icon_dark" alt="" /> {{ item.title }}
           </template>
           <div class="intro-img-mobile">
-            <img :src="imgSrc" alt="openEuler" />
+            <img :src="imgSrc" :alt="introData[active]?.alt || ''" />
           </div>
         </OCollapseItem>
       </OCollapse>

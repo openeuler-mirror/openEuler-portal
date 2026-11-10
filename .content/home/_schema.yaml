@@ -20,6 +20,7 @@ zh:
       icon_light: 列表图标（zh/en 共用）
       icon_dark: 列表图标（zh/en 共用）
       description: 介绍描述（zh/en 相同）
+      alt: 介绍图片 alt 文本（描述性，供屏幕阅读器）
       logo_light: 亮色 logo
   play_community:
     label: 玩转社区卡片
@@ -79,6 +80,7 @@ en:
       icon_light: List icons (shared zh/en)
       icon_dark: List icons (shared zh/en)
       description: Intro description (same for zh/en)
+      alt: Intro image alt text (descriptive, for screen readers)
   play_community:
     label: Play-with-community cards
     fields:

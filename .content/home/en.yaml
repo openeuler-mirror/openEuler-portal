@@ -44,18 +44,21 @@ intro:
     icon_light: ./images/computing-arch_light.png
     icon_dark: ./images/computing-arch_dark.png
     description: 全量组件原子化，构建服务自助化
+    alt: '100% coverage of mainstream computing architectures: ARM, x86, RISC-V, SW-64, LoongArch, NPU, GPU, DPU, supporting 100+ servers, 300+ boards, covering servers, cloud & cloud native, edge computing, and embedded devices'
   - title: All-Scenario Applications
     img_pc: ./images/cover-all_en_pc.jpg
     img_mo: ./images/cover-all_en_mo.png
     icon_light: ./images/cover-all_light.png
     icon_dark: ./images/cover-all_dark.png
     description: 一次开发，覆盖数字基础设施全场景
+    alt: '100% support for mainstream application scenarios: covering Information Technology, Communication, and Operational Technology, supporting CRM, ERP, BSS/OSS, NFV, DCS, SCADA, PLC and 10,000+ mainstream applications, including cloud native, big data, CDN, MEC, and industrial control'
   - title: Development Tool Chain
     img_pc: ./images/development-tool_en_pc.jpg
     img_mo: ./images/development-tool_en_mo.png
     icon_light: ./images/development-tool_light.png
     icon_dark: ./images/development-tool_dark.png
     description: 统一API跨多设备调用
+    alt: 'openEuler DevKit provides system build and deployment, with multi-device build tools and compatibility/migration/tuning capabilities; openEuler SDKs support all-scenario application development, with multi-architecture confidential computing SDK and application compatibility assessment SDK'
 
 # play_community: Play-with-community cards (Contributor + Donor)
 #   title: Card title

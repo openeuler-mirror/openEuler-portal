@@ -167,7 +167,7 @@ This problem can be solved by either:
 
 If the openEuler enters emergency mode upon boot.
 
-![fig](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0229291264.jpg)
+![Emergency mode screen on boot](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0229291264.jpg)
 
 It indicates issues such as file system corruption causing drive mounting failures, overpressured I/O leading to drive mounting timeout \(threshold: 90s\), or anomalies like unexpected power-off or low I/O performance of drives.
 To solve this issue:
@@ -175,7 +175,7 @@ To solve this issue:
 1. Log in to openEuler as the **root** user.
 2. Check and restore files by using the file system check \(fsck\) tool, and reboot openEuler.
 
-    >![fig](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/public_sys-resources/icon-note.gif) **NOTE**
+    >![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/public_sys-resources/icon-note.gif) **NOTE**
     
      >The fsck tool checks and maintains inconsistent file systems. In case of power-off or drive issues, fsck commands can be used to check file systems. Run the `fsck.ext3 -h` and `fsck.ext4 -h` commands to view the usage instructions for fsck.
 
@@ -241,13 +241,13 @@ If you encounter the message "Error checking software selection," it may indicat
 
 Reserved memory is necessary for running the kdump kernel. If the output of `systemctl status kdump` is "No memory reserved for crash kernel", follow the steps below to reserve it.
 
-![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0229291280.png)
+![systemctl status kdump output showing no memory reserved](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0229291280.png)
 
 1. Add **crashkernel=1024M, high** to **/boot/efi/EFI/openEuler/grub.cfg** (see the table below for details).
 2. Restart the system to apply the modification.
 3. Run `systemctl status kdump` to check the kdump status. If "active" is displayed in the output, as shown in the following figure, the kdump service is enabled.
 
-![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0229291272.png)
+![systemctl status kdump showing active status](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0229291272.png)
 
 **crashkernel** values
 | Parameter                                 | Description                                                                                                                  | Default Value                           | Remarks                                                                                                                                              |
@@ -261,17 +261,17 @@ Reserved memory is necessary for running the kdump kernel. If the output of `sys
 
 It is likely you have encountered the following error.
 
-![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/Configuration_error_prompt.png)
+![Configuration error prompt for drive in logical volume](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/Configuration_error_prompt.png)
 
 This occurs because the drive is part of a logical volume. Modifying one drive can corrupt the entire volume. openEuler prevents OS installation on such drives and shows an error message.
 
 To use the drive, delete the volume group corresponding to the logical volume first:
 
 1. Press **Ctrl**+**Alt**+**F2** to switch to the CLI and run `vgs` to find the volume group, for example, **euleros**.
-    ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0231657950.png)
+    ![vgs command output showing volume group](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/zh-cn_image_0231657950.png)
 2. Run `vgremove euleros` to delete the volume group.
 3. Run `systemctl restart anaconda` to restart the system for the modification to take effect.
-    >![fig](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/public_sys-resources/icon-note.gif) **NOTE**
+    >![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/public_sys-resources/icon-note.gif) **NOTE**
 
     >You can also press **Ctrl**+**Alt**+**F6** to return to the GUI and click **Refresh** in the lower right corner to update the storage configuration.
 
@@ -279,7 +279,7 @@ To use the drive, delete the volume group corresponding to the logical volume fi
 
 When you install openEuler on an x86 machine and the BIOS setting for secure boot is enabled (which is usually disabled by default), the system might get stuck on the "no bootable device" screen, as shown below, halting installation.
 
-![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/No-bootable-device.png)
+![No bootable device screen](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/No-bootable-device.png)
 
 This occurs because, with secure boot activated, the mainboard checks the digital signatures of the bootloader and OS. If they are not signed with the right private key, the built-in public key of the mainboard will prevent them from running.
 
@@ -287,13 +287,13 @@ To proceed with the installation, disable secure boot:
 
 1. Press **F11** as the system starts up and input the password **Admin@9000** to enter the BIOS.
 
-    ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/BIOS.png)
+    ![BIOS password entry prompt](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/BIOS.png)
 2. Select **Administer Secure Boot**.
 
-    ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/security.png)
+    ![BIOS secure boot administration](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/security.png)
 3. Set **Enforce Secure Boot** to **Disabled**.
 
-    ![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/select.png)
+    ![Enforce Secure Boot set to Disabled](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/select.png)
 4. Save the changes and exit. You should now be able to install openEuler successfully.
 
 ### 27. How should I address the appearance of "pmie_check failed in /usr/share/pcp/lib/pmie" in the "messages" logs following the openEuler installation with the "Server - Performance tools" software option?
@@ -316,9 +316,9 @@ To resolve this issue, execute one of the following commands after installing an
 
 If there are two drives with an OS already installed, selecting the first drive for partitioning and then canceling, followed by selecting the second drive and partitioning, will lead to installation failure.
 
-![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/cancle_disk.png)
+![Reclaim disk space screen with the Cancel button highlighted](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/cancle_disk.png)
 
-![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/custom_paratition.png)
+![Device selection screen with the second drive selected and Custom storage configuration](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/custom_paratition.png)
 
 This is because frequent operations can corrupt drive information. You are advised to directly select the target drive for partitioning. If you must cancel and reselect, it is recommended that the installation process be started from the beginning.
 
@@ -326,7 +326,7 @@ This is because frequent operations can corrupt drive information. You are advis
 
 After kdump is deployed, the system fails to generate a **vmcore** file following a kernel crash, either triggered manually (using `echo c > /proc/sysrq-trigger`) or due to a system fault. While kdump attempts to boot the second kernel, the MegaRAID driver throws error "BRCM Debug mfi stat 0x2d, data len requested/completed 0x200/0x0", as shown in the image below.
 
-![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/Megaraid_IO_Request_uncompleted.png)
+![MegaRAID IO request uncompleted error](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/Megaraid_IO_Request_uncompleted.png)
 
 The issue stems from the default **reset_devices** boot parameter. When the second kernel boots, it triggers a device reset as part of its initialization. This reset operation can cause the MegaRAID card or the connected drives to enter an error state. Consequently, when kdump tries to write the **vmcore** file to the drives managed by the MegaRAID card, it encounters errors, preventing the **vmcore** generation.
 
@@ -337,7 +337,7 @@ To resolve this issue, you need to remove the **reset_devices** parameter from t
 3. Remove the **reset_devices** parameter.
 4. Save the changes.
 
-![](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/reset_devices.png)
+![reset_devices parameter in kdump configuration](https://docs.openeuler.org/zh/docs/24.03_LTS/docs/Installation/figures/reset_devices.png)
 
 By removing the **reset_devices** parameter, you prevent the device reset operation during the second kernel boot process. This, in turn, avoids the MegaRAID driver error related to incomplete I/O requests, allowing kdump to successfully generate the **vmcore** file.
 

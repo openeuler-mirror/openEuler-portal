@@ -229,7 +229,12 @@ useInViewDuration(
           </div>
         </li>
         <li v-if="!isPhone" class="case-img">
-          <OFigure :src="cases[activeTab].img" colorful class="right-img" />
+          <OFigure
+            :src="cases[activeTab].img"
+            alt=""
+            colorful
+            class="right-img"
+          />
         </li>
       </ul>
     </div>

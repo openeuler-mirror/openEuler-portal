@@ -26,7 +26,7 @@ const displayZoneData = computed(() => homeContent[locale.value].display_zone);
       <div class="display-zone-icon">
         <img
           :src="theme === 'light' ? item.icon_light : item.icon_dark"
-          alt="openEuler"
+          alt=""
           class="display-zone-item-icon"
         />
       </div>
