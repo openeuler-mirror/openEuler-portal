@@ -32,19 +32,44 @@ const isDark = computed(() => {
   return commonStore.theme === 'dark' ? true : false;
 });
 
-// group 结构：多条带时间的议程共享一条分割线（拆平渲染，内部行去掉边框）
+// 扁平行 → 展示行,两层合并(渲染层完成,数据保持一行一条):
+// 1) 连续同 time → 同组:时间只显示一次、内容堆叠、共享分割线;
+// 2) 组内还原拆行前的形态(对应旧数据 content[] 多态条目):
+//    - 同 title 连续行 → 一条议题 + guest[](多嘉宾,如联合主题演讲);
+//    - 同演讲者(name+post)不同 title 连续行 → titles[] 多标题 + 单嘉宾(如多项颁奖)。
 const scheduleRows = computed(() => {
-  const list: Record<string, unknown>[] = [];
-  (props.options || []).forEach((item: Record<string, any>) => {
-    if (item.group?.length) {
-      item.group.forEach((g: Record<string, any>) => {
-        list.push({ ...g, grouped: true });
-      });
+  const groups: Record<string, any>[] = [];
+  for (const row of (props.options || []) as Record<string, any>[]) {
+    const group = groups[groups.length - 1];
+    if (group && group.time === row.time) {
+      group.content.push({ ...row });
     } else {
-      list.push(item);
+      groups.push({ time: row.time, content: [{ ...row }] });
     }
-  });
-  return list;
+  }
+  for (const group of groups) {
+    const merged: Record<string, any>[] = [];
+    for (const row of group.content) {
+      const prev = merged[merged.length - 1];
+      if (prev && row.title && prev.title === row.title && !prev.titles) {
+        // 同 title 多行 → 多嘉宾议题(并入上一条的嘉宾列表,清掉行级 name/post 残留)
+        (prev.guest ??= [{ name: prev.name, post: prev.post }]).push({ name: row.name, post: row.post });
+        delete prev.name;
+        delete prev.post;
+      } else if (prev && row.name && !prev.guest && prev.name === row.name && prev.post === row.post) {
+        // 同演讲者多行 → 多标题条目(上一条转 titles 形态后并入)
+        if (!prev.titles) {
+          prev.titles = [prev.title];
+          prev.title = '';
+        }
+        prev.titles.push(row.title);
+      } else {
+        merged.push(row);
+      }
+    }
+    group.content = merged;
+  }
+  return groups;
 });
 </script>
 

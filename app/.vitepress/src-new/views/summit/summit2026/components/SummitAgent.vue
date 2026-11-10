@@ -14,48 +14,72 @@ interface DateT {
   month: string;
 }
 
-interface AgentItemT {
-  title: string;
+// 议程条目(agent.days[].forums[].agenda[] / sessions[].agenda[] / cards[].agenda[] 三处同构):
+// 一行一条,时间/标题/嘉宾平铺在条目上,无再下层包装;多嘉宾条目在数据中
+// 拆为连续同 time 多行,由 SummitSchedule 在渲染层合并展示
+interface AgendaRowT {
   time: string;
-  name: string;
-  post: string;
+  title?: string;
+  titles?: string[];
+  name?: string;
+  post?: string;
+  guest?: { name: string; post: string }[];
 }
 
-interface TabItemT {
+// 分论坛场次(agent.days[].forums[].sessions[])
+interface SessionMetaT {
   label: string;
+  // 场次面板头部:分论坛主题(配合 address / time 展示在议程行上方)
+  title?: string;
   time: string;
   address: string;
-  url?: string;
-  // tab 面板头部：分论坛标题（配合 address / time 展示在议程行上方）
-  title?: string;
-  // 闭门分论坛：无公开议程，面板展示 closedTitle / closedTips 与特殊背景 closedBg（深浅两套）
-  // 注意：TheSummit.vue 已把 yaml 的 snake_case 键递归转为 camelCase 后传入，此处均为 camelCase
+  // 闭门分论坛:无公开议程,面板展示 closedTitle / closedTips 与特殊背景 closedBg(深浅两套)
   closed?: boolean;
   closedTitle?: string;
   closedTips?: string;
   closedBg?: { light: string; dark: string };
-  children?: AgentItemT[];
+  agenda?: AgendaRowT[];
 }
 
-interface ListItemT {
-  title: string;
-  children: TabItemT[];
-}
-
-interface PendingCardT {
+// 技术沙龙卡片(agent.days[].forums[].cards[]):手风琴展开渲染议程
+interface CardT {
   label: string;
-  address: string;
-  time: string;
+  time?: string;
+  address?: string;
+  agenda?: AgendaRowT[];
 }
 
-interface ForumT {
+// 论坛(agent.days[].forums[]):kind 决定渲染形态(main 主论坛/sub 分论坛/salon 技术沙龙)。
+// 注意:agentData 经 TheSummit 的 snakeToCamel,运行时键为 camelCase(pendingCards/closedTitle 等)。
+interface ForumMetaT {
   title: string;
-  children: AgentItemT[];
-  tab: TabItemT[];
-  list?: ListItemT[];
-  // 分论坛信息未确定时的占位卡片；有值时替代 tab 议程展示，确认后由 yaml 移除
-  pendingCards?: PendingCardT[];
+  kind: 'main' | 'sub' | 'salon';
+  visible?: boolean;
+  agenda?: AgendaRowT[];
+  sessions?: SessionMetaT[];
+  cards?: CardT[];
   pendingTips?: string;
+  pendingCards?: CardT[];
+}
+
+// 渲染视图:议程行已挂到视图节点上
+interface SessionViewT extends SessionMetaT {
+  rows: AgendaRowT[];
+}
+
+interface CardViewT extends CardT {
+  rows: AgendaRowT[];
+}
+
+interface ForumViewT {
+  title: string;
+  kind: string;
+  visible: boolean;
+  agendaRows: AgendaRowT[];
+  sessions: SessionViewT[];
+  cards: CardViewT[];
+  pendingCards: CardT[];
+  pendingTips: string;
 }
 
 const props = defineProps({
@@ -71,10 +95,29 @@ const isDark = computed(() => {
   return commonStore.theme === 'dark' ? true : false;
 });
 
-// 分论坛页签索引（自绘页签栏，支持横向滚动）
+/** agentData.days(按天)→ 渲染视图:结构即数据(天→论坛→场次→议程),
+ *  直接映射,无需分桶挂载;visible 显式控制(缺省显示)。 */
+const dateGroups = computed<{ date: string; forums: ForumViewT[] }[]>(() => {
+  const days: { date: string; forums?: ForumMetaT[] }[] = props.agentData?.days ?? [];
+  return days.map((day) => ({
+    date: day.date,
+    forums: (day.forums ?? []).map((f) => ({
+      title: f.title,
+      kind: f.kind,
+      visible: f.visible !== false,
+      agendaRows: f.agenda ?? [],
+      sessions: (f.sessions ?? []).map((s) => ({ ...s, rows: s.agenda ?? [] })),
+      cards: (f.cards ?? []).map((c) => ({ ...c, rows: c.agenda ?? [] })),
+      pendingCards: f.pendingCards ?? [],
+      pendingTips: f.pendingTips ?? '',
+    })),
+  }));
+});
+
+// 分论坛页签索引(自绘页签栏,支持横向滚动)
 const tabType = ref<number>(0);
 
-// 当前激活的分论坛 tab
+// 当前激活的分论坛场次 tab
 const activeTab = computed(() => forumTabData.value[tabType.value]);
 // 切换页签并把激活项平滑滚动到页签栏中部
 const switchTab = (i: number, e?: MouseEvent) => {
@@ -88,7 +131,7 @@ const switchTab = (i: number, e?: MouseEvent) => {
   });
 };
 
-// 页签栏滚动状态：按滚动位置渐进显示两端渐变（起点无左渐变、接近末尾右渐变消失）
+// 页签栏滚动状态:按滚动位置渐进显示两端渐变(起点无左渐变、接近末尾右渐变消失)
 const tabBarRef = ref<HTMLElement>();
 const tabFade = ref({ left: 0, right: 0 });
 const updateTabScroll = () => {
@@ -100,7 +143,7 @@ const updateTabScroll = () => {
     right: Math.min(1, Math.max(0, (maxScroll - bar.scrollLeft) / 96)),
   };
 };
-// 内容遮罩：对应侧还有隐藏页签时，淡出该侧边缘的页签文字（任意背景下均可见）
+// 内容遮罩:对应侧还有隐藏页签时,淡出该侧边缘的页签文字(任意背景下均可见)
 const tabBarMaskStyle = computed(() => {
   const li = tabFade.value.left > 0 ? 'transparent 0, #000 32px' : '#000 0';
   const ri = tabFade.value.right > 0 ? '#000 calc(100% - 32px), transparent 100%' : '#000 100%';
@@ -113,30 +156,30 @@ onMounted(() => {
   updateTabScroll();
 });
 onBeforeUnmount(() => window.removeEventListener('resize', onResize));
-// 页签栏实际挂载后再补测一次（初始渲染时 ref 尚未绑定，首测会被守卫跳过）
+// 页签栏实际挂载后再补测一次(初始渲染时 ref 尚未绑定,首测会被守卫跳过)
 watch(tabBarRef, () => updateTabScroll());
 
 // 论坛切换
 const activeIndex = ref(0);
 const isCardVisible = ref(false);
-const dateData = ref<ForumT[]>([]);
-const forumData = ref<AgentItemT[]>([]);
-const forumTabData = ref<TabItemT[]>([]);
-const listData = ref<ListItemT[]>([]);
-const pendingCards = ref<PendingCardT[]>([]);
+const dateData = ref<ForumViewT[]>([]);
+const forumData = ref<AgendaRowT[]>([]);
+const forumTabData = ref<SessionViewT[]>([]);
+const listData = ref<CardViewT[]>([]);
+const pendingCards = ref<CardT[]>([]);
 const pendingTips = ref('');
 
-// 当前激活 tab 是否为闭门分论坛（面板覆盖整个 tab 区域，文案在页签栏顶部到内容底部区间居中）
+// 当前激活 tab 是否为闭门分论坛(面板覆盖整个 tab 区域,文案在页签栏顶部到内容底部区间居中)
 const activeTabClosed = computed(() => forumTabData.value[tabType.value]?.closed === true);
 
-// 技术沙龙卡片手风琴展开（默认全部折叠，同时只展开一个）
+// 技术沙龙卡片手风琴展开(默认全部折叠,同时只展开一个)
 const openSalon = ref<string | null>(null);
-const isOpenSalon = (i: number, c: number) => openSalon.value === `${i}-${c}`;
+const isOpenSalon = (c: number) => openSalon.value === `${c}`;
 const toggleSalon = (key: string, e?: MouseEvent) => {
   const head = e?.currentTarget as HTMLElement | undefined;
   const topBefore = head?.getBoundingClientRect().top ?? 0;
   openSalon.value = openSalon.value === key ? null : key;
-  // 手风琴切换改变上方卡片高度会使被点击标题位移，补偿滚动量让标题保持点击时的位置
+  // 手风琴切换改变上方卡片高度会使被点击标题位移,补偿滚动量让标题保持点击时的位置
   nextTick(() => {
     if (!head) return;
     const delta = head.getBoundingClientRect().top - topBefore;
@@ -149,50 +192,50 @@ const toggleSalon = (key: string, e?: MouseEvent) => {
 const forumClick = (val: number) => {
   tabType.value = 0;
   activeIndex.value = val;
-  forumData.value = dateData.value[val].children;
-  forumTabData.value = dateData.value[val].tab;
-  pendingCards.value = dateData.value[val]?.pendingCards || [];
-  pendingTips.value = dateData.value[val]?.pendingTips || '';
-  listData.value = dateData.value[val]?.list || [];
+  const forum = dateData.value[val];
+  forumData.value = forum.agendaRows;
+  forumTabData.value = forum.sessions;
+  pendingCards.value = forum.pendingCards;
+  pendingTips.value = forum.pendingTips;
+  listData.value = forum.cards;
+  // 仅当所有场次都无议程且非闭门时才切换到占位卡片;
+  // 存在闭门场次(closed)或任一场次有议程时保持 tab 形式
   isCardVisible.value =
-    (val === 1 || val === 2) &&
+    forum.kind !== 'main' &&
     forumTabData.value.length > 0 &&
-    // 仅当所有 tab 都无议程且非闭门态时才切换到占位卡片；存在闭门 tab（closed）时保持 tab 形式
-    forumTabData.value.every((item) => !item.closed && (item.children?.length ?? 0) === 0);
-}
+    forumTabData.value.every((item) => !item.closed && item.rows.length === 0);
+};
 
-// 闭门分论坛面板背景（深浅主题取不同图）；经 CSS 变量注入，便于移动端断点隐藏
-const closedBgStyle = (item: TabItemT) => {
+// 闭门分论坛面板背景(深浅主题取不同图);经 CSS 变量注入,便于移动端断点隐藏
+const closedBgStyle = (item: SessionViewT) => {
   if (!item.closedBg) return {};
   return { '--closed-bg': `url(${isDark.value ? item.closedBg.dark : item.closedBg.light})` };
 };
 
 // 议程日期切换
-const dateList = ref<DateT[]>([]);
+const dateList = computed<DateT[]>(() =>
+  dateGroups.value.map((g) => ({ day: g.date, month: 'NOV' })),
+);
 const dateIndex = ref(0);
 
 const setDateIndex = (index: number) => {
   activeIndex.value = 0;
   dateIndex.value = index;
-  // 支持 yaml 中 visible: false 隐藏某个论坛（如暂不展示的 SIG Gathering）
-  dateData.value = props.agentData.list[index].children.filter(
-    (item: { visible?: boolean }) => item.visible !== false
-  );
-  forumClick(activeIndex.value)
-}
+  // 支持 yaml 中 visible: false 隐藏某个论坛(如暂不展示议程的分论坛)
+  dateData.value = dateGroups.value[index]?.forums.filter((item) => item.visible) ?? [];
+  forumClick(activeIndex.value);
+};
 
+// 数据变化(编辑/语言切换)后刷新当前视图;仅选择越界时回到首日,
+// 编辑中不跳天(整组重建而非 push 累积,否则日期 tab 每次变更多出一轮)
 watch(
-  () => props.agentData,
-  (val) => {
-    val.list.forEach((item: any) => {
-      dateList.value.push({
-        day: item.date,
-        month: 'NOV',
-      })
-    });
-    setDateIndex(0);
+  dateGroups,
+  (groups) => {
+    const day = groups[dateIndex.value];
+    if (!day || activeIndex.value >= day.forums.length) setDateIndex(0);
+    else setDateIndex(dateIndex.value);
   },
-  { immediate: true }
+  { immediate: true },
 );
 </script>
 
@@ -285,7 +328,7 @@ watch(
                     </span>
                   </div>
                 </div>
-                <SummitSchedule :options="activeTab.children" :address="activeTab.address" :date-index="dateIndex" />
+                <SummitSchedule :options="activeTab.rows" :address="activeTab.address" :date-index="dateIndex" />
               </template>
             </template>
           </div>
@@ -332,34 +375,32 @@ watch(
       <p class="tips">{{ agentData.tips }}</p>
     </div>
     <div v-if="!isCardVisible && listData.length" class="sig-agent">
-      <template v-for="(item, i) in listData" :key="i">
-        <div
-          v-for="(card, c) in item.children"
-          :key="`${i}-${c}`"
-          class="salon-card"
-          :class="{ 'salon-card-dark': isDark, 'salon-card-open': isOpenSalon(i, c) }"
-        >
-          <div class="salon-head" @click="toggleSalon(`${i}-${c}`, $event)">
-            <div class="salon-head-main">
-              <p class="salon-title">{{ card.label }}</p>
-              <div class="salon-info">
-                <span v-if="card.address" class="info-item">
-                  <IconAddress /><span>{{ card.address }}</span>
-                </span>
-                <span class="info-item">
-                  <IconTime /><span>{{ dateIndex === 0 ? '2026/11/13' : '2026/11/14' }} {{ card.time }}</span>
-                </span>
-              </div>
+      <div
+        v-for="(card, c) in listData"
+        :key="c"
+        class="salon-card"
+        :class="{ 'salon-card-dark': isDark, 'salon-card-open': isOpenSalon(c) }"
+      >
+        <div class="salon-head" @click="toggleSalon(`${c}`, $event)">
+          <div class="salon-head-main">
+            <p class="salon-title">{{ card.label }}</p>
+            <div class="salon-info">
+              <span v-if="card.address" class="info-item">
+                <IconAddress /><span>{{ card.address }}</span>
+              </span>
+              <span class="info-item">
+                <IconTime /><span>{{ dateIndex === 0 ? '2026/11/13' : '2026/11/14' }} {{ card.time }}</span>
+              </span>
             </div>
-            <span class="salon-arrow" :class="{ 'salon-arrow-open': isOpenSalon(i, c) }">
-              <IconArrowDownDouble />
-            </span>
           </div>
-          <div v-show="isOpenSalon(i, c)" class="salon-body">
-            <SummitSchedule :options="card.children" :date-index="dateIndex" />
-          </div>
+          <span class="salon-arrow" :class="{ 'salon-arrow-open': isOpenSalon(c) }">
+            <IconArrowDownDouble />
+          </span>
         </div>
-      </template>
+        <div v-show="isOpenSalon(c)" class="salon-body">
+          <SummitSchedule :options="card.rows" :date-index="dateIndex" />
+        </div>
+      </div>
       <p v-if="agentData.salonTips" class="pending-tips">{{ agentData.salonTips }}</p>
     </div>
   </div>

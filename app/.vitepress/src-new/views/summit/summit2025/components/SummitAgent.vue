@@ -91,12 +91,12 @@ const setDateIndex = (index: number) => {
 watch(
   () => props.agentData,
   (val) => {
-    val.list.forEach((item: any) => {
-      dateList.value.push({
-        day: item.date,
-        month: 'NOV',
-      })
-    });
+    // 整体重建(不可 push 累积):编辑模式下任何内容变动都会触发本 watch,
+    // push 会让日期 tab 每次变更多追加一轮(13/14 反复复制)
+    dateList.value = val.list.map((item: any) => ({
+      day: item.date,
+      month: 'NOV',
+    }));
     setDateIndex(0);
   },
   { immediate: true }

@@ -1,166 +1,244 @@
 # 目录级内容元数据(编辑器白名单):键 = 文件名,值 = {section: {label, fields}}。
 # fields 即编辑白名单(严格路径匹配,注册到叶子才可编辑)—— 摘除条目 = 隐藏;
 # schema 缺失/路径不全的字段不可编辑,由业务在此补注册(而非编辑器宽容兜底)。
+# 覆盖率审计:node scripts/audit-schema.mjs <本目录>(vscode-portal-cms 仓库)。
+# agent 议程行统一行内形态(time/title/name/post):主论坛 agenda[]、分论坛 sessions[].agenda[]、
+# 技术沙龙 cards[].agenda[] 三处同构;多嘉宾/多标题条目在数据中拆为连续同 time 多行。
 zh:
   banner:
-    label: banner
+    label: 顶部 Banner
     fields:
-      bg_pc: bg_pc
-      bg_pc.light: light
-      bg_pc.dark: dark
-      bg_pad: bg_pad
-      bg_pad.light: light
-      bg_pad.dark: dark
-      bg_mb: bg_mb
-      bg_mb.light: light
-      bg_mb.dark: dark
-      text_img: text_img
-      text_img.light: light
-      text_img.dark: dark
-      text_img_mb: text_img_mb
-      text_img_mb.light: light
-      text_img_mb.dark: dark
-      text_img_alt: text_img_alt
-      button_text: button_text
-      button_link: button_link
-      button_link_mb: button_link_mb
+      bg_pc: 背景图(PC)
+      bg_pc.light: PC 背景图(亮色)
+      bg_pc.dark: PC 背景图(暗色)
+      bg_pad: 背景图(平板)
+      bg_pad.light: 平板背景图(亮色)
+      bg_pad.dark: 平板背景图(暗色)
+      bg_mb: 背景图(移动端)
+      bg_mb.light: 移动端背景图(亮色)
+      bg_mb.dark: 移动端背景图(暗色)
+      text_img: 文字图
+      text_img.light: 文字图(亮色)
+      text_img.dark: 文字图(暗色)
+      text_img_mb: 文字图(移动端)
+      text_img_mb.light: 移动端文字图(亮色)
+      text_img_mb.dark: 移动端文字图(暗色)
+      text_img_alt: 文字图替代文本(无障碍)
+      button_text: 报名按钮文案
+      button_link: 报名链接(PC/平板)
+      button_link_mb: 报名链接(移动端)
+  apply_bar:
+    label: 底部报名浮窗
+    fields:
+      bg_pc: 浮窗背景图(PC)
+      bg_pc.light: PC 浮窗背景图(亮色)
+      bg_pc.dark: PC 浮窗背景图(暗色)
+      bg_mb: 浮窗背景图(移动端)
+      bg_mb.light: 移动端浮窗背景图(亮色)
+      bg_mb.dark: 移动端浮窗背景图(暗色)
+      title: 浮窗标题
+      date_place: 时间地点
+      button_text: 按钮文案
   introduce:
-    label: introduce
+    label: 大会简介
     fields:
-      desc: desc
-      tips: tips
-      list: list
-      slogan: slogan
+      desc: 简介段落
+      tips: 亮点引导语
+      list: 亮点列表
+      slogan: 结尾口号
   agent:
-    label: agent
+    label: 活动日程
     fields:
-      title: title
-      tips: tips
-      salon_tips: salon_tips
-      text: text
-      list: list
-      list[].children: children
-      list[].children[].children: children
-      list[].children[].children[].content: content
-      list[].children[].tab: tab
-      list[].children[].pending_cards: pending_cards
-      list[].children[].tab[].children: children
-      list[].children[].tab[].children[].content: content
-      list[].children[].tab[].children[].content[].guest: guest
-      list[].children[].children[].content[].titles: titles
-      list[].children[].children[].content[].guest: guest
-      list[].children[].tab[].title: title
-      list[].children[].tab[].closed: closed
-      list[].children[].tab[].closed_title: closed_title
-      list[].children[].tab[].closed_tips: closed_tips
-      list[].children[].tab[].closed_bg: closed_bg
-      list[].children[].tab[].closed_bg.light: light
-      list[].children[].tab[].closed_bg.dark: dark
-      list[].children[].list: list
-      list[].children[].list[].children: children
-      list[].children[].list[].children[].address: address
-      list[].children[].list[].children[].time: time
-      list[].children[].list[].children[].children: children
+      title: 板块标题
+      tips: 提示语(场次议程未定时)
+      salon_tips: 技术沙龙提示语
+      text: 卡片链接文案(查看详情)
+      days: 日程(按天)
+      days[].date: 日期(几号)
+      days[].forums: 论坛列表(当天)
+      days[].forums[].title: 论坛名称
+      days[].forums[].kind: 论坛类型(main 主论坛/sub 分论坛/salon 技术沙龙)
+      days[].forums[].visible: 是否显示(false 隐藏整个论坛)
+      days[].forums[].agenda: 议程列表(主论坛)
+      days[].forums[].agenda[].time: 议程时间
+      days[].forums[].agenda[].title: 议程标题
+      days[].forums[].agenda[].name: 演讲嘉宾姓名
+      days[].forums[].agenda[].post: 演讲嘉宾职务
+      days[].forums[].sessions: 场次列表(分论坛)
+      days[].forums[].sessions[].label: 场次名称
+      days[].forums[].sessions[].title: 场次主题(议程面板标题)
+      days[].forums[].sessions[].time: 场次时间范围
+      days[].forums[].sessions[].address: 场次地点
+      days[].forums[].sessions[].closed: 是否闭门(true 不展示议程)
+      days[].forums[].sessions[].closed_title: 闭门标题
+      days[].forums[].sessions[].closed_tips: 闭门提示语
+      days[].forums[].sessions[].closed_bg: 闭门背景图
+      days[].forums[].sessions[].closed_bg.light: 闭门背景图(亮色)
+      days[].forums[].sessions[].closed_bg.dark: 闭门背景图(暗色)
+      days[].forums[].sessions[].agenda: 议程列表(该场次)
+      days[].forums[].sessions[].agenda[].time: 议程时间
+      days[].forums[].sessions[].agenda[].title: 议程标题
+      days[].forums[].sessions[].agenda[].name: 演讲嘉宾姓名
+      days[].forums[].sessions[].agenda[].post: 演讲嘉宾职务
+      days[].forums[].pending_tips: 占位卡片提示语
+      days[].forums[].pending_cards: 占位卡片(议程未公开时展示)
+      days[].forums[].pending_cards[].label: 卡片名称
+      days[].forums[].pending_cards[].address: 地点
+      days[].forums[].pending_cards[].time: 时间
+      days[].forums[].cards: 技术沙龙卡片列表
+      days[].forums[].cards[].label: 卡片名称
+      days[].forums[].cards[].address: 卡片地点
+      days[].forums[].cards[].time: 卡片时间
+      days[].forums[].cards[].url: 卡片链接(查看详情)
+      days[].forums[].cards[].agenda: 沙龙议程列表
+      days[].forums[].cards[].agenda[].time: 议程时间
+      days[].forums[].cards[].agenda[].title: 议程标题
+      days[].forums[].cards[].agenda[].name: 演讲嘉宾姓名
+      days[].forums[].cards[].agenda[].post: 演讲嘉宾职务
   guest:
-    label: guest
+    label: 活动嘉宾
     fields:
-      title: title
-      list: list
-      list[].title: title
-      list[].children: children
-      list[].children[].name: name
-      list[].children[].org: org
-      list[].children[].post: post
-      list[].children[].img: img
+      title: 板块标题
+      list: 嘉宾分组
+      list[].title: 分组名称(主论坛嘉宾/分论坛嘉宾/技术沙龙嘉宾)
+      list[].children: 嘉宾列表
+      list[].children[].name: 嘉宾姓名
+      list[].children[].img: 嘉宾头像
+      list[].children[].org: 嘉宾单位
+      list[].children[].post: 嘉宾职务
   partner:
-    label: partner
+    label: 共建单位
     fields:
-      title: title
-      list: list
-      list[].logos: logos
+      title: 板块标题
+      visible: 是否显示(false 隐藏共建单位板块)
+      list: 单位分组
+      list[].title: 分组名称(主办方/联合主办方/协办方/支持方)
+      list[].logos: 分组 logo 列表
+      list[].logos[].light: logo(亮色)
+      list[].logos[].dark: logo(暗色)
   previous:
-    label: previous
+    label: 精彩回顾
     fields:
-      title: title
-      list: list
+      title: 板块标题
+      list: 历届活动列表
+      list[].name: 活动名称
+      list[].link: 活动链接
 en:
   banner:
-    label: banner
+    label: 顶部 Banner
     fields:
-      bg_pc: bg_pc
-      bg_pc.light: light
-      bg_pc.dark: dark
-      bg_pad: bg_pad
-      bg_pad.light: light
-      bg_pad.dark: dark
-      bg_mb: bg_mb
-      bg_mb.light: light
-      bg_mb.dark: dark
-      text_img: text_img
-      text_img.light: light
-      text_img.dark: dark
-      text_img_mb: text_img_mb
-      text_img_mb.light: light
-      text_img_mb.dark: dark
-      text_img_alt: text_img_alt
-      button_text: button_text
-      button_link: button_link
-      button_link_mb: button_link_mb
+      bg_pc: 背景图(PC)
+      bg_pc.light: PC 背景图(亮色)
+      bg_pc.dark: PC 背景图(暗色)
+      bg_pad: 背景图(平板)
+      bg_pad.light: 平板背景图(亮色)
+      bg_pad.dark: 平板背景图(暗色)
+      bg_mb: 背景图(移动端)
+      bg_mb.light: 移动端背景图(亮色)
+      bg_mb.dark: 移动端背景图(暗色)
+      text_img: 文字图
+      text_img.light: 文字图(亮色)
+      text_img.dark: 文字图(暗色)
+      text_img_mb: 文字图(移动端)
+      text_img_mb.light: 移动端文字图(亮色)
+      text_img_mb.dark: 移动端文字图(暗色)
+      text_img_alt: 文字图替代文本(无障碍)
+      button_text: 报名按钮文案
+      button_link: 报名链接(PC/平板)
+      button_link_mb: 报名链接(移动端)
+  apply_bar:
+    label: 底部报名浮窗
+    fields:
+      bg_pc: 浮窗背景图(PC)
+      bg_pc.light: PC 浮窗背景图(亮色)
+      bg_pc.dark: PC 浮窗背景图(暗色)
+      bg_mb: 浮窗背景图(移动端)
+      bg_mb.light: 移动端浮窗背景图(亮色)
+      bg_mb.dark: 移动端浮窗背景图(暗色)
+      title: 浮窗标题
+      date_place: 时间地点
+      button_text: 按钮文案
   introduce:
-    label: introduce
+    label: 大会简介
     fields:
-      desc: desc
-      tips: tips
-      list: list
-      slogan: slogan
+      desc: 简介段落
+      tips: 亮点引导语
+      list: 亮点列表
+      slogan: 结尾口号
   agent:
-    label: agent
+    label: 活动日程
     fields:
-      title: title
-      tips: tips
-      salon_tips: salon_tips
-      text: text
-      list: list
-      list[].children: children
-      list[].children[].children: children
-      list[].children[].children[].content: content
-      list[].children[].tab: tab
-      list[].children[].pending_cards: pending_cards
-      list[].children[].tab[].children: children
-      list[].children[].tab[].children[].content: content
-      list[].children[].tab[].children[].content[].guest: guest
-      list[].children[].children[].content[].titles: titles
-      list[].children[].tab[].title: title
-      list[].children[].tab[].closed: closed
-      list[].children[].tab[].closed_title: closed_title
-      list[].children[].tab[].closed_tips: closed_tips
-      list[].children[].tab[].closed_bg: closed_bg
-      list[].children[].tab[].closed_bg.light: light
-      list[].children[].tab[].closed_bg.dark: dark
-      list[].children[].list: list
-      list[].children[].list[].children: children
-      list[].children[].list[].children[].address: address
-      list[].children[].list[].children[].time: time
-      list[].children[].list[].children[].children: children
+      title: 板块标题
+      tips: 提示语(场次议程未定时)
+      salon_tips: 技术沙龙提示语
+      text: 卡片链接文案(查看详情)
+      days: 日程(按天)
+      days[].date: 日期(几号)
+      days[].forums: 论坛列表(当天)
+      days[].forums[].title: 论坛名称
+      days[].forums[].kind: 论坛类型(main 主论坛/sub 分论坛/salon 技术沙龙)
+      days[].forums[].visible: 是否显示(false 隐藏整个论坛)
+      days[].forums[].agenda: 议程列表(主论坛)
+      days[].forums[].agenda[].time: 议程时间
+      days[].forums[].agenda[].title: 议程标题
+      days[].forums[].agenda[].name: 演讲嘉宾姓名
+      days[].forums[].agenda[].post: 演讲嘉宾职务
+      days[].forums[].sessions: 场次列表(分论坛)
+      days[].forums[].sessions[].label: 场次名称
+      days[].forums[].sessions[].title: 场次主题(议程面板标题)
+      days[].forums[].sessions[].time: 场次时间范围
+      days[].forums[].sessions[].address: 场次地点
+      days[].forums[].sessions[].closed: 是否闭门(true 不展示议程)
+      days[].forums[].sessions[].closed_title: 闭门标题
+      days[].forums[].sessions[].closed_tips: 闭门提示语
+      days[].forums[].sessions[].closed_bg: 闭门背景图
+      days[].forums[].sessions[].closed_bg.light: 闭门背景图(亮色)
+      days[].forums[].sessions[].closed_bg.dark: 闭门背景图(暗色)
+      days[].forums[].sessions[].agenda: 议程列表(该场次)
+      days[].forums[].sessions[].agenda[].time: 议程时间
+      days[].forums[].sessions[].agenda[].title: 议程标题
+      days[].forums[].sessions[].agenda[].name: 演讲嘉宾姓名
+      days[].forums[].sessions[].agenda[].post: 演讲嘉宾职务
+      days[].forums[].pending_tips: 占位卡片提示语
+      days[].forums[].pending_cards: 占位卡片(议程未公开时展示)
+      days[].forums[].pending_cards[].label: 卡片名称
+      days[].forums[].pending_cards[].address: 地点
+      days[].forums[].pending_cards[].time: 时间
+      days[].forums[].cards: 技术沙龙卡片列表
+      days[].forums[].cards[].label: 卡片名称
+      days[].forums[].cards[].address: 卡片地点
+      days[].forums[].cards[].time: 卡片时间
+      days[].forums[].cards[].url: 卡片链接(查看详情)
+      days[].forums[].cards[].agenda: 沙龙议程列表
+      days[].forums[].cards[].agenda[].time: 议程时间
+      days[].forums[].cards[].agenda[].title: 议程标题
+      days[].forums[].cards[].agenda[].name: 演讲嘉宾姓名
+      days[].forums[].cards[].agenda[].post: 演讲嘉宾职务
   guest:
-    label: guest
+    label: 活动嘉宾
     fields:
-      title: title
-      list: list
-      list[].title: title
-      list[].children: children
-      list[].children[].name: name
-      list[].children[].org: org
-      list[].children[].post: post
-      list[].children[].img: img
+      title: 板块标题
+      list: 嘉宾分组
+      list[].title: 分组名称(主论坛嘉宾/分论坛嘉宾/技术沙龙嘉宾)
+      list[].children: 嘉宾列表
+      list[].children[].name: 嘉宾姓名
+      list[].children[].img: 嘉宾头像
+      list[].children[].org: 嘉宾单位
+      list[].children[].post: 嘉宾职务
   partner:
-    label: partner
+    label: 共建单位
     fields:
-      title: title
-      list: list
-      list[].logos: logos
+      title: 板块标题
+      visible: 是否显示(false 隐藏共建单位板块)
+      list: 单位分组
+      list[].title: 分组名称(主办方/联合主办方/协办方/支持方)
+      list[].logos: 分组 logo 列表
+      list[].logos[].light: logo(亮色)
+      list[].logos[].dark: logo(暗色)
   previous:
-    label: previous
+    label: 精彩回顾
     fields:
-      title: title
-      list: list
+      title: 板块标题
+      list: 历届活动列表
+      list[].name: 活动名称
+      list[].link: 活动链接
