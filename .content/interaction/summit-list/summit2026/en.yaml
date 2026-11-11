@@ -65,6 +65,55 @@ introduce:
   slogan:
     - A shared vision brings us together, across mountains and seas. We look forward to seeing you in Beijing, as we chart the next chapter of agentic AI together.
 
+# live: Live streams (per-day rooms; room links reused from 2025)
+live:
+  title: Live
+  list:
+    - time: Nov 13
+      lives:
+        - live_id: 16719
+          live_test_id: 16706
+          id: 0
+          name: Agentic Infra OS Conference
+        - live_id: 16725
+          live_test_id: 16712
+          name: SuperPoD OS Forum
+        - live_id: 16722
+          live_test_id: 16709
+          name: Embedded & Industrial Control Forum
+        - live_id: 16721
+          live_test_id: 16708
+          name: CTyunOS Technology Ecosystem Forum
+        - live_id: 16724
+          live_test_id: 16711
+          name: Linx Software Subforum
+        - live_id: 16723
+          live_test_id: 16710
+          name: Science & Education Forum
+    - time: Nov 14
+      lives:
+        - live_id: 16720
+          live_test_id: 16707
+          id: 0
+          name: openEuler Summit 2026
+        - live_id: 16726
+          live_test_id: 16713
+          name: Embodied AI, Edge & Embedded Systems
+        - live_id: 16727
+          live_test_id: 16714
+          name: AI-Enabled Software Security & Trustworthiness
+        - live_id: 16728
+          live_test_id: 16715
+          name: Agentic Development Tools & Engineering Enablement
+        - live_id: 16729
+          live_test_id: 16716
+          name: Kernel & Infrastructure Reliability
+        - live_id: 16730
+          live_test_id: 16717
+          name: AI & Agentic Infra
+        - live_id: 16731
+          live_test_id: 16718
+          name: Compilers & Performance Optimization for the AI Era
 # agent: Agenda (keynote / sub-forum / salon sessions with speakers)
 # Structure agent.days[].forums[]; the kind field decides how a forum renders (main / sub / salon):
 #   Agenda rows are flat (time/title/name/post, one item per row): joint items with multiple speakers/titles are split into consecutive rows sharing one time; consecutive rows with the same time are merged back at render time (the time is displayed once)
