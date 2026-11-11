@@ -197,8 +197,8 @@ agent:
               agenda:
                 - time: 16:00-16:05
                   title: 致辞
-                  name: 马洪波
-                  post: 特邀嘉宾
+                  name: 刘飞
+                  post: OpenAtom openEuler 委员会执行总监
                 - time: 16:05-16:20
                   title: 通智融合时代先进算力趋势与挑战
                   name: 李铮
@@ -210,7 +210,7 @@ agent:
                 - time: 16:35-16:50
                   title: 润和软件面向鲲鹏超节点的HopeAgentPlatform创新实践
                   name: 魏博
-                  post: 江苏润和 解决方案总监
+                  post: 润和软件智算事业部解决方案总监
                 - time: 16:50-17:00
                   title: 突破单机资源边界：超节点操作系统的资源管理与AI负载优化实践
                   name: 严海双
@@ -253,6 +253,10 @@ agent:
               time: 13:30-14:55
               address: '103'
               agenda:
+                - time: "13:30-13:40"
+                  title: "开场及嘉宾致辞"
+                  name: "熊伟"
+                  post: "OpenAtom openEuler 委员会主席"
                 - time: 13:30-13:40
                   title: 开场及嘉宾致辞
                   name: 陈晖
@@ -299,7 +303,7 @@ agent:
                   name: ''
                   post: ''
                 - time: 13:35-13:40
-                  title: 开放原子基金会领导致辞
+                  title: 开放原子开源基金会领导致辞
                   name: 李博
                   post: 开放原子开源基金会副秘书长
                 - time: 13:40-13:45
@@ -324,7 +328,7 @@ agent:
                   post: 北京凝思软件股份有限公司 研发经理
                 - time: 14:40-14:55
                   title: 筑牢金融数字底座——国产操作系统在银行关键业务中的创新实践
-                  name: 潘嘉欣
+                  name: 潘嘉钦
                   post: 杭州银行信息技术部 生产运行中心主管
                 - time: 14:55-15:00
                   title: 主持人总结、论坛结束
@@ -460,11 +464,11 @@ agent:
               name: 辛耀中
               post: 国家电网公司国家电力调度控制中心原副主任
             - time: 11:25-11:40
-              title: openEuler 2026年度突出贡献单位
+              title: openEuler 2026年度突出贡献单位 致谢仪式
               name: 特邀嘉宾
               post: ''
             - time: 11:25-11:40
-              title: openEuler 2026年度贡献之星
+              title: openEuler 2026年度贡献之星 致谢仪式
               name: 特邀嘉宾
               post: ''
         - title: 技术沙龙
@@ -715,9 +719,9 @@ agent:
                   name: 双小川
                   post: 上海航天计算机技术研究所研究员
                 - time: 14:50-15:10
-                  title: 面向具身智能体的仿真训练系统技术研究
-                  name: 张珩
-                  post: 中国科学院软件研究所副研究员
+                  title: 基于AGIROS的机器人产业软硬件生态发展前瞻
+                  name: 李昭元
+                  post: 中国科学院软件研究所高级工程师
                 - time: 15:10-15:30
                   title: 面向航天任务的 openEuler Embedded 星载操作系统：轻量化定制与分层加固实践
                   name: 刘超
@@ -742,10 +746,6 @@ agent:
                   title: 嵌入式虚拟化实时操作系统ZVM产品化实践
                   name: 刘俊
                   post: 长沙理工大学博士研究生
-                - time: 17:05-17:25
-                  title: 基于AGIROS的机器人产业软硬件生态发展前瞻
-                  name: 李昭元
-                  post: 中国科学院软件研究所高级工程师
             - label: AI 使能软件安全与可信
               address: 105会议室
               time: 13:30-17:45
