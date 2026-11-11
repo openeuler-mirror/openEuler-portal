@@ -148,8 +148,8 @@ agent:
               agenda:
                 - time: 16:00-16:05
                   title: Opening Remarks
-                  name: Ma Hongbo
-                  post: Special Guest
+                  name: Liu Fei
+                  post: Executive Director, OpenAtom openEuler Committee
                 - time: 16:05-16:20
                   title: Advanced Compute in the Era of General-Purpose Computing and AI Convergence
                   name: Dr. Li Zheng
@@ -165,7 +165,7 @@ agent:
                 - time: 16:35-16:50
                   title: 'HopeRun: HopeAgentPlatform on TaiShan 950 SuperPoD'
                   name: Wei Bo
-                  post: Solution Director, HopeRun
+                  post: Solution Director, AI Computing Division, HopeRun
                 - time: 16:50-17:00
                   title: 'Single-Server No More: Resource Management & AI Workload Optimization in SuperPoD OS'
                   name: Yan Haishuang
@@ -210,6 +210,10 @@ agent:
               time: 13:30-14:55
               address: '103'
               agenda:
+                - time: "13:30-13:40"
+                  title: "Opening Remarks & Guest Addresses"
+                  name: " Dr. Xiong Wei"
+                  post: "Chairperson, OpenAtom openEuler Committee"
                 - time: 13:30-13:40
                   title: Opening Remarks & Guest Addresses
                   name: Chen Hui
@@ -231,7 +235,7 @@ agent:
                   name: Miao Zongli
                   post: Technical Director & Senior Engineer, Information Technology Research Center, CESI
                 - time: 14:20-14:30
-                  title: 'CTyunOS-based Security Collaboration: Practices & Benefits'
+                  title: "CTyunOS-based Security Collaboration: Practices & Benefits"
                   name: Liang Chen
                   post: Technical Director, Carrier Business Group, QiAnXin
                 - time: 14:30-14:40
@@ -239,7 +243,7 @@ agent:
                   name: Gong Yuanbo
                   post: Senior Solutions Engineer, HopeRun
                 - time: 14:40-14:50
-                  title: 'Open Scenario Lab: Enabling Enterprise-led AI Innovation'
+                  title: "Open Scenario Lab: Enabling Enterprise-led AI Innovation"
                   name: Lu Yingxia
                   post: Director, Digital Intelligence Center, Yizhuang Artificial Intelligence Research Institute
                 - time: 14:50-14:55
@@ -281,7 +285,7 @@ agent:
                   post: R&D Manager, Linx Software
                 - time: 14:40-14:55
                   title: 'Building a Robust Digital Foundation for Finance: Homegrown OS Innovation for Mission-Critical Banking Services'
-                  name: Pan Jiaxin
+                  name: Pan Jiaqin
                   post: Head of Production Operations Center, IT Department, Bank of Hangzhou
                 - time: 14:55-15:00
                   title: Summary
@@ -419,7 +423,7 @@ agent:
               name: Xin Yaozhong
               post: Former Deputy Director, National Electric Power Dispatch & Control Center, State Grid
             - time: 11:25-11:40
-              title: 'Recognition Ceremony: 2026 openEuler Top Contributors & 2026 openEuler Contribution Stars'
+              title: 'Recognition Ceremony: 2026 openEuler Top Contributors & Recognition Ceremony: 2026 openEuler Contribution Stars'
               name: Guest speaker
               post: ''
         - title: Tech Salons
@@ -699,9 +703,9 @@ agent:
                   name: Shuang Xiaochuan
                   post: Researcher, Shanghai Aerospace Computer Technology Institute
                 - time: 14:50-15:10
-                  title: Simulation and Training Systems for Embodied Agents
-                  name: Zhang Heng
-                  post: Associate Researcher, Institute of Software, Chinese Academy of Sciences
+                  title: Outlook on the AGIROS-Based Robotics Hardware and Software Ecosystem
+                  name: Li Zhaoyuan
+                  post: Senior Engineer, Institute of Software, Chinese Academy of Sciences
                 - time: 15:10-15:30
                   title: 'openEuler Embedded Onboard OS for Space Missions: Lightweight Customization and Layered Hardening'
                   name: Liu Chao
@@ -719,7 +723,7 @@ agent:
                   name: Zhu Honglei
                   post: Senior Software Engineer, Phytium
                 - time: 16:25-16:45
-                  title: 'On-Device Multimodal Meeting Transcription on openEuler AIOS: Heterogeneous Scheduling, Speaker Diarization, and Real-Time Inference Optimization'
+                  title: "On-Device Multimodal Meeting Transcription on openEuler AIOS: Heterogeneous Scheduling, Speaker Diarization, and Real-Time Inference Optimization"
                   name: Tian Kehui
                   post: |-
                     Operations Working Group Member, OpenAtom openEuler
@@ -728,10 +732,6 @@ agent:
                   title: ZVM Productization Practices
                   name: Liu Jun
                   post: PhD Candidate, Changsha University of Science & Technology
-                - time: 17:05-17:25
-                  title: Outlook on the AGIROS-Based Robotics Hardware and Software Ecosystem
-                  name: Li Zhaoyuan
-                  post: Senior Engineer, Institute of Software, Chinese Academy of Sciences
             - label: AI-Enabled Software Security & Trustworthiness
               address: Room 105
               time: 13:30-17:45
