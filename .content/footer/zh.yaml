@@ -82,6 +82,8 @@ quickNav:
         href: __ENV:VITE_MAIN_DOMAIN_URL__/zh/faq/
       - title: 联系我们
         href: /zh/contact-us/
+      - title: 问题反馈
+        href: 'https://atomgit.com/openeuler/community-issue/issues/create/choose'
   - title: 互动与交流
     children:
       - title: 邮件列表
