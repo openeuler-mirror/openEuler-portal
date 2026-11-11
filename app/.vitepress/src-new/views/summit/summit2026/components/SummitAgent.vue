@@ -811,7 +811,7 @@ watch(
     .agenda-tab-body {
       margin-top: 32px;
     }
-    .agenda-tabs-closed .tab-closed {
+    &.agenda-tabs-closed .tab-closed {
       top: -32px;
       left: -32px;
       right: -32px;

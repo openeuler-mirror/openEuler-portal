@@ -176,15 +176,9 @@ agent:
 
                   name: 彭红华
 
-                  post: ICT战略与业务发展部 总裁
+                  post: 华为ICT战略与业务发展部 总裁
 
-            - time: '10:10-10:15'
-
-              content:
-
-                - title: openEuler Agentic Infra 生态共建倡议仪式
-
-            - time: '10:15-10:30'
+            - time: '10:10-10:30'
 
               content:
 
@@ -204,9 +198,15 @@ agent:
 
               content:
 
+                - title: openEuler Agentic Infra 生态共建倡议仪式
+
+            - time: '10:35-10:40'
+
+              content:
+
                 - title: openEuler新增白金捐赠人授牌仪式
 
-            - time: '10:35-10:45'
+            - time: '10:40-10:50'
 
               content:
 
@@ -216,7 +216,7 @@ agent:
 
                   post: 天翼云科技有限公司副总经理
 
-            - time: '10:45-10:55'
+            - time: '10:50-11:00'
 
               content:
 
@@ -226,7 +226,7 @@ agent:
 
                   post: 中国移动云公司副总经理
 
-            - time: '10:55-11:05'
+            - time: '11:00-11:10'
 
               content:
 
@@ -236,7 +236,7 @@ agent:
 
                   post: ''
 
-            - time: '11:05-11:15'
+            - time: '11:10-11:20'
 
               content:
 
@@ -246,7 +246,7 @@ agent:
 
                   post: VP of Canonical
 
-            - time: '11:15-11:25'
+            - time: '11:20-11:30'
 
               content:
 
@@ -256,7 +256,7 @@ agent:
 
                   post: 京东零售广告算法架构师
 
-            - time: '11:25-11:30'
+            - time: '11:30-11:35'
 
               content:
 
@@ -280,7 +280,7 @@ agent:
 
               title: '超节点OS: 助力Agentic AI时代的智能底座重塑'
 
-              time: '16:00-17:25'
+              time: '16:00-17:10'
 
               address: '106'
 
@@ -292,9 +292,9 @@ agent:
 
                     - title: 致辞
 
-                      name: 特邀嘉宾
+                      name: 马洪波
 
-                      post: ''
+                      post: 特邀嘉宾
 
                 - time: '16:05-16:20'
 
@@ -304,7 +304,7 @@ agent:
 
                       name: 李铮
 
-                      post: openEuler社区灵衢sig maintainer 通算超节点首席架构师
+                      post: openEuler社区灵衢sig maintainer，通算超节点首席架构师 博士
 
                 - time: '16:20-16:35'
 
@@ -314,9 +314,19 @@ agent:
 
                       name: 李力军
 
-                      post: openEuler社区UB-SIG maintainer，华为灵衢通信专家
+                      post: openEuler社区UB-SIG maintainer，华为超节点通信专家
 
-                - time: '16:35-16:45'
+                - time: '16:35-16:50'
+
+                  content:
+
+                    - title: 润和软件面向鲲鹏超节点的HopeAgentPlatform创新实践
+
+                      name: 魏博
+
+                      post: 江苏润和 解决方案总监
+
+                - time: '16:50-17:00'
 
                   content:
 
@@ -326,7 +336,7 @@ agent:
 
                       post: 中国移动（苏州） 内核架构师、openEuler Maintainer
 
-                - time: '16:45-16:55'
+                - time: '17:00-17:10'
 
                   content:
 
@@ -335,16 +345,6 @@ agent:
                       name: 刘达林
 
                       post: 麒麟信安 服务器OS开发专家
-
-                - time: '16:55-17:25'
-
-                  content:
-
-                    - title: 润和软件面向鲲鹏超节点的HopeAgentPlatform创新实践
-
-                      name: 魏博
-
-                      post: 江苏润和 解决方案总监
 
             - label: '嵌入式&工控'
 
@@ -370,11 +370,11 @@ agent:
 
                   content:
 
-                    - title: 工业领域具身智能机器人的场景应用与展望
+                    - title: AI 推理与实时控制——AcoEuler 的工程化实践
 
-                      name: 丁肖同
+                      name: 付同堂
 
-                      post: 佛山华数机器人有限公司 产品线总负责人
+                      post: 北京翼辉信息技术有限公司 研发副总经理
 
                 - time: '13:55-14:15'
 
@@ -416,11 +416,11 @@ agent:
 
                       post: ''
 
-            - label: 技术生态
+            - label: 天翼云
 
-              title: CTyunOS技术生态论坛：开源共建，智安协同
+              title: CTyunOS智能与安全创新论坛：开源共建，智安协同
 
-              time: '13:30-15:00'
+              time: '13:30-14:55'
 
               address: '103'
 
@@ -432,77 +432,81 @@ agent:
 
                     - title: 开场及嘉宾致辞
 
+                      name: 陈晖
+
+                      post: 天翼云科技有限公司 基础架构事业部副总经理
+
                 - time: '13:40-13:50'
 
                   content:
 
                     - title: CTyunOS面向智能基础设施的工程实践与开源协同
 
-                      name: 特邀嘉宾
+                      name: 王海粟
 
-                      post: ''
+                      post: 天翼云科技有限公司 基础架构事业部 资深研发专家
 
                 - time: '13:50-14:00'
 
                   content:
 
-                    - title: 面向AI与智能体的开源操作系统演进与生态协同
+                    - title: openEuler 对于AI记忆存储技术的探索
 
-                      name: 特邀嘉宾
+                      name: 赵家麒
 
-                      post: ''
+                      post: openEuler社区 SIG Intelligence Maintainer
 
                 - time: '14:00-14:10'
 
                   content:
 
-                    - title: 面向智能基础设施的操作系统标准与测试评价
+                    - title: 人工智能安全：从部署到应用
 
-                      name: 特邀嘉宾
+                      name: 郭山清
 
-                      post: ''
+                      post: 山东大学网络空间安全学院副院长，教授，博士生导师
 
                 - time: '14:10-14:20'
 
                   content:
 
-                    - title: 人工智能安全：从部署到应用
+                    - title: 面向智能基础设施的操作系统标准与测试评价
 
-                      name: 特邀嘉宾
+                      name: 苗宗利
 
-                      post: ''
+                      post: 中国电子技术标准化研究院 信息技术研究中心 技术总监、高级工程师
 
                 - time: '14:20-14:30'
 
                   content:
 
-                    - title: 基于CTyunOS的安全协同与应用实践
+                    - title: 基于CTyunOS的安全协同实践与应用价值
 
-                      name: 特邀嘉宾
+                      name: 梁晨
 
-                      post: ''
+                      post: 奇安信运营商集团军技术总监
 
                 - time: '14:30-14:40'
 
                   content:
 
-                    - title: 基于CTyunOS的智能化技术与生态协同
+                    - title: 携手天翼云CTyunOS，筑牢自主创新智算底座，赋能AI4S 与 Agent 创新落地
 
-                      name: 特邀嘉宾
+                      name: 巩远波
 
-                      post: ''
+                      post: 润和软件资深解决方案工程师
 
                 - time: '14:40-14:50'
 
                   content:
 
-                    - title: 云操作系统行业应用与实践经验
+                    - title: 开放场景实验室助力企业自主智能AI创新实践
 
-                      name: 特邀嘉宾
+                      name: 路迎霞
 
-                      post: ''
+                      post: 亦庄人工智能研究院 数智中心主任
 
-                - time: '14:50-15:00'
+                - time: '14:50-14:55'
 
                   content:
 
@@ -510,7 +514,7 @@ agent:
 
                       name: 特邀嘉宾
 
-                      post: ''
+                      post: 特邀嘉宾
 
             - label: 凝思软件
 
@@ -562,7 +566,7 @@ agent:
 
                   content:
 
-                    - title: 主题一：AI时代操作系统架构演进与技术发展趋势
+                    - title: 国产基础软件赋能关键行业智能化转型的应用实践
 
                       name: 徐新智
 
@@ -572,17 +576,17 @@ agent:
 
                   content:
 
-                    - title: 主题二：面向Agentic Infra的超节点操作系统技术创新
+                    - title: 面向Agentic Infra的超节点操作系统技术创新
 
                       name: 陈亚强
 
-                      post: OpenAtom openEuler技术委员会 委员
+                      post: openEuler技术委员会 委员
 
                 - time: '14:25-14:40'
 
                   content:
 
-                    - title: 主题三：面向超节点的新一代操作系统技术创新与实践
+                    - title: 面向AI时代的超节点操作系统技术创新与实践
 
                       name: 李晓宇
 
@@ -592,11 +596,11 @@ agent:
 
                   content:
 
-                    - title: 主题四：国产基础软件赋能关键行业智能化转型的应用实践
+                    - title: 筑牢金融数字底座——国产操作系统在银行关键业务中的创新实践
 
-                      name: 特邀嘉宾
+                      name: 潘嘉欣
 
-                      post: ''
+                      post: 杭州银行信息技术部 生产运行中心主管
 
                 - time: '14:55-15:00'
 
@@ -630,9 +634,9 @@ agent:
 
                     - title: openEuler委员会领导致辞
 
-                      name: 熊伟
+                      name: 特邀嘉宾
 
-                      post: OpenAtom openEuler 委员会主席
+                      post: ''
 
                 - time: '16:10-16:30'
 
@@ -678,7 +682,7 @@ agent:
 
               title: 开源筑平台，产教育英才：Agentic时代的openEuler科教生态
 
-              time: '16:00-17:25'
+              time: '16:00-17:30'
 
               address: '105'
 
@@ -704,23 +708,23 @@ agent:
 
                       post: 北京航空航天大学软件学院院长、OpenAtom openEuler学术与教育委员会主席
 
-                - time: '16:10-16:20'
+                - time: '16:10-16:25'
 
                   content:
 
-                    - title: 软通天鹤AIOS × 昇腾边缘AI推理模组：开源科教教学底座与成果转化实践
+                    - title: 软通天鹤AIOS × 昇腾边缘AI推理模组：开源科研教学底座与成果转化实践
 
                       guest:
 
-                        - name: 杨彬
+                        - name: 李成鹏
 
-                          post: 软通动力开源欧拉研究中心主任
+                          post: 软通动力欧拉生态高级技术总监
 
                         - name: 初明
 
                           post: 软通动力计算产品与解决方案中心部长
 
-                - time: '16:20-16:30'
+                - time: '16:25-16:35'
 
                   content:
 
@@ -730,7 +734,7 @@ agent:
 
                       post: 清华大学副教授
 
-                - time: '16:30-16:40'
+                - time: '16:35-16:45'
 
                   content:
 
@@ -740,7 +744,7 @@ agent:
 
                       post: 上海交通大学副研究员
 
-                - time: '16:40-16:50'
+                - time: '16:45-16:55'
 
                   content:
 
@@ -750,7 +754,7 @@ agent:
 
                       post: 北京航空航天大学教授
 
-                - time: '16:50-17:00'
+                - time: '16:55-17:05'
 
                   content:
 
@@ -760,7 +764,7 @@ agent:
 
                       post: 开放原子开源基金会秘书处教育培训部主任
 
-                - time: '17:00-17:10'
+                - time: '17:05-17:15'
 
                   content:
 
@@ -768,9 +772,9 @@ agent:
 
                       name: 段洲涛
 
-                      post: 海南大学研究生
+                      post: 海南大学本科生（推免至西安交通大学）
 
-                - time: '17:10-17:20'
+                - time: '17:15-17:25'
 
                   content:
 
@@ -780,7 +784,7 @@ agent:
 
                       post: 西安电子科技大学在读博士生
 
-                - time: '17:20-17:25'
+                - time: '17:25-17:30'
 
                   content:
 
@@ -1918,7 +1922,7 @@ agent:
 
                         - title: Cache感知调度器介绍
 
-                          name: 陈瑜
+                          name: 陈渝
 
                           post: 英特尔软件工程师
 
@@ -1940,7 +1944,7 @@ agent:
 
                           name: 刘育擎
 
-                          post: openEuler Committer
+                          post: openEuler SIG-Kernel Committer
 
                     - time: '14:40-15:00'
 
@@ -2062,7 +2066,7 @@ agent:
 
                   address: 海慧厅B会议室
 
-                  time: '13:30-17:35'
+                  time: '13:30-17:45'
 
                   children:
 
@@ -2152,7 +2156,7 @@ agent:
 
                       content:
 
-                        - title: 大规模AI模型分发的实践
+                        - title: 大规模AI模型和镜像分发的实践
 
                           name: 杨开勇
 
@@ -2182,9 +2186,9 @@ agent:
 
                           name: 吴衡
 
-                          post: 天翼云研发专家
+                          post: 天翼云操作系统研发专家
 
-                    - time: '16:45-16:55'
+                    - time: '16:45-17:00'
 
                       content:
 
@@ -2198,9 +2202,9 @@ agent:
 
                             - name: 张自晓
 
-                              post: openEuler SIG-AI Committer、麒麟软件高级研发工程师
+                              post: openEuler SIG-AI Committer、麒麟软件研发工程师
 
-                    - time: '16:55-17:05'
+                    - time: '17:00-17:15'
 
                       content:
 
@@ -2210,7 +2214,7 @@ agent:
 
                           post: 东方通高级架构师
 
-                    - time: '17:05-17:15'
+                    - time: '17:15-17:25'
 
                       content:
 
@@ -2220,7 +2224,7 @@ agent:
 
                           post: 华为主任工程师
 
-                    - time: '17:15-17:25'
+                    - time: '17:25-17:35'
 
                       content:
 
@@ -2230,7 +2234,7 @@ agent:
 
                           post: 品高股份CTO
 
-                    - time: '17:25-17:35'
+                    - time: '17:35-17:45'
 
                       content:
 
@@ -2272,7 +2276,7 @@ agent:
 
                       content:
 
-                        - title: openEuler Development cli(oed-cli)：面向 Agent 的原生命令行，一键接入openEuler社区所有基础服务
+                        - title: openEuler Development cli(oed-cli)：面向 Agent 的原生命令行，一键接入社区所有基础设施服务
 
                           name: 翟文杰
 
@@ -2286,7 +2290,7 @@ agent:
 
                           name: 高冲
 
-                          post: openEuler Committer、麒麟信安操作系统开发工程师
+                          post: openEuler SIG-Kernel & SIG-Compiler Committer、麒麟信安操作系统开发工程师
 
                     - time: '15:30-15:45'
 
@@ -2302,7 +2306,7 @@ agent:
 
                           name: 王弈桥
 
-                          post: openEuler Maintainer、香港城市大学基础软件开发人员
+                          post: openEuler Maintainer、香港城市大学教研人员
 
                     - time: '16:15-16:45'
 
@@ -2400,7 +2404,7 @@ agent:
 
                         - title: 流计算的原生化之路：Gluten-Flink的架构与实践
 
-                          name: 郭锡鸿
+                          name: 郭锦鸿
 
                           post: 华为软件工程师
 
@@ -2436,7 +2440,7 @@ agent:
 
                       content:
 
-                        - title: 基于openeuler的边缘集群具身智能节点
+                        - title: 基于openEuler的边缘集群具身智能节点
 
                           name: 杨彬
 
@@ -2456,7 +2460,7 @@ agent:
 
                       content:
 
-                        - title: openEuler embedded操作系统宇航应用优化与实践
+                        - title: openEuler Embedded操作系统宇航应用优化与实践
 
                           name: 双小川
 
@@ -2496,7 +2500,7 @@ agent:
 
                           name: 李萌
 
-                          post: 中广核数字科技智能工控系统总设计师
+                          post: 中广核数字科技有限公司 智能工控系统总设计师
 
                     - time: '16:05-16:25'
 
@@ -2594,7 +2598,7 @@ agent:
 
                           name: 曹平
 
-                          post: 中移（苏州）软件技术有限公司软件开发工程师
+                          post: openEuler SIG-Message-Middleware Committer、中移（苏州）软件技术有限公司软件开发工程师
 
                     - time: '15:10-15:30'
 
@@ -2616,7 +2620,7 @@ agent:
 
                       content:
 
-                        - title: Hypershell：面向 AI Agent 的轻量级多后端隔离框架
+                        - title: Hypershell：面向 AI Agent 的轻量级、硬件亲和、多后端隔离框架
 
                           name: 王宇
 
@@ -2748,6 +2752,114 @@ guest:
 
           post: 技术专家
 
+    - title: 分论坛嘉宾
+
+      children:
+
+        - name: 付同堂
+
+          img: ./images/guests/futongtang.png
+
+          org: 北京翼辉信息技术有限公司
+
+          post: 研发副总经理
+
+        - name: 王伟
+
+          img: ./images/guests/wangwei.png
+
+          org: 成都菁蓉联创科技有限公司
+
+          post: 无人装备事业部部长
+
+        - name: 池骋
+
+          img: ./images/guests/chicheng.png
+
+          org: 艾可萨科技（成都）有限公司
+
+          post: 总工程师
+
+        - name: 胡春明
+
+          img: ./images/guests/huchunming.png
+
+          org: 北京航空航天大学软件学院院长
+
+          post: OpenAtom openEuler学术与教育委员会主席
+
+        - name: 初明
+
+          img: ./images/guests/chuming.png
+
+          org: 软通动力
+
+          post: 计算产品与解决方案中心部长
+
+        - name: 李成鹏
+
+          img: ./images/guests/lichengpeng.png
+
+          org: 软通动力
+
+          post: 欧拉生态高级技术总监
+
+        - name: 陆游游
+
+          img: ./images/guests/luyouyou.png
+
+          org: 清华大学
+
+          post: 副教授
+
+        - name: 杜冬冬
+
+          img: ./images/guests/dudongdong.png
+
+          org: 上海交通大学
+
+          post: 副研究员
+
+        - name: 杨海龙
+
+          img: ./images/guests/yanghailong.png
+
+          org: 北京航空航天大学
+
+          post: 教授
+
+        - name: 韩江
+
+          img: ./images/guests/hanjiang.png
+
+          org: 开放原子开源基金会
+
+          post: 秘书处教育培训部主任
+
+        - name: 段洲涛
+
+          img: ./images/guests/duanzhoutao.png
+
+          org: 海南大学
+
+          post: 本科生（推免至西安交通大学）
+
+        - name: 惠明轩
+
+          img: ./images/guests/huimingxuan.png
+
+          org: 西安电子科技大学
+
+          post: 在读博士生
+
+        - name: 王勇
+
+          img: ./images/guests/wangyong.png
+
+          org: 华为
+
+          post: 基础软件院业务发展部部长
+
     - title: 技术沙龙嘉宾
 
       children:
@@ -2760,7 +2872,7 @@ guest:
 
           post: openEuler 技术委员会委员
 
-        - name: 陈瑜
+        - name: 陈渝
 
           img: ./images/guests/chenyu.png
 
@@ -2780,7 +2892,7 @@ guest:
 
           img: ./images/guests/liuyuqing.png
 
-          org: openEuler Committer
+          org: openEuler SIG-Kernel Committer
 
           post: ''
 
@@ -3120,7 +3232,7 @@ guest:
 
           post: ''
 
-        - name: 郭锡鸿
+        - name: 郭锦鸿
 
           img: ./images/guests/guoxihong.png
 
@@ -3188,9 +3300,9 @@ guest:
 
           img: ./images/guests/limeng.png
 
-          org: 中广核数字科技智能工控
+          org: 中广核数字科技有限公司
 
-          post: 系统总设计师
+          post: 智能工控系统总设计师
 
         - name: 朱鸿雷
 
@@ -3393,6 +3505,26 @@ partner:
         - light: ./images/logo/baolande_light.png
 
           dark: ./images/logo/baolande_dark.png
+
+        - light: ./images/logo/pingao_light.png
+
+          dark: ./images/logo/pingao_dark.png
+
+        - light: ./images/logo/yunhong_light.png
+
+          dark: ./images/logo/yunhong_dark.png
+
+        - light: ./images/logo/yuntianlifei_light.png
+
+          dark: ./images/logo/yuntianlifei_dark.png
+
+        - light: ./images/logo/jinshanyun_light.png
+
+          dark: ./images/logo/jinshanyun_dark.png
+
+        - light: ./images/logo/360_light.png
+
+          dark: ./images/logo/360_dark.png
 
 
 
