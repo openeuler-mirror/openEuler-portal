@@ -45,6 +45,7 @@ declare module '#content/home' {
     icon_light: string;
     icon_dark: string;
     description: string;
+    alt?: string;
   }
 
   // play_community: 玩转社区卡片

@@ -43,18 +43,21 @@ intro:
     icon_light: ./images/computing-arch_light.png
     icon_dark: ./images/computing-arch_dark.png
     description: 全量组件原子化，构建服务自助化
+    alt: '主流计算架构100%覆盖：ARM、x86、RISC-V、SW-64、LoongArch，NPU、GPU、DPU，支持100+整机、300+板卡，覆盖服务器、云&云原生、边缘计算、嵌入式四类设备'
   - title: 覆盖全场景应用
     img_pc: ./images/cover-all_zh_pc.jpg
     img_mo: ./images/cover-all_zh_mo.png
     icon_light: ./images/cover-all_light.png
     icon_dark: ./images/cover-all_dark.png
     description: 一次开发，覆盖数字基础设施全场景
+    alt: '主流应用场景100%支持：覆盖信息技术（Information Technology）、通信（Communication）、操作系统技术（Operational Technology）三大领域，支持CRM、ERP、BSS/OSS、NFV、DCS、SCADA、PLC等10,000+主流应用，包括云原生、大数据、CND、MEC、工业控制'
   - title: 完整开发工具链
     img_pc: ./images/development-tool_zh_pc.jpg
     img_mo: ./images/development-tool_zh_mo.png
     icon_light: ./images/development-tool_light.png
     icon_dark: ./images/development-tool_dark.png
     description: 统一API跨多设备调用
+    alt: 'openEuler DevKit 提供系统构建和部署，含多设备构建工具及兼容/迁移/调优能力；openEuler SDKs 支持应用全场景开发，含多架构机密计算SDK和应用兼容性评估SDK'
 
 # play_community: 玩转社区卡片（贡献者 + 捐赠人）
 #   title: 卡片标题

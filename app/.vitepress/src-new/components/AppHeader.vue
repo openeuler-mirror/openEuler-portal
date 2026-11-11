@@ -407,6 +407,8 @@ const isMounted = ref(false);
 const isUserSimple = ref(false);
 const isSearchSimple = ref(false);
 
+const headerDisplay = computed(() => isMounted.value ? 'block' : 'none');
+
 type BreakpointsT = { both: number; user: number } | null;
 
 const getBreakpoints = (locale: string, hasCookie: boolean): BreakpointsT => {
@@ -433,7 +435,7 @@ watch(
 <template>
   <!-- 桌面端导航 -->
   <OHeader
-    v-if="isMounted && !lePadV"
+    v-if="!lePadV"
     :logo="logoUrl"
     :nav-data="navData"
     :active-index="activeIndex"
@@ -492,7 +494,7 @@ watch(
 
   <!-- 移动端导航 -->
   <OHeaderMobile
-    v-if="isMounted && lePadV"
+    v-if="lePadV"
     :logo="isDark ? logoDark : logoLight"
     :is-simple-header="false"
     :lang="lang"
@@ -550,6 +552,11 @@ watch(
 </template>
 
 <style lang="scss" scoped>
+.header-pc,
+.header-mb {
+  display: v-bind('headerDisplay');
+}
+
 .header-pc {
   --header-tool-gap: 20px;
   @media (min-width: 1201px) and (max-width: 1680px) {
