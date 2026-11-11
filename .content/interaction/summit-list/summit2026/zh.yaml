@@ -65,6 +65,55 @@ introduce:
   slogan:
     - 志合者，不以山海为远。我们期待与您相聚北京，共话Agentic AI时代的技术演进之道，携手谱写Agentic Infra的创新篇章！
 
+# live: 活动直播（分时段直播间，直播间链接沿用 2025）
+live:
+  title: 活动直播
+  list:
+    - time: 11月13日
+      lives:
+        - live_id: 16719
+          live_test_id: 16706
+          id: 0
+          name: Agentic Infra操作系统大会
+        - live_id: 16725
+          live_test_id: 16712
+          name: 超节点OS论坛
+        - live_id: 16722
+          live_test_id: 16709
+          name: 嵌入式&工控论坛
+        - live_id: 16721
+          live_test_id: 16708
+          name: 天翼云分论坛
+        - live_id: 16724
+          live_test_id: 16711
+          name: 凝思软件分论坛
+        - live_id: 16723
+          live_test_id: 16710
+          name: 科教论坛
+    - time: 11月14日
+      lives:
+        - live_id: 16720
+          live_test_id: 16707
+          id: 0
+          name: openEuler Summit 2026
+        - live_id: 16726
+          live_test_id: 16713
+          name: 具身智能，边缘与Embedded
+        - live_id: 16727
+          live_test_id: 16714
+          name: AI使能软件安全与可信
+        - live_id: 16728
+          live_test_id: 16715
+          name: Agentic开发工具与工程使能
+        - live_id: 16729
+          live_test_id: 16716
+          name: Kernel & 基础服务可靠性
+        - live_id: 16730
+          live_test_id: 16717
+          name: AI & Agentic Infra
+        - live_id: 16731
+          live_test_id: 16718
+          name: AI 时代的编译器与性能优化
 # agent: 活动日程（主论坛/分论坛/技术沙龙议程，含嘉宾）
 # 结构 agent.days[].forums[]，论坛由 kind 决定渲染形态（main 主论坛 / sub 分论坛 / salon 技术沙龙）：
 #   议程行扁平（time/title/name/post 一行一条）：多嘉宾 / 多标题条目拆为连续同 time 多行，页面渲染时自动合并（时间只显示一次）

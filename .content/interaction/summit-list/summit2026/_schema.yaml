@@ -46,6 +46,17 @@ zh:
       tips: 亮点引导语
       list: 亮点列表
       slogan: 结尾口号
+  live:
+    label: live
+    fields:
+      title: title
+      list: list
+      list[].time: time
+      list[].lives: lives
+      list[].lives[].live_id: live_id
+      list[].lives[].live_test_id: live_test_id
+      list[].lives[].id: id
+      list[].lives[].name: name
   agent:
     label: 活动日程
     fields:
@@ -165,6 +176,17 @@ en:
       tips: 亮点引导语
       list: 亮点列表
       slogan: 结尾口号
+  live:
+    label: live
+    fields:
+      title: title
+      list: list
+      list[].time: time
+      list[].lives: lives
+      list[].lives[].live_id: live_id
+      list[].lives[].live_test_id: live_test_id
+      list[].lives[].id: id
+      list[].lives[].name: name
   agent:
     label: 活动日程
     fields:
