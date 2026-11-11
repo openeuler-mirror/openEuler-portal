@@ -80,6 +80,8 @@ quickNav:
         href: __ENV:VITE_MAIN_DOMAIN_URL__/en/faq/
       - title: Contact Us
         href: /en/contact-us/
+      - title: Feedback
+        href: 'https://atomgit.com/openeuler/community-issue/issues/create/choose'
   - title: Communicate
     children:
       - title: Mailing Lists
