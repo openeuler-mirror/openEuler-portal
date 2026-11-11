@@ -59,16 +59,20 @@ function collectAdvertisedData() {
 
 onMounted(() => {
   // zh 下插件门控（isCookieAgreed）恒通过，直接上报；
-  // en 下监听 cookie 同意状态后再上报
+  // en 下监听 OCookieNotice 的 analysisAllowed（同意分析 cookie）后再上报
   if (isZh.value) {
     collectAdvertisedData();
     return;
   }
   watch(
-    () => cookieStore.isAllAgreed,
+    () => cookieStore.analysisAllowed,
     (val) => {
       if (!val) return;
       collectAdvertisedData();
+      // 用户停留期间点击同意时插件可能仍处于禁用态（初始化时 en 门控未过），
+      // 手动启用以立即冲刷队列，否则要等 visibilitychange/路由变化
+      // any 原因：插件全局实例类型未导出，同 src/stores/user.ts 的既有用法
+      (window as any)?.__OA_INSTANCE__?.enableReporting?.(true);
     },
     { immediate: true }
   );

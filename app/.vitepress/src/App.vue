@@ -148,6 +148,7 @@ watch(
       <OCookieNotice
         ref="cookieRef"
         v-model:visible="cookieStore.isNoticeVisible"
+        v-model:analysis-allowed="cookieStore.analysisAllowed"
         community="openEuler"
         :detail-url="`/${lang}/other/cookies`"
         :cookie-domain="COOKIE_DOMAIN"
