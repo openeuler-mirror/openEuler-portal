@@ -443,26 +443,30 @@ agent:
               title: 交流区参观交流
               name: ''
               post: ''
-            - time: 09:40-10:05
+            - time: 09:40-10:00
               title: 大会开场
               name: ''
               post: ''
-            - time: 10:05-10:25
+            - time: 10:00-10:20
               title: openEuler 社区发展主题演讲
               name: 刘飞
               post: OpenAtom openEuler 委员会执行总监
-            - time: 10:25-11:05
+            - time: 10:20-11:05
               title: openEuler技术前沿与展望
               name: 胡欣蔚
               post: OpenAtom openEuler 技术委员会主席
             - time: 11:05-11:15
-              title: 基于麒麟信安操作系统在金融行业应用与实践
+              title: 中泰证券服务器操作系统治理与运维一体化创新实践
               name: 雷健
               post: 中泰证券技术专家
             - time: 11:15-11:25
-              title: AI时代操作系统技术创新与应用
+              title: AI时代基础软件创新与行业应用
               name: 辛耀中
               post: 国家电网公司国家电力调度控制中心原副主任
+            - time: 11:15-11:25
+              title: AI时代基础软件创新与行业应用
+              name: 刘峥
+              post: 杭州银行信息技术部副总经理
             - time: 11:25-11:40
               title: openEuler 2026年度突出贡献单位 致谢仪式
               name: 特邀嘉宾
@@ -1005,7 +1009,7 @@ guest:
         - name: 吴衡
           img: ./images/guests/wuheng.png
           org: 天翼云
-          post: 研发专家
+          post: 操作系统研发专家
         - name: 李长欣
           img: ./images/guests/lichangxin.png
           org: openEuler SIG-Intelligence Committer
@@ -1013,7 +1017,7 @@ guest:
         - name: 张自晓
           img: ./images/guests/zhangzixiao.png
           org: openEuler SIG-AI Committer
-          post: 麒麟软件高级研发工程师
+          post: 麒麟软件研发工程师
         - name: 聂丹妮
           img: ./images/guests/niedanni.png
           org: 东方通
@@ -1045,11 +1049,11 @@ guest:
         - name: 高冲
           img: ./images/guests/gaochong.png
           org: openEuler Committer
-          post: 麒麟信安操作系统开发工程师
+          post: openEuler SIG-Kernel & SIG-Compiler Committer、麒麟信安操作系统开发工程师
         - name: 王弈桥
           img: ./images/guests/wangyiqiao.png
           org: openEuler Maintainer
-          post: 香港城市大学基础软件开发人员
+          post: 香港城市大学教研人员
         - name: 张桐
           img: ./images/guests/zhangtong.png
           org: openEuler SIG-ANSE Maintainer
@@ -1153,7 +1157,7 @@ guest:
         - name: 曹平
           img: ./images/guests/caoping.png
           org: 中移（苏州）软件技术有限公司
-          post: 软件开发工程师
+          post: openEuler SIG-Message-Middleware Committer、中移（苏州）软件技术有限公司软件开发工程师
         - name: 王麟
           img: ./images/guests/wanglin.png
           org: openEuler SIG-CloudNative Maintainer
