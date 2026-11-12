@@ -1202,12 +1202,12 @@ partner:
           dark: ./images/logo/huawei_dark.png
         - light: ./images/logo/tianyiyun_light.png
           dark: ./images/logo/tianyiyun_dark.png
+        - light: ./images/logo/qilin_light.png
+          dark: ./images/logo/qilin_dark.png
         - light: ./images/logo/qilinxinan_light.png
           dark: ./images/logo/qilinxinan_dark.png
         - light: ./images/logo/ningsi_light.png
           dark: ./images/logo/ningsi_dark.png
-        - light: ./images/logo/qilin_light.png
-          dark: ./images/logo/qilin_dark.png
     - title: 协办方
       logos:
         - light: ./images/logo/tongxin_light.png
