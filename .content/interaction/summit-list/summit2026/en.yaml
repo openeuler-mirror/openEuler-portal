@@ -451,26 +451,30 @@ agent:
               title: Demos & Networking
               name: ''
               post: ''
-            - time: 09:40-10:05
+            - time: 09:40-10:00
               title: Summit Opening
               name: ''
               post: ''
-            - time: 10:05-10:25
+            - time: 10:00-10:20
               title: openEuler Community Development
               name: Liu Fei
               post: Executive Director, OpenAtom openEuler Committee
-            - time: 10:25-11:05
+            - time: 10:20-11:05
               title: openEuler Technology Frontier & Outlook
               name: Hu Xinwei
               post: Technical Committee Chairperson, OpenAtom openEuler
             - time: 11:05-11:15
-              title: Kylinsec OS Applications & Practice in Finance
+              title: 'Zhongtai Securities: Innovations in Integrated Server OS Governance and O&M'
               name: Lei Jian
               post: Technology Expert, Zhongtai Securities
             - time: 11:15-11:25
-              title: OS Technology Innovation & Application in the AI Era
+              title: Foundational Software Innovation and Industry Applications in the AI Era
               name: Xin Yaozhong
               post: Former Deputy Director, National Electric Power Dispatch & Control Center, State Grid
+            - time: 11:15-11:25
+              title: Foundational Software Innovation and Industry Applications in the AI Era
+              name: Liu Zheng
+              post: Deputy General Manager, IT Department, Bank of Hangzhopu 
             - time: 11:25-11:40
               title: 'Recognition Ceremony: 2026 openEuler Top Contributors & Recognition Ceremony: 2026 openEuler Contribution Stars'
               name: Guest speaker
@@ -1052,7 +1056,7 @@ guest:
         - name: Wu Heng
           img: ./images/guests/wuheng.png
           org: China Telecom Cloud
-          post: R&D Expert
+          post: OS R&D Expert
         - name: Li Changxin
           img: ./images/guests/lichangxin.png
           org: Committer, openEuler Intelligence SIG
@@ -1060,7 +1064,7 @@ guest:
         - name: Zhang Zixiao
           img: ./images/guests/zhangzixiao.png
           org: Committer, openEuler AI SIG
-          post: Senior R&D Engineer, KylinSoft
+          post: R&D Engineer, KylinSoft
         - name: Nie Danni
           img: ./images/guests/niedanni.png
           org: TongTech
@@ -1092,11 +1096,11 @@ guest:
         - name: Gao Chong
           img: ./images/guests/gaochong.png
           org: OpenAtom openEuler Committer
-          post: OS Development Engineer, Kylinsec
+          post: Kernel SIG & Compiler SIG Committer, OpenAtom openEuler OS Development Engineer, Kylinsec
         - name: Wang Yiqiao
           img: ./images/guests/wangyiqiao.png
           org: OpenAtom openEuler Maintainer
-          post: Foundational Software Developer, City University of Hong Kong
+          post: Academic Staff, City University of Hong Kong
         - name: Zhang Tong
           img: ./images/guests/zhangtong.png
           org: ANSE SIG Maintainer, OpenAtom openEuler
@@ -1200,7 +1204,7 @@ guest:
         - name: Cao Ping
           img: ./images/guests/caoping.png
           org: China Mobile (Suzhou) Software Technology
-          post: Software Development Engineer
+          post: Message Middleware SIG Committer, OpenAtom openEuler Software Development Engineer, China Mobile (Suzhou) Software Technology
         - name: Wang Lin
           img: ./images/guests/wanglin.png
           org: Cloud Native SIG Maintainer, OpenAtom openEuler
