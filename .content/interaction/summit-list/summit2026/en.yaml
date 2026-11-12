@@ -469,12 +469,12 @@ agent:
               post: Technology Expert, Zhongtai Securities
             - time: 11:15-11:25
               title: Foundational Software Innovation and Industry Applications in the AI Era
-              name: Xin Yaozhong
-              post: Former Deputy Director, National Electric Power Dispatch & Control Center, State Grid
-            - time: 11:15-11:25
-              title: Foundational Software Innovation and Industry Applications in the AI Era
               name: Liu Zheng
               post: Deputy General Manager, IT Department, Bank of Hangzhopu 
+            - time: 11:15-11:25
+              title: Foundational Software Innovation and Industry Applications in the AI Era
+              name: Xin Yaozhong
+              post: Former Deputy Director, National Electric Power Dispatch & Control Center, State Grid
             - time: 11:25-11:40
               title: 'Recognition Ceremony: 2026 openEuler Top Contributors & Recognition Ceremony: 2026 openEuler Contribution Stars'
               name: Guest speaker
