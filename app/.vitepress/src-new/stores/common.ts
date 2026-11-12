@@ -26,6 +26,9 @@ export const useCookieStore = defineStore('cookie', {
   state: () => ({
     status: '0',
     isNoticeVisible: false,
+    // OCookieNotice(rc.108+) v-model:analysis-allowed：勾选"允许分析 cookie"/全部同意时为 true，
+    // 组件挂载时会从同意 cookie（en: agreed-cookiepolicy-en=1）自动同步初始值
+    analysisAllowed: false,
   }),
   getters: {
     isAllAgreed: (state) => state.status === '1',
