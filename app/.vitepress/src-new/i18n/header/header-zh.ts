@@ -93,7 +93,7 @@ export default {
       shortcut: [
         {
           label: '查询所有版本',
-          href: '/zh/download?archive=true',
+          href: '/zh/download/?archive=true',
         },
         {
           label: '版本生命周期',

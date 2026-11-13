@@ -226,6 +226,17 @@ const setDateIndex = (index: number) => {
   forumClick(activeIndex.value);
 };
 
+//-------- 活动日程默认日期:11-14 00:00 默认展示 14 号议程,11-15 00:00 恢复 13 号(与直播 tab 同款) --------
+const AGENDA_TAB_START_TIME = new Date('2026-11-14T00:00:00').getTime();
+const AGENDA_TAB_END_TIME = new Date('2026-11-15T00:00:00').getTime();
+
+onMounted(() => {
+  const now = Date.now();
+  if (now >= AGENDA_TAB_START_TIME && now < AGENDA_TAB_END_TIME && dateGroups.value.length > 1) {
+    setDateIndex(1);
+  }
+});
+
 // 数据变化(编辑/语言切换)后刷新当前视图;仅选择越界时回到首日,
 // 编辑中不跳天(整组重建而非 push 累积,否则日期 tab 每次变更多出一轮)
 watch(
