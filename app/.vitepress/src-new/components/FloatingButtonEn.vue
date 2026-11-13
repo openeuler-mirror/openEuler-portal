@@ -110,6 +110,7 @@ const tipsObj: TitleItemT = {
   // 【构建板块】：软件包贡献
   // 【项目板块】：A-Tune/iSula/secGear/NestOS/StratoVirt/OpenJDK/智能解决方案
   '/other/projects/': TITLES2[7],
+  '/projects/': TITLES2[7],
   '/nestos/': TITLES2[7],
   // 【兼容性专区】：兼容性列表/兼容性技术测评/OSV技术测评/镜像仓列表
   '/compatibility/': TITLES2[8],
