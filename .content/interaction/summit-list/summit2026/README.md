@@ -15,8 +15,8 @@
 
 | 板块 | 类型 | 用途 |
 |------|------|------|
-| `banner` | 对象 | 顶部 banner（PC/平板/移动端背景图、文字图、报名链接） |
-| `apply_bar` | 对象 | 页面底部「立即报名」浮窗（fixed 吸底，与 cookie 提示物理堆叠；报名链接复用 banner） |
+| `banner` | 对象 | 顶部 banner（PC/平板/移动端背景图、文字图、按钮链接） |
+| `apply_bar` | 对象 | 页面底部浮窗（fixed 吸底，与 cookie 提示物理堆叠；按钮链接复用 banner） |
 | `introduce` | 对象 | 大会简介（描述、亮点列表、口号） |
 | `agent` | 对象 | 活动日程（主论坛/分论坛/技术沙龙议程，含嘉宾与职务；分论坛支持闭门态与占位卡片） |
 | `guest` | 对象 | 活动嘉宾（头像 + 单位 + 职称，按主论坛/分论坛/技术沙龙分组） |
@@ -67,9 +67,9 @@ node scripts/audit-schema.mjs <本目录>
 | `text_img` | 是 | PC/平板文字图（透明底 PNG），含 `light` / `dark` |
 | `text_img_mb` | 是 | 移动端文字图，含 `light` / `dark` |
 | `text_img_alt` | 是 | 文字图替代文本（无障碍） |
-| `button_text` | 是 | 报名按钮文案 |
-| `button_link` | 是 | 报名链接（PC/平板） |
-| `button_link_mb` | 是 | 报名链接（移动端，≤840px 使用） |
+| `button_text` | 是 | 按钮文案（大会期「立即报名」，会后「观看回放」） |
+| `button_link` | 是 | 按钮链接（PC/平板；大会期为外部报名页，会后为本页回放锚点 `#live`） |
+| `button_link_mb` | 是 | 按钮链接（移动端，≤840px 使用；回放锚点与 PC 同一目标） |
 
 ### apply_bar
 

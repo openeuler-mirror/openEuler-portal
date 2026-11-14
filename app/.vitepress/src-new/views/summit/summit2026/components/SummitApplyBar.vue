@@ -29,7 +29,7 @@ const bg = computed(() => {
   return data[lePadV.value ? 'bgMb' : 'bgPc']?.[theme.value] ?? '';
 });
 
-// 报名链接：与本页面顶部 banner 一致，<=840px 使用移动端报名链接
+// 按钮链接：与本页面顶部 banner 一致（报名期为外部报名页，会后为站内回放锚点），<=840px 使用移动端链接
 const applyLink = computed(() => {
   const data = props.bannerData as Record<string, string> | null;
   if (!data) return undefined;
@@ -37,8 +37,12 @@ const applyLink = computed(() => {
   return link || undefined;
 });
 
+// 外链新窗口打开；站内链接（如回放锚点 #live）不设 target，
+// 由 VitePress 路由接管点击，同页平滑滚动到锚点（带 target 属性的链接路由不拦截）
+const isExternalLink = computed(() => /^https?:\/\//.test(applyLink.value ?? ''));
+
 // -------------------- 与顶部 banner 的显示联动 --------------------
-// 页面顶部 banner（含报名按钮）在视口内可见时隐藏底部横幅；banner 完全滚出视口（看不到）后再显示。
+// 页面顶部 banner（含按钮）在视口内可见时隐藏底部横幅；banner 完全滚出视口（看不到）后再显示。
 // IntersectionObserver 以 banner 元素与视口的实际相交为准，初始默认隐藏（页面加载时 banner 必然可见）
 const isBannerVisible = ref(true);
 let intersectionObserver: IntersectionObserver | null = null;
@@ -140,7 +144,7 @@ onUnmounted(() => {
     :class="{ 'is-hidden': isBannerVisible || isNavOpen }"
     :style="{ bottom: `${bottomOffset}px`, backgroundImage: `url(${bg})` }"
   >
-    <!-- >840px：大会名称 + 时间地点 + 报名按钮，整体居中 -->
+    <!-- >840px：大会名称 + 时间地点 + 按钮，整体居中 -->
     <div v-if="!lePadV" class="bar-content">
       <span class="bar-title">{{ barData.title }}</span>
       <span class="bar-date-place">{{ barData.datePlace }}</span>
@@ -150,13 +154,13 @@ onUnmounted(() => {
         color="primary"
         size="small"
         :href="applyLink"
-        target="_blank"
-        rel="noopener noreferrer"
+        :target="isExternalLink ? '_blank' : undefined"
+        :rel="isExternalLink ? 'noopener noreferrer' : undefined"
       >
         {{ barData.buttonText }}
       </OButton>
     </div>
-    <!-- <=840px：大会名称居左（可换行），报名按钮居右 -->
+    <!-- <=840px：大会名称居左（可换行），按钮居右 -->
     <div v-else class="bar-content-mb">
       <span class="bar-title">{{ barData.title }}</span>
       <OButton
@@ -165,8 +169,8 @@ onUnmounted(() => {
         color="primary"
         size="small"
         :href="applyLink"
-        target="_blank"
-        rel="noopener noreferrer"
+        :target="isExternalLink ? '_blank' : undefined"
+        :rel="isExternalLink ? 'noopener noreferrer' : undefined"
       >
         {{ barData.buttonText }}
       </OButton>
@@ -228,7 +232,7 @@ onUnmounted(() => {
   }
 }
 
-// <=840px：文字居左（可换行），报名按钮居右；左右内边距对齐页面内容区
+// <=840px：文字居左（可换行），按钮居右；左右内边距对齐页面内容区
 @include respond('<=pad_v') {
   .bar-content-mb {
     height: fit-content;

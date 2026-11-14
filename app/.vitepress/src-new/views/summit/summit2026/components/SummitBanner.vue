@@ -56,7 +56,7 @@ const textImgMb = computed(() => {
   return data.textImgMb?.[theme.value] ?? '';
 });
 
-// 报名链接：minisite 区分 PC / 移动端报名页，≤840px 使用移动端链接
+// 按钮链接：报名期为外部报名页（PC / 移动端分链），会后为站内回放锚点（同一目标）
 // 链接为空时 OButton 渲染为 <button>，不发生跳转
 const buttonLink = computed(() => {
   const data = props.bannerData as Record<string, string> | null;
@@ -66,6 +66,10 @@ const buttonLink = computed(() => {
     : data.buttonLink;
   return link || undefined;
 });
+
+// 外链新窗口打开；站内链接（如回放锚点 #live）不设 target，
+// 由 VitePress 路由接管点击，同页平滑滚动到锚点（带 target 属性的链接路由不拦截）
+const isExternalLink = computed(() => /^https?:\/\//.test(buttonLink.value ?? ''));
 
 onMounted(() => {
   AOS.init({
@@ -86,14 +90,14 @@ onMounted(() => {
           color="primary"
           size="large"
           :href="buttonLink"
-          target="_blank"
-          rel="noopener noreferrer"
+          :target="isExternalLink ? '_blank' : undefined"
+          :rel="isExternalLink ? 'noopener noreferrer' : undefined"
         >
           {{ bannerData.buttonText }}
         </OButton>
       </ContentWrapper>
     </div>
-    <!-- <=840px：移动端 banner，背景图与文字图分离，文字图与报名按钮贴底排布（距底 12px），仅按钮可跳转 -->
+    <!-- <=840px：移动端 banner，背景图与文字图分离，文字图与按钮贴底排布（距底 12px），仅按钮可跳转 -->
     <div v-if="lePadV" class="banner-content-mb">
       <img class="text-img-mb" :src="textImgMb" :alt="bannerData.textImgAlt" />
       <OButton
@@ -102,8 +106,8 @@ onMounted(() => {
         color="primary"
         size="medium"
         :href="buttonLink"
-        target="_blank"
-        rel="noopener noreferrer"
+        :target="isExternalLink ? '_blank' : undefined"
+        :rel="isExternalLink ? 'noopener noreferrer' : undefined"
       >
         {{ bannerData.buttonText }}
       </OButton>
@@ -154,7 +158,7 @@ onMounted(() => {
   }
 }
 
-// <=840px：移动端 banner，背景图与文字图分离，文字图与报名按钮贴底排布（距底 12px），仅按钮可跳转
+// <=840px：移动端 banner，背景图与文字图分离，文字图与按钮贴底排布（距底 12px），仅按钮可跳转
 @include respond('<=pad_v') {
   .summit-banner {
     height: 300px;
