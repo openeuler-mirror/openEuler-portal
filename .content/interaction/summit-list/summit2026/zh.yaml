@@ -1,8 +1,8 @@
 # openEuler Summit 2026 页面数据 / Summit 2026 page data
 #
 # 顶层板块（按页面从上到下顺序）：
-#   banner     顶部 banner（PC / pad / 移动端背景图、文字图、报名按钮）
-#   apply_bar  页面底部「立即报名」浮窗（fixed 吸底）
+#   banner     顶部 banner（PC / pad / 移动端背景图、文字图、按钮）
+#   apply_bar  页面底部「观看回放」浮窗（fixed 吸底）
 #   introduce  大会简介
 #   agent      活动日程（主论坛/分论坛/技术沙龙议程，含嘉宾；分论坛场次支持 closed 闭门态）
 #   guest      活动嘉宾（头像 + 单位 + 职称，按主论坛/分论坛/技术沙龙分组）
@@ -11,9 +11,10 @@
 # 图片路径相对本 yaml 文件（./images/...），由构建插件重写为带 hash 的 URL。
 # 主题变体（亮色/暗色）拆为 light/dark 两个字段。
 
-# banner: 顶部 banner（背景图 + 文字图 + 报名按钮）
-# <=840px 使用移动端 banner：背景图与文字图分离，文字图与报名按钮贴底排布（距底 12px），仅按钮可跳转
+# banner: 顶部 banner（背景图 + 文字图 + 按钮）
+# <=840px 使用移动端 banner：背景图与文字图分离，文字图与按钮贴底排布（距底 12px），仅按钮可跳转
 # 文字图 >840px（pad 横屏 / PC）共用一份（透明底 PNG），显示尺寸由组件按断点控制；<=840px 使用移动端专用文字图
+# 大会进行中为外部报名页链接，会后改为站内回放锚点（本页 #live）
 
 banner:
   bg_pc:
@@ -32,12 +33,12 @@ banner:
     light: ./images/textImg-mb-light.png
     dark: ./images/textImg-mb-dark.png
   text_img_alt: Agentic Infra 操作系统大会 & openEuler Summit 2026，11月13日-14日，中国·北京中关村国际创新中心
-  button_text: 立即报名
-  button_link: https://openatomcon.openatom.cn/registration/?code=3Ytx&activityNo=HD20261010110123
-  button_link_mb: https://openatomcon.openatom.cn/registration_mobile/?code=3Ytx&activityNo=HD20261010110123
+  button_text: 观看回放
+  button_link: /zh/interaction/summit-list/summit2026/#live
+  button_link_mb: /zh/interaction/summit-list/summit2026/#live
 
-# apply_bar: 页面底部「立即报名」浮窗（fixed 吸底，cookie 提示未关闭时显示在其下方）
-# bg_pc: >840px 浮窗背景图；bg_mb: <=840px 浮窗背景图；报名链接复用 banner 的 button_link / button_link_mb
+# apply_bar: 页面底部「观看回放」浮窗（fixed 吸底，cookie 提示未关闭时显示在其下方）
+# bg_pc: >840px 浮窗背景图；bg_mb: <=840px 浮窗背景图；按钮链接复用 banner 的 button_link / button_link_mb
 
 apply_bar:
   bg_pc:
@@ -48,7 +49,7 @@ apply_bar:
     dark: ./images/apply-bar-mb-dark.png
   title: Agentic Infra 操作系统大会 & openEuler Summit 2026
   date_place: 11月13日-14日 | 中国·北京中关村国际创新中心
-  button_text: 立即报名
+  button_text: 观看回放
 
 # introduce: 大会简介（描述、亮点列表、口号）
 

@@ -60,8 +60,8 @@ declare module '#content/interaction/summit-list/devday2026' {
 }
 
 declare module '#content/interaction/summit-list/summit2026' {
-  // banner: 顶部 banner（背景图 PC / pad / 移动端 + 文字图 + 报名入口，含亮暗双主题）
-  // 移动端（<=840px）背景图与文字图分离：渲染移动端文字图与报名按钮，仅按钮可跳转
+  // banner: 顶部 banner（背景图 PC / pad / 移动端 + 文字图 + 按钮入口，含亮暗双主题）
+  // 移动端（<=840px）背景图与文字图分离：渲染移动端文字图与按钮，仅按钮可跳转
   interface Summit2026ThemeImgT {
     light: string;
     dark: string;
@@ -78,7 +78,7 @@ declare module '#content/interaction/summit-list/summit2026' {
     button_link_mb: string;
   }
 
-  // apply_bar: 页面底部「立即报名」浮窗（fixed 吸底，cookie 提示未关闭时显示在其下方；报名链接复用 banner）
+  // apply_bar: 页面底部浮窗（大会期「立即报名」，会后「观看回放」；fixed 吸底，cookie 提示未关闭时显示在其下方；链接复用 banner）
   interface Summit2026ApplyBarT {
     bg_pc: Summit2026ThemeImgT;
     bg_mb: Summit2026ThemeImgT;

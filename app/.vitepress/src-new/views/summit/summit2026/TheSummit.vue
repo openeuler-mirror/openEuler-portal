@@ -115,7 +115,7 @@ onMounted(() => {
     <SummitPartner v-if="summitData.partner?.visible !== false" :partner-data="summitData.partner" />
     <SummitPrevious :previous-data="summitData.previous" />
   </ContentWrapper>
-  <!-- 底部「立即报名」浮窗，报名链接复用顶部 banner -->
+  <!-- 底部浮窗（大会期「立即报名」，会后「观看回放」），链接复用顶部 banner -->
   <SummitApplyBar
     :bar-data="summitData.applyBar"
     :banner-data="summitData.banner"

@@ -24,11 +24,11 @@ zh:
       text_img_mb.light: 移动端文字图(亮色)
       text_img_mb.dark: 移动端文字图(暗色)
       text_img_alt: 文字图替代文本(无障碍)
-      button_text: 报名按钮文案
-      button_link: 报名链接(PC/平板)
-      button_link_mb: 报名链接(移动端)
+      button_text: 按钮文案
+      button_link: 按钮链接(PC/平板)
+      button_link_mb: 按钮链接(移动端)
   apply_bar:
-    label: 底部报名浮窗
+    label: 底部浮窗
     fields:
       bg_pc: 浮窗背景图(PC)
       bg_pc.light: PC 浮窗背景图(亮色)
@@ -154,11 +154,11 @@ en:
       text_img_mb.light: 移动端文字图(亮色)
       text_img_mb.dark: 移动端文字图(暗色)
       text_img_alt: 文字图替代文本(无障碍)
-      button_text: 报名按钮文案
-      button_link: 报名链接(PC/平板)
-      button_link_mb: 报名链接(移动端)
+      button_text: 按钮文案
+      button_link: 按钮链接(PC/平板)
+      button_link_mb: 按钮链接(移动端)
   apply_bar:
-    label: 底部报名浮窗
+    label: 底部浮窗
     fields:
       bg_pc: 浮窗背景图(PC)
       bg_pc.light: PC 浮窗背景图(亮色)
