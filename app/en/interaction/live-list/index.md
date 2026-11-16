@@ -1,5 +1,6 @@
 ---
 title: Live
+simpleHeader: /en/learn/mooc/
 ---
 
 <script setup lang="ts">

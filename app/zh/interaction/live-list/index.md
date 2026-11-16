@@ -1,5 +1,6 @@
 ---
 title: 直播
+simpleHeader: /zh/learn/mooc/
 ---
 
 <script setup lang="ts">
