@@ -108,6 +108,7 @@ const tipsObj: TitleItemT = {
   '/universities/': TITLES2[2],
   '/internship/': TITLES2[2],
   '/talent-assessment/': TITLES2[2],
+  '/interaction/live-list/': TITLES2[2],
   // 【社区板块】：组织架构/社区章程/选举条例/行为准则/运作制度/成员单位/社区荣誉/城市用户组/贡献看板/联系我们/用户案例/白皮书/市场研究报告/论坛/邮件列表/线上会议/QuickIssue
   '/community/organization/': TITLES2[3],
   '/community/charter/': TITLES2[3],
@@ -129,7 +130,9 @@ const tipsObj: TitleItemT = {
   '/interaction/summit-list/': TITLES2[4],
   '/community/program/': TITLES2[4],
   '/interaction/news-list/': TITLES2[4],
+  '/interaction/post-news/': TITLES2[4],
   '/interaction/blog-list/': TITLES2[4],
+  '/interaction/post-blog/': TITLES2[4],
   '/blog/': TITLES2[4],
   '/news/': TITLES2[4],
   '/monthly-bulletins/': TITLES2[4],
