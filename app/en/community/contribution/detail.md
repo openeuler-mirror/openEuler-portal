@@ -45,8 +45,7 @@ Experience a range of original open source projects in the openEuler community.
 - [iSula](https://www.openeuler.org/en/other/projects/isula/): lightweight container solution
 - [secGear](https://www.openeuler.org/en/other/projects/secgear/): security application development kit for confidential computing
 - [pkgship](https://pkgmanage.openeuler.org/): software package dependency management with detailed dependency graphs
-- [BiSheng JDK](https://www.openeuler.org/en/other/projects/bishengjdk/): open source version of Huawei JDK, a high-performance, production-ready OpenJDK distribution
-- [Compass-CI](https://compass-ci.openeuler.org/): open source software platform for continuous integration (CI) with an open and comprehensive test system
+- [BiSheng JDK](https://www.openeuler.org/en/other/projects/bishengjdk/): open source version of Huawei JDK, a high-performance, production-ready OpenJDK distributionration (CI) with an open and comprehensive test system
 - [More](https://atomgit.com/openeuler)
 
 ## 2. Sign the CLA

@@ -79,7 +79,6 @@ export default {
   ignitionFile: 'NestOS Ignition File',
   ignitionFileDesc: 'NestOS ignition file usage examples for automated system initialization and configuration.',
   docLink: 'https://nestos.org.cn/',
-  ignitionLink: 'https://gitee.com/openeuler/NestOS/blob/master/docs/use_sample/ignition/',
   mirrorPackage: 'Package',
   mirrorRepo: 'Mirror',
   mirrorDownloadCol: 'Download',

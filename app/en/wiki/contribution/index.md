@@ -76,7 +76,7 @@ Add a new software package by modifying the openeuler/community repository on Gi
    type: public
    ```
 
-   - Submit a pull request (PR). For details, see the [_Pull Request Submission Guide_](https://gitee.com/openeuler/community/blob/master/en/contributors/pull-request.md). After the PR is merged, a repository with the same name as the added software package will be created in [src-openeuler](https://gitee.com/src-openeuler) on Gitee. A repository with the same name will be created on OBS. You can view the repository at <https://build.openeuler.org/project/show/openEuler:Factory>.
+   - Submit a pull request (PR). For details, see the [_Pull Request Submission Guide_](https://gitee.com/openeuler/community/blob/master/en/contributors/pull-request.md). After the PR is merged, a repository with the same name as the added software package will be created in [src-openeuler](https://gitee.com/src-openeuler) on Gitee. A repository with the same name will be created on OBS. You can view the repository at <https://eulermaker.openeuler.openatom.cn/project/overview?osProject=openEuler-master:factory>.
 
 ##### 2.1.2 OBS Code Pulling Method Modification
 
@@ -168,7 +168,7 @@ You can also participate in community component packaging. For details, see the 
 
 ### 3. Content Creation and Optimization
 
-- Optimize openEuler documentation by participating in [document bug catching](https://docs-bug.openeuler.sh/).
+- Optimize openEuler documentation by participating in [document bug catching](https://atomgit.com/openeuler/docs/issues).
 
 - Create [blogs](https://www.openeuler.org/en/interaction/blog-list/) or participate in the [community forum](https://forum.openeuler.org/) to share your technical solutions and achievements with the community.
 
@@ -184,7 +184,7 @@ Share your expertise on openEuler's architecture and your real-world experience 
 
 ### 6. SIG Meeting Organization
 
-Operate community communication tools, including assisting SIG maintainers to improve the [SIG homepages](https://www.openeuler.org/en/sig/sig-list/) and organizing [community meetings](https://www.openeuler.org/en/sig/meeting-guide/).
+Operate community communication tools, including assisting SIG maintainers to improve the [SIG homepages](https://www.openeuler.org/en/sig/sig-list/).
 
 ### 7. Other
 

@@ -76,7 +76,7 @@ e) 答疑交流
    type: public
    ```
 
-   - 提交 PR（请参考 [PR 提交指南](https://atomgit.com/openeuler/community/blob/master/zh/contributors/pull-request.md)，PR 合入后将会在 atomgit 建立同名仓库。查看地 址：src-openeuler。同时在 obs 上建立同名仓库，可在 obs 网站查看： [https://build.openeuler.org/project/show/openEuler:Factory](https://build.openeuler.org/project/show/openEuler:Factory)
+   - 提交 PR（请参考 [PR 提交指南](https://atomgit.com/openeuler/community/blob/master/zh/contributors/pull-request.md)，PR 合入后将会在 atomgit 建立同名仓库。查看地 址：src-openeuler。同时在 obs 上建立同名仓库，可在 obs 网站查看： [https://eulermaker.openeuler.openatom.cn/project/overview?osProject=openEuler-master:factory](https://eulermaker.openeuler.openatom.cn/project/overview?osProject=openEuler-master:factory)
 
 #### 2.1.2 修改 obs 拉取代码方式
 
@@ -168,7 +168,7 @@ $ cd ~/rpmbuild/SPECS$ rpmbuild -ba openssl.spec
 
 ## 3. 内容创作与优化
 
-a) 参与[文档捉虫](https://docs-bug.openeuler.sh/)，优化 openEuler 社区技术文档，
+a) 参与[文档捉虫](https://atomgit.com/openeuler/docs/issues)，优化 openEuler 社区技术文档，
 
 b) 通过[博客](https://www.openeuler.org/zh/interaction/blog-list/)创作或[社区论坛](https://forum.openeuler.org/)，分享您在社区的技术方案与成果，
 

@@ -228,16 +228,6 @@ export default {
               OUTLINK: true,
             },
             {
-              NAME: 'EulerTest',
-              LABEL: 'Testing management platform developed based on openEuler',
-              PATH: 'https://radiatest.openeuler.org',
-            },
-            {
-              NAME: 'Compass-CI',
-              LABEL: 'Open test service platform',
-              PATH: 'https://compass-ci.openeuler.org/',
-            },
-            {
               NAME: 'OEPKGS',
               LABEL: 'Open External Packages Service',
               PATH: 'https://oepkgs.net/en-US',
@@ -348,12 +338,6 @@ export default {
               LABEL: '',
               PATH: '/sig/sig-list/',
             },
-            // {
-            //   //培训认证
-            //   NAME: 'Certification',
-            //   LABEL: '',
-            //   PATH: 'https://talent-assessment.openeuler.org/',
-            // },
           ],
         },
         {
