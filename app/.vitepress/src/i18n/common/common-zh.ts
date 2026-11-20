@@ -152,11 +152,6 @@ export default {
               PATH: 'https://docs.openeuler.org/zh/',
             },
             {
-              NAME: 'Man Pages',
-              LABEL: '提供命令、函数、系统调用等的帮助手册',
-              PATH: 'https://man.openeuler.org',
-            },
-            {
               NAME: '课程中心',
               LABEL: '',
               PATH: '/learn/mooc/',
@@ -284,19 +279,9 @@ export default {
               OUTLINK: true,
             },
             {
-              NAME: 'EulerTest',
-              LABEL: '基于openEuler环境开发的测试管理平台',
-              PATH: 'https://radiatest.openeuler.org',
-            },
-            {
               NAME: 'x2openEuler',
               LABEL: '将原有业务迁移到openEuler的工具套件',
               PATH: 'https://docs.openeuler.org/zh/docs/20.03_LTS_SP1/docs/x2openEuler/Introduction.html',
-            },
-            {
-              NAME: 'Compass-CI',
-              LABEL: '开放式测试服务平台',
-              PATH: 'https://compass-ci.openeuler.org/',
             },
             {
               NAME: 'OEPKGS',

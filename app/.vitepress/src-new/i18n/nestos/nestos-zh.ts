@@ -79,7 +79,6 @@ export default {
   ignitionFile: 'NestOS 点火文件',
   ignitionFileDesc: 'NestOS 点火文件使用样例，用于系统初始化自动化配置。',
   docLink: 'https://nestos.org.cn/',
-  ignitionLink: 'https://gitee.com/openeuler/NestOS/blob/master/docs/use_sample/ignition/',
   mirrorPackage: '软件包',
   mirrorRepo: '镜像仓库',
   mirrorDownloadCol: '软件包下载',

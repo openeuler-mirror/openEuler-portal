@@ -7,7 +7,6 @@ export default {
     COMMUNITY_LIST: [
       {
         NAME: 'openEuler 26.09',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/26.09/',
         DESC: '2026年9月30日，发布openEuler 26.09，基于6.6+ 6.18的双内核创新版本，面向AI等场景基于6.6内核持续提供更多新特性和功能扩展，包括Agent可观测、SkillHub、上下文管理、KV Cache协同加速、模型加载优化等，同时基于6.18内核增强DevStation智能开发者桌面能力，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/26.09/server/releasenotes/introduction.html`,
@@ -25,7 +24,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.03 LTS SP4',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',
         DESC: '2026年6月30日，发布openEuler 24.03 LTS SP4，基于6.6内核的24.03-LTS版本增强扩展版本（参见版本生命周期），面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、灵衢超节点可靠性&易用性、NPU算力切分、推理服务快恢、E2B沙箱、智能诊断&调优&运维、编译器、机密虚机等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP4/server/releasenotes/introduction.html`,
@@ -58,7 +56,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.03 LTS SP3',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP3/',
         DESC: '2025年12月30日，openEuler首个支持超节点的版本正式发布。新版本openEuler 24.03 LTS SP3是基于6.6内核的24.03-LTS版本增强扩展版本（参见版本生命周期），面向服务器、云、AI场景，持续提供更多新特性和功能扩展，包括内核优化、异构协同推理、智能诊断、机密虚机、编译器、RISC-V架构优化、智能开发者桌面、安全加固、灵衢超节点、身份认证、虚拟化等，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/24.03_LTS_SP3/server/releasenotes/releasenotes/introduction.html`,
@@ -75,7 +72,6 @@ export default {
       },
       {
         NAME: 'openEuler 25.09',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/25.09/',
         DESC: 'openEuler 25.09 是基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/zh/docs/25.09/server/quickstart/releasenotes/introduction.html`,
@@ -93,7 +89,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.03 LTS SP2',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP2/',
         DESC: 'openEuler 24.03 LTS SP2 是基于6.6内核的LTS版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/24.03_LTS_SP2/server/releasenotes/releasenotes/introduction.html',
@@ -110,7 +105,6 @@ export default {
       },
       {
         NAME: 'openEuler 25.03',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/25.03/',
         DESC: 'openEuler 25.03 是基于6.6内核的创新版本，面向服务器、云、边缘计算和嵌入式场景，提供更多新特性和功能，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/25.03/server/releasenotes/releasenotes/introduction.html',
@@ -128,7 +122,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.03 LTS SP1',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP1/',
         DESC: 'openEuler 24.03 LTS SP1 是基于6.6内核的24.03 LTS版本增强扩展版本，面向服务器、云、边缘计算和嵌入式场景，持续提供更多新特性和功能扩展，给开发者和用户带来全新的体验，服务更多的领域和更多的用户。',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/24.03_LTS_SP1/server/releasenotes/releasenotes/introduction.html',
@@ -145,7 +138,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.09',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.09/',
         DESC: 'openEuler 24.09 是基于6.6内核的创新版本，面向服务器、云、边缘计算、AI和嵌入式场景，提供更多新特性和功能，给开发者和用户带来更新的体验。',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/24.09/docs/Releasenotes/release_notes.html',
@@ -168,7 +160,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP4/server/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/installation.html',
+          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/Installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP4 技术白皮书.pdf',
@@ -324,15 +316,9 @@ export default {
         INSTALL_GUIDENCE_URL:
           'https://docs.openeuler.org/zh/docs/22.09/docs/Installation/installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
-        GET_ISO_URL: 'https://repo.openeuler.org/openEuler-22.09/ISO/',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2209.pdf',
         WEBSITE_SELECT: '/zh/mirror/select/?version=22.09',
-        CLOUD_IMAGE:
-          'https://repo.openeuler.org/openEuler-22.09/virtual_machine_img/',
-        EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-22.09/edge_img/',
-        EMBEDDEN_IMAGE:
-          'https://repo.openeuler.org/openEuler-22.09/embedded_img/',
         PUBLISH_DATE: '2022/09',
         LTS: false,
         VERSION: '22.09',
@@ -345,7 +331,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/installation.html',
+          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/Installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2203.pdf',
@@ -507,7 +493,6 @@ export default {
     COMMUNITY_LIST: [
       {
         NAME: 'openEuler 26.09',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/26.09/',
         DESC: 'openEuler 26.09 is an innovative dual-kernel release based on Linux 6.6+ and 6.18 kernels. It delivers new AI capabilities, including agent observability, SkillHub, context management, KV cache acceleration, and optimized model loading, while enhancing the intelligent development experience of DevStation.',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/26.09/server/releasenotes/introduction.html`,
@@ -525,7 +510,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.03 LTS SP4',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP4/',
         DESC: 'openEuler 24.03 LTS SP4, built on kernel 6.6, is an enhanced extension tailored for server, cloud, and AI scenarios. This release introduces new features and enhancements, including kernel optimizations, UnifiedBus SuperPoD reliability & usability, NPU partitioning, rapid recovery for inference services, E2B sandboxes, intelligent O&M (diagnosis & tuning), compilers, and confidential virtual machines (CVMs). It delivers a brand-new experience to developers and users, extending its reach to broader industries.',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP4/server/releasenotes/introduction.html`,
@@ -558,7 +542,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.03 LTS SP3',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP3/',
         DESC: 'openEuler 24.03 LTS SP3, built on Linux Kernel 6.6, introduces support for the groundbreaking UnifiedBus SuperPoD architecture. Engineered for server, cloud, and AI workloads, it delivers robust performance and scalability for next-generation digital infrastructure.',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/24.03_LTS_SP3/server/releasenotes/releasenotes/introduction.html`,
@@ -575,7 +558,6 @@ export default {
       },
       {
         NAME: 'openEuler 25.09',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/25.09/',
         DESC: 'openEuler 25.09, built on Linux kernel 6.6, is an innovation release with new features spanning server, cloud, edge, and embedded scenarios to enhance the developer and user experience.',
         RELEASE_DESC_URL:
           `${import.meta.env.VITE_SERVICE_DOCS_URL}/en/docs/25.09/server/quickstart/releasenotes/introduction.html`,
@@ -593,7 +575,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.03 LTS SP2',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP2/',
         DESC: 'openEuler 24.03 LTS SP2, built on Linux kernel 6.6, is suited for server, cloud, edge, and embedded deployments. With best-in-class features, it delivers brand-new experience to developers and users spanning diverse industries.',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/24.03_LTS_SP2/server/releasenotes/releasenotes/introduction.html',
@@ -610,7 +591,6 @@ export default {
       },
       {
         NAME: 'openEuler 25.03',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/25.03/',
         DESC: 'openEuler 25.03, an innovation version built on Linux kernel 6.6, is tailored for server, cloud, edge, and embedded scenarios. It offers a compelling range of new features and functions designed to elevate the experience for developers and users across diverse industries.',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/25.03/server/releasenotes/releasenotes/introduction.html',
@@ -629,7 +609,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.03 LTS SP1',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.03 LTS SP1/',
         DESC: 'openEuler 24.03 LTS SP1, an enhanced version of the 24.03 LTS release based on the 6.6 kernel, is designed for server, cloud, edge computing, and embedded deployments, offering new features and functionality for developers and users across diverse domains.',
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/24.03_LTS_SP1/server/releasenotes/releasenotes/introduction.html',
@@ -647,7 +626,6 @@ export default {
       },
       {
         NAME: 'openEuler 24.09',
-        DOWNLOAD_URL: 'https://repo.openeuler.org/24.09/',
         WHITE_PAPER: '/whitepaper/en/openEuler 24.09 Technical White Paper.pdf',
         DESC: 'openEuler 24.09, built on Linux kernel 6.6, is suited for server, cloud, edge, AI, and embedded deployments. With best-in-class features, it delivers brand-new experience to developers and users spanning diverse industries.',
         RELEASE_DESC_URL:
@@ -670,7 +648,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP4/server/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/en/docs/22.03_LTS_SP4/docs/Installation/Installation.html',
+          'https://docs.openeuler.org/en/docs/22.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
@@ -708,7 +686,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS_SP3/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/en/docs/22.03_LTS_SP3/docs/Installation/installation.html',
+          'https://docs.openeuler.org/en/docs/22.03_LTS_SP3/docs/Installation/Installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
@@ -827,18 +805,12 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/22.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/en/docs/22.09/docs/Installation/installation.html',
+          'https://docs.openeuler.org/en/docs/22.09/docs/Installation/Installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
         WEBSITE_SELECT: '/en/mirror/select/?version=22.09',
-        SERVER_IMAGE: 'https://repo.openeuler.org/openEuler-22.09/ISO/',
         WHITE_PAPER: '/whitepaper/en/openEuler-22.09 Technical White Paper.pdf',
-        CLOUD_IMAGE:
-          'https://repo.openeuler.org/openEuler-22.09/virtual_machine_img/',
-        EDGE_IMAGE: 'https://repo.openeuler.org/openEuler-22.09/edge_img/',
-        EMBEDDEN_IMAGE:
-          'https://repo.openeuler.org/openEuler-22.09/embedded_img/',
         PUBLISH_DATE: '2022/09',
         LTS: false,
         VERSION: '22.09',
@@ -851,7 +823,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/22.03_LTS/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/en/docs/22.03_LTS/docs/Installation/installation.html',
+          'https://docs.openeuler.org/en/docs/22.03_LTS/docs/Installation/installation-preparations.html',
         SEEK_HELP_URL:
           'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         LIFE_CYCLE_URL: '/en/other/lifecycle/',
@@ -909,7 +881,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/en/docs/21.09/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/en/docs/21.09/docs/Installation/installation.html',
+          'https://docs.openeuler.org/en/docs/21.09/docs/Installation/Installation.html',
         SEEK_HELP_URL:
           'https://atomgit.com/openeuler/community-issue/blob/master/README.md',
         GET_ISO_URL: 'https://archives.openeuler.openatom.cn/',
