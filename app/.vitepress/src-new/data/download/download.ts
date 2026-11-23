@@ -331,7 +331,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/Installation.html',
+          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2203.pdf',
