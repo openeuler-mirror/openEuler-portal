@@ -55,13 +55,13 @@
             "@type": "HowToStep",
             "position": 1,
             "name": "注册AtomGit账号",
-            "text": "参考 http://git.mydoc.io/?t=179267 注册 AtomGit 账号。"
+            "text": "参考 https://docs.atomgit.com/docs/start/quick 注册 AtomGit 账号。"
           },
           {
             "@type": "HowToStep",
             "position": 2,
             "name": "设置主邮箱地址",
-            "text": "在 AtomGit 个人设置中设置主邮箱地址，访问 https://atomgit.com/profile/emails。"
+            "text": "在 AtomGit 个人设置中设置主邮箱地址，访问 https://atomgit.com/setting/emails。"
           },
           {
             "@type": "HowToStep",
@@ -74,7 +74,7 @@
             "@type": "HowToStep",
             "position": 4,
             "name": "准备git环境",
-            "text": "参考 http://git.mydoc.io/?t=180692 准备你的git环境。"
+            "text": "参考 https://docs.atomgit.com/docs/help/home/general-reference/git 准备你的git环境。"
           }
         ]
       },

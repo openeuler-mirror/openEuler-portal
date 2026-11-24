@@ -21,7 +21,7 @@
             "@type": "HowToStep",
             "position": "1",
             "name": "Register a Gitee Account",
-            "text": "Register a Gitee account by following the instructions at http://git.mydoc.io/?t=179267."
+            "text": "Register a Gitee account by following the instructions at https://docs.atomgit.com/docs/start/quick."
           },
           {
             "@type": "HowToStep",
@@ -39,7 +39,7 @@
             "@type": "HowToStep",
             "position": "4",
             "name": "Prepare Your Git Environment",
-            "text": "Set up your local git environment by following the guide at http://git.mydoc.io/?t=180692."
+            "text": "Set up your local git environment by following the guide at https://docs.atomgit.com/docs/help/home/general-reference/git."
           }
         ]
       },

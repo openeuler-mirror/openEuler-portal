@@ -7,13 +7,13 @@ category: news
 
 ## 准备
 
-1. 参考 http://git.mydoc.io/?t=179267 注册 AtomGit 账号。
+1. 参考<https://docs.atomgit.com/docs/start/quick> 注册 AtomGit 账号。
 
-2. 在 AtomGit 个人设置中设置主邮箱地址，在此https://atomgit.com/profile/emails。
+2. 在 AtomGit 个人设置中设置主邮箱地址，在此<https://atomgit.com/setting/emails>。
 
-3. 签署贡献者协议，https://www.openeuler.org/zh/other/cla。
+3. 签署贡献者协议，<https://www.openeuler.org/zh/other/cla>。
 
-4. 参考http://git.mydoc.io/?t=180692准备你的git环境
+4. 参考<https://docs.atomgit.com/docs/help/home/general-reference/git>准备你的git环境
 
 ## 理解新闻格式
 
@@ -38,13 +38,11 @@ summary: Just about everything you'll need to style in the theme：headings, par
 Here you can edit your news.
 ```
 
-小提示：你可以复制 https://atomgit.com/openeuler/openEuler-portal/blob/master/web-ui/docs/zh/interaction/post-news/news_example/2020-03-03-sample-post.md 到你的工作路径下然后继续编辑。
-
 ## 提交新闻
 
 新闻的提交利用了 AtomGit 的 PR(Pull Request)。
 
-1. Fork openEuler 新闻项目 <https://atomgit.com/openeuler/openEuler-portal> 到你自己的 AtomGit 上。如果需要具体指导请参考 <http://git.mydoc.io/?t=153749> 。
+1. Fork openEuler 新闻项目 <https://atomgit.com/openeuler/openEuler-portal> 到你自己的 AtomGit 上。如果需要具体指导请参考 <https://docs.atomgit.com/docs/help/home/org_project/pullrequests/pr-fork> 。
 
 2. Clone 代码
 
@@ -99,7 +97,7 @@ git commit -m "<message>"
 git push origin <branch-name>:<branch-name>
 ```
 
-2. 参考 <http://git.mydoc.io/?t=153749> 提交你的 PR
+2. 参考 <https://docs.atomgit.com/docs/help/home/org_project/pullrequests/pr-fork> 提交你的 PR
 
 3. 等待评审和合入。
 

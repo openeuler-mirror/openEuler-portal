@@ -160,7 +160,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS_SP4/server/releasenotes/introduction.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/Installation.html',
+          'https://docs.openeuler.org/zh/docs/22.03_LTS_SP4/server/installation_upgrade/installation/installation_preparations.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         GET_ISO_URL: 'https://repo.openeuler.org/',
         WHITE_PAPER: '/whitepaper/openEuler 22.03 LTS SP4 技术白皮书.pdf',
@@ -331,7 +331,7 @@ export default {
         RELEASE_DESC_URL:
           'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Releasenotes/release_notes.html',
         INSTALL_GUIDENCE_URL:
-          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/Installation.html',
+          'https://docs.openeuler.org/zh/docs/22.03_LTS/docs/Installation/installation.html',
         SEEK_HELP_URL: 'https://atomgit.com/openeuler/community-issue',
         LIFE_CYCLE_URL: '/zh/other/lifecycle/',
         WHITE_PAPER: '/whitepaper/openEuler-whitepaper-2203.pdf',
