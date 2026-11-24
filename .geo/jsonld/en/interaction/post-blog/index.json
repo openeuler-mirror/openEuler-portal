@@ -60,7 +60,7 @@
             "@type": "HowToStep",
             "position": 1,
             "name": "Register an AtomGit account",
-            "text": "Register an AtomGit account by following the instructions at http://git.mydoc.io/?t=179267."
+            "text": "Register an AtomGit account by following the instructions at https://docs.atomgit.com/docs/start/quick."
           },
           {
             "@type": "HowToStep",
@@ -78,7 +78,7 @@
             "@type": "HowToStep",
             "position": 4,
             "name": "Prepare your git environment",
-            "text": "Set up your local git environment by following the guide at http://git.mydoc.io/?t=180692."
+            "text": "Set up your local git environment by following the guide at https://docs.atomgit.com/docs/help/home/general-reference/git."
           }
         ]
       },
@@ -110,7 +110,7 @@
             "@type": "HowToStep",
             "position": 1,
             "name": "Fork the openEuler blog project",
-            "text": "Fork the openEuler portal project to your own AtomGit account. Refer to http://git.mydoc.io/?t=153749 for detailed guidance."
+            "text": "Fork the openEuler portal project to your own AtomGit account. Refer to https://docs.atomgit.com/docs/help/home/org_project/pullrequests/pr-fork for detailed guidance."
           },
           {
             "@type": "HowToStep",

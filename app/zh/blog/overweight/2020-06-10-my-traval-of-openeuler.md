@@ -275,7 +275,7 @@ SIG就是Special Interest Group的缩写，openEuler社区按照不同的SIG来�
 
 ### 2、提交PR，修复一个问题（bug、cve、新特性）
 
-当你提交一个PR的时候，就意味您已经开始给社区贡献代码了。请参考[openEuler社区PR提交指导](https://gitee.com/openeuler/community/blob/master/zh/contributors/pull-request.md) 与 [码云PR提交流程](http://git.mydoc.io/?t=153749)。
+当你提交一个PR的时候，就意味您已经开始给社区贡献代码了。请参考[openEuler社区PR提交指导](https://gitee.com/openeuler/community/blob/master/zh/contributors/pull-request.md) 与 [码云PR提交流程](https://docs.atomgit.com/docs/help/home/org_project/pullrequests/pr-fork)。
 
 **注意事项**：
 

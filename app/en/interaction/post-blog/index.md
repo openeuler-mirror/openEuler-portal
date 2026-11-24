@@ -7,13 +7,13 @@ category: blog
 
 ## Preparation
 
-1. Refer to <http://git.mydoc.io/?t=179267> to register AtomGit account.
+1. Refer to <https://docs.atomgit.com/docs/start/quick> to register AtomGit account.
 
 2. Set your primary mail box in AtomGit settings <https://atomgit.com/setting/email>.
 
 3. Sign your CLA in <https://clasign.osinfra.cn/sign/6983225bdcbb19710248ccf0?lang=en>.
 
-4. Prepare your git environment refering to <http://git.mydoc.io/?t=180692>.
+4. Prepare your git environment refering to <https://docs.atomgit.com/docs/help/home/general-reference/git>.
 
 ## Understand blog format
 
@@ -45,9 +45,9 @@ Tips: you can copy `https://atomgit.com/openeuler/openEuler-portal/blob/master/a
 
 ## Post your blog
 
-The blog posting follows the pull request of [AtomGit](https://atomgit/).
+The blog posting follows the pull request of AtomGit.
 
-1. Fork openEuler blog project <https://atomgit/openeuler/openEuler-portal> to your own atomgit. Refer to <http://git.mydoc.io/?t=153749> for detailed guidance.
+1. Fork openEuler blog project <https://atomgit/openeuler/openEuler-portal> to your own atomgit. Refer to <https://docs.atomgit.com/docs/help/home/org_project/pullrequests/pr-fork> for detailed guidance.
 
 2. Clone the code to your local environment.
 
@@ -99,7 +99,7 @@ git commit -m "<message>"
 git push origin <branch-name>:<branch-name>
 ```
 
-2. Refer to <http://git.mydoc.io/?t=153749> to submit your Pull Request
+2. Refer to <https://docs.atomgit.com/docs/help/home/org_project/pullrequests/pr-fork> to submit your Pull Request
 
 3. Wait for reviewing and merging.
 
