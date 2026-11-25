@@ -298,7 +298,7 @@ const handleConfirm = () => {
         variant="outline"
         color="primary"
         size="large"
-        :href="isZh ? '/whitepaper/openEuler%20industry%20user%20case%20collection.pdf' : '/whitepaper/en/OpenAtom%20openEuler%20Use%20Cases%20(Featured%202025).pdf'"
+        :href="isZh ? '/whitepaper/OpenAtom openEuler 行业应用案例集.pdf' : '/whitepaper/en/OpenAtom%20openEuler%20Use%20Cases%20(Featured%202025).pdf'"
         download
       >
         <OIcon><IconDownload /></OIcon>

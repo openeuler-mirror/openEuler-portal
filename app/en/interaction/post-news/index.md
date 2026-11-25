@@ -9,7 +9,7 @@ category: news
 
 1. 参考<https://docs.atomgit.com/docs/start/quick> 注册 AtomGit 账号。
 
-2. 在 AtomGit 个人设置中设置主邮箱地址，在此<https://atomgit.com/setting/emails>。
+2. 在 AtomGit 个人设置中设置主邮箱地址，在此<https://atomgit.com/setting/email>。
 
 3. 签署贡献者协议，<https://www.openeuler.org/zh/other/cla>。
 
