@@ -111,3 +111,34 @@
     nomination.title: title
     nomination.list: list
     notice: notice
+"2026":
+  label: 2026 年度荣誉榜单
+  fields:
+    title: title
+    list: list
+    tips: tips
+    personal: personal
+    personal[].list: list
+    personal[].list[].post: post
+    personal[].list[].detail: detail
+    list[].list: list
+    list[].list[].detail: detail
+    company: company
+    company.title: title
+    company.list: list
+    company.tips: tips
+    contribution: contribution
+    contribution.title: title
+    contribution.personal: personal
+    contribution.personal[].list: list
+    contribution.personal[].list[].post: post
+    contribution.personal[].list[].detail: detail
+    project: project
+    project.title: title
+    project.list: list
+    project.list[].list: list
+    project.list[].list[].detail: detail
+    nomination: nomination
+    nomination.title: title
+    nomination.list: list
+    notice: notice

@@ -53,8 +53,15 @@ const honorData = [
   {
     label: '2025',
     data: honorContent['2025'],
+  },
+  {
+    label: '2026',
+    data: honorContent['2026'],
   }
 ];
+
+// 2025 年起（含 2026 及以后）：贡献之星板块置于年度项目板块之前；2024 及以前置于其后
+const isContributionFirst = (label: string) => label >= '2025';
 
 // -------------------- 证书图片弹窗--------------------
 const certificateVisible = ref(false);
@@ -100,8 +107,8 @@ watch(
   () => {
     if (!isClient) return;
     if (!location.search) {
-      router.go(`/${locale.value}/community/honor/?year=2025`);
-      activeTab.value = '2025';
+      router.go(`/${locale.value}/community/honor/?year=2026`);
+      activeTab.value = '2026';
     } else {
       activeTab.value = location.search.split('=')[1];
     }
@@ -156,7 +163,7 @@ watch(
             <p class="company-tips">{{ tab.data?.company.tips }}</p>
           </ContentWrapper>
           <!-- 贡献奖 -->
-          <ContentWrapper v-if="tab.data?.contribution && tab.label === '2025'" class="contribution-content">
+          <ContentWrapper v-if="tab.data?.contribution && isContributionFirst(tab.label)" class="contribution-content">
             <p class="floor-title">
               <p v-for="item in tab.data?.contribution.title" :key="item">{{ item }}</p>
             </p>
@@ -250,7 +257,7 @@ watch(
             </template>
           </ContentWrapper>
           <!-- 贡献奖 -->
-          <ContentWrapper v-if="tab.data?.contribution && tab.label !== '2025'" class="contribution-content">
+          <ContentWrapper v-if="tab.data?.contribution && !isContributionFirst(tab.label)" class="contribution-content">
             <p class="floor-title">
               <p v-for="item in tab.data?.contribution.title" :key="item">{{ item }}</p>
             </p>
@@ -523,6 +530,9 @@ img {
   color: var(--o-color-info2);
   margin-top: 12px;
   height: 100px;
+  // OScroller 滚动条为覆盖式悬浮（medium 尺寸轨道宽 --scrollbar-width: 16px），
+  // 为轨道预留右侧空间，避免 hover 详情文案与滚动条重叠
+  --scroller-padding: 0 16px 0 0;
   @include text1;
 }
 
