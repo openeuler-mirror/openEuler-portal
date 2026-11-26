@@ -4,7 +4,7 @@
     "@type": "CollectionPage",
     "@id": "https://www.openeuler.org/zh/projects/index.html",
     "url": "https://www.openeuler.org/zh/projects/index.html",
-    "name": "项目 | openEuler社区",
+    "name": "项目 | 开发 | openEuler社区",
     "description": "openEuler 社区创新开源项目列表，涵盖 Intelligence BooM、UB Service Core、A-Tune、iSula、secGear、NestOS、StratoVirt、BiSheng JDK 等多个开源项目。",
     "inLanguage": "zh",
     "isPartOf": {

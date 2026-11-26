@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "openEuler 迁移常见问题",
+    "name": "openEuler 迁移常见问题 | 迁移专区 | openEuler社区",
     "description": "查看openEuler迁移过程中常见问题的解答，助您顺利完成迁移。",
     "url": "https://www.openeuler.org/zh/migration/faq",
     "inLanguage": "zh",

@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "年度规划 | 开发者活动 | openEuler社区",
+    "name": "活动日历 | 活动 | openEuler社区",
     "description": "openEuler社区活动，为您提供关于openEuler官方发布的第一手开发者活动信息。",
     "url": "https://www.openeuler.org/zh/interaction/event-list",
     "inLanguage": "zh",

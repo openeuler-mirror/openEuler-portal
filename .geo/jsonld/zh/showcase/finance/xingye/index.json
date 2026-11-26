@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/showcase/finance/xingye",
     "url": "https://www.openeuler.org/zh/showcase/finance/xingye",
-    "name": "兴业银行 | openEuler社区",
+    "name": "兴业银行：超聚变和厦门大学助力兴业银行构建智慧金融隐私计算 | 用户案例 | openEuler社区",
     "description": "超聚变和厦门大学助力兴业银行构建智慧金融隐私计算平台，助力信用卡业务精准营销",
     "inLanguage": "zh-CN",
     "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.org/", "url": "https://www.openeuler.org/", "name": "openEuler社区"},

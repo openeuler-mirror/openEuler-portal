@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "云原生常见问题",
+    "name": "云原生常见问题 | FAQ | openEuler社区",
     "description": "获取openEuler云原生相关的常见问题解答，提升您的使用体验。",
     "url": "https://www.openeuler.org/zh/faq/cloud-native",
     "inLanguage": "zh-CN",
@@ -89,7 +89,7 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "云原生常见问题",
+        "name": "云原生常见问题 | FAQ | openEuler社区",
         "item": "https://www.openeuler.org/zh/faq/cloud-native"
       }
     ]

@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "OSV Technical Assessment Report & Compatibility | openEuler",
+    "name": "OSV Technical Assessment Report & Compatibility | Compatibility | openEuler Community",
     "description": "View OSV technical assessment reports for openEuler compatibility, covering COMPATIBLE tool checks, kernel KABI, ABI interface, and platform validation.",
     "url": "http://www.openeuler.org/en/approve/approve-info/",
     "inLanguage": "en",

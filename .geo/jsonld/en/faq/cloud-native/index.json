@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "Cloud Native FAQs | openEuler",
+    "name": "Cloud Native | FAQs | openEuler Community",
     "description": "Get answers to frequently asked questions related to cloud native on openEuler.",
     "url": "https://www.openeuler.org/en/faq/cloud-native",
     "inLanguage": "en",

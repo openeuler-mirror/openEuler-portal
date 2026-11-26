@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "支持 Rubik 在离线混部 | NestOS | openEuler | openEuler社区",
+    "name": "支持 Rubik 在离线混部 | NestOS | openEuler社区",
     "description": "NestOS For Container 版本已预开启 Rubik 在离线混部相关内核特性，支持基于 Rubik 容器混部引擎的整体解决方案。",
     "url": "https://www.openeuler.org/zh/other/projects/nestos/feature/rubik/",
     "inLanguage": "zh",

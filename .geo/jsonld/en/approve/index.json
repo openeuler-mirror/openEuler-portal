@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "OSV Technical Evaluation for openEuler Distributions",
+    "name": "OSV Technical Evaluation for openEuler Distributions | Compatibility | openEuler Community",
     "description": "Explore the OSV technical evaluation list for openEuler. Check certified OS vendors, versions, and download links with full compatibility and ecosystem testing results.",
     "url": "https://www.openeuler.org/en/approve",
     "inLanguage": "en",

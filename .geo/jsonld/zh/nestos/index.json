@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/nestos",
     "url": "https://www.openeuler.org/zh/nestos",
-    "name": "NestOS - 基于欧拉开源操作系统的云底座操作系统 | openEuler社区",
+    "name": "NestOS | 项目 | openEuler社区",
     "description": "NestOS是基于openEuler的云底座操作系统，整合了NestOS For Container和NestOS For Virt双模式，专注于提供最佳的容器主机和虚拟化解决方案，支持K8S、openStack等平台。",
     "inLanguage": "zh",
     "isPartOf": {

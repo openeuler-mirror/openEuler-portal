@@ -31,7 +31,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Download x2openEuler for Easy Migration | openEuler",
+    "name": "Download x2openEuler | Migration | openEuler Community",
     "url": "https://www.openeuler.org/en/migration/download",
     "description": "Get the x2openEuler migration tool to perform in-place upgrade of OSs in batches.",
     "inLanguage": "en",

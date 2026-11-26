@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/showcase/others/wuhan",
     "url": "https://www.openeuler.org/zh/showcase/others/wuhan",
-    "name": "中科通达智慧交通管控平台 | openEuler社区",
+    "name": "中科通达智慧交通管控平台 | 用户案例 | openEuler社区",
     "description": "中科通达智慧交通管控平台基于openEuler系操作系统，结合云计算、大数据技术，实现高性能计算、全栈优化、分布式存储与计算及微服务架构，助力智慧交通管理提升30%数据吞吐性能。",
     "inLanguage": "zh",
     "isPartOf": {

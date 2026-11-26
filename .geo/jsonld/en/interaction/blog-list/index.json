@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Blogs | openEuler",
+    "name": "Blog | News & Blogs | openEuler Community",
     "description": "Gain in-depth knowledge and fresh perspectives on openEuler through our insightful blogs.",
     "url": "https://www.openeuler.org/en/interaction/blog-list/",
     "inLanguage": "en",

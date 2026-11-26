@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案",
+    "name": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案 | 用户案例 | openEuler社区",
     "url": "https://www.openeuler.org/zh/showcase/others/12/12.html",
     "description": "基于openEuler操作系统的碧海分布式存储解决方案",
     "inLanguage": "zh",
@@ -35,7 +35,7 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案",
+          "name": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案 | 用户案例 | openEuler社区",
           "item": "https://www.openeuler.org/zh/showcase/others/12/12.html"
         }
       ]
@@ -44,7 +44,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案",
+    "headline": "上海霄云信息科技有限公司基于openEuler操作系统的碧海分布式存储解决方案 | 用户案例 | openEuler社区",
     "description": "基于openEuler操作系统的碧海分布式存储解决方案",
     "url": "https://www.openeuler.org/zh/showcase/others/12/12.html",
     "inLanguage": "zh",

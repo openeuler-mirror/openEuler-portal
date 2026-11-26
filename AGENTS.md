@@ -136,6 +136,8 @@ SEO/GEO 各维度**规范与配套 skill 统一来源于规范仓库 [opensource
 
 （注意区分：OpenDesign 组件/设计类 skills 走 `pnpm skills:sync`，来源是 opendesign-skills 仓库，与本节无关。）
 
+> 页面 title 实现细节：网站首页的 title 固定为中文（`/zh/`） -> `openEuler社区官网 | 面向数字基础设施的开源操作系统`，英文（`/en/`） -> `openEuler Community Website | An Open Source OS for Digital Infrastructure`，其他页面的 title 按 `页面主题 | 模块 or 补充说明 | openEuler社区（openEuler Community）` 的格式设置
+
 ### 同步脚本
 
 | 命令 | 说明 |

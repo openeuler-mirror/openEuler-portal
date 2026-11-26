@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler软件兼容性测试介绍",
+    "name": "openEuler软件兼容性测试介绍 | 兼容性列表 | openEuler社区",
     "url": "https://www.openeuler.org/zh/compatibility/software",
     "description": "了解openEuler支持的软件兼容性信息，确保您的应用正常运行。",
     "inLanguage": "zh",

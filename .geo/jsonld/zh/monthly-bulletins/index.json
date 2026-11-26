@@ -4,7 +4,7 @@
     "@type": "CollectionPage",
     "@id": "https://www.openeuler.org/zh/monthly-bulletins",
     "url": "https://www.openeuler.org/zh/monthly-bulletins",
-    "name": "openEuler月刊 | 社区运作报告 | openEuler社区",
+    "name": "月刊与年报 | 资讯 | openEuler社区",
     "description": "openEuler月刊是面向社区所有开发者展现社区运作情况，包括社区治理、技术、生态、活动等方方面面的发展情况。月刊每月发布一次。",
     "inLanguage": "zh",
     "isPartOf": {
@@ -34,7 +34,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Periodical",
-    "name": "openEuler月刊",
+    "name": "月刊与年报",
     "description": "openEuler月刊是面向社区所有开发者展现社区运作情况，包括社区治理、技术、生态、活动等方方面面的发展情况。月刊每月发布一次。",
     "url": "https://www.openeuler.org/zh/monthly-bulletins",
     "inLanguage": "zh",

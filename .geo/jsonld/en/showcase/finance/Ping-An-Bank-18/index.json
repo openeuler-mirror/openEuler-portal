@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/showcase/finance/Ping-An-Bank-18",
     "url": "https://www.openeuler.org/en/showcase/finance/Ping-An-Bank-18",
-    "name": "Ping An Bank | openEuler",
+    "name": "Ping An Bank's Cost-Efficient Offline Big Data Platform | Success Stories | openEuler Community",
     "description": "Ping An Bank's offline big data platform supports large-scale data archiving, data-mart batch processing, and report generation. The platform, built on Hadoop, runs thousands of cluster nodes. Originally built on Red Hat and CentOS, the platform was fully migrated to openEuler, with Fusion delivering OS technical services and comprehensive lifecycle support.",
     "inLanguage": "en",
     "isPartOf": {

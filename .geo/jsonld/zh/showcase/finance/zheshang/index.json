@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/showcase/finance/zheshang",
     "url": "https://www.openeuler.org/zh/showcase/finance/zheshang",
-    "name": "浙商银行 | openEuler社区",
+    "name": "浙商银行：全栈区块链服务平台改造升级 | 用户案例 | openEuler社区",
     "description": "浙商银行股份有限公司基于openEuler操作系统对全栈区块链服务平台进行改造升级，实现金融级区块链服务能力，提供重要金融数据的可信接入与可信存证。",
     "inLanguage": "zh",
     "isPartOf": {"@type": "WebSite", "@id": "https://www.openeuler.org/", "url": "https://www.openeuler.org/", "name": "openEuler社区"},

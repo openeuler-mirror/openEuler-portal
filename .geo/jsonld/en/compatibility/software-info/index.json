@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Software Compatibility & Driver Info | openEuler",
+    "name": "Software Compatibility & Driver Info | Compatibility | openEuler Community",
     "url": "https://www.openeuler.org/en/compatibility/software-info",
     "description": "Browse openEuler's software compatibility list with verified configurations, adapter drivers, chip vendors, and board models per openEuler Compatibility Policies.",
     "inLanguage": "en",

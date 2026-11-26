@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "国家电网 | openEuler社区",
+    "name": "国家电网：智能调度系统 D5000 工程 | 用户案例 | openEuler社区",
     "description": "智能调度系统 D5000 工程，实现对电力核心调度系统的操作系统迁移改造",
     "url": "https://www.openeuler.org/zh/showcase/energy/006e41a2-9e5f-621a3b40396e",
     "inLanguage": "zh",

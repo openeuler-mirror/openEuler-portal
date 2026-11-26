@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "系统管理常见问题",
+    "name": "系统管理常见问题 | FAQ | openEuler社区",
     "description": "查阅openEuler在系统管理方面的常见问题解答，提升管理效率。",
     "url": "https://www.openeuler.org/zh/faq/system-management",
     "inLanguage": "zh",
@@ -84,7 +84,7 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "系统管理常见问题",
+        "name": "系统管理常见问题 | FAQ | openEuler社区",
         "item": "https://www.openeuler.org/zh/faq/system-management"
       }
     ]

@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "内核特性增强 | NestOS | openEuler | openEuler社区",
+    "name": "内核特性增强 | NestOS | openEuler社区",
     "description": "NestOS 独立维护内核分支，基于 openEuler 主线版本针对云场景进一步特性增强。",
     "url": "https://www.openeuler.org/zh/other/projects/nestos/feature/kernel/",
     "inLanguage": "zh",

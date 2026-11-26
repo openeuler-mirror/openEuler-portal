@@ -52,7 +52,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "iSula - Lightweight Container Engine | openEuler",
+    "name": "iSula - Lightweight Container Engine | Projects | openEuler Community",
     "url": "https://www.openeuler.org/en/other/projects/isula",
     "description": "Experience the power of iSula, a lightweight container engine built for enhanced efficiency and security on openEuler.",
     "inLanguage": "en",

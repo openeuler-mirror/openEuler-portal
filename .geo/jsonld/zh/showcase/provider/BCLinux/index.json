@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "中国移动云能力中心 | openEuler社区",
+    "name": "中国移动云能力中心：基于 openEuler 打造 BC-Linux | 用户案例 | openEuler社区",
     "description": "基于 openEuler 打造 BC-Linux，分布式块存储，读 IOPS 提升 100%",
     "url": "https://www.openeuler.org/zh/showcase/provider/BCLinux",
     "inLanguage": "zh",

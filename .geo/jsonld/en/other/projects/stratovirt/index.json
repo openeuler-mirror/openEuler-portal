@@ -37,7 +37,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "StratoVirt - Enterprise Virtualization Platform | openEuler",
+    "name": "StratoVirt - Enterprise Virtualization Platform | Projects | openEuler Community",
     "url": "https://www.openeuler.org/en/other/projects/stratovirt",
     "description": "StratoVirt is a lightweight, secure, open source virtualization platform. Learn more about its features & benefits.",
     "inLanguage": "en",

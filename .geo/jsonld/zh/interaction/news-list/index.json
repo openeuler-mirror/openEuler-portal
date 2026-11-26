@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "openEuler新闻资讯 | openEuler社区",
+    "name": "新闻 | 资讯 | openEuler社区",
     "description": "openEuler新闻资讯，为您提供关于openEuler官方发布的第一手资讯。",
     "url": "https://www.openeuler.org/zh/interaction/news-list/",
     "inLanguage": "zh",

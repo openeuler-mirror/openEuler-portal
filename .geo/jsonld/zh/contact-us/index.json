@@ -4,7 +4,7 @@
     "@type": "ContactPage",
     "@id": "https://www.openeuler.org/zh/contact-us",
     "url": "https://www.openeuler.org/zh/contact-us",
-    "name": "联系openEuler社区：邮件、微信及活动合作渠道一览",
+    "name": "联系我们 | 关于社区 | openEuler社区",
     "description": "openEuler社区提供多种联系方式，包括资金捐赠、社区活动、品牌合作等专属邮箱，以及开发者邮件列表 dev@openeuler.org。您还可通过微信号 openeuler123 联系社区小助手，或关注微信公众号、X、LinkedIn、YouTube、Bilibili 等平台，随时获取最新动态与技术支持。",
     "inLanguage": "zh",
     "isPartOf": {

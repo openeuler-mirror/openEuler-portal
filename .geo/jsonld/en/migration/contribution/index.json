@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Share Your OS Migration Story | openEuler",
+    "name": "Share Your OS Migration Story | Migration | openEuler Community",
     "description": "Help others by sharing your openEuler migration experiences. Contribute best practices, follow our guides, and make migration smoother for everyone.",
     "url": "https://www.openeuler.org/en/migration/contribution",
     "inLanguage": "en",

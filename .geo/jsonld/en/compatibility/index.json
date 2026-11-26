@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/compatibility",
     "url": "https://www.openeuler.org/en/compatibility",
-    "name": "Certified Hardware & Software | Compatibility | openEuler",
+    "name": "Compatibility List | Compatibility | openEuler Community",
     "description": "Check hardware and software compatibility with openEuler. Explore servers, cards, and software certified for different openEuler OS versions.",
     "inLanguage": "en",
     "isPartOf": {

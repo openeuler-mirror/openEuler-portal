@@ -35,7 +35,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "A-Tune - AI-Powered Performance Tuning | openEuler",
+    "name": "A-Tune - AI-Powered Performance Tuning | Projects | openEuler Community",
     "description": "A-Tune leverages AI for dynamic service optimization and resource configuration.",
     "url": "https://www.openeuler.org/en/other/projects/atune",
     "inLanguage": "en",

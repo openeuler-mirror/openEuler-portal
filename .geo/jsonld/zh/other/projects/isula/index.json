@@ -40,7 +40,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "iSulad | 通用容器引擎 | openEuler社区",
+    "name": "iSulad | 项目 | openEuler社区",
     "url": "https://www.openeuler.org/zh/other/projects/isula",
     "description": "iSulad 是一个新的通用容器引擎，提供统一的架构设计来满足CT和IT领域的不同需求。它具有轻、快、易、灵的特点，这与子弹蚂蚁\"小个头、大能量\"的形象不谋而合。",
     "inLanguage": "zh-CN",

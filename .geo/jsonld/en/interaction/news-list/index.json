@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "News | openEuler",
+    "name": "News | News & Blogs | openEuler Community",
     "description": "Catch up with the latest developments, releases, and community updates from openEuler.",
     "url": "https://www.openeuler.org/en/interaction/news-list/",
     "inLanguage": "en",

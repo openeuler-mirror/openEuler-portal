@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "FAQs | openEuler",
+    "name": "FAQs | Support | openEuler Community",
     "description": "Get answers to frequently asked questions about openEuler.",
     "url": "https://www.openeuler.org/en/faq",
     "inLanguage": "en",

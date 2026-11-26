@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler线上会议 | openEuler开发者日历 | openEuler社区",
+    "name": "线上会议 | 社区交流 | openEuler社区",
     "description": "openEuler线上会议，为您提供关于openEuler社区SIG会议、SIG工作会议、社区直播等openEuler线上活动消息。想要了解更多相关信息，欢迎访问openEuler官网。",
     "url": "https://www.openeuler.org/zh/meeting",
     "inLanguage": "zh",

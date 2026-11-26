@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler课程中心 | openEuler社区",
+    "name": "课程中心 | 课程 | openEuler社区",
     "description": "提供openEuler社区各类学习资源。帮助开发者更好地了解openEuler，学习开源操作系统知识，提升自身技能。想要了解更多信息，欢迎访问openEuler官网。",
     "url": "https://www.openeuler.org/zh/learn/mooc",
     "inLanguage": "zh",
@@ -38,7 +38,7 @@
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "openEuler课程中心",
+    "name": "课程中心",
     "description": "提供openEuler社区各类学习资源，包括认证培训课程、精品课程、视频教程、直播课程及安全知识培训。",
     "url": "https://www.openeuler.org/zh/learn/mooc",
     "itemListElement": [

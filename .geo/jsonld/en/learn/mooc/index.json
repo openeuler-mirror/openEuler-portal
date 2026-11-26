@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "MOOCs | openEuler",
+    "name": "MOOCs | Training | openEuler Community",
     "description": "Dive into no-cost tutorials and hands-on projects to learn everything from the basics to advanced features of openEuler.",
     "url": "https://www.openeuler.org/en/learn/mooc",
     "inLanguage": "en",

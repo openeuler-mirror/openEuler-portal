@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/interaction/event-list/collect",
     "url": "https://www.openeuler.org/zh/interaction/event-list/collect",
-    "name": "活动收集 | 社区活动 | openEuler社区",
+    "name": "活动 | 社区活动 | openEuler社区",
     "description": "收集openEuler社区的各类活动信息，获取更多参与机会。",
     "inLanguage": "zh-CN",
     "isPartOf": {

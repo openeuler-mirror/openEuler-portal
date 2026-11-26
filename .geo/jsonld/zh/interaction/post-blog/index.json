@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "博客 | 互动中心 | openEuler社区",
+    "name": "博客：探索openEuler社区的博客文章 | 互动中心 | openEuler社区",
     "description": "探索openEuler社区的博客文章，获取最新资讯与技术分享。",
     "url": "https://www.openeuler.org/zh/interaction/post-blog",
     "inLanguage": "zh",

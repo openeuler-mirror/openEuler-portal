@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "CVEs | Security | openEuler",
+    "name": "Security Center | Security | openEuler Community",
     "url": "https://www.openeuler.org/en/security/cve",
     "description": "The list of Common Vulnerabilities and Exposures (CVEs) relevant to openEuler, helping you stay updated on security issues.",
     "inLanguage": "en",

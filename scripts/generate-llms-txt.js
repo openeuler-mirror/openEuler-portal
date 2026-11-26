@@ -60,7 +60,7 @@ async function* itrHtml(dir) {
 }
 
 const writeStream = createWriteStream(join(distDir, 'llms.txt'));
-writeStream.write(`# openEuler | 开源社区 | openEuler社区官网
+writeStream.write(`# openEuler社区官网 | 面向数字基础设施的开源操作系统
 
 > openEuler是一个开源、免费的 Linux 发行版平台，通过开放的形式与全球的开发者共同构建一个开放、多元和架构包容的软件生态体系。openEuler是一个创新的平台，鼓励任何人在这里提出新想法、开拓新思路、实践新方案。想要了解更多信息，欢迎访问openEuler官网。
 

@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/showcase/provider/tianyiyun",
     "url": "https://www.openeuler.org/zh/showcase/provider/tianyiyun",
-    "name": "天翼云FaaS产品 | openEuler社区",
+    "name": "天翼云FaaS产品 | 用户案例 | openEuler社区",
     "description": "基于stratovirt的安全容器为函数计算提供完善的租户隔离和安全运行环境，并且在内存底噪、启动速度、并发、密度上具备较大优势。",
     "inLanguage": "zh",
     "isPartOf": {

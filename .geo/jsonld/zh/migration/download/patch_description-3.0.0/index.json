@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler 3.0.0 补丁说明",
+    "name": "openEuler 3.0.0 补丁说明 | 迁移专区 | openEuler社区",
     "description": "下载openEuler 3.0.0版本的补丁说明，确保系统的安全与稳定。",
     "url": "https://www.openeuler.org/zh/migration/download/patch_description-3.0.0",
     "inLanguage": "zh",
@@ -29,7 +29,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "openEuler 3.0.0 补丁说明",
+          "name": "openEuler 3.0.0 补丁说明 | 迁移专区 | openEuler社区",
           "item": "https://www.openeuler.org/zh/migration/download/patch_description-3.0.0"
         }
       ]
