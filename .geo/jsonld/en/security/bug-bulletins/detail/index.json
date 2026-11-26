@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Security Vulnerability Advisory Details | openEuler",
+    "name": "Security Vulnerability Advisory Details | Security | openEuler Community",
     "url": "https://www.openeuler.org/en/security/bug-bulletins/detail",
     "description": "View detailed openEuler security advisory info including synopsis, severity rating, affected components, and release date. Keep your system protected.",
     "inLanguage": "en",

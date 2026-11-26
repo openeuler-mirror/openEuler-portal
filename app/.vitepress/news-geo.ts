@@ -5,6 +5,9 @@ import { resolveNewsBlogDescription } from './tdk-dedup';
 export const isNews = /^(zh|en)\/news\//;
 
 const newsLang = { zh: 'zh-CN', en: 'en-US' };
+// <title> 三段式：`新闻标题 | 新闻/News | 站点名（模板拼接）`。
+// oneSegment 收敛标题内部多余的 ` | `，headline 等 JSON-LD 数据仍用原始标题。
+const oneSegment = (text: string): string => text.replace(/\s*\|\s*/g, ' · ').trim();
 const newsPublisher = {
   zh: { '@type': 'Organization', name: 'openEuler社区', url: 'https://www.openeuler.org/zh/', logo: { '@type': 'ImageObject', url: 'https://www.openeuler.org/favicon.ico' } },
   en: { '@type': 'Organization', name: 'openEuler Community', url: 'https://www.openeuler.org/en/', logo: { '@type': 'ImageObject', url: 'https://www.openeuler.org/favicon.ico' } },
@@ -26,7 +29,7 @@ export const setNewsGeo = (
   hostname: string,
 ) => {
   const locale = filePath.startsWith('en') ? 'en' : 'zh';
-  pageData.titleTemplate = `:title | ${locale === 'zh' ? 'openEuler社区官网' : 'openEuler'}`;
+  pageData.titleTemplate = `:title | ${locale === 'zh' ? 'openEuler社区' : 'openEuler Community'}`;
 
   const fm = pageData.frontmatter;
   const head = (pageData.frontmatter.head ??= []);
@@ -38,7 +41,9 @@ export const setNewsGeo = (
   const rawTags = Array.isArray(fm?.tags) ? fm.tags : (fm?.tags ? [fm.tags] : []);
   const keywords = [...new Set(rawTags.map((s) => String(s).trim()).filter(Boolean))].join(', ');
 
-  if (title) pageData.title = title;
+  if (title) {
+    pageData.title = `${oneSegment(title)} | ${locale === 'zh' ? '新闻' : 'News'}`;
+  }
   if (description) pageData.description = description;
   if (keywords) {
     const idx = head.findIndex((item: HeadConfig) => item[1]?.name === 'keywords');

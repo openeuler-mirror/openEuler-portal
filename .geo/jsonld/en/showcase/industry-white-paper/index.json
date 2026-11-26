@@ -4,7 +4,7 @@
     "@type": "CollectionPage",
     "@id": "https://www.openeuler.org/en/showcase/industry-white-paper",
     "url": "https://www.openeuler.org/en/showcase/industry-white-paper",
-    "name": "Download openEuler Industry White Papers",
+    "name": "Industry White Papers | About | openEuler Community",
     "description": "Explore openEuler industry white papers covering OS solutions for finance and enterprise sectors. Download technical insights and real-world deployment reports.",
     "inLanguage": "en",
     "isPartOf": {

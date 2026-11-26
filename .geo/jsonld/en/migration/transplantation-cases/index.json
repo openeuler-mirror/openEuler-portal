@@ -4,7 +4,7 @@
     "@type": "CollectionPage",
     "@id": "https://www.openeuler.org/en/migration/transplantation-cases",
     "url": "https://www.openeuler.org/en/migration/transplantation-cases",
-    "name": "Software Porting Guides | openEuler",
+    "name": "Software Porting Guides | Migration | openEuler Community",
     "description": "Find essential openEuler porting guides for MySQL, Apache, Nginx, and more to ensure seamless deployment and compatibility.",
     "inLanguage": "en",
     "isPartOf": {

@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "最新活动 | 社区活动 | openEuler社区",
+    "name": "活动列表 | 活动 | openEuler社区",
     "description": "浏览openEuler社区的最新活动信息，及时参与感兴趣的活动。",
     "url": "https://www.openeuler.org/zh/interaction/event-list/latest",
     "inLanguage": "zh",

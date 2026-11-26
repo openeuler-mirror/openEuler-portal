@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "基于openEuler Intelligence的天翼云CTyunos智能调优",
+    "name": "基于openEuler Intelligence的天翼云CTyunos智能调优 | 用户案例 | openEuler社区",
     "description": "基于openEuler Intelligence的天翼云CTyunos智能调优。中国电信天翼云基于openEuler自研操作系统CTyunOS，构建智能调优负载感知与自主调优技术，通算四大主力场景性能提升10%。",
     "url": "https://www.openeuler.org/zh/showcase/provider/tianyiyu0911n",
     "inLanguage": "zh",
@@ -29,7 +29,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "基于openEuler Intelligence的天翼云CTyunos智能调优",
+          "name": "基于openEuler Intelligence的天翼云CTyunos智能调优 | 用户案例 | openEuler社区",
           "item": "https://www.openeuler.org/zh/showcase/provider/tianyiyu0911n"
         }
       ]
@@ -38,7 +38,7 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "基于openEuler Intelligence的天翼云CTyunos智能调优",
+    "headline": "基于openEuler Intelligence的天翼云CTyunos智能调优 | 用户案例 | openEuler社区",
     "description": "基于openEuler Intelligence的天翼云CTyunos智能调优。中国电信天翼云基于openEuler自研操作系统CTyunOS，构建智能调优负载感知与自主调优技术，通算四大主力场景性能提升10%。",
     "url": "https://www.openeuler.org/zh/showcase/provider/tianyiyu0911n",
     "inLanguage": "zh",
@@ -78,7 +78,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CaseStudy",
-    "name": "基于openEuler Intelligence的天翼云CTyunos智能调优",
+    "name": "基于openEuler Intelligence的天翼云CTyunos智能调优 | 用户案例 | openEuler社区",
     "description": "天翼云基于openEuler Intelligence构建智能调优系统，解决海量业务场景下的自动化性能调优难题，通算四大主力场景性能提升10%，调优效率从天级提升至小时级。",
     "url": "https://www.openeuler.org/zh/showcase/provider/tianyiyu0911n",
     "provider": {

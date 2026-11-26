@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler邮件列表 | openEuler社区",
+    "name": "邮件列表 | 社区交流 | openEuler社区",
     "description": "邮件列表是开源社区最重要的基本交流工具之一，欢迎订阅openEuler邮件列表，即可通过邮件与我们交流。 想要了解更多相关信息，欢迎访问openEuler官网。",
     "url": "https://www.openeuler.org/zh/community/mailing-list",
     "inLanguage": "zh",

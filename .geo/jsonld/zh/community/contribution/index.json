@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/community/contribution",
     "url": "https://www.openeuler.org/zh/community/contribution",
-    "name": "openEuler贡献攻略地图 | openEuler贡献攻略 | openEuler社区",
+    "name": "openEuler贡献攻略地图 | 贡献 | openEuler社区",
     "description": "阅读这篇完整指南，快速了解参与openEuler社区贡献全流程。我们将介绍关于社区贡献的完整流程，包括签署CLA、项目体验、提交issue、提交pr、代码贡献、活动申请、开源成长等等。想要了解更多信息，欢迎访问openEuler官网。",
     "inLanguage": "zh",
     "isPartOf": {

@@ -4,7 +4,7 @@
     "@type": "CollectionPage",
     "@id": "https://www.openeuler.org/zh/migration/transplantation-cases",
     "url": "https://www.openeuler.org/zh/migration/transplantation-cases",
-    "name": "openEuler迁移案例 | 移植指南",
+    "name": "openEuler迁移案例 | 移植指南 | openEuler社区",
     "description": "openEuler助力企业简单、平稳、高效进行操作系统升级。移植案例移植指南专区涵盖MySQL移植案例、Apache移植指南、Nginx移植指南、Dubbo移植指南。",
     "inLanguage": "zh",
     "isPartOf": {

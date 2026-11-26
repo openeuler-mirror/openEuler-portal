@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler 网站搜索",
+    "name": "openEuler 网站搜索 | 其他信息 | openEuler社区",
     "description": "使用openEuler网站搜索功能，快速找到您需要的信息和资源。",
     "url": "https://www.openeuler.org/zh/other/search",
     "inLanguage": "zh",

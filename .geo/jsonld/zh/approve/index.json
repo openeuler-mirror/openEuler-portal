@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/approve",
     "url": "https://www.openeuler.org/zh/approve",
-    "name": "openEuler OSV技术测评列表 | openEuler社区",
+    "name": "OSV技术测评列表 | 兼容性专区 | openEuler社区",
     "description": "openEuler提供了完整的测试流程和工具，检测伙伴二次发行版生态核心特性不丢失，关键配置不更改，帮助牵引实现扩展仓库openEuler系共享、共用，主流行业应用在openEuler系不同的OSV生态复用度。",
     "inLanguage": "zh-CN",
     "isPartOf": {

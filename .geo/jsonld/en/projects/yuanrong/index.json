@@ -43,7 +43,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openYuanrong: Serverless Distributed Engine | openEuler",
+    "name": "openYuanrong | Projects | openEuler Community",
     "description": "openYuanrong is a Serverless distributed compute engine for AI, big data, and microservices. Write local code, execute at scale with dynamic scheduling.",
     "url": "https://www.openeuler.org/en/projects/yuanrong",
     "inLanguage": "en",

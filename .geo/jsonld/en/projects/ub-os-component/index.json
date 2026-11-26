@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/projects/ub-os-component",
     "url": "https://www.openeuler.org/en/projects/ub-os-component",
-    "name": "UB OS Component: Unified Hardware Abstraction | openEuler",
+    "name": "UB OS Component | Projects | openEuler Community",
     "description": "UB OS Component extends the OS framework to abstract heterogeneous hardware, enabling unified memory space and global resource scheduling for UnifiedBus.",
     "inLanguage": "en",
     "isPartOf": {

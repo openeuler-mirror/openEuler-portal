@@ -104,8 +104,29 @@ const setJSONLD = async (pageData: PageData, pagePath: string) => {
   }
 }
 
+// title 数据中可能混入的“站点名”段（需剔除，避免与 titleTemplate 重复）
+const SITE_TITLE_SEGS = [
+  'openEuler社区官网',
+  'openEuler社区',
+  'openEuler Community Website',
+  'openEuler Community',
+  'openEuler',
+];
+// 收敛主题段内部的额外 ` | `，保证最终 <title> 为 `页面主题 | 模块 | 站点名` 三段式
+const asOneSegment = (text: string): string =>
+  text
+    .split(/\s*\|\s*/)
+    .filter(s => s.trim() && !SITE_TITLE_SEGS.includes(s.trim()))
+    .join(' · ')
+    .trim();
+
 const setTdk = (pageData: PageData, pagePath: string) => {
-  pageData.titleTemplate = `:title | ${pagePath.startsWith('zh') ? 'openEuler社区官网' : 'openEuler'}`;
+  // 三段式 title 方案（AGENTS.md §4）：`页面主题 | 模块 or 补充说明 | openEuler社区（openEuler Community）`；
+  // 首页例外，固定两段式，完整 title 由 .geo/tdks 归档直接提供。
+  const isSiteHome = pagePath === '' || pagePath === 'zh' || pagePath === 'en';
+  pageData.titleTemplate = isSiteHome
+    ? ':title'
+    : `:title | ${pagePath.startsWith('zh') ? 'openEuler社区' : 'openEuler Community'}`;
   // SIG 详情页（动态路由 /{zh|en}/sig/[sig]，数据来自 [sig].paths.ts）：title/description 取
   // params.sig / params.description，keywords 用固定模板（突出 openEuler、协作等含义）追加 SIG 名称生成，
   // 不依赖 .geo 静态文件；params.sig 判断同时排除了 sig 下的静态栏目页。
@@ -114,7 +135,7 @@ const setTdk = (pageData: PageData, pagePath: string) => {
     const sig = String(params.sig ?? '').trim();
     const description = String(params.description ?? '').trim();
     if (sig) {
-      pageData.title = `${sig} | SIG`;
+      pageData.title = `${asOneSegment(sig)} | SIG`;
     }
     if (description) {
       pageData.description = description;
@@ -131,10 +152,13 @@ const setTdk = (pageData: PageData, pagePath: string) => {
   const fm = pageData.frontmatter as Record<string, unknown>;
   // showcase 案例详情页：title 直接取 frontmatter（公司名），同公司多案例会重复。
   // 仅在标题冲突时追加案例摘要片段区分（只影响 SEO <title>，不改页面可见横幅）。
+  // showcase 案例详情页 title 组合为 `公司名（案例） | 用户案例`，同公司多案例由 resolveShowcaseTitle 追加摘要片段消歧
   const applyShowcaseTitle = () => {
-    const showcaseTitle = resolveShowcaseTitle(fm);
+    const locale = pagePath.startsWith('en') ? 'en' : 'zh';
+    const showcaseTitle =
+      resolveShowcaseTitle(fm) || String(fm?.title ?? pageData.title ?? '').trim();
     if (showcaseTitle) {
-      pageData.title = showcaseTitle;
+      pageData.title = `${asOneSegment(showcaseTitle)} | ${locale === 'zh' ? '用户案例' : 'Success Stories'}`;
     }
   };
   if (!tdkInfo) {
@@ -145,6 +169,14 @@ const setTdk = (pageData: PageData, pagePath: string) => {
       const fallback = deduped || String(fm?.summary ?? fm?.Summary ?? '').trim();
       if (!pageData.description && fallback) {
         pageData.description = fallback;
+      }
+      // blog 文章页无 tdk 归档（news 由 setNewsGeo 单独处理）：组合 `文章标题 | 博客/Blog`
+      if (/^(?:zh|en)\/blog\/.+/.test(pagePath)) {
+        const locale = pagePath.startsWith('en') ? 'en' : 'zh';
+        const base = asOneSegment(String(fm?.title ?? pageData.title ?? '').trim());
+        if (base) {
+          pageData.title = `${base} | ${locale === 'zh' ? '博客' : 'Blog'}`;
+        }
       }
     }
     return;

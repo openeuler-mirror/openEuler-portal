@@ -4,7 +4,7 @@
     "@type": "CollectionPage",
     "@id": "https://www.openeuler.org/en/projects",
     "url": "https://www.openeuler.org/en/projects",
-    "name": "Open Source Projects from openEuler Community | openEuler",
+    "name": "Projects | Develop | openEuler Community",
     "description": "Explore innovative open source projects from openEuler, including Intelligence BooM, A-Tune, iSula, secGear, and UB components for modern OS ecosystems.",
     "inLanguage": "en",
     "isPartOf": {

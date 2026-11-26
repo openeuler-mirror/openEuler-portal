@@ -4,7 +4,7 @@
     "@type": "CollectionPage",
     "@id": "https://www.openeuler.org/en/interaction/event-list/latest",
     "url": "https://www.openeuler.org/en/interaction/event-list/latest",
-    "name": "Event Replays | openEuler",
+    "name": "Event Replays | Activities | openEuler Community",
     "description": "Catch up on openEuler events you missed. Access video replays and recordings of past community activities, all in one place.",
     "inLanguage": "en",
     "isPartOf": {

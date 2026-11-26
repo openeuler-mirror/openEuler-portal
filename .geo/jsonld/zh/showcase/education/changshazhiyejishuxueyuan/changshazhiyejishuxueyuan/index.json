@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "长沙职业技术学院 | openEuler社区",
+    "name": "长沙职业技术学院 | 用户案例 | openEuler社区",
     "description": "麒麟信安服务器操作系统在长沙职业技术学院成功部署，优化学校的管理、教学等信息服务",
     "url": "https://www.openeuler.org/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html",
     "inLanguage": "zh",
@@ -35,7 +35,7 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "长沙职业技术学院",
+          "name": "长沙职业技术学院 | 用户案例 | openEuler社区",
           "item": "https://www.openeuler.org/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html"
         }
       ]
@@ -44,7 +44,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "长沙职业技术学院 | openEuler社区",
+    "headline": "长沙职业技术学院 | 用户案例 | openEuler社区",
     "description": "麒麟信安服务器操作系统在长沙职业技术学院成功部署，优化学校的管理、教学等信息服务",
     "url": "https://www.openeuler.org/zh/showcase/education/changshazhiyejishuxueyuan/changshazhiyejishuxueyuan.html",
     "inLanguage": "zh",
@@ -59,7 +59,7 @@
     },
     "about": {
       "@type": "EducationalOrganization",
-      "name": "长沙职业技术学院",
+      "name": "长沙职业技术学院 | 用户案例 | openEuler社区",
       "description": "长沙职业技术学院，通过将关键业务系统迁移到麒麟信安服务器操作系统，保障了学院日常业务的稳定运行。"
     },
     "mentions": [

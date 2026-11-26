@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler 证书中心 | 安全信息 | openEuler社区",
+    "name": "证书中心 | 安全信息 | openEuler社区",
     "description": "访问openEuler证书中心，获取相关安全证书和认证信息。",
     "url": "https://www.openeuler.org/zh/security/certificate-center",
     "inLanguage": "zh",
@@ -38,7 +38,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Dataset",
-    "name": "openEuler 证书中心",
+    "name": "证书中心",
     "description": "openEuler证书中心用于存放社区各个系统中具体使用的公钥及证书信息。",
     "url": "https://www.openeuler.org/zh/security/certificate-center",
     "inLanguage": "zh",

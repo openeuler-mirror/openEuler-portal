@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "openEuler 联系方式 | 迁移专区",
+    "name": "openEuler 联系方式 | 迁移专区 | openEuler社区",
     "description": "获取openEuler迁移的联系方式，如有疑问，请随时联系我们。",
     "url": "https://www.openeuler.org/zh/migration/contact",
     "inLanguage": "zh",

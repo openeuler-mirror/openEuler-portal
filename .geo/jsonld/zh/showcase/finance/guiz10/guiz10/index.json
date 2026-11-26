@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10",
     "url": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10",
-    "name": "贵州省农村信用社联合社 | openEuler社区",
+    "name": "贵州省农村信用社联合社 | 用户案例 | openEuler社区",
     "description": "贵州省农村信用社联合社（贵州农信）通过将企业网银平台的数据库服务器、操作系统、数据库软件整体替换为本土创新技术软硬件产品，实现了关键核心系统软件供应链安全，提升业务查询和交易处理性能。",
     "inLanguage": "zh",
     "isPartOf": {
@@ -37,7 +37,7 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "贵州省农村信用社联合社",
+          "name": "贵州省农村信用社联合社 | 用户案例 | openEuler社区",
           "item": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10"
         }
       ]
@@ -48,7 +48,7 @@
     "@type": "Article",
     "@id": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10#article",
     "url": "https://www.openeuler.org/zh/showcase/finance/guiz10/guiz10",
-    "headline": "贵州省农村信用社联合社 | openEuler社区",
+    "headline": "贵州省农村信用社联合社 | 用户案例 | openEuler社区",
     "description": "贵州省农村信用社联合社率先投入本土创新技术改造实践，将企业网银平台整体替换为本土创新技术软硬件产品，实现供应链安全、性能提升和运维成本降低。",
     "inLanguage": "zh",
     "about": [
@@ -65,7 +65,7 @@
     ],
     "mentions": {
       "@type": "Organization",
-      "name": "贵州省农村信用社联合社",
+      "name": "贵州省农村信用社联合社 | 用户案例 | openEuler社区",
       "alternateName": "贵州农信",
       "foundingDate": "2003-12-30",
       "description": "由省人民政府管理的地方金融机构，是贵州省最大的金融机构",

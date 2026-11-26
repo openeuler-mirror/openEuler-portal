@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/security/bug-bulletins",
     "url": "https://www.openeuler.org/en/security/bug-bulletins",
-    "name": "Latest Bugs | openEuler",
+    "name": "Bug Center | Security | openEuler Community",
     "description": "Track the latest software bugs in openEuler. Visit our bug bulletin for up-to-date issue reports and fixes.",
     "inLanguage": "en",
     "isPartOf": {

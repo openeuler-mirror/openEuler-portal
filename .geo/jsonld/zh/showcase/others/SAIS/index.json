@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/showcase/others/SAIS",
     "url": "https://www.openeuler.org/zh/showcase/others/SAIS",
-    "name": "阳光天使SAIS系统 | openEuler社区",
+    "name": "阳光天使SAIS系统 | 用户案例 | openEuler社区",
     "description": "结算管理性能提升34%，TPS性能测试指标提升17.72%",
     "inLanguage": "zh-CN",
     "isPartOf": {
@@ -36,7 +36,7 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "阳光天使SAIS系统",
+          "name": "阳光天使SAIS系统 | 用户案例 | openEuler社区",
           "item": "https://www.openeuler.org/zh/showcase/others/SAIS"
         }
       ]
@@ -45,7 +45,7 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "阳光天使SAIS系统 | openEuler社区",
+    "headline": "阳光天使SAIS系统 | 用户案例 | openEuler社区",
     "description": "结算管理性能提升34%，TPS性能测试指标提升17.72%",
     "url": "https://www.openeuler.org/zh/showcase/others/SAIS",
     "inLanguage": "zh-CN",
@@ -57,7 +57,7 @@
     "about": [
       {
         "@type": "SoftwareApplication",
-        "name": "阳光天使SAIS系统",
+        "name": "阳光天使SAIS系统 | 用户案例 | openEuler社区",
         "description": "阳光天使SAIS系统是为山东力诺瑞特新能源有限公司自主研发的维保派工平台，依托鲲鹏硬件底座，对售后系统完成迁移和集成，升级完善各终端的应用功能，优化系统架构。",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "openEuler"

@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/migration/user-cases",
     "url": "https://www.openeuler.org/en/migration/user-cases",
-    "name": "Migration Best Practices | openEuler",
+    "name": "Migration Best Practices | Migration | openEuler Community",
     "description": "Discover real cases and best practices for migrating to openEuler in big data, storage, virtualization, container, and database scenarios.",
     "inLanguage": "en",
     "isPartOf": {

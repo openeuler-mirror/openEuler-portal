@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "华电芜湖电厂 | openEuler社区",
+    "name": "华电芜湖电厂 | 用户案例 | openEuler社区",
     "description": "华电芜湖电厂 DCS 核心控制系统平滑完成操作系统迁移，实现业务高效稳定运行",
     "url": "https://www.openeuler.org/zh/showcase/energy/huadian",
     "inLanguage": "zh",

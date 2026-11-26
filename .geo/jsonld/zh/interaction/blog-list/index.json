@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "开发者博客 | openEuler博客文档 | openEuler社区",
+    "name": "博客 | 资讯 | openEuler社区",
     "description": "openEuler开发者博客是面向开发者的知识分享平台，涵盖服务器操作系统安装、迁移、创新项目实践、开发者贡献经验等内容，便于开发者之间的知识交流。",
     "url": "https://www.openeuler.org/zh/interaction/blog-list/",
     "inLanguage": "zh",

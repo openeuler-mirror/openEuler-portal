@@ -46,7 +46,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/projects/intelligence#webpage",
     "url": "https://www.openeuler.org/en/projects/intelligence",
-    "name": "openEuler Intelligence: AI Agent & LLM Platform | openEuler",
+    "name": "openEuler Intelligence | Projects | openEuler Community",
     "description": "Build AI-powered apps with openEuler Intelligence. Supports RAG knowledge Q&A, workflow orchestration, Agent apps, and MCP services for developers and enterprises.",
     "inLanguage": "en",
     "isPartOf": {

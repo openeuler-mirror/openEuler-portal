@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "CVE Details | Security | openEuler",
+    "name": "CVE Details | Security | openEuler Community",
     "description": "Stay informed about CVEs impacting openEuler. Access in-depth information to safeguard your projects.",
     "url": "https://www.openeuler.org/en/security/cve/detail",
     "inLanguage": "en",

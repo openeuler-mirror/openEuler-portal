@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "轻松定制系统镜像 | NestOS | openEuler | openEuler社区",
+    "name": "轻松定制系统镜像 | NestOS | openEuler社区",
     "description": "NestOS For Container 支持以编写 Dockerfile 形式轻松定制容器镜像格式的系统镜像。",
     "url": "https://www.openeuler.org/zh/other/projects/nestos/feature/custom-image/",
     "inLanguage": "zh",

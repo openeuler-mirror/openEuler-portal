@@ -44,7 +44,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "BiSheng JDK - JDK for Enterprise Performance | openEuler",
+    "name": "BiSheng JDK | Projects | openEuler Community",
     "url": "https://www.openeuler.org/en/other/projects/bishengjdk",
     "description": "BiSheng JDK delivers enhanced performance and stability for cloud, edge, and enterprise applications.",
     "inLanguage": "en",

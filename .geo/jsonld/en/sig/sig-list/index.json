@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/sig/sig-list",
     "url": "https://www.openeuler.org/en/sig/sig-list",
-    "name": "openEuler SIGs | openEuler SIG Center | openEuler",
+    "name": "SIG | Contribute | openEuler Community",
     "description": "This page provides the complete list of openEuler community SIGs with members, repositories, SIG applications, and meetings. Anyone can participate. The openEuler community is organized by SIGs for better management and workflow.",
     "inLanguage": "en",
     "isPartOf": {

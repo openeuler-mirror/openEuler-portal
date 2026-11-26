@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler 3.0.0 特性说明",
+    "name": "openEuler 3.0.0 特性说明 | 迁移专区 | openEuler社区",
     "url": "https://www.openeuler.org/zh/migration/download/characteristic-description-3.0.0",
     "description": "深入了解openEuler 3.0.0版本的新特性及功能，掌握使用要点。",
     "inLanguage": "zh",
@@ -35,7 +35,7 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "openEuler 3.0.0 特性说明",
+          "name": "openEuler 3.0.0 特性说明 | 迁移专区 | openEuler社区",
           "item": "https://www.openeuler.org/zh/migration/download/characteristic-description-3.0.0"
         }
       ]
@@ -68,7 +68,7 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "openEuler 3.0.0 特性说明",
+    "headline": "openEuler 3.0.0 特性说明 | 迁移专区 | openEuler社区",
     "description": "深入了解openEuler 3.0.0版本的新特性及功能，掌握使用要点。",
     "url": "https://www.openeuler.org/zh/migration/download/characteristic-description-3.0.0",
     "inLanguage": "zh",

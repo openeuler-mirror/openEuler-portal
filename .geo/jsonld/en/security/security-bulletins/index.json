@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/security/security-bulletins",
     "url": "https://www.openeuler.org/en/security/security-bulletins",
-    "name": "CVEs | Security | openEuler",
+    "name": "Security Bulletins | Security | openEuler Community",
     "description": "Get the latest CVE details and security patches. Stay protected with the openEuler vulnerability bulletin.",
     "inLanguage": "en",
     "isPartOf": {

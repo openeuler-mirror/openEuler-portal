@@ -95,7 +95,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler Developer Day 2025 开发者大会 | 内核、AI、云原生专题齐聚 | openEuler社区",
+    "name": "openEuler Developer Day 2025 开发者大会 | 活动 | openEuler社区",
     "description": "openEuler Developer Day 2025（ODD 2025）是openEuler社区年度开发者大会，聚焦25.03创新版本特性发布，设内核开发、AI生态支持、云与云原生、RISC-V等八大SIG Gathering专题研讨，汇聚开发者共同推动操作系统与基础软件创新突破，欢迎报名参与。",
     "url": "https://www.openeuler.org/zh/interaction/summit-list/devday2025",
     "inLanguage": "zh-CN",

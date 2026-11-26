@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Mirrors | openEuler",
+    "name": "Mirrors | Related Resources | openEuler Community",
     "description": "Find fast and reliable openEuler repository mirrors worldwide. Download everything you need to install & run openEuler.",
     "url": "https://www.openeuler.org/en/mirror/list",
     "inLanguage": "en",

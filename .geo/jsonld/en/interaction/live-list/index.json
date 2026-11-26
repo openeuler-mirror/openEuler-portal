@@ -4,7 +4,7 @@
     "@type": "CollectionPage",
     "@id": "https://www.openeuler.org/en/interaction/live-list",
     "url": "https://www.openeuler.org/en/interaction/live-list",
-    "name": "openEuler Live: Tech Sessions & Highlights",
+    "name": "openEuler Live: Tech Sessions & Highlights | Live | openEuler Community",
     "description": "Watch openEuler live sessions on StratoVirt virtualization, CPU/memory/IO subsystems, and Avocado-VT testing. Explore recorded highlights from expert developers.",
     "inLanguage": "en",
     "isPartOf": {

@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/en/security/management",
     "url": "https://www.openeuler.org/en/security/management",
-    "name": "Bug Management | openEuler",
+    "name": "Bug Management | Security | openEuler Community",
     "description": "Get to know how openEuler handles bugs promptly for quick resolution.",
     "inLanguage": "en",
     "isPartOf": {

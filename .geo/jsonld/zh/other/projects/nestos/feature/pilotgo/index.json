@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "PilotGo 插件式运维管理平台 | NestOS | openEuler | openEuler社区",
+    "name": "PilotGo 插件式运维管理平台 | NestOS | openEuler社区",
     "description": "PilotGo 是麒麟软件在 openEuler 社区孵化的插件式运维管理平台，为 NestOS 带来定制化运维管理功能及架构感知插件特性。",
     "url": "https://www.openeuler.org/zh/other/projects/nestos/feature/pilotgo/",
     "inLanguage": "zh",

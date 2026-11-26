@@ -45,7 +45,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Intelligence BooM: Open Source AI Inference | openEuler",
+    "name": "Intelligence BooM | Projects | openEuler Community",
     "url": "https://www.openeuler.org/en/projects/intelligence-boom",
     "description": "Intelligence BooM is an open source full-stack AI inference platform with 20+ components for LLM deployment, fine-tuning, and agentic workflows on heterogeneous hardware.",
     "inLanguage": "en",

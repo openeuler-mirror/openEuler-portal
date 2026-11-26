@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "name": "应用开发常见问题",
+    "name": "应用开发常见问题 | FAQ | openEuler社区",
     "description": "查阅openEuler应用开发的常见问题解答，快速解决开发过程中的疑惑。",
     "url": "https://www.openeuler.org/zh/faq/application-development",
     "inLanguage": "zh-CN",
@@ -36,7 +36,7 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "应用开发常见问题",
+        "name": "应用开发常见问题 | FAQ | openEuler社区",
         "item": "https://www.openeuler.org/zh/faq/application-development"
       }
     ]

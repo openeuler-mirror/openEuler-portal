@@ -3,7 +3,7 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "url": "https://www.openeuler.org/en/migration/faq",
-    "name": "Migration FAQs | openEuler",
+    "name": "Migration FAQs | Migration | openEuler Community",
     "description": "Get answers to common questions about migrating to openEuler, including upgrade tutorials, VM support, hardware compatibility tests, and more.",
     "inLanguage": "en",
     "isPartOf": {

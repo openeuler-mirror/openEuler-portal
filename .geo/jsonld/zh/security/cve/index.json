@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler CVE 安全漏洞列表 | 安全信息 | openEuler社区",
+    "name": "安全中心 | 安全信息 | openEuler社区",
     "description": "查看openEuler的CVE安全漏洞列表，及时更新，确保系统的安全。",
     "url": "https://www.openeuler.org/zh/security/cve",
     "inLanguage": "zh",

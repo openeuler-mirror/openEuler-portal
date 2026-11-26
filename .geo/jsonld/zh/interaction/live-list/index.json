@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/interaction/live-list",
     "url": "https://www.openeuler.org/zh/interaction/live-list",
-    "name": "直播列表 | 社区活动 | openEuler社区",
+    "name": "直播 | 社区活动 | openEuler社区",
     "description": "浏览openEuler社区的直播活动列表，参与实时互动。",
     "inLanguage": "zh",
     "isPartOf": {

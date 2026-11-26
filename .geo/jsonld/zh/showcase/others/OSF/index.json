@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "奥卡云OrcaFS分布式并行文件存储系统 | openEuler社区",
+    "name": "奥卡云OrcaFS分布式并行文件存储系统 | 用户案例 | openEuler社区",
     "description": "集群平均响应时间降低66%，满足HPC应用性能要求",
     "url": "https://www.openeuler.org/zh/showcase/others/OSF",
     "inLanguage": "zh",

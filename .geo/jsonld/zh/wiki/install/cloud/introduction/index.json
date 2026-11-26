@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/wiki/install/cloud/introduction",
     "url": "https://www.openeuler.org/zh/wiki/install/cloud/introduction",
-    "name": "公有云上openEuler镜像使用指南与获取方式",
+    "name": "公有云上openEuler镜像使用指南与获取方式 | Wiki | openEuler社区",
     "description": "openEuler已将多个版本的云镜像发布至各大公有云厂商，开发者可通过openEuler官网下载页或各大公有云平台获取最新镜像，快速在云端部署和使用openEuler操作系统，助力云上业务高效运行。",
     "inLanguage": "zh",
     "isPartOf": {

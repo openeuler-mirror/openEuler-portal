@@ -58,7 +58,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "openEuler 智能化解决方案：低代码构建 Agent 与知识问答应用 | openEuler社区",
+    "name": "openEuler 智能化解决方案 | 项目 | openEuler社区",
     "url": "https://www.openeuler.org/zh/projects/intelligence",
     "description": "openEuler 智能化解决方案是搭载在 openEuler 上的大模型平台，支持 RAG 知识问答、工作流应用、Agent 智能体及智能调优运维。低代码可视化编排，兼容主流 AI 软件栈，助力企业和开发者 1 天构建专属 AI 应用。",
     "inLanguage": "zh",

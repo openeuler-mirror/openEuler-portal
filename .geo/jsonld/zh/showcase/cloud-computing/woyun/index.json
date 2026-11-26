@@ -4,7 +4,7 @@
     "@type": "WebPage",
     "@id": "https://www.openeuler.org/zh/showcase/cloud-computing/woyun",
     "url": "https://www.openeuler.org/zh/showcase/cloud-computing/woyun",
-    "name": "联通沃云信创云 | openEuler社区",
+    "name": "联通沃云信创云 | 用户案例 | openEuler社区",
     "description": "基于云原生定制化改造适配，以开源软件OpenStack+KVM为基础打造自主、安全可靠的强大云平台，适配鲲鹏、海光等国内主流芯片，支持银河麒麟操作系统。",
     "inLanguage": "zh-CN",
     "isPartOf": {
