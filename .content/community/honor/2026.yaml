@@ -1,0 +1,392 @@
+# 2026 年度荣誉榜单
+# 板块结构：company（突出贡献单位）、contribution（贡献之星：5 个分组）、project（项目之星：6 个分类卡片）、notice（公告）
+
+company:
+  title:
+    - '突出贡献单位'
+  list:
+    - light: './images/company/2026/huawei.png'
+      dark: './images/company/2026/huawei-dark.png'
+      name: '华为'
+    - light: './images/company/2026/qilinruanjian.png'
+      dark: './images/company/2026/qilinruanjian-dark.png'
+      name: '麒麟软件'
+    - light: './images/company/2026/tongxin.png'
+      dark: './images/company/2026/tongxin-dark.png'
+      name: '统信软件'
+    - light: './images/company/2026/qilinxinan.png'
+      dark: './images/company/2026/qilinxinan-dark.png'
+      name: '麒麟信安'
+    - light: './images/company/2026/zhongkeyuan.png'
+      dark: './images/company/2026/zhongkeyuan-dark.png'
+      name: '中国科学院软件研究所'
+    - light: './images/company/2026/liantongshuke.png'
+      dark: './images/company/2026/liantongshuke-dark.png'
+      name: '联通数科'
+    - light: './images/company/2026/xfusion.png'
+      dark: './images/company/2026/xfusion-dark.png'
+      name: '超聚变'
+    - light: './images/company/2026/intel.png'
+      dark: './images/company/2026/intel-dark.png'
+      name: 'Intel'
+    - light: './images/company/2026/yidongyun.png'
+      dark: './images/company/2026/yidongyun-dark.png'
+      name: '中国移动'
+    - light: './images/company/2026/ncti.png'
+      dark: './images/company/2026/ncti-dark.png'
+      name: '粤港澳大湾区国家技术创新中心'
+    - light: './images/company/2026/zhongkehaiguang.png'
+      dark: './images/company/2026/zhongkehaiguang-dark.png'
+      name: '海光信息'
+    - light: './images/company/2026/tianyiyun.png'
+      dark: './images/company/2026/tianyiyun-dark.png'
+      name: '天翼云'
+    - light: './images/company/2026/ruantongdongli.png'
+      dark: './images/company/2026/ruantongdongli-dark.png'
+      name: '软通动力'
+    - light: './images/company/2026/runhe.png'
+      dark: './images/company/2026/runhe-dark.png'
+      name: '润和软件'
+    - light: './images/company/2026/ningsi.png'
+      dark: './images/company/2026/ningsi-dark.png'
+      name: '凝思软件'
+    - light: './images/company/2026/nanfangdianwang.png'
+      dark: './images/company/2026/nanfangdianwang-dark.png'
+      name: '南方电网'
+    - light: './images/company/2026/longxing.png'
+      dark: './images/company/2026/longxing-dark.png'
+      name: '龙芯中科'
+    - light: './images/company/2026/h3c.png'
+      dark: './images/company/2026/h3c-dark.png'
+      name: '新华三'
+    - light: './images/company/2026/CEC.png'
+      dark: './images/company/2026/CEC-dark.png'
+      name: '中国电子云'
+    - light: './images/company/2026/k.png'
+      dark: './images/company/2026/k-dark.png'
+      name: '苦芽科技'
+    - light: './images/company/2026/aosiwei.png'
+      dark: './images/company/2026/aosiwei-dark.png'
+      name: '奥思维'
+    - light: './images/company/2026/langchaoyun.png'
+      dark: './images/company/2026/langchaoyun-dark.png'
+      name: '浪潮云'
+    - light: './images/company/2026/dongfangtong.png'
+      dark: './images/company/2026/dongfangtong-dark.png'
+      name: '东方通'
+    - light: './images/company/2026/baiduzhinengyun.png'
+      dark: './images/company/2026/baiduzhinengyun-dark.png'
+      name: '百度智能云'
+    - light: './images/company/2026/boyun.png'
+      dark: './images/company/2026/boyun-dark.png'
+      name: '博云'
+    - light: './images/company/2026/amd.png'
+      dark: './images/company/2026/amd-dark.png'
+      name: 'AMD'
+    - light: './images/company/2026/feiten.png'
+      dark: './images/company/2026/feiten-dark.png'
+      name: '飞腾'
+    - light: './images/company/2026/arm.png'
+      dark: './images/company/2026/arm-dark.png'
+      name: 'Arm'
+    - light: './images/company/2026/shenzhoushuma.png'
+      dark: './images/company/2026/shenzhoushuma-dark.png'
+      name: '神州数码'
+    - light: './images/company/2026/ZTE.png'
+      dark: './images/company/2026/ZTE-dark.png'
+      name: '中兴通讯'
+  tips: '注：根据团体标准T/CESA 1270.5-2023对贡献者企业的综合贡献排名，分析维度包含在openEuler社区的技术级贡献、治理级贡献、生态级贡献及专家评审等。'
+
+contribution:
+  title:
+    - '2026年度贡献之星'
+  personal:
+    - title: 'openEuler 社区新秀'
+      list:
+        - name: '陈浩然'
+          post:
+            - '天翼云科技有限公司'
+            - 'chr2301137125'
+          img: './images/avatar/2026/chenhaoran.png'
+          detail:
+            - '1、2025年11月加入openEuler社区，协助创建sig-MCP-Tools-Ecosystem并担任SIG Committer，持续负责SIG例会组织与主持（2026年已主持10次，跨年累计13次），协调项目开源进度、MCP生态建设与发行版集成；'
+            - '2、2026年为syskits项目贡献PR 2061个，完善其命令功能与兼容性；修复组件procps-ng在systemd会话下w命令段错误，已合入openEuler-24.03-LTS-SP1；'
+            - '3、参与SIG文档维护，推动建立syskits源码包仓库及openEuler-24.03-LTS-Next分支，为后续发行版集成奠定基础。'
+        - name: '高博'
+          post:
+            - '湖南麒麟信安科技股份有限公司'
+            - 'gaob-kylinsec'
+          img: './images/avatar/2026/gaobo.png'
+          detail:
+            - '1、2026年加入openEuler社区，年度累计提交PR 660余个，覆盖30余个仓库；'
+            - '2、向zlog、xscreensaver、caja、pluma等社区软件包提交补丁更新、内存泄漏修复与依赖缺失修复；向libkscreen-qt5反馈"显示配置在无输出连接时挂起"缺陷并提交修复；为mate-screensaver、mate-session-manager等组件提交中文本地化翻译；'
+            - '3、参与Kiran桌面项目建设，完成打印机管理插件等特性开发，参与内存泄漏专项治理与命令解析漏洞修复，完成10余个软件包补丁同步与版本对齐；'
+            - '4、积极参与代码评审与问题讨论，帮助新成员解决问题，从加入社区快速成长为成熟贡献者。'
+        - name: '程鑫'
+          post:
+            - '华为技术有限公司'
+            - 'cx22757'
+          img: './images/avatar/2026/chengxin.png'
+          detail:
+            - '1、2025年8月加入openEuler社区，作为模块设计师定义远程证明CCA、ITrustee特性的插件模块（涉及证据采集、证据校验流程），并基于RFC 7516标准定义机密资源下发流程；作为核心开发者累计贡献Rust代码18K行，累计参加社区检视40+次，2026年提出检视意见90+条；'
+            - '2、创新提出基于远程证明+RBS的AI推理实践，基于鲲鹏CCA特性产出Openclaw机密虚机部署方案，产出usage_guide文档1篇、专家组showcase 1次，经专家组评审优于业界同类方案，相关案例已同步开源社区，有效支撑鲲鹏机密数据空间项目落地；'
+            - '3、为GTA远程证明项目搭建集成测试框架，梳理测试用例100+条，覆盖策略管理、证书管理、基线管理、证据采集与校验等核心模块，有效提升项目可维护性。'
+        - name: '阎欣怡'
+          post:
+            - '联通数字科技有限公司'
+            - 'yanxy78'
+          img: './images/avatar/2026/yanxinyi.png'
+          detail:
+            - '向openEuler fastblock（分布式全闪块存储）仓库贡献自动化测试套件，在testframework分支新增集群功能、快照、故障注入、副本一致性等测试用例，补齐模块自动化回归能力；参与代码评审、缺陷验证，保障Raft多副本、SPDK IO链路等核心能力稳定交付，降低版本迭代回归风险，支撑openEuler SDS存储生态演进。'
+        - name: '彭昆仑'
+          post:
+            - '麒麟软件有限公司'
+            - 'kunlun_spurs'
+          img: './images/avatar/2026/pengkunlun.png'
+          detail:
+            - '1、2026年7月加入社区，现为Kernel SIG Committer，积极参与CVE修复（尤其是高分CVE）相关工作，已有93个PR被合入，评审PR 30+个，提出CVE修复相关改进建议，并帮助多位新成员参与CVE修复，新成员累计提交PR 30+个；'
+            - '2、现为Kernel AI Committer，参与孵化创建fgds项目（GPU直访存储读写性能加速方向），担任项目主要负责人之一，已有15个PR被合入，为AI Infra能力建设提供支撑。'
+    - title: 'openEuler 开发贡献之星'
+      list:
+        - name: '马海亮'
+          post:
+            - '统信软件技术有限公司'
+            - 'hailianguniontech'
+          img: './images/avatar/2026/mahailiang.png'
+          detail:
+            - '积极参与openEuler社区各版本的开发与维护工作，在sig-DDE、Desktop、QT等SIG组持续贡献；深度参与openEuler-24.03-LTS-SP4、openEuler-26.09-DevStation版本开发中DDE SIG组软件包的维护与开发，保障两个版本DDE的版本开发与issue修复，近一年DDE SIG贡献PR超700个。'
+        - name: '吴腾达'
+          post:
+            - '华为技术有限公司'
+            - 'stavewu'
+          img: './images/avatar/2026/wutengda.png'
+          detail:
+            - '1、加入openEuler社区两年，现为内核SIG Committer和Branch Keeper，专职负责6.6 & 5.10两个版本，长期活跃于sig-kernel，深度参与内核版本维护与社区协同治理，过去一年累计提交PR 409个、需求&问题issue 105个、有效评审Comment 4000+；'
+            - '2、聚焦kernel可观测性领域，长期维护内核tracing、perf、kprobe等子系统，累计回合上游补丁100+；'
+            - '3、在kernel社区开源协同治理方面开展机制创新：PR标签化管理、邮件推送机制、自动定期检查与清理机制，推动PR从创建到闭环全流程效率提升60%以上。'
+        - name: '袁杏'
+          post:
+            - '湖南麒麟信安科技股份有限公司'
+            - 'yaun__xing'
+          img: './images/avatar/2026/yuanxing.png'
+          detail:
+            - '作为sig-KIRAN-DESKTOP的Committer和sig-mate-desktop的Maintainer，近一年累计合入PR 1K+条，完成代码评审200+次。在sig-KIRAN-DESKTOP负责kiran-control-panel、kiran-session-daemon、kiran-panel、kiran-menu等Kiran桌面环境重要组件的新功能开发与日常维护，持续优化组件性能与交互体验，保障Kiran桌面环境在openEuler系统中的稳定性与实用性；在sig-mate-desktop积极推进mate桌面环境版本升级，及时响应并处理mate相关组件issue，确保mate桌面环境在社区各版本中正常构建与运行，为社区桌面生态的多样化和健康发展提供坚实支撑。'
+        - name: '许萍'
+          post:
+            - '江苏润和软件股份有限公司'
+            - 'cherry530'
+          img: './images/avatar/2026/xuping.png'
+          detail:
+            - '参与Desktop、Base-service、Programming-language、sig-epol、sig-Java、sig-python-modules、System-tool等SIG软件包的维护，处理CVE、软件包升级、bug修复等事项，积极参与相关SIG会议讨论与社区开发者PR检视。过去一年提交PR 228个、issue 118个，参与社区PR检视及修复CVE产生comment 7432条。'
+        - name: '王思'
+          post:
+            - '天翼云科技有限公司'
+            - 'w-xxxx'
+          img: './images/avatar/2026/wangsi.png'
+          detail:
+            - '2026年贡献syskits、track-system两个操作系统相关项目，共享PR数2000+，社区排名前三；积极参与openEuler操作系统大会，进行操作系统兼容性相关内容的topic演讲。'
+        - name: '童宇翔'
+          post:
+            - '联通数字科技有限公司'
+            - 'tongyx633'
+          img: './images/avatar/2026/tongyuxiang.png'
+          detail:
+            - '担任ebpf SIG Committer，负责safeguard（基于eBPF的Linux审计观测工具）的日常研发与维护，持续推进项目新特性开发、缺陷修复与性能提升，提交相关技术补丁与Pull Requests，并推进项目加入openEuler-24.03-LTS版本，助力提升ebpf社区安全能力，为openEuler社区建设作出贡献。'
+        - name: '许靖'
+          post:
+            - '华为技术有限公司'
+            - 'xujing99'
+          img: './images/avatar/2026/xujing.png'
+          detail:
+            - '作为Base-service Maintainer及sig-intelligence部分软件包Committer，2026年累计参与社区PR提交120+次、需求&问题Issue 50+次、评审Comment 800+次，积极看护xiaoO、systemd、rpm、dracut等相关软件包质量，保障版本发布前没有阻塞问题遗留。'
+        - name: '吕耕耕'
+          post:
+            - '统信软件技术有限公司'
+            - 'lvgenggeng'
+          img: './images/avatar/2026/lvgenggeng.png'
+          detail:
+            - '持续维护GNOME，合入PR 400+个；Desktop合入PR 240+个；参与版本升级、补丁回合及CVE修复工作，深度参与openEuler 26.09版本开发任务。'
+    - title: 'openEuler 基础设施与安全贡献之星'
+      list:
+        - name: '姚鑫'
+          post:
+            - '江苏润和软件股份有限公司'
+            - 'starlet-dx'
+          img: './images/avatar/2026/yaoxin.png'
+          detail:
+            - '担任Desktop SIG Maintainer，Application、DB、Runtime及sig-python-modules Committer。长期参与社区CVE、bug修复，软件包开发及日常维护，版本迭代、代码评审等工作。2026年度共提交PR 522条（其中CVE修复296条），处理issue 120个，处理CVE和安全问题约1000+。'
+        - name: '王凯'
+          post:
+            - '江苏润和软件股份有限公司'
+            - 'wk333'
+          img: './images/avatar/2026/wangkai.png'
+          detail:
+            - '参与Application、Compiler、DB、dev-utils、Others、Programming-language、sig-perl-modules等SIG软件包的维护，处理CVE、软件包升级、bug修复等事项，积极参与相关SIG会议讨论与社区开发者PR检视。过去一年提交PR 200个、issue 118个，处理CVE 1000+，参与社区PR检视及修复CVE产生comment 4500条。'
+        - name: '关文涛'
+          post:
+            - '统信软件技术有限公司'
+            - 'koishimind'
+          img: './images/avatar/2026/guanwentao.png'
+          detail:
+            - '积极参与openEuler Kernel 6.6内核稳定版本补丁维护和CVE补丁维护。2026年至今通过PR合并上游小版本补丁和CVE补丁67次共计9377个，其中2718个为CVE安全修复，覆盖2717个不同CVE（2296个为2026年新披露CVE），有力保障了openEuler内核版本的安全性与稳定性。'
+    - title: 'openEuler 创新贡献之星'
+      list:
+        - name: '任筠凯'
+          post:
+            - '华为技术有限公司'
+            - 'hid63677235'
+          img: './images/avatar/2026/renjunkai.png'
+          detail:
+            - '围绕openEuler机密计算与可信计算场景，面向天翼云、银联、字节火山引擎等客户的场景需求，提出多个安全及性能创新方案并真实落地于客户场景，在4个代码仓及其src仓共贡献PR 100+、评审200+：'
+            - '1、创新提出"握手过程全态证明"的RA-TLS握手协议，将通信连接完整信息与硬件根绑定，有效缓解中继冒用风险；提供RATS-TLS C扩展与独立Rust实现，方案已开源于openEuler sec-select并应用于银联等客户实际产品环境；'
+            - '2、针对集群下可信NPU等硬件瞬时度量耗时问题，通过循环并发、预先加载、闲时采集等多重手段，将实际环境18秒的采集度量稳定缩减至2~3秒，已应用于字节、火山引擎实际环境；'
+            - '3、构建面向异构、多设备场景的统一验证方案，新增昇腾A3/A5统一适配，将不同代际设备接口差异封装在插件内部，贯通"设备接入—证据处理—策略生成"，为社区及客户扩展异构算力可信验证提供可复用路径；'
+            - '4、围绕IETF RFC 9334 Passport、Background-Check两类证明流程，实现one-shot可信资源获取机制，将硬件采集、度量验证、身份验证、资源获取等繁琐流程封装为完整流程，降低可信资源交付的接入成本；'
+            - '5、完善可复用的业务鉴权和密钥管理能力：在GTA中新增API子密钥管理并完成OpenBao HTTP API对接，在RBS中扩展RSA-PSS密钥兼容能力并强化JWT校验，为客户提供统一、可复用的安全组件；'
+            - '6、创新提出并行AI自动化验证流程，设计落地五路并行PR检查（软件成分分析、恶意代码扫描、代码规范检查、Rust静态检查、构建与单元/集成测试），配套统一构建环境配置，将分散检查沉淀为社区可复用、可扩展的自动化验证机制。'
+        - name: '孙满利'
+          post:
+            - '麒麟软件有限公司'
+            - 'manlysunmanli'
+          img: './images/avatar/2026/sunmanli.png'
+          detail:
+            - '围绕openEuler面向智能体规模化应用的技术需求，主动发起并推动witty-sandboxer、witty-token-compressor、goose三个开源项目通过社区评审并完成建仓，承担项目整体架构设计与核心功能研发的主要工作；推动智能体工具执行安全与多级沙箱隔离机制、Token使用效率优化及Agent Runtime运行支撑等关键技术方向的方案设计与工程落地；积极参与社区PR贡献、技术问题跟进及SIG Intelligence技术交流，促进相关成果在openEuler社区沉淀，助力构建安全、可控、高效的Agentic OS基础技术体系。'
+        - name: '熊添晨'
+          post:
+            - '杭州华为企业通信技术有限公司'
+            - 'xtchen'
+          img: './images/avatar/2026/xiongtianchen.png'
+          detail:
+            - '作为负责人，完成openEuler 26.09创新版本AI场景创新特性（白皮书&宣传文章中全场景全特性排序第一）：Agent语义感知的KV Cache协同调度ram-a-kv。将Agent上下文映射到KV Cache，预测重用关系，在下一次推理之前主动编排prefetch/evict，并通过全局引用计数保护跨会话共享的chunk，最终把TTFT压回毫秒级。相关特性随openEuler 26.09创新版本发布并写入版本白皮书，特性代码已在openEuler社区开源。'
+    - title: 'openEuler 社区活跃之星'
+      list:
+        - name: '王龙'
+          post:
+            - '天翼云科技有限公司'
+            - 'empire99200'
+          img: './images/avatar/2026/wanglong.png'
+          detail:
+            - '近一年累计提交PR 1105个，持续高频参与openEuler社区代码贡献，社区活跃度表现突出。'
+
+project:
+  title:
+    - 'openEuler 项目之星'
+  list:
+    - title: '年度优秀项目'
+      bg: './images/project-card1.jpg'
+      bg_dark: './images/project-card1-dark.jpg'
+      list:
+        - name: 'UBS-Engine'
+          detail:
+            - 'UBS-Engine（UB Service Core Engine）是 openEuler 社区开源的灵衢（UnifiedBus）超节点集群服务核心引擎，秉持“软件定义计算、按需资源组合与分配”理念，是 UB 计算系统的核心控制面参考实现。它面向内存、DPU 等资源实现池化与动态调度，支持分布式自动主节点选举与 N-1 高可靠，通过守护进程与配套 SDK 为开发者提供北向服务接口，助力上层应用充分释放超节点集群算力，繁荣灵衢软件生态。'
+          link: 'https://atomgit.com/openeuler/ubs-engine'
+        - name: 'openYuanrong'
+          detail:
+            - 'openYuanrong 数据系统是 openEuler 社区孵化的、以内存为中心、近计算的分布式异构多级缓存系统，也是 Serverless 分布式计算引擎 openYuanrong 的核心子系统。它利用集群 HBM/DRAM/SSD 资源构建多级缓存，以共享内存免拷贝读写、分布式对象引用、发布订阅等能力，为 AI 训推、智能体、大数据、微服务等分布式应用提供高性能的数据对象与数据流访问，并支持 NPU 卡间高效数据传输与分布式元数据水平扩展，兼顾高可用与数据可靠性。'
+          link: 'https://atomgit.com/openeuler/yuanrong-datasystem'
+        - name: 'Omni Operator'
+          detail:
+            - 'OmniOperator 是 openEuler 社区联合鲲鹏生态开源的大数据 SQL 算子加速引擎，是 OmniRuntime 大数据套件的核心特性之一。它以 Native Code（C/C++）实现高性能列式向量化算子，替换开源引擎的 Java/Scala 算子，并定义与语言无关的列式内存格式 OmniVec，实现零拷贝读取、无序列化开销的数据处理，充分释放鲲鹏等多样性算力。目前已适配 Spark 3.1.1–3.5.2、Hive、openLooKeng 及 Gluten 等主流引擎与框架，端到端提升大数据离线分析性能。'
+          link: 'https://atomgit.com/openeuler/OmniOperator'
+        - name: 'openEuler Kernel'
+          detail:
+            - 'openEuler Kernel 是 openEuler 操作系统的核心组件，是数字基础设施的关键底座。支持服务器、云、边缘、嵌入式等应用场景，支持多样性计算，致力于提供高性能、安全、稳定可靠的操作系统内核。'
+          link: 'https://atomgit.com/openeuler/kernel'
+        - name: '灵衢通信库UMDK'
+          detail:
+            - 'UMDK（Unified Memory Development Kit，灵衢内存语义开发包）是 openEuler 社区开源的、以内存语义为核心的分布式通信软件库，为数据中心网络、超节点内部及服务器卡间提供高性能通信接口，使能并充分发挥灵衢统一总线（UnifiedBus）的硬件能力。其核心组件 URMA 提供统一的单边、双边、原子等远端内存访问语义，并配套 URPC 高性能 RPC、ULOCK 分布式锁、USOCK 标准 Socket 兼容接口及面向训推通信加速的 CAM 库，支撑大数据、数据库、AI 训推等场景构建以内存语义互联为中心的新一代算力原生网络。'
+          link: 'https://atomgit.com/openeuler/umdk'
+    - title: '年度新建项目'
+      bg: './images/project-card2.jpg'
+      bg_dark: './images/project-card2-dark.jpg'
+      list:
+        - name: 'xiaoO'
+          detail:
+            - 'xiaoO 是 openEuler 社区开源的高效、安全的 AI Agent 框架，定位为 AgentOS 的智能中枢，提供面向系统管理、智能体编排、工具执行、记忆与上下文压缩、多渠道接入的自治 Agent 运行时。它将操作系统转变为智能体可稳定工作的环境，通过统一的 Agent Loop 协同文件、Shell、Git、Web 访问、技能与插件等能力，支撑智能系统管理与自动化工作流的快速构建。'
+          link: 'https://atomgit.com/openeuler/xiaoO'
+        - name: 'Agent Insight'
+          detail:
+            - 'Agent Insight 是 openEuler 社区孵化的开源 AgentOps 平台，致力于构建“观测—评测—诊断—优化”持续运转的能力闭环，让黑盒化的智能体成为可观测、可度量、可治理的可信资产。平台提供白盒链路追踪、多维评测、分钟级智能故障诊断与 Skill 闭环优化能力，基于 OpenTelemetry 等业界标准已适配 OpenCode、Claude Code 等多个主流 Agent 运行时，支持全栈本地化自托管部署。'
+          link: 'https://atomgit.com/openeuler/agent-insight'
+        - name: 'IB_Robot'
+          detail:
+            - 'IB_Robot 是 openEuler 社区基于 Intelligence BooM 开源全栈孵化的具身智能机器人软件全栈项目，也是 openEuler Embedded 26.03 首个开箱即用具身智能 OS 的核心底座。项目提供覆盖环境搭建、仿真调试、数据录制、一键部署的一站式工具链，支持 Sim2Real 无缝切换与微秒级实时控制，适配机械臂、四足机器狗、AGV 等多种物理形态，并深度融合 leRobot 与 ROS2 开源生态，支撑机器人研发创新与规模化商用落地。'
+          link: 'https://atomgit.com/openeuler/IB_Robot'
+        - name: 'witty-ub'
+          detail:
+            - 'witty-ub 是 openEuler Witty 智能运维体系中面向灵衢（UnifiedBus）超节点架构的故障定位工具，提供超节点可用性故障的信息采集与智能诊断能力。项目包含跨栈跨节点资源拓扑采集、多源日志采集与故障事件关联、基于大模型的故障诊断等组件，支撑超节点场景日志故障的定位定界，助力超节点 OS 从智能诊断迈向系统智能自治。'
+          link: 'https://atomgit.com/openeuler/witty-ub'
+        - name: 'KASandbox'
+          detail:
+            - 'KASandbox 是 openEuler 社区孵化的面向 AI 智能体的沙箱基础设施，为智能体提供安全隔离的云端代码执行与任务运行环境。项目支持微虚机隔离、快照与检查点回滚、CRI 多路复用及 Android 沙箱等能力，兼顾隔离强度与部署密度，为大规模智能体运行构筑可靠的执行基座。'
+          link: 'https://atomgit.com/openeuler/KASandbox'
+    - title: '金代码仓项目'
+      bg: './images/project-card3.jpg'
+      bg_dark: './images/project-card3-dark.jpg'
+      list:
+        - name: 'UBS-Comm'
+          detail:
+            - 'UBS Comm（UB Service Communication）是 openEuler 灵衢（UnifiedBus）超节点系统的高性能通信组件，面向高带宽、低延迟网络下的 C/S 架构应用提供统一的高级通信 API，屏蔽 RDMA、TCP、UDS、SHM 等底层协议的复杂性与差异性。它提供点对点单双边通信、双向 RPC、传输加密与故障检测重传等高可靠能力，使跨节点数据交换与数据一致性对应用透明，助力云、大数据、存储与 AI 训推场景性能提升。'
+          link: 'https://atomgit.com/openeuler/ubs-comm'
+        - name: 'witty-rag'
+          detail:
+            - 'witty-rag（euler-copilot-rag）是 EulerCopilot 智能操作系统助手的检索增强服务，并演进为社区自研、面向企业级运维场景的工业级 RAG 引擎底座，分层解耦、高可扩展、支持全链路自定义开发。项目打通文档解析、智能检索、质量评估、工程落地全链路，支持十余种主流文档格式与多路召回检索，为 EulerCopilot 智能问答、调优与诊断提供知识底座。'
+          link: 'https://atomgit.com/openeuler/euler-copilot-rag'
+        - name: 'yocto-meta-openeuler'
+          detail:
+            - 'yocto-meta-openeuler 是 openEuler Embedded 的核心构建仓，承载 openEuler 嵌入式版本镜像的构建与交付，在混合部署、嵌入式 AI、内核小型化、ROS、边缘容器等技术方向持续构建竞争力，积极引导 openEuler 嵌入式生态健康发展。（该项目同时荣获行业影响力项目奖项）'
+          link: 'https://atomgit.com/openeuler/yocto-meta-openeuler'
+    - title: '行业影响力项目'
+      bg: './images/project-card5.jpg'
+      bg_dark: './images/project-card5-dark.jpg'
+      list:
+        - name: 'openEuler-RISC-V'
+          detail:
+            - 'openEuler on RISC-V 项目为 openEuler 构建 RISC-V 软硬件生态，主导了 RVA20 版本构建、RVA23 版本计划、RVCK 内核同源计划等面向国内外 RISC-V 操作系统生态的核心项目，推动 openEuler 24.03 LTS 成为首批原生支持 RISC-V 架构的 Linux 发行版之一。'
+          link: 'https://atomgit.com/openeuler/RISC-V'
+        - name: 'yocto-meta-openeuler'
+          detail:
+            - 'yocto-meta-openeuler 是 openEuler Embedded 的核心构建仓，承载 openEuler 嵌入式版本镜像的构建与交付，在混合部署、嵌入式 AI、内核小型化、ROS、边缘容器等技术方向持续构建竞争力，积极引导 openEuler 嵌入式生态健康发展。（该项目同时荣获金代码仓项目奖项）'
+          link: 'https://atomgit.com/openeuler/yocto-meta-openeuler'
+        - name: 'StratoVirt'
+          detail:
+            - 'StratoVirt 是 openEuler 开源的轻量级虚拟化系统，以 Rust 语言实现，面向云数据中心提供企业级 VMM。它以一套架构统一支持虚拟机、容器、Serverless 三种场景，在轻量低噪、软硬协同、语言级安全等方面具备核心竞争优势，并预留组件化拼装接口，可按需组装高级特性直至支持标准虚拟化，为云原生负载提供高性能运行底座。'
+          link: 'https://atomgit.com/openeuler/stratovirt'
+    - title: '技术创新项目'
+      bg: './images/project-card1.jpg'
+      bg_dark: './images/project-card1-dark.jpg'
+      list:
+        - name: '异构融合虚拟化-xlite轻量化推理运行时'
+          detail:
+            - 'GVirt/Xlite 是 openEuler 异构融合 SIG 开源的轻量级 XPU 虚拟化前后端推理运行时，提供极简高效的异构运行环境，支持多样性算力协同。其中 Xlite 前端是轻量级大模型运行时，支持 DeepSeek-R1 等模型在昇腾等硬件上高效运行，算子基于昇腾 AscendC 开发，让大模型推理在异构算力上低门槛、高效率落地。'
+          link: 'https://atomgit.com/openeuler/GVirt'
+        - name: 'openEuler Compiler SIG Triton-CPU'
+          detail:
+            - 'Triton-CPU 是 openEuler 社区维护的 Triton 分支，为面向 GPU 的 Triton AI 编译框架构建 CPU 后端，并适配社区 LLVM 工具链。它基于 MLIR/LLVM 将 Triton 算子编译为 CPU 高性能代码，保持与 Triton 一致的编程接口，集成 FlagGems 高性能算子库，使深度学习原语与推理服务摆脱 GPU 依赖、在 CPU 平台高效运行，openEuler 24.03 LTS SP2 及以后版本可通过 yum 直接安装。'
+          link: 'https://atomgit.com/openeuler/triton-cpu'
+        - name: 'ubturbo'
+          detail:
+            - 'UBTurbo 是 openEuler UB（统一总线）生态中开源的节点内资源管理框架，具备配置读取、插件加载、日志打印与 IPC 通信等基础能力，并集成 SMAP 模块提供多级内存调度服务。其 RMRS（资源腾挪调度模块）负责虚拟机、容器内存资源的迁移调度，通过页面扫描与迁移实现分级内存，是超节点场景下内存资源灵活调度的关键组件。'
+          link: 'https://atomgit.com/openeuler/ubturbo'
+        - name: 'virtCCA机密计算高性能易部署底座'
+          detail:
+            - 'virtCCA 是包含 TEE 虚拟化的 ARM CCA 机密计算架构在 openEuler 上的落地底座，基于 QEMU、libvirt 与内核协同，在鲲鹏平台使能机密虚拟机与机密容器。它提供基于硬件的远程证明、密钥派生等能力，让应用在 TEE 内复用 REE 侧 openEuler 应用生态资源，实现机密计算应用易开发、易部署、易迁移，支撑数据安全与合规场景。'
+          link: 'https://atomgit.com/openeuler/virtCCA_sdk'
+    - title: '社区活跃项目'
+      bg: './images/project-card2.jpg'
+      bg_dark: './images/project-card2-dark.jpg'
+      list:
+        - name: 'mugen'
+          detail:
+            - 'mugen 是 openEuler 社区自主孵化的开源测试项目，面向操作系统质量保证人员提供统一的编程方法和架构设计能力，通过社区协同不断提升社区产品质量、测试能力及效率：提供持续丰富的操作系统测试用例，覆盖服务器、云计算、嵌入式等场景；提供高效的公共用例编写和执行方法库；支持解耦式执行及完善的测试过程跟踪与结果统计。'
+          link: 'https://atomgit.com/openeuler/mugen'
+        - name: 'dde_autotest_euler'
+          detail:
+            - 'dde_autotest_euler 是 openEuler 社区面向 DDE 桌面环境的自动化测试用例库，基于 YouQu 自动化测试框架构建。项目覆盖控制中心、任务栏、启动器、文件管理器等 DDE 核心组件，结合图像识别与 OCR 技术对桌面界面进行自动化操作与断言验证，持续沉淀桌面测试资产，保障 openEuler DDE 桌面的质量与稳定性。'
+          link: 'https://atomgit.com/openeuler/dde_autotest_euler'
+        - name: 'openEuler Release-management SIG'
+          detail:
+            - 'release-management 是 openEuler 社区版本发布管理的核心工具链与流程仓库，承载各版本的 release plan、关键特性清单、开发与分支计划及发布范围说明。Release Manager 团队依托该仓库协调各 SIG Maintainer、QA、发布工程与技术委员会，完成版本时间表规划、开发测试状态跟踪与发布评审决策，支撑社区版本高效、高质量持续交付。'
+          link: 'https://atomgit.com/openeuler/release-management'
+
+notice: '注：根据openEuler社区评奖规则，依据2026年1月1日 ~ 2026年10月20日的贡献进行评选，且展示不分先后顺序。'
