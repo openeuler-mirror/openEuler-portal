@@ -219,8 +219,9 @@ import advisoryDirect from '#content/organization/advisory.yaml';
 describe('集成: vite-plugin-content-yaml 真实 YAML', () => {
   const advisory = organizationAll.advisory;
 
-  it('目录 import 拿到了所有 11 个 section', () => {
-    expect(Object.keys(organizationAll).length, '虚拟目录模块返回空 → 核对 #content alias / 插件 configResolved').toBe(11);
+  it('目录 import 拿到了所有 12 个 section(_schema 元数据文件除外)', () => {
+    const sectionKeys = Object.keys(organizationAll).filter((k) => !k.startsWith('_'));
+    expect(sectionKeys.length, '虚拟目录模块返回空 → 核对 #content alias / 插件 configResolved').toBe(12);
     expect(advisory, '没找到 advisory.yaml,核对 vitest.config.js 的 #content alias').toBeDefined();
   });
 

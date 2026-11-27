@@ -1,0 +1,239 @@
+# 学术与教育委员会 / openEuler Academic & Education Committee
+#
+# 文件名 academic-education 就是这个 section 的 slug,在页面侧的 SECTIONS 数组里被引用。
+# 平铺成员列表用 members:,每个成员一个块,看起来像一张张名片。
+# 排序约定:主席排在最前,委员按姓名拼音排序。
+# 注:陈榕(AI联合工作组)、屈晟(委员会)、武延军 与本目录已有头像同名,
+# 本委员会的照片文件名带 -academic-education 后缀区分。
+
+title: openEuler 学术与教育委员会
+title_en: openEuler Academic & Education Committee
+
+members:
+  - name: 胡春明
+    name_en: Hu Chunming
+    image: ./images/huchunming.png
+    position: 主席
+    position_en: Chairperson
+
+  - name: 包云岗
+    name_en: Bao Yungang
+    image: ./images/baoyungang.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 陈榕
+    name_en: Chen Rong
+    image: ./images/chenrong-academic-education.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 陈向群
+    name_en: Chen Xiangqun
+    image: ./images/chenxiangqun.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 陈渝
+    name_en: Chen Yu
+    image: ./images/chenyu.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 崔江涛
+    name_en: Cui Jiangtao
+    image: ./images/cuijiangtao.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 郭耀
+    name_en: Guo Yao
+    image: ./images/guoyao.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 华志超
+    name_en: Hua Zhichao
+    image: ./images/huazhichao.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 惠维
+    name_en: Hui Wei
+    image: ./images/huiwei.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 金芝
+    name_en: Jin Zhi
+    image: ./images/jinzhi.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 李锭
+    name_en: Li Ding
+    image: ./images/liding.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 李昊
+    name_en: Li Hao
+    image: ./images/lihao.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 李建欣
+    name_en: Li Jianxin
+    image: ./images/lijianxin.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 李金喜
+    name_en: Li Jinxi
+    image: ./images/lijinxi.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 廖小飞
+    name_en: Liao Xiaofei
+    image: ./images/liaoxiaofei.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 刘忻
+    name_en: Liu Xin
+    image: ./images/liuxin.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 陆游游
+    name_en: Lu Youyou
+    image: ./images/luyouyou.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 马晓星
+    name_en: Ma Xiaoxing
+    image: ./images/maxiaoxing.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 戚正伟
+    name_en: Qi Zhengwei
+    image: ./images/qizhengwei.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 屈晟
+    name_en: Qu Sheng
+    image: ./images/qusheng-academic-education.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 沈志荣
+    name_en: Shen Zhirong
+    image: ./images/shenzhirong.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 田臣
+    name_en: Tian Chen
+    image: ./images/tianchen.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 万波
+    name_en: Wan Bo
+    image: ./images/wanbo.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 王晨曦
+    name_en: Wang Chenxi
+    image: ./images/wangchenxi.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 王杰
+    name_en: Wang Jie
+    image: ./images/wangjie.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 汪庆
+    name_en: Wang Qing
+    image: ./images/wangqing.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 武延军
+    name_en: Wu Yanjun
+    image: ./images/wuyanjun-academic-education.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 夏文
+    name_en: Xia Wen
+    image: ./images/xiawen.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 夏虞斌
+    name_en: Xia Yubin
+    image: ./images/xiayubin.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 向乔
+    name_en: Xiang Qiao
+    image: ./images/xiangqiao.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 杨任宇
+    name_en: Yang Renyu
+    image: ./images/yangrenyu.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 尹建伟
+    name_en: Yin Jianwei
+    image: ./images/yinjianwei.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 余杰
+    name_en: Yu Jie
+    image: ./images/yujie.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 张莉
+    name_en: Zhang Li
+    image: ./images/zhangli.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 张羽
+    name_en: Zhang Yu
+    image: ./images/zhangyu.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 赵新奎
+    name_en: Zhao Xinkui
+    image: ./images/zhaoxinkui.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 周庆国
+    name_en: Zhou Qingguo
+    image: ./images/zhouqingguo.png
+    position: 委员
+    position_en: Committee member
+
+  - name: 邹翔宇
+    name_en: Zou Xiangyu
+    image: ./images/zouxiangyu.png
+    position: 委员
+    position_en: Committee member
